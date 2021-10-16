@@ -1,4 +1,5 @@
 import { Fragment, useState } from 'react'
+import Link from 'next/link'
 import { Dialog, Disclosure, Popover, Tab, Transition } from '@headlessui/react'
 import {
   MenuIcon,
@@ -140,43 +141,6 @@ const filters = [
   },
 ]
 
-const products2 = [
-  {
-    id: 7,
-    name: 'Electric Kettle',
-    href: '#',
-    price: '$149',
-    description: 'Black',
-    imageSrc:
-      'https://tailwindui.com/img/ecommerce-images/category-page-01-image-card-07.jpg',
-    imageAlt:
-      'Close up of long kettle spout pouring boiling water into pour-over coffee mug with frothy coffee.',
-  },
-  {
-    id: 8,
-    name: 'Leather Workspace Pad',
-    href: '#',
-    price: '$165',
-    description: 'Black',
-    imageSrc:
-      'https://tailwindui.com/img/ecommerce-images/category-page-01-image-card-08.jpg',
-    imageAlt:
-      'Extra large black leather workspace pad on desk with computer, wooden shelf, desk organizer, and computer peripherals.',
-  },
-  {
-    id: 9,
-    name: 'Leather Long Wallet',
-    href: '#',
-    price: '$118',
-    description: 'Natural',
-    imageSrc:
-      'https://tailwindui.com/img/ecommerce-images/category-page-01-image-card-09.jpg',
-    imageAlt:
-      'Leather long wallet held open with hand-stitched card dividers, full-length bill pocket, and simple tab closure.',
-  },
-  // More products...
-]
-
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
@@ -234,7 +198,7 @@ export default function Header() {
                           className={({ selected }) =>
                             classNames(
                               selected
-                                ? 'text-indigo-600 border-indigo-600'
+                                ? 'text-blue-600 border-blue-600'
                                 : 'text-gray-900 border-transparent',
                               'flex-1 whitespace-nowrap py-4 px-1 border-b-2 text-base font-medium'
                             )
@@ -316,22 +280,22 @@ export default function Header() {
 
         <header className="relative">
           <nav aria-label="Top">
-            {/* Top navigation */}
-
             {/* Secondary navigation */}
             <div className="bg-white shadow-sm">
               <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="h-16 flex items-center justify-between">
                   {/* Logo (lg+) */}
                   <div className="hidden lg:flex-1 lg:flex lg:items-center">
-                    <a href="#">
-                      <span className="sr-only">Workflow</span>
-                      <img
-                        className="h-8 w-auto"
-                        src="https://tailwindui.com/img/logos/workflow-mark.svg?color=indigo&shade=600"
-                        alt=""
-                      />
-                    </a>
+                    <Link href="/">
+                      <a>
+                        <span className="sr-only">Workflow</span>
+                        <img
+                          className="h-8 w-auto"
+                          src="https://tailwindui.com/img/logos/workflow-mark.svg?color=blue&shade=600"
+                          alt=""
+                        />
+                      </a>
+                    </Link>
                   </div>
 
                   <div className="hidden h-full lg:flex">
@@ -346,14 +310,14 @@ export default function Header() {
                                   <Popover.Button
                                     className={classNames(
                                       open
-                                        ? 'text-indigo-600'
+                                        ? 'text-blue-600'
                                         : 'text-gray-700 hover:text-gray-800',
                                       'relative flex items-center justify-center transition-colors ease-out duration-200 text-sm font-medium'
                                     )}>
                                     {category.name}
                                     <span
                                       className={classNames(
-                                        open ? 'bg-indigo-600' : '',
+                                        open ? 'bg-blue-600' : '',
                                         'absolute z-30 -bottom-px inset-x-0 h-0.5 transition ease-out duration-200'
                                       )}
                                       aria-hidden="true"
@@ -461,58 +425,16 @@ export default function Header() {
                   </div>
 
                   {/* Logo (lg-) */}
-                  <a href="#" className="lg:hidden">
-                    <span className="sr-only">Workflow</span>
-                    <img
-                      src="https://tailwindui.com/img/logos/workflow-mark.svg?color=indigo&shade=600"
-                      alt=""
-                      className="h-8 w-auto"
-                    />
-                  </a>
-
-                  <div className="flex-1 flex items-center justify-end">
-                    <a
-                      href="#"
-                      className="hidden text-sm font-medium text-gray-700 hover:text-gray-800 lg:block">
-                      Search
+                  <Link href="/">
+                    <a className="lg:hidden">
+                      <span className="sr-only">Workflow</span>
+                      <img
+                        src="https://tailwindui.com/img/logos/workflow-mark.svg?color=blue&shade=600"
+                        alt=""
+                        className="h-8 w-auto"
+                      />
                     </a>
-
-                    <div className="flex items-center lg:ml-8">
-                      {/* Help */}
-                      <a
-                        href="#"
-                        className="p-2 text-gray-400 hover:text-gray-500 lg:hidden">
-                        <span className="sr-only">Help</span>
-                        <QuestionMarkCircleIcon
-                          className="w-6 h-6"
-                          aria-hidden="true"
-                        />
-                      </a>
-                      <a
-                        href="#"
-                        className="hidden text-sm font-medium text-gray-700 hover:text-gray-800 lg:block">
-                        Help
-                      </a>
-
-                      {/* Cart */}
-                      <div className="ml-4 flow-root lg:ml-8">
-                        <a
-                          href="#"
-                          className="group -m-2 p-2 flex items-center">
-                          <ShoppingBagIcon
-                            className="flex-shrink-0 h-6 w-6 text-gray-400 group-hover:text-gray-500"
-                            aria-hidden="true"
-                          />
-                          <span className="ml-2 text-sm font-medium text-gray-700 group-hover:text-gray-800">
-                            0
-                          </span>
-                          <span className="sr-only">
-                            items in cart, view bag
-                          </span>
-                        </a>
-                      </div>
-                    </div>
-                  </div>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -551,7 +473,7 @@ export default function Header() {
                   <h2 className="text-lg font-medium text-gray-900">Filters</h2>
                   <button
                     type="button"
-                    className="-mr-2 w-10 h-10 bg-white p-2 rounded-md flex items-center justify-center text-gray-400 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                    className="-mr-2 w-10 h-10 bg-white p-2 rounded-md flex items-center justify-center text-gray-400 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-500"
                     onClick={() => setMobileFiltersOpen(false)}>
                     <span className="sr-only">Close menu</span>
                     <XIcon className="h-6 w-6" aria-hidden="true" />
@@ -595,7 +517,7 @@ export default function Header() {
                                     defaultValue={option.value}
                                     type="checkbox"
                                     defaultChecked={option.checked}
-                                    className="h-4 w-4 border-gray-300 rounded text-indigo-600 focus:ring-indigo-500"
+                                    className="h-4 w-4 border-gray-300 rounded text-blue-600 focus:ring-blue-500"
                                   />
                                   <label
                                     htmlFor={`filter-mobile-${section.id}-${optionIdx}`}
