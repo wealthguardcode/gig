@@ -10,7 +10,10 @@ export default function Layout({ title, keywords, description, children }) {
         <meta name="keywords" content={keywords} />
         <meta name="description" content={description} />
         <link rel="icon" href="/favicon.ico" />
-        <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+          rel="stylesheet"
+        />
       </Head>
 
       <Header />
