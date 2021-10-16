@@ -1,4 +1,6 @@
 import Head from 'next/head'
+import Header from './Header'
+import Footer from './Footer'
 
 export default function Layout({ title, keywords, description, children }) {
   return (
@@ -11,7 +13,11 @@ export default function Layout({ title, keywords, description, children }) {
         <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
       </Head>
 
+      <Header />
+
       <main>{children}</main>
+
+      <Footer />
     </div>
   )
 }
