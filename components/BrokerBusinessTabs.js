@@ -16,13 +16,6 @@ export default function BrokerBusinessTabs() {
         description:
           'Aenean dictum varius metus a imperdiet. Donec cursus nulla sem, ac bibendum elit laoreet nec. Nulla facilisi. Fusce tristique lacus enim, vitae mattis ex laoreet et. Fusce fringilla lacus et neque convallis, eu bibendum urna maximus.',
       },
-      //   {
-      //     id: 2,
-      //     title: "So you've bought coffee... now what?",
-      //     date: '2h ago',
-      //     commentCount: 3,
-      //     shareCount: 2,
-      //   },
     ],
     Businesses: [
       {
@@ -33,13 +26,6 @@ export default function BrokerBusinessTabs() {
         description:
           'Aenean dictum varius metus a imperdiet. Donec cursus nulla sem, ac bibendum elit laoreet nec. Nulla facilisi. Fusce tristique lacus enim, vitae mattis ex laoreet et. Fusce fringilla lacus et neque convallis, eu bibendum urna maximus.',
       },
-      //   {
-      //     id: 2,
-      //     title: 'The most innovative things happening in coffee',
-      //     date: 'Mar 19',
-      //     commentCount: 24,
-      //     shareCount: 12,
-      //   },
     ],
   })
 
