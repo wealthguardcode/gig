@@ -7,12 +7,57 @@ const navigation = [
   { name: 'Company', href: '#' },
 ]
 
+import { CheckIcon } from '@heroicons/react/outline'
+
+const features = [
+  {
+    name: 'Sample Industry',
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras scelerisque efficitur posuere.',
+  },
+  {
+    name: 'Sample Industry',
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras scelerisque efficitur posuere.',
+  },
+  {
+    name: 'Sample Industry',
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras scelerisque efficitur posuere.',
+  },
+  {
+    name: 'Sample Industry',
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras scelerisque efficitur posuere.',
+  },
+  {
+    name: 'Sample Industry',
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras scelerisque efficitur posuere.',
+  },
+  {
+    name: 'Sample Industry',
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras scelerisque efficitur posuere.',
+  },
+  {
+    name: 'Sample Industry',
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras scelerisque efficitur posuere.',
+  },
+  {
+    name: 'Sample Industry',
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras scelerisque efficitur posuere.',
+  },
+]
+
 export default function Home() {
   return (
     <Layout>
       <div className="relative bg-gray-50 overflow-hidden">
         <div className="relative pt-6 pb-16 sm:pb-24">
-          <main className="mt-16 mx-auto max-w-7xl px-4 sm:mt-24">
+          <div className="mt-16 mx-auto max-w-7xl px-4 sm:mt-24">
             <div className="text-center">
               <h1 className="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
                 <span className="block xl:inline">Commercial</span>{' '}
@@ -58,7 +103,58 @@ export default function Home() {
                 </div>
               </div>
             </div>
-          </main>
+          </div>
+        </div>
+      </div>
+
+      {/* Features Section */}
+      <div className="bg-white">
+        <div className="max-w-3xl mx-auto text-center">
+          <h2 className="text-3xl font-extrabold text-gray-900 pt-12">
+            Industries We Insure: Boats to Loved Ones to Logistics
+          </h2>
+        </div>
+        <div className="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:pb-24 lg:pt-12 lg:px-8 lg:grid lg:grid-cols-4 lg:gap-x-8">
+          <div className="mt-12 lg:mt-0 lg:col-span-2">
+            <dl className="space-y-10 sm:space-y-0 sm:grid sm:grid-cols-2 sm:grid-rows-4 sm:grid-flow-col sm:gap-x-6 sm:gap-y-10 lg:gap-x-8">
+              {features.map((feature) => (
+                <div key={feature.name} className="relative">
+                  <dt>
+                    <CheckIcon
+                      className="absolute h-6 w-6 text-green-500"
+                      aria-hidden="true"
+                    />
+                    <p className="ml-9 text-lg leading-6 font-medium text-gray-900">
+                      {feature.name}
+                    </p>
+                  </dt>
+                  <dd className="mt-2 ml-9 text-base text-gray-500">
+                    {feature.description}
+                  </dd>
+                </div>
+              ))}
+            </dl>
+          </div>
+          <div className="mt-12 lg:mt-0 lg:col-span-2">
+            <dl className="space-y-10 sm:space-y-0 sm:grid sm:grid-cols-2 sm:grid-rows-4 sm:grid-flow-col sm:gap-x-6 sm:gap-y-10 lg:gap-x-8">
+              {features.map((feature) => (
+                <div key={feature.name} className="relative">
+                  <dt>
+                    <CheckIcon
+                      className="absolute h-6 w-6 text-green-500"
+                      aria-hidden="true"
+                    />
+                    <p className="ml-9 text-lg leading-6 font-medium text-gray-900">
+                      {feature.name}
+                    </p>
+                  </dt>
+                  <dd className="mt-2 ml-9 text-base text-gray-500">
+                    {feature.description}
+                  </dd>
+                </div>
+              ))}
+            </dl>
+          </div>
         </div>
       </div>
     </Layout>
