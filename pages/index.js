@@ -1,6 +1,10 @@
 import Layout from '../components/Layout'
-
-import { CheckIcon } from '@heroicons/react/outline'
+import {
+  GlobeAltIcon,
+  LightningBoltIcon,
+  ScaleIcon,
+  CheckIcon,
+} from '@heroicons/react/outline'
 import BrokerBusinessTabs from '../components/BrokerBusinessTabs'
 
 const features = [
@@ -43,6 +47,27 @@ const features = [
     name: 'Sample Industry',
     description:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras scelerisque efficitur posuere.',
+  },
+]
+
+const features2 = [
+  {
+    name: 'Claims Experience',
+    description:
+      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
+    icon: GlobeAltIcon,
+  },
+  {
+    name: 'Risk Control',
+    description:
+      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
+    icon: ScaleIcon,
+  },
+  {
+    name: 'Extensive Coverage',
+    description:
+      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
+    icon: LightningBoltIcon,
   },
 ]
 
@@ -171,6 +196,123 @@ export default function Home() {
               <BrokerBusinessTabs />
             </dl>
           </div>
+        </div>
+      </div>
+
+      {/* Testimonial */}
+      <section className="py-12 bg-gray-50 overflow-hidden md:py-20 lg:py-24">
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="relative">
+            <h1 className="max-w-3xl mx-auto text-center text-3xl leading-9 font-bold text-gray-900">
+              Example Testimonial
+            </h1>
+            <blockquote className="mt-6">
+              <div className="max-w-3xl mx-auto text-center text-2xl leading-9 font-medium text-gray-900">
+                <p>
+                  &ldquo;Lorem ipsum dolor sit amet consectetur adipisicing
+                  elit. Nemo expedita voluptas culpa sapiente alias molestiae.
+                  Numquam corrupti in laborum sed rerum et corporis.&rdquo;
+                </p>
+              </div>
+              <footer className="mt-8">
+                <div className="md:flex md:items-center md:justify-center">
+                  <div className="md:flex-shrink-0">
+                    <img
+                      className="mx-auto h-10 w-10 rounded-full"
+                      src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png"
+                      alt=""
+                    />
+                  </div>
+                  <div className="mt-3 text-center md:mt-0 md:ml-4 md:flex md:items-center">
+                    <div className="text-base font-medium text-gray-900">
+                      John Smith
+                    </div>
+
+                    <svg
+                      className="hidden md:block mx-1 h-5 w-5 text-indigo-600"
+                      fill="currentColor"
+                      viewBox="0 0 20 20">
+                      <path d="M11 0h3L9 20H6l5-20z" />
+                    </svg>
+
+                    <div className="text-base font-medium text-gray-500">
+                      CEO, Example Co
+                    </div>
+                  </div>
+                </div>
+              </footer>
+            </blockquote>
+          </div>
+        </div>
+      </section>
+
+      {/* Resources Section */}
+      <div className="bg-gray-700">
+        <div className="max-w-2xl mx-auto text-center py-16 px-4 sm:py-20 sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-extrabold text-white sm:text-4xl">
+            <span className="block">Helpful Business Resources</span>
+          </h2>
+          <p className="mt-4 text-lg leading-6 text-gray-200">
+            In finibus purus sit amet leo tempus, et condimentum justo
+            venenatis. Nam ac eros condimentum, blandit risus eu, dapibus
+            tortor. Quisque ut scelerisque risus.
+          </p>
+          <a
+            href="#"
+            className="mt-8 w-full inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-gray-600 bg-white hover:bg-gray-50 sm:w-auto">
+            Learn more
+          </a>
+        </div>
+      </div>
+      {/* Covid Section */}
+      <div className="bg-blue-700">
+        <div className="max-w-2xl mx-auto text-center py-16 px-4 sm:py-20 sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-extrabold text-white sm:text-4xl">
+            <span className="block">Business Support</span>
+            <span className="block">Covid-19 Resource Center</span>
+          </h2>
+          <p className="mt-4 text-lg leading-6 text-blue-200">
+            See the latest federal and state resources available to business
+            owners to help offset the effects of the Covid-19 pandemic,
+            including business emergency funding and relief programs.
+          </p>
+          <a
+            href="#"
+            className="mt-8 w-full inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-blue-600 bg-white hover:bg-blue-50 sm:w-auto">
+            Learn more
+          </a>
+        </div>
+      </div>
+
+      {/* Why Work with GIG */}
+      <div className="bg-white">
+        <div className="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:py-24 lg:px-8">
+          <div className="max-w-3xl mx-auto text-center">
+            <h2 className="text-3xl font-extrabold text-gray-900">
+              Why Work With GIG?
+            </h2>
+            <p className="mt-4 text-lg text-gray-500">
+              Ac euismod vel sit maecenas id pellentesque eu sed consectetur.
+              Malesuada adipiscing sagittis vel nulla nec.
+            </p>
+          </div>
+          <dl className="mt-12 space-y-10 sm:space-y-0 sm:grid sm:grid-cols-2 sm:gap-x-6 sm:gap-y-12 lg:grid-cols-3 lg:gap-x-8">
+            {features2.map((feature) => (
+              <div key={feature.name}>
+                <dt>
+                  <div className="flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
+                    <feature.icon className="h-6 w-6" aria-hidden="true" />
+                  </div>
+                  <p className="mt-5 text-lg leading-6 font-medium text-gray-900">
+                    {feature.name}
+                  </p>
+                </dt>
+                <dd className="mt-2 text-base text-gray-500">
+                  {feature.description}
+                </dd>
+              </div>
+            ))}
+          </dl>
         </div>
       </div>
     </Layout>
