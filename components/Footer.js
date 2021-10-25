@@ -1,27 +1,24 @@
 const footerNavigation = {
-  products: [
-    { name: 'Bags', href: '#' },
-    { name: 'Tees', href: '#' },
-    { name: 'Objects', href: '#' },
-    { name: 'Home Goods', href: '#' },
-    { name: 'Accessories', href: '#' },
+  links: [
+    { name: 'Brokers', href: '#' },
+    { name: 'Businesses', href: '#' },
+    { name: 'Link 3', href: '#' },
+    { name: 'Link 4', href: '#' },
+    { name: 'Link 5', href: '#' },
+  ],
+  resources: [
+    { name: 'Link 1', href: '#' },
+    { name: 'Link 2', href: '#' },
+    { name: 'Link 3', href: '#' },
+    { name: 'Link 4', href: '#' },
+    { name: 'Link 5', href: '#' },
   ],
   company: [
-    { name: 'Who we are', href: '#' },
-    { name: 'Sustainability', href: '#' },
-    { name: 'Press', href: '#' },
-    { name: 'Careers', href: '#' },
-    { name: 'Terms & Conditions', href: '#' },
-    { name: 'Privacy', href: '#' },
-  ],
-  customerService: [
-    { name: 'Contact', href: '#' },
-    { name: 'Shipping', href: '#' },
-    { name: 'Returns', href: '#' },
-    { name: 'Warranty', href: '#' },
-    { name: 'Secure Payments', href: '#' },
+    { name: 'About Us Overview', href: '#' },
+    { name: 'Leadership', href: '#' },
     { name: 'FAQ', href: '#' },
-    { name: 'Find a store', href: '#' },
+    { name: 'Contact Us', href: '#' },
+    { name: 'Link 5', href: '#' },
   ],
 }
 
@@ -50,10 +47,10 @@ export default function Footer() {
               <div className="grid grid-cols-1 gap-y-12 sm:col-span-2 sm:grid-cols-2 sm:gap-x-8">
                 <div>
                   <h3 className="text-sm font-medium text-gray-900">
-                    Products
+                    Quick Links
                   </h3>
                   <ul role="list" className="mt-6 space-y-6">
-                    {footerNavigation.products.map((item) => (
+                    {footerNavigation.links.map((item) => (
                       <li key={item.name} className="text-sm">
                         <a
                           href={item.href}
@@ -65,9 +62,11 @@ export default function Footer() {
                   </ul>
                 </div>
                 <div>
-                  <h3 className="text-sm font-medium text-gray-900">Company</h3>
+                  <h3 className="text-sm font-medium text-gray-900">
+                    Resources
+                  </h3>
                   <ul role="list" className="mt-6 space-y-6">
-                    {footerNavigation.company.map((item) => (
+                    {footerNavigation.resources.map((item) => (
                       <li key={item.name} className="text-sm">
                         <a
                           href={item.href}
@@ -80,11 +79,9 @@ export default function Footer() {
                 </div>
               </div>
               <div>
-                <h3 className="text-sm font-medium text-gray-900">
-                  Customer Service
-                </h3>
+                <h3 className="text-sm font-medium text-gray-900">Company</h3>
                 <ul role="list" className="mt-6 space-y-6">
-                  {footerNavigation.customerService.map((item) => (
+                  {footerNavigation.company.map((item) => (
                     <li key={item.name} className="text-sm">
                       <a
                         href={item.href}
