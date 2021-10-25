@@ -1,22 +1,16 @@
 import { Fragment, useState } from 'react'
 import Link from 'next/link'
 import { Dialog, Disclosure, Popover, Tab, Transition } from '@headlessui/react'
-import {
-  MenuIcon,
-  QuestionMarkCircleIcon,
-  SearchIcon,
-  ShoppingBagIcon,
-  XIcon,
-} from '@heroicons/react/outline'
+import { MenuIcon, SearchIcon, XIcon } from '@heroicons/react/outline'
 import { ChevronDownIcon } from '@heroicons/react/solid'
 
 const navigation = {
   categories: [
     {
-      name: 'Link1',
-      featured: [
+      name: 'For Brokers',
+      programs: [
         {
-          name: 'New Arrivals',
+          name: 'View All Programs',
           href: '#',
           imageSrc:
             'https://tailwindui.com/img/ecommerce-images/mega-menu-category-01.jpg',
@@ -24,7 +18,7 @@ const navigation = {
             'Models sitting back to back, wearing Basic Tee in black and bone.',
         },
         {
-          name: 'Basic Tees',
+          name: 'West Wall Marina Program',
           href: '#',
           imageSrc:
             'https://tailwindui.com/img/ecommerce-images/mega-menu-category-02.jpg',
@@ -32,7 +26,7 @@ const navigation = {
             'Close up of Basic Tee fall bundle with off-white, ochre, olive, and black tees.',
         },
         {
-          name: 'Accessories',
+          name: 'Assistant Living Facility',
           href: '#',
           imageSrc:
             'https://tailwindui.com/img/ecommerce-images/mega-menu-category-03.jpg',
@@ -40,7 +34,23 @@ const navigation = {
             'Model wearing minimalist watch with black wristband and white watch face.',
         },
         {
-          name: 'Carry',
+          name: 'Cargo & Logistics',
+          href: '#',
+          imageSrc:
+            'https://tailwindui.com/img/ecommerce-images/mega-menu-category-04.jpg',
+          imageAlt:
+            'Model opening tan leather long wallet with credit card pockets and cash pouch.',
+        },
+        {
+          name: 'Active Assailant',
+          href: '#',
+          imageSrc:
+            'https://tailwindui.com/img/ecommerce-images/mega-menu-category-04.jpg',
+          imageAlt:
+            'Model opening tan leather long wallet with credit card pockets and cash pouch.',
+        },
+        {
+          name: 'Terrorism & Sabotage',
           href: '#',
           imageSrc:
             'https://tailwindui.com/img/ecommerce-images/mega-menu-category-04.jpg',
@@ -50,10 +60,10 @@ const navigation = {
       ],
     },
     {
-      name: 'Link2',
-      featured: [
+      name: 'For Business Owners',
+      programs: [
         {
-          name: 'New Arrivals',
+          name: 'For Business Owners Overview',
           href: '#',
           imageSrc:
             'https://tailwindui.com/img/ecommerce-images/mega-menu-01-men-category-01.jpg',
@@ -61,14 +71,14 @@ const navigation = {
             'Hats and sweaters on wood shelves next to various colors of t-shirts on hangers.',
         },
         {
-          name: 'Basic Tees',
+          name: 'Link 1',
           href: '#',
           imageSrc:
             'https://tailwindui.com/img/ecommerce-images/mega-menu-01-men-category-02.jpg',
           imageAlt: 'Model wearing light heather gray t-shirt.',
         },
         {
-          name: 'Accessories',
+          name: 'Link 2',
           href: '#',
           imageSrc:
             'https://tailwindui.com/img/ecommerce-images/mega-menu-01-men-category-03.jpg',
@@ -76,7 +86,7 @@ const navigation = {
             'Grey 6-panel baseball hat with black brim, black mountain graphic on front, and light heather gray body.',
         },
         {
-          name: 'Carry',
+          name: 'Link 3',
           href: '#',
           imageSrc:
             'https://tailwindui.com/img/ecommerce-images/mega-menu-01-men-category-04.jpg',
@@ -85,11 +95,56 @@ const navigation = {
         },
       ],
     },
+    {
+      name: 'Resources',
+      programs: [
+        {
+          name: 'Broker Resources',
+          href: '#',
+          imageSrc:
+            'https://tailwindui.com/img/ecommerce-images/mega-menu-01-men-category-01.jpg',
+          imageAlt:
+            'Hats and sweaters on wood shelves next to various colors of t-shirts on hangers.',
+        },
+        {
+          name: 'Business Resources',
+          href: '#',
+          imageSrc:
+            'https://tailwindui.com/img/ecommerce-images/mega-menu-01-men-category-02.jpg',
+          imageAlt: 'Model wearing light heather gray t-shirt.',
+        },
+      ],
+    },
+    {
+      name: 'About Us',
+      programs: [
+        {
+          name: 'About Us Overview',
+          href: '#',
+          imageSrc:
+            'https://tailwindui.com/img/ecommerce-images/mega-menu-01-men-category-01.jpg',
+          imageAlt:
+            'Hats and sweaters on wood shelves next to various colors of t-shirts on hangers.',
+        },
+        {
+          name: 'Leadership',
+          href: '#',
+          imageSrc:
+            'https://tailwindui.com/img/ecommerce-images/mega-menu-01-men-category-02.jpg',
+          imageAlt: 'Model wearing light heather gray t-shirt.',
+        },
+        {
+          name: 'Link 1',
+          href: '#',
+          imageSrc:
+            'https://tailwindui.com/img/ecommerce-images/mega-menu-01-men-category-03.jpg',
+          imageAlt:
+            'Grey 6-panel baseball hat with black brim, black mountain graphic on front, and light heather gray body.',
+        },
+      ],
+    },
   ],
-  pages: [
-    { name: 'Link3', href: '#' },
-    { name: 'Link4', href: '#' },
-  ],
+  pages: [{ name: 'Contact Us', href: '#' }],
 }
 
 const filters = [
@@ -213,30 +268,32 @@ export default function Header() {
                       <Tab.Panel
                         key={category.name}
                         className="px-4 py-6 space-y-12">
-                        <div className="grid grid-cols-2 gap-x-4 gap-y-10">
-                          {category.featured.map((item) => (
-                            <div key={item.name} className="group relative">
-                              <div className="aspect-w-1 aspect-h-1 rounded-md bg-gray-100 overflow-hidden group-hover:opacity-75">
+                        <div className="grid grid-cols-1 gap-x-4 gap-y-10">
+                          {category.programs.map((item) => (
+                            <div
+                              key={item.name}
+                              className="group relative mx-auto">
+                              {/* <div className="aspect-w-1 aspect-h-1 rounded-md bg-gray-100 overflow-hidden group-hover:opacity-75">
                                 <img
                                   src={item.imageSrc}
                                   alt={item.imageAlt}
                                   className="object-center object-cover"
                                 />
-                              </div>
+                              </div> */}
                               <a
                                 href={item.href}
-                                className="mt-6 block text-sm font-medium text-gray-900">
+                                className="mt-6 block  font-medium text-gray-900">
                                 <span
                                   className="absolute z-10 inset-0"
                                   aria-hidden="true"
                                 />
                                 {item.name}
                               </a>
-                              <p
+                              {/* <p
                                 aria-hidden="true"
                                 className="mt-1 text-sm text-gray-500">
                                 Shop now
-                              </p>
+                              </p> */}
                             </div>
                           ))}
                         </div>
@@ -245,38 +302,23 @@ export default function Header() {
                   </Tab.Panels>
                 </Tab.Group>
 
-                <div className="border-t border-gray-200 py-6 px-4 space-y-6">
+                <div className="border-t divide-y border-gray-200 py-6 px-4 space-y-6 mx-auto">
                   {navigation.pages.map((page) => (
                     <div key={page.name} className="flow-root">
                       <a
                         href={page.href}
-                        className="-m-2 p-2 block font-medium text-gray-900">
+                        className="-m-2 p-2 block font-medium text-gray-900 ">
                         {page.name}
                       </a>
                     </div>
                   ))}
                 </div>
-
-                <div className="border-t border-gray-200 py-6 px-4 space-y-6">
-                  <div className="flow-root">
-                    <a
-                      href="#"
-                      className="-m-2 p-2 block font-medium text-gray-900">
-                      Create an account
-                    </a>
-                  </div>
-                  <div className="flow-root">
-                    <a
-                      href="#"
-                      className="-m-2 p-2 block font-medium text-gray-900">
-                      Sign in
-                    </a>
-                  </div>
-                </div>
               </div>
             </Transition.Child>
           </Dialog>
         </Transition.Root>
+
+        {/* Large Nav */}
 
         <header className="relative">
           <nav aria-label="Top">
@@ -312,7 +354,7 @@ export default function Header() {
                                       open
                                         ? 'text-blue-600'
                                         : 'text-gray-700 hover:text-gray-800',
-                                      'relative flex items-center justify-center transition-colors ease-out duration-200 text-sm font-medium'
+                                      'relative flex items-center justify-center transition-colors ease-out duration-200  font-medium'
                                     )}>
                                     {category.name}
                                     <span
@@ -355,32 +397,20 @@ export default function Header() {
 
                                     <div className="relative">
                                       <div className="max-w-7xl mx-auto px-8">
-                                        <div className="grid grid-cols-4 gap-y-10 gap-x-8 py-16">
-                                          {category.featured.map((item) => (
+                                        <div className="grid grid-cols-1 py-8">
+                                          {category.programs.map((item) => (
                                             <div
                                               key={item.name}
                                               className="group relative">
-                                              <div className="aspect-w-1 aspect-h-1 rounded-md bg-gray-100 overflow-hidden group-hover:opacity-75">
-                                                <img
-                                                  src={item.imageSrc}
-                                                  alt={item.imageAlt}
-                                                  className="object-center object-cover"
-                                                />
-                                              </div>
                                               <a
                                                 href={item.href}
-                                                className="mt-4 block font-medium text-gray-900">
+                                                className="mt-4 font-base block font-medium text-gray-900">
                                                 <span
                                                   className="absolute z-10 inset-0"
                                                   aria-hidden="true"
                                                 />
                                                 {item.name}
                                               </a>
-                                              <p
-                                                aria-hidden="true"
-                                                className="mt-1">
-                                                Shop now
-                                              </p>
                                             </div>
                                           ))}
                                         </div>
@@ -397,7 +427,7 @@ export default function Header() {
                           <a
                             key={page.name}
                             href={page.href}
-                            className="flex items-center text-sm font-medium text-gray-700 hover:text-gray-800">
+                            className="flex items-center font-medium text-gray-700 hover:text-gray-800">
                             {page.name}
                           </a>
                         ))}
