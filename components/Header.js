@@ -246,7 +246,7 @@ export default function Header() {
                 {/* Links */}
                 <Tab.Group as="div" className="mt-2">
                   <div className="border-b border-gray-200">
-                    <Tab.List className="-mb-px flex px-4 space-x-8">
+                    <Tab.List className="-mb-px flex px-4 space-x-2 md:space-x-8">
                       {navigation.categories.map((category) => (
                         <Tab
                           key={category.name}
