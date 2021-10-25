@@ -232,7 +232,7 @@ export default function Header() {
               leave="transition ease-in-out duration-300 transform"
               leaveFrom="translate-x-0"
               leaveTo="-translate-x-full">
-              <div className="relative  w-full bg-white shadow-xl pb-12 flex flex-col overflow-y-auto">
+              <div className="relative w-full bg-white shadow-xl pb-12 flex flex-col overflow-y-auto">
                 <div className="px-4 pt-5 pb-2 flex">
                   <button
                     type="button"
@@ -255,7 +255,7 @@ export default function Header() {
                               selected
                                 ? 'text-blue-600 border-blue-600'
                                 : 'text-gray-900 border-transparent',
-                              'flex-1 whitespace-nowrap py-4 px-1 border-b-2 text-base font-medium'
+                              'flex-1 whitespace-nowrap py-4 px-1 border-b-2 text-sm font-medium'
                             )
                           }>
                           {category.name}
