@@ -38,11 +38,11 @@ export default function BrokerBusinessTabs() {
               key={category}
               className={({ selected }) =>
                 classNames(
-                  'w-full py-2.5 text-sm leading-5 font-medium bg-white shadow text-blue-700 rounded-lg',
+                  'w-full py-2.5 text-sm leading-5 font-medium bg-white shadow text-blue-500 rounded-lg',
                   'focus:outline-none focus:ring-2 ring-offset-2 ring-offset-blue-400 ring-white ring-opacity-60',
                   selected
-                    ? 'bg-blue-100 shadow'
-                    : 'text-blue-100 hover:bg-white/[0.12] hover:text-blue-500'
+                    ? 'bg-blue-900 opacity-70 shadow'
+                    : 'text-blue-100 hover:bg-white/[0.12] hover:text-blue-700'
                 )
               }>
               For {category}
@@ -54,22 +54,22 @@ export default function BrokerBusinessTabs() {
             <Tab.Panel
               key={idx}
               className={classNames(
-                'bg-white rounded-xl p-3',
+                'bg-white shadow-lg rounded-xl p-4',
                 'focus:outline-none focus:ring-2 ring-offset-2 ring-offset-blue-400 ring-white ring-opacity-60'
               )}>
               <div className="grid grid-cols-1">
                 {posts.map((post) => (
                   <div
                     key={post.id}
-                    className="flex flex-col md:flex-row md:justify-between relative p-3 rounded-md hover:bg-coolGray-100">
-                    <div className="w-full">
+                    className="flex flex-col md:flex-row md:justify-between relative p-3 rounded-md hover:bg-coolGray-100 items-center">
+                    <div className="w-full ">
                       <h3 className="text-3xl font-medium leading-5">
                         {post.title}
                       </h3>
-                      <p>{post.description}</p>
+                      <p className="mt-3">{post.description}</p>
                     </div>
 
-                    <div className="">
+                    <div className="mt-4 md:mt-0">
                       <img
                         className="w-3/4 mx-auto"
                         src={post.image}

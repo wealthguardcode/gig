@@ -395,7 +395,7 @@ export default function Header() {
                                       />
                                     </div>
 
-                                    <div className="relative">
+                                    <div className="relative ">
                                       <div className="max-w-7xl mx-auto px-8">
                                         <div className="grid grid-cols-1 py-8">
                                           {category.programs.map((item) => (
@@ -406,7 +406,7 @@ export default function Header() {
                                                 href={item.href}
                                                 className="mt-4 font-base block font-medium text-gray-900">
                                                 <span
-                                                  className="absolute z-10 inset-0"
+                                                  className="absolute z-10 inset-0 group-hover:block"
                                                   aria-hidden="true"
                                                 />
                                                 {item.name}

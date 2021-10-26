@@ -269,7 +269,7 @@ export default function Home() {
           </p>
           <a
             href="#"
-            className="mt-8 w-full inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-gray-600 bg-white hover:bg-gray-50 sm:w-auto">
+            className="mt-8 w-full inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-gray-600 bg-white hover:bg-gray-100 sm:w-auto">
             Learn more
           </a>
         </div>
@@ -288,7 +288,7 @@ export default function Home() {
           </p>
           <a
             href="#"
-            className="mt-8 w-full inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-blue-600 bg-white hover:bg-blue-50 sm:w-auto">
+            className="mt-8 w-full inline-flex items-center justify-center px-5 py-3 border border-blue-300 text-base font-medium rounded-md text-white bg-transparent hover:bg-blue-50 hover:text-blue-600 sm:w-auto">
             Learn more
           </a>
         </div>
@@ -310,10 +310,10 @@ export default function Home() {
             {features2.map((feature) => (
               <div key={feature.name}>
                 <dt>
-                  <div className="flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
+                  <div className="flex items-center justify-center h-12 w-12 rounded-md bg-blue-900 opacity-70 text-white mx-auto">
                     <feature.icon className="h-6 w-6" aria-hidden="true" />
                   </div>
-                  <p className="mt-5 text-lg leading-6 font-medium text-gray-900">
+                  <p className="mt-5 text-lg leading-6 font-medium text-gray-900 text-center">
                     {feature.name}
                   </p>
                 </dt>
