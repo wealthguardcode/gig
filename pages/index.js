@@ -76,8 +76,16 @@ export default function Home() {
     <Layout>
       <div className="relative bg-gray-50 overflow-hidden">
         <div className="relative pt-6 pb-16 sm:pb-24">
-          <div className="mt-16 mx-auto max-w-7xl px-4 sm:mt-24">
-            <div className="text-center">
+          <div className="h-full mx-auto w-full px-4 sm:mt-24">
+            {/* BG Image */}
+            <div className="absolute inset-0">
+              <img
+                className="h-full w-full object-cover"
+                src="/images/goGuard-hero.svg"
+                alt="goGuard-hero"
+              />
+            </div>
+            <div className="text-center relative">
               <h1 className="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
                 <span className="block xl:inline">Commercial</span>{' '}
                 <span className="block text-blue-600 xl:inline">
