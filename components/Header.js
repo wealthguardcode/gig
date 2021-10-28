@@ -232,7 +232,7 @@ export default function Header() {
               leave="transition ease-in-out duration-300 transform"
               leaveFrom="translate-x-0"
               leaveTo="-translate-x-full">
-              <div className="relative w-full bg-white shadow-xl pb-12 flex flex-col overflow-y-auto">
+              <div className="relative w-full bg-white shadow-xl pb-12 flex flex-col overflow-y-auto ">
                 <div className="px-4 pt-5 pb-2 flex">
                   <button
                     type="button"
@@ -323,7 +323,7 @@ export default function Header() {
         <header className="relative">
           <nav aria-label="Top">
             {/* Secondary navigation */}
-            <div className="bg-white shadow-sm">
+            <div className="bg-white shadow-xl">
               <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="h-16 flex items-center justify-between">
                   {/* Logo (lg+) */}
@@ -446,12 +446,12 @@ export default function Header() {
                     </button>
 
                     {/* Search */}
-                    <a
+                    {/* <a
                       href="#"
                       className="ml-2 p-2 text-gray-400 hover:text-gray-500">
                       <span className="sr-only">Search</span>
                       <SearchIcon className="w-6 h-6" aria-hidden="true" />
-                    </a>
+                    </a> */}
                   </div>
 
                   {/* Logo (lg-) */}

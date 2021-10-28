@@ -81,7 +81,7 @@ export default function Home() {
             <div className="absolute inset-0">
               <img
                 className="h-full w-full object-cover"
-                src="/images/goGuard-hero.svg"
+                src="/images/goGuard-Hero.svg"
                 alt="goGuard-hero"
               />
               <div className="absolute inset-0 bg-gray-50 mix-blend-multiply" />
@@ -113,21 +113,21 @@ export default function Home() {
                 <div className="bg-blue-900 opacity-70 m-8 h-48 flex justify-center">
                   <div className="m-auto">
                     <h1 className="text-4xl text-white my-2">Brokers</h1>
-                    <button
-                      type="button"
-                      className="inline-flex items-center px-3.5 py-2 border border-transparent text-sm leading-4 font-medium rounded-full shadow-sm text-white bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500">
-                      Learn More
-                    </button>
+                    <a
+                      href="#"
+                      className="mt-3 w-full inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-green-700 hover:bg-green-600 sm:w-auto">
+                      Learn more
+                    </a>
                   </div>
                 </div>
                 <div className="bg-blue-900 opacity-70 m-8 h-48 flex justify-center">
                   <div className="m-auto">
                     <h1 className="text-4xl text-white my-2">Businesses</h1>
-                    <button
-                      type="button"
-                      className="inline-flex items-center px-3.5 py-2 border border-transparent text-sm leading-4 font-medium rounded-full shadow-sm text-white bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500">
-                      Learn More
-                    </button>
+                    <a
+                      href="#"
+                      className="mt-3 w-full inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-green-700 hover:bg-green-600 sm:w-auto">
+                      Learn more
+                    </a>
                   </div>
                 </div>
               </div>
@@ -288,7 +288,7 @@ export default function Home() {
           </p>
           <a
             href="#"
-            className="mt-8 w-full inline-flex items-center justify-center px-5 py-3 border border-blue-300 text-base font-medium rounded-md text-white bg-transparent hover:bg-blue-50 hover:text-blue-600 sm:w-auto">
+            className="mt-8 w-full inline-flex items-center justify-center px-5 py-3 border border-solid border-blue-50 text-base font-medium rounded-md text-white bg-transparent hover:bg-blue-50 hover:text-blue-600 sm:w-auto">
             Learn more
           </a>
         </div>
