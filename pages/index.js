@@ -80,11 +80,16 @@ export default function Home() {
             {/* BG Image */}
             <div className="absolute inset-0">
               <img
-                className="h-full w-full object-cover"
-                src="/images/goGuard-Hero.svg"
+                className="h-auto w-full object-fill"
+                src="/images/goGuard-hero.svg"
                 alt="goGuard-hero"
               />
               <div className="absolute inset-0 bg-gray-50 mix-blend-multiply" />
+              {/* <img
+                className="h-screen w-full "
+                src="/images/gigHero2.png"
+                alt="goGuard-hero"
+              /> */}
             </div>
             <div className="text-center relative">
               <h1 className="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
