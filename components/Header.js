@@ -128,7 +128,7 @@ const navigation = {
         },
         {
           name: 'Leadership',
-          href: '#',
+          href: '/about-us/leadership',
           imageSrc:
             'https://tailwindui.com/img/ecommerce-images/mega-menu-01-men-category-02.jpg',
           imageAlt: 'Model wearing light heather gray t-shirt.',
