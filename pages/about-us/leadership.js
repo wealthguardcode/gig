@@ -1,11 +1,12 @@
 import Layout from '../../components/Layout'
+import { Parallax } from 'react-scroll-parallax'
 
 const people = [
   {
     name: 'Joseph O’Connor',
     role: 'Chief Underwriting Officer',
     imageUrl:
-      'https://media.graphcms.com/output=format:jpg/resize=,height:800,fit:max/9RaLqgeQIigwLGo4yek7',
+      'https://media.graphcms.com/output=format:jpg/resize=,height:800,fit:max/MgIE76sSmmMepxXOCgtg',
     bio:
       'Ultricies massa malesuada viverra cras lobortis. Tempor orci hac ligula dapibus mauris sit ut eu. Eget turpis urna maecenas cras. Nisl dictum.',
   },
@@ -53,7 +54,7 @@ const people = [
     name: 'Lita Trahan',
     role: 'Sales',
     imageUrl:
-      'https://media.graphcms.com/output=format:jpg/resize=,height:800,fit:max/5IGMKr3nRiO4Hpoq00uE',
+      'https://media.graphcms.com/output=format:jpg/resize=,height:800,fit:max/Dr4QKMmERgqRazNX3sDs',
     bio:
       'Ultricies massa malesuada viverra cras lobortis. Tempor orci hac ligula dapibus mauris sit ut eu. Eget turpis urna maecenas cras. Nisl dictum.',
   },
@@ -68,13 +69,15 @@ export default function leadership() {
           <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gray-100" />
           <div className="w-full mx-auto">
             <div className="relative shadow-xl  sm:overflow-hidden">
-              <div className="absolute  inset-0">
-                <img
-                  className="h-full w-full object-cover"
-                  src="https://images.unsplash.com/photo-1431540015161-0bf868a2d407?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1470&q=80"
-                  alt="GIG Leadership"
-                />
-                <div className="absolute inset-0 bg-indigo-700 mix-blend-multiply" />
+              <div className="absolute inset-0">
+                <Parallax y={[-60, 20]}>
+                  <img
+                    className="h-full w-full object-cover"
+                    src="https://images.unsplash.com/photo-1431540015161-0bf868a2d407?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1470&q=80"
+                    alt="GIG Leadership"
+                  />
+                  <div className="absolute inset-0 bg-indigo-700 mix-blend-multiply" />
+                </Parallax>
               </div>
               <div className="relative px-4 py-16 sm:px-6 sm:py-24 lg:py-32 lg:px-8">
                 <h1 className="text-center text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl">
@@ -87,7 +90,7 @@ export default function leadership() {
         </div>
 
         {/* Our Leadership / Team */}
-        <div className="bg-white">
+        <div className="relative bg-white">
           <div className="mx-auto py-12 px-4 max-w-7xl sm:px-6 lg:px-8 lg:py-24">
             <div className="space-y-12">
               <h2 className="text-3xl font-extrabold tracking-tight sm:text-4xl">

@@ -320,7 +320,7 @@ export default function Header() {
 
         {/* Large Nav */}
 
-        <header className="relative">
+        <header className="relative z-10">
           <nav aria-label="Top">
             {/* Secondary navigation */}
             <div className="bg-white shadow-xl">
