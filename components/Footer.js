@@ -1,10 +1,10 @@
 const footerNavigation = {
   links: [
     { name: 'Brokers', href: '#' },
-    { name: 'Businesses', href: '#' },
+    { name: 'Link 1', href: '#' },
+    { name: 'Link 2', href: '#' },
     { name: 'Link 3', href: '#' },
     { name: 'Link 4', href: '#' },
-    { name: 'Link 5', href: '#' },
   ],
   resources: [
     { name: 'Link 1', href: '#' },
@@ -18,7 +18,7 @@ const footerNavigation = {
     { name: 'Leadership', href: '#' },
     { name: 'FAQ', href: '#' },
     { name: 'Contact Us', href: '#' },
-    { name: 'Link 5', href: '#' },
+    { name: 'Link 1', href: '#' },
   ],
 }
 

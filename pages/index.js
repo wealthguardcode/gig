@@ -93,14 +93,16 @@ export default function Home() {
             </div>
             <div className="text-center relative">
               <h1 className="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
-                <span className="block xl:inline">Commercial</span>{' '}
-                <span className="block text-blue-600 xl:inline">
-                  Insurance Programs
+                <span className="block xl:inline">Commercial Insurance</span>{' '}
+                <span className="block text-blue-600 ">
+                  {' '}
+                  Programs & Brokerage
                 </span>
               </h1>
               <p className="my-4 pb-4 font-bold text-lg md:text-xl lg:text-4xl tracking-tight">
                 <span className="block xl:inline">
-                  Providing insurance solutions with expertise,
+                  Since 2016 we have been providing insurance solutions with
+                  expertise,
                   <br />
                 </span>
                 <span className="mt-2 block xl:inline">
@@ -196,10 +198,11 @@ export default function Home() {
       <div className="py-12 bg-gradient-to-t from-gray-50 via-gray-50 to-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="lg:text-center">
-            <p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+            <p className="my-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl text-center">
               GoGuard&apos;s insurance programs help businesses grow and thrive
             </p>
-            <p className="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
+            <div className="border-t-4 w-1/5 mx-auto my-6 border-green-600" />
+            <p className="mt-4 max-w-2xl text-2xl text-gray-500 mx-auto">
               We partner with businesses to help insure their success by
               protecting their assets, reducing exposure, and maintaining
               compliance.
