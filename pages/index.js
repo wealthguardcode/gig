@@ -107,7 +107,7 @@ export default function Home() {
                   diversity of products and underwriting integrity!
                 </span>
               </p>
-              <div className="border-t-4 w-1/5 mx-auto py-2 border-yellow-600" />
+              <div className="border-t-4 w-1/5 mx-auto py-2 border-green-600" />
               <p className="mt-3 max-w-md mx-auto text-base text-gray-500 sm:text-lg md:mt-5 md:text-xl md:max-w-3xl">
                 Whether you&apos;re a business owner or insurance broker,
                 you&apos;ll find industry-specific resources and specialty
