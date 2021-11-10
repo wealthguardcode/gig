@@ -1,6 +1,6 @@
 const footerNavigation = {
   links: [
-    { name: 'Brokers', href: '#' },
+    { name: 'Brokers', href: '/brokers' },
     { name: 'Link 1', href: '#' },
     { name: 'Link 2', href: '#' },
     { name: 'Link 3', href: '#' },
@@ -14,10 +14,10 @@ const footerNavigation = {
     { name: 'Link 5', href: '#' },
   ],
   company: [
-    { name: 'About Us Overview', href: '#' },
+    { name: 'About Us', href: '#' },
     { name: 'Leadership', href: '#' },
     { name: 'FAQ', href: '#' },
-    { name: 'Contact Us', href: '#' },
+    { name: 'Contact Us', href: '/contact-us' },
     { name: 'Link 1', href: '#' },
   ],
 }
