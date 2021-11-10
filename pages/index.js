@@ -6,6 +6,7 @@ import {
   CheckIcon,
 } from '@heroicons/react/outline'
 import BrokerBusinessTabs from '../components/BrokerBusinessTabs'
+import Link from 'next/link'
 
 const features = [
   {
@@ -98,7 +99,7 @@ export default function Home() {
                   </span>
                 </span>
               </h1>
-              <p className="outline my-4 pb-4 font-bold text-xl text-yellow-400 lg:text-3xl tracking-tight">
+              <p className="outline my-4 pb-4 font-bold text-xl text-yellow-500 lg:text-3xl tracking-tight">
                 <span className="block xl:inline">
                   Since 2016 we have been providing insurance solutions with
                   expertise,
@@ -117,18 +118,18 @@ export default function Home() {
               </p>
               <div className="flex justify-center my-8">
                 <div className="mt-3 rounded-md shadow sm:mt-0 sm:ml-3">
-                  <a
-                    href="#"
-                    className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 md:py-4 md:text-lg md:px-10">
-                    For Brokers
-                  </a>
+                  <Link href="/brokers">
+                    <a className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 md:py-4 md:text-lg md:px-10">
+                      For Brokers
+                    </a>
+                  </Link>
                 </div>
                 <div className="mt-3 rounded-md shadow sm:mt-0 ml-3">
-                  <a
-                    href="#"
-                    className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-indigo-600 bg-white hover:bg-gray-50 md:py-4 md:text-lg md:px-10">
-                    Contact Us
-                  </a>
+                  <Link href="/contact-us">
+                    <a className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-indigo-600 bg-white hover:bg-gray-50 md:py-4 md:text-lg md:px-10">
+                      Contact Us
+                    </a>
+                  </Link>
                 </div>
               </div>
 
