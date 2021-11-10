@@ -93,7 +93,7 @@ export default function Home() {
                 <span className="block xl:inline">Commercial Insurance</span>{' '}
                 <span className="block outline-title font-extrabold ">
                   {' '}
-                  Programs &
+                  Programs &{' '}
                   <span className="block md:inline mt-3 md:mt-0">
                     Brokerage
                   </span>
