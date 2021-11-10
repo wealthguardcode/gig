@@ -7,3 +7,22 @@
 * {
   font-family: 'Roboto', sans-serif;
 }
+
+.custom-img {
+  background-image: url('https://images.unsplash.com/photo-1541777594744-addc2de9d110?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1470&q=80');
+}
+
+.outline-title {
+  font-size: 50px;
+  background: -webkit-linear-gradient(#34d399, #60a5fa);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: rgb(112, 112, 112);
+  margin-top: 2px;
+}
+
+.outline {
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #f59e0b;
+}

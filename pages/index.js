@@ -9,42 +9,42 @@ import BrokerBusinessTabs from '../components/BrokerBusinessTabs'
 
 const features = [
   {
-    name: 'Sample Industry',
+    name: 'Assisted Living Facilities',
     description:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras scelerisque efficitur posuere.',
   },
   {
-    name: 'Sample Industry',
+    name: 'Marina Insurance',
     description:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras scelerisque efficitur posuere.',
   },
   {
-    name: 'Sample Industry',
+    name: 'Coastal Property',
     description:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras scelerisque efficitur posuere.',
   },
   {
-    name: 'Sample Industry',
+    name: 'Cargo & Logistics',
     description:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras scelerisque efficitur posuere.',
   },
   {
-    name: 'Sample Industry',
+    name: 'Terrorism & Sabotage',
     description:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras scelerisque efficitur posuere.',
   },
   {
-    name: 'Sample Industry',
+    name: 'Active Assailant',
     description:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras scelerisque efficitur posuere.',
   },
   {
-    name: 'Sample Industry',
+    name: 'Violent Malicious Acts',
     description:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras scelerisque efficitur posuere.',
   },
   {
-    name: 'Sample Industry',
+    name: 'Deductible buy-down options',
     description:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras scelerisque efficitur posuere.',
   },
@@ -76,42 +76,63 @@ export default function Home() {
     <Layout>
       <div className="relative bg-gray-50 overflow-hidden">
         <div className="relative pt-6 sm:pb-12">
-          <div className="h-full mx-auto w-full px-4 sm:mt-24">
+          <div className="h-screen mx-auto w-full px-4 sm:mt-24">
             {/* BG Image */}
-            <div className="absolute inset-0">
-              <img
-                className="h-full w-full object-fill bg-blend-lighten"
+
+            <div className="absolute inset-0 flex items-center justify-center h-screen mb-12 bg-fixed bg-center bg-cover custom-img">
+              {/* <img
+                className="h-full w-full bg-fixed bg-center object-fill bg-blend-lighten"
                 src="https://images.unsplash.com/photo-1541777594744-addc2de9d110?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1470&q=80"
                 alt="goGuard-hero"
-              />
+              /> */}
               <div className="absolute inset-0 bg-gray-400 mix-blend-multiply" />
             </div>
             <div className="text-center relative">
               <h1 className="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
                 <span className="block xl:inline">Commercial Insurance</span>{' '}
-                <span className="block text-blue-600 ">
+                <span className="block outline-title font-extrabold text-transparent bg-clip-text bg-gradient-to-br from-green-700 to-blue-700 ">
                   {' '}
-                  Programs & Brokerage
+                  Programs &{' '}
+                  <span className="block md:inline mt-3 md:mt-0">
+                    Brokerage
+                  </span>
                 </span>
               </h1>
-              <p className="my-4 pb-4 font-bold text-xl text-gray-900 lg:text-3xl tracking-tight">
+              <p className="outline my-4 pb-4 font-bold text-xl text-yellow-400 lg:text-3xl tracking-tight">
                 <span className="block xl:inline">
                   Since 2016 we have been providing insurance solutions with
                   expertise,
                   <br />
                 </span>
                 <span className="mt-2 block xl:inline">
-                  diversity of products and underwriting integrity!
+                  diversity of products, and underwriting integrity!
                 </span>
               </p>
-              <div className="border-t-4 w-1/5 mx-auto py-2 border-green-600" />
+              <div className="border-t-4 w-1/5 mx-auto py-2 border-gray-900" />
               <p className="mt-3 max-w-md mx-auto prose lg:prose-xl text-gray-200 font-semibold  md:mt-5  md:max-w-3xl">
                 Whether you&apos;re a business owner or insurance broker,
                 you&apos;ll find industry-specific resources and specialty
                 insurance coverages to meet the unique needs of the industries
                 we serve.
               </p>
-              <div className="grid grid-cols-1 items-center">
+              <div className="flex justify-center my-8">
+                <div className="mt-3 rounded-md shadow sm:mt-0 sm:ml-3">
+                  <a
+                    href="#"
+                    className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 md:py-4 md:text-lg md:px-10">
+                    For Brokers
+                  </a>
+                </div>
+                <div className="mt-3 rounded-md shadow sm:mt-0 ml-3">
+                  <a
+                    href="#"
+                    className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-indigo-600 bg-white hover:bg-gray-50 md:py-4 md:text-lg md:px-10">
+                    Contact Us
+                  </a>
+                </div>
+              </div>
+
+              {/* <div className="grid grid-cols-1 items-center">
                 <div className="bg-blue-900 opacity-70 my-8 mx-10 md:mx-36 lg:mx-64 rounded-2xl h-56 w-auto flex justify-center">
                   <div className="m-auto">
                     <h1 className="text-4xl text-white my-2">Brokers</h1>
@@ -122,7 +143,7 @@ export default function Home() {
                     </a>
                   </div>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
@@ -131,31 +152,11 @@ export default function Home() {
       {/* Features Section */}
       <div className="bg-gradient-to-b from-gray-50 via-gray-50 to-white">
         <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-3xl font-extrabold text-gray-900 pt-2">
+          <h2 className="text-3xl font-extrabold text-gray-900 md:pt-2 md:mx-0 pt-1 mx-1">
             Industries We Insure: Boats to Loved Ones to Logistics
           </h2>
         </div>
-        <div className="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:pb-24 lg:pt-12 lg:px-8 lg:grid lg:grid-cols-4 lg:gap-x-8">
-          <div className="mt-12 lg:mt-0 lg:col-span-2">
-            <dl className="space-y-10 sm:space-y-0 sm:grid sm:grid-cols-2 sm:grid-rows-4 sm:grid-flow-col sm:gap-x-6 sm:gap-y-10 lg:gap-x-8">
-              {features.map((feature) => (
-                <div key={feature.name} className="relative">
-                  <dt>
-                    <CheckIcon
-                      className="absolute h-6 w-6 text-green-500"
-                      aria-hidden="true"
-                    />
-                    <p className="ml-9 text-lg leading-6 font-medium text-gray-900">
-                      {feature.name}
-                    </p>
-                  </dt>
-                  <dd className="mt-2 ml-9 text-base text-gray-500">
-                    {feature.description}
-                  </dd>
-                </div>
-              ))}
-            </dl>
-          </div>
+        <div className="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:pb-24 lg:pt-12 lg:px-8 lg:grid lg:grid-cols-2 lg:gap-x-8">
           <div className="mt-12 lg:mt-0 lg:col-span-2">
             <dl className="space-y-10 sm:space-y-0 sm:grid sm:grid-cols-2 sm:grid-rows-4 sm:grid-flow-col sm:gap-x-6 sm:gap-y-10 lg:gap-x-8">
               {features.map((feature) => (
