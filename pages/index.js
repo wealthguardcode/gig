@@ -81,11 +81,6 @@ export default function Home() {
             {/* BG Image */}
 
             <div className="absolute inset-0 flex items-center justify-center h-screen mb-12 bg-fixed bg-center bg-cover custom-img">
-              {/* <img
-                className="h-full w-full bg-fixed bg-center object-fill bg-blend-lighten"
-                src="https://images.unsplash.com/photo-1541777594744-addc2de9d110?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1470&q=80"
-                alt="goGuard-hero"
-              /> */}
               <div className="absolute inset-0 bg-gray-400 mix-blend-multiply" />
             </div>
             <div className="text-center relative">
@@ -132,19 +127,6 @@ export default function Home() {
                   </Link>
                 </div>
               </div>
-
-              {/* <div className="grid grid-cols-1 items-center">
-                <div className="bg-blue-900 opacity-70 my-8 mx-10 md:mx-36 lg:mx-64 rounded-2xl h-56 w-auto flex justify-center">
-                  <div className="m-auto">
-                    <h1 className="text-4xl text-white my-2">Brokers</h1>
-                    <a
-                      href="#"
-                      className="mt-3 w-full inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-green-700 hover:bg-green-600 sm:w-auto">
-                      Learn more
-                    </a>
-                  </div>
-                </div>
-              </div> */}
             </div>
           </div>
         </div>
