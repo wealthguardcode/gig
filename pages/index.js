@@ -4,6 +4,7 @@ import {
   LightningBoltIcon,
   ScaleIcon,
   CheckIcon,
+  ArrowCircleUpIcon,
 } from '@heroicons/react/outline'
 import BrokerBusinessTabs from '../components/BrokerBusinessTabs'
 import Link from 'next/link'
@@ -180,7 +181,45 @@ export default function Home() {
 
           <div className="mt-10">
             <dl className="space-y-10 md:space-y-0 grid grid-cols-1 md:gap-x-8 md:gap-y-10">
-              <BrokerBusinessTabs />
+              <div className="my-10">
+                <h1 className="text-4xl bg-blue-300 font-bold w-full text-center rounded py-1">
+                  For Brokers
+                </h1>
+              </div>
+              <div className="flex flex-col md:flex-row">
+                <div className="flex flex-col p-4">
+                  <h3 className="text-3xl">Brokers</h3>
+                  <p className="mt-3">
+                    Aenean dictum varius metus a imperdiet. Donec cursus nulla
+                    sem, ac bibendum elit laoreet nec. Nulla facilisi. Fusce
+                    tristique lacus enim, vitae mattis ex laoreet et. Fusce
+                    fringilla lacus et neque convallis, eu bibendum urna
+                    maximus.
+                  </p>
+                </div>
+
+                <div className=" ">
+                  <img
+                    className="w-3/4 mx-auto my-2 rounded"
+                    src="https://cdn.pixabay.com/photo/2021/09/12/08/49/headset-6617715_1280.png"
+                    alt=""
+                  />
+                </div>
+              </div>
+              <div className="flex justify-between">
+                <ArrowCircleUpIcon height={80} />{' '}
+                <span className="flex items-center text-xl font-bold">
+                  Programs
+                </span>
+                <ArrowCircleUpIcon height={80} />
+                <span className="flex items-center text-xl font-bold">
+                  Resources
+                </span>
+                <ArrowCircleUpIcon height={80} />
+                <span className="flex items-center text-xl font-bold">
+                  Contact
+                </span>
+              </div>
             </dl>
           </div>
         </div>
