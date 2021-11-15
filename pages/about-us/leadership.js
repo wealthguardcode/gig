@@ -7,56 +7,49 @@ const people = [
     role: 'Chief Underwriting Officer',
     imageUrl:
       'https://media.graphcms.com/output=format:jpg/resize=,height:800,fit:max/MgIE76sSmmMepxXOCgtg',
-    bio:
-      'Ultricies massa malesuada viverra cras lobortis. Tempor orci hac ligula dapibus mauris sit ut eu. Eget turpis urna maecenas cras. Nisl dictum.',
+    bio: 'Ultricies massa malesuada viverra cras lobortis. Tempor orci hac ligula dapibus mauris sit ut eu. Eget turpis urna maecenas cras. Nisl dictum.',
   },
   {
     name: 'Alexandria Cantrell',
     role: 'Director of Underwriting Programs',
     imageUrl:
       'https://media.graphcms.com/output=format:jpg/resize=,height:800,fit:max/78a3p2VNTfi2Q0AXAVnc',
-    bio:
-      'Ultricies massa malesuada viverra cras lobortis. Tempor orci hac ligula dapibus mauris sit ut eu. Eget turpis urna maecenas cras. Nisl dictum.',
+    bio: 'Ultricies massa malesuada viverra cras lobortis. Tempor orci hac ligula dapibus mauris sit ut eu. Eget turpis urna maecenas cras. Nisl dictum.',
   },
   {
     name: 'Jaime Calhoun',
     role: 'Accounting',
     imageUrl:
       'https://media.graphcms.com/output=format:jpg/resize=,height:800,fit:max/2VtKDuTiijbnjT6BTQxQ',
-    bio:
-      'Ultricies massa malesuada viverra cras lobortis. Tempor orci hac ligula dapibus mauris sit ut eu. Eget turpis urna maecenas cras. Nisl dictum.',
+    bio: 'Ultricies massa malesuada viverra cras lobortis. Tempor orci hac ligula dapibus mauris sit ut eu. Eget turpis urna maecenas cras. Nisl dictum.',
   },
   {
     name: 'Theresa Elkins',
     role: 'Contracting & Broker Support',
     imageUrl:
       'https://media.graphcms.com/output=format:jpg/resize=,height:800,fit:max/fUJNTDpTTLuS66I0hOGT',
-    bio:
-      'Ultricies massa malesuada viverra cras lobortis. Tempor orci hac ligula dapibus mauris sit ut eu. Eget turpis urna maecenas cras. Nisl dictum.',
+    bio: 'Ultricies massa malesuada viverra cras lobortis. Tempor orci hac ligula dapibus mauris sit ut eu. Eget turpis urna maecenas cras. Nisl dictum.',
   },
   {
     name: 'Sam Klepper',
     role: 'Creative & Graphic Designer',
     imageUrl:
       'https://media.graphcms.com/output=format:jpg/resize=,height:800,fit:max/fUJNTDpTTLuS66I0hOGT',
-    bio:
-      'Ultricies massa malesuada viverra cras lobortis. Tempor orci hac ligula dapibus mauris sit ut eu. Eget turpis urna maecenas cras. Nisl dictum.',
+    bio: 'Ultricies massa malesuada viverra cras lobortis. Tempor orci hac ligula dapibus mauris sit ut eu. Eget turpis urna maecenas cras. Nisl dictum.',
   },
   {
     name: 'Jeff Fluker',
     role: 'Sales',
     imageUrl:
       'https://media.graphcms.com/output=format:jpg/resize=,height:800,fit:max/Me8VDakpR1CLJrmh0Zrh',
-    bio:
-      'Ultricies massa malesuada viverra cras lobortis. Tempor orci hac ligula dapibus mauris sit ut eu. Eget turpis urna maecenas cras. Nisl dictum.',
+    bio: 'Ultricies massa malesuada viverra cras lobortis. Tempor orci hac ligula dapibus mauris sit ut eu. Eget turpis urna maecenas cras. Nisl dictum.',
   },
   {
     name: 'Lita Trahan',
     role: 'Sales',
     imageUrl:
       'https://media.graphcms.com/output=format:jpg/resize=,height:800,fit:max/Dr4QKMmERgqRazNX3sDs',
-    bio:
-      'Ultricies massa malesuada viverra cras lobortis. Tempor orci hac ligula dapibus mauris sit ut eu. Eget turpis urna maecenas cras. Nisl dictum.',
+    bio: 'Ultricies massa malesuada viverra cras lobortis. Tempor orci hac ligula dapibus mauris sit ut eu. Eget turpis urna maecenas cras. Nisl dictum.',
   },
 ]
 
@@ -65,29 +58,22 @@ export default function leadership() {
     <Layout>
       <div>
         {/* Hero */}
-        <div className="relative">
-          <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gray-100" />
-          <div className="w-full mx-auto">
-            <div className="relative shadow-xl  sm:overflow-hidden">
-              <div className="absolute inset-0">
-                <Parallax y={[-60, 20]}>
-                  <img
-                    className="h-full w-full object-cover"
-                    src="https://images.unsplash.com/photo-1431540015161-0bf868a2d407?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1470&q=80"
-                    alt="GIG Leadership"
-                  />
-                  <div className="absolute inset-0 bg-indigo-700 mix-blend-multiply" />
-                </Parallax>
+
+
+        <div className="relative bg-indigo-800">
+      <div className="absolute inset-0">
+      
+      <div className="absolute inset-0 flex items-center justify-center h-full mb-12 bg-fixed bg-center bg-cover leadership-img">
+             
               </div>
-              <div className="relative px-4 py-16 sm:px-6 sm:py-24 lg:py-32 lg:px-8">
-                <h1 className="text-center text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl">
-                  <span className=" text-indigo-200"> Leadership</span>
-                </h1>
-                <div className="mt-10 max-w-sm mx-auto sm:max-w-none sm:flex sm:justify-center"></div>
-              </div>
-            </div>
-          </div>
-        </div>
+        <div className="absolute inset-0 bg-indigo-800 mix-blend-multiply" aria-hidden="true" />
+      </div>
+      <div className="relative max-w-7xl mx-auto py-24 px-4 sm:py-32 sm:px-6 lg:px-8">
+        <h1 className="text-4xl font-extrabold text-center tracking-tight text-white sm:text-5xl lg:text-6xl">Leadership</h1>
+        <div className="border-t-4 w-1/5 mx-auto mt-2 py-2 border-white" />
+      </div>
+    </div>
+
 
         {/* Our Leadership / Team */}
         <div className="relative bg-white">
