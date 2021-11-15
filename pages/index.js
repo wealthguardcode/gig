@@ -4,9 +4,11 @@ import {
   LightningBoltIcon,
   ScaleIcon,
   CheckIcon,
-  ArrowCircleUpIcon,
+  MailIcon,
+  LinkIcon,
+  BookOpenIcon,
 } from '@heroicons/react/outline'
-import BrokerBusinessTabs from '../components/BrokerBusinessTabs'
+
 import Link from 'next/link'
 
 const features = [
@@ -188,7 +190,7 @@ export default function Home() {
               </div>
               <div className="flex flex-col md:flex-row">
                 <div className="flex flex-col p-4">
-                  <h3 className="text-3xl">Brokers</h3>
+                  <h3 className="text-4xl tracking-wider">Brokers</h3>
                   <p className="mt-3">
                     Aenean dictum varius metus a imperdiet. Donec cursus nulla
                     sem, ac bibendum elit laoreet nec. Nulla facilisi. Fusce
@@ -206,19 +208,32 @@ export default function Home() {
                   />
                 </div>
               </div>
-              <div className="flex justify-between">
-                <ArrowCircleUpIcon height={80} />{' '}
-                <span className="flex items-center text-xl font-bold">
-                  Programs
-                </span>
-                <ArrowCircleUpIcon height={80} />
-                <span className="flex items-center text-xl font-bold">
-                  Resources
-                </span>
-                <ArrowCircleUpIcon height={80} />
-                <span className="flex items-center text-xl font-bold">
-                  Contact
-                </span>
+              <div className="flex justify-around">
+                <Link href="/programs">
+                  <a className="flex flex-start items-center hover:bg-gray-100 p-2">
+                    <BookOpenIcon height={50} />{' '}
+                    <span className="flex items-center text-xl font-bold ml-1">
+                      Programs
+                    </span>
+                  </a>
+                </Link>
+                <Link href="/resources">
+                  <a className="flex flex-start  items-center hover:bg-gray-100 p-2">
+                    <LinkIcon height={50} />
+                    <span className="flex flex-start items-center text-xl font-bold ml-1">
+                      Resources
+                    </span>
+                  </a>
+                </Link>
+
+                <Link href="/contact-us">
+                  <a className="flex flex-start items-center hover:bg-gray-100 p-2">
+                    <MailIcon height={50} />
+                    <span className="flex items-center text-xl font-bold ml-1">
+                      Contact
+                    </span>
+                  </a>
+                </Link>
               </div>
             </dl>
           </div>
@@ -283,11 +298,13 @@ export default function Home() {
             venenatis. Nam ac eros condimentum, blandit risus eu, dapibus
             tortor. Quisque ut scelerisque risus.
           </p>
+          <Link href='/resources'>
+
           <a
-            href="#"
             className="mt-8 w-full inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-gray-600 bg-white hover:bg-gray-100 sm:w-auto">
             Learn more
           </a>
+          </Link>
         </div>
       </div>
       {/* Covid Section */}
