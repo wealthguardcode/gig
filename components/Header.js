@@ -11,7 +11,7 @@ const navigation = {
       programs: [
         {
           name: 'View All Programs',
-          href: '#',
+          href: '/programs',
           imageSrc:
             'https://tailwindui.com/img/ecommerce-images/mega-menu-category-01.jpg',
           imageAlt:
@@ -19,7 +19,7 @@ const navigation = {
         },
         {
           name: 'West Wall Marina Program',
-          href: '#',
+          href: '/programs/west-wall-marina',
           imageSrc:
             'https://tailwindui.com/img/ecommerce-images/mega-menu-category-02.jpg',
           imageAlt:
@@ -27,7 +27,7 @@ const navigation = {
         },
         {
           name: 'Assistant Living Facility',
-          href: '#',
+          href: '/programs/assistant-living-facility',
           imageSrc:
             'https://tailwindui.com/img/ecommerce-images/mega-menu-category-03.jpg',
           imageAlt:
@@ -35,7 +35,7 @@ const navigation = {
         },
         {
           name: 'Cargo & Logistics',
-          href: '#',
+          href: '/programs/cargo-and-logistics',
           imageSrc:
             'https://tailwindui.com/img/ecommerce-images/mega-menu-category-04.jpg',
           imageAlt:
@@ -43,7 +43,7 @@ const navigation = {
         },
         {
           name: 'Active Assailant',
-          href: '#',
+          href: '/programs/active-assailant',
           imageSrc:
             'https://tailwindui.com/img/ecommerce-images/mega-menu-category-04.jpg',
           imageAlt:
@@ -51,7 +51,7 @@ const navigation = {
         },
         {
           name: 'Terrorism & Sabotage',
-          href: '#',
+          href: '/programs/terrorism-and-sabotage',
           imageSrc:
             'https://tailwindui.com/img/ecommerce-images/mega-menu-category-04.jpg',
           imageAlt:
