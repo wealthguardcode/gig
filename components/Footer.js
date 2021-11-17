@@ -100,7 +100,7 @@ export default function Footer() {
                 Sign up for our newsletter
               </h3>
               <p className="mt-6 text-sm text-gray-500">
-                The latest deals and savings, sent to your inbox weekly.
+                The latest info & updates, sent to your inbox weekly.
               </p>
               <form className="mt-2 flex sm:max-w-md">
                 <label htmlFor="email-address" className="sr-only">
