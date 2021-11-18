@@ -59,21 +59,21 @@ export default function leadership() {
       <div>
         {/* Hero */}
 
-
         <div className="relative bg-indigo-800">
-      <div className="absolute inset-0">
-      
-      <div className="absolute inset-0 flex items-center justify-center h-full mb-12 bg-fixed bg-center bg-cover leadership-img">
-             
-              </div>
-        <div className="absolute inset-0 bg-indigo-800 mix-blend-multiply" aria-hidden="true" />
-      </div>
-      <div className="relative max-w-7xl mx-auto py-24 px-4 sm:py-32 sm:px-6 lg:px-8">
-        <h1 className="text-4xl font-extrabold text-center tracking-tight text-white sm:text-5xl lg:text-6xl">Leadership</h1>
-        <div className="border-t-4 w-1/5 mx-auto mt-2 py-2 border-white" />
-      </div>
-    </div>
-
+          <div className="absolute inset-0">
+            <div className="absolute inset-0 flex items-center justify-center h-full mb-12 bg-fixed bg-center bg-cover leadership-img"></div>
+            <div
+              className="absolute inset-0 bg-indigo-800 mix-blend-multiply"
+              aria-hidden="true"
+            />
+          </div>
+          <div className="relative max-w-7xl mx-auto py-24 px-4 sm:py-32 sm:px-6 lg:px-8">
+            <h1 className="text-4xl font-extrabold text-center tracking-tight text-white sm:text-5xl lg:text-6xl">
+              Leadership
+            </h1>
+            <div className="border-t-4 w-1/5 mx-auto mt-2 py-2 border-white" />
+          </div>
+        </div>
 
         {/* Our Leadership / Team */}
         <div className="relative bg-white">

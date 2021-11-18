@@ -1,8 +1,7 @@
 import { Fragment, useState } from 'react'
 import Link from 'next/link'
-import { Dialog, Disclosure, Popover, Tab, Transition } from '@headlessui/react'
+import { Dialog, Popover, Tab, Transition } from '@headlessui/react'
 import { MenuIcon, XIcon } from '@heroicons/react/outline'
-import { ChevronDownIcon } from '@heroicons/react/solid'
 
 const navigation = {
   categories: [
@@ -120,7 +119,7 @@ const navigation = {
       programs: [
         {
           name: 'About Us Overview',
-          href: '#',
+          href: '/about-us/about-us',
           imageSrc:
             'https://tailwindui.com/img/ecommerce-images/mega-menu-01-men-category-01.jpg',
           imageAlt:
@@ -146,55 +145,6 @@ const navigation = {
   ],
   pages: [{ name: 'Contact Us', href: '/contact-us' }],
 }
-
-const filters = [
-  {
-    id: 'category',
-    name: 'Category',
-    options: [
-      { value: 'tees', label: 'Tees' },
-      { value: 'crewnecks', label: 'Crewnecks' },
-      { value: 'hats', label: 'Hats' },
-      { value: 'bundles', label: 'Bundles' },
-      { value: 'carry', label: 'Carry' },
-      { value: 'objects', label: 'Objects' },
-    ],
-  },
-  {
-    id: 'brand',
-    name: 'Brand',
-    options: [
-      { value: 'clothing-company', label: 'Clothing Company' },
-      { value: 'fashion-inc', label: 'Fashion Inc.' },
-      { value: 'shoes-n-more', label: "Shoes 'n More" },
-      { value: 'supplies-n-stuff', label: "Supplies 'n Stuff" },
-    ],
-  },
-  {
-    id: 'color',
-    name: 'Color',
-    options: [
-      { value: 'white', label: 'White' },
-      { value: 'black', label: 'Black' },
-      { value: 'grey', label: 'Grey' },
-      { value: 'blue', label: 'Blue' },
-      { value: 'olive', label: 'Olive' },
-      { value: 'tan', label: 'Tan' },
-    ],
-  },
-  {
-    id: 'sizes',
-    name: 'Sizes',
-    options: [
-      { value: 'xs', label: 'XS' },
-      { value: 's', label: 'S' },
-      { value: 'm', label: 'M' },
-      { value: 'l', label: 'L' },
-      { value: 'xl', label: 'XL' },
-      { value: '2xl', label: '2XL' },
-    ],
-  },
-]
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
@@ -255,7 +205,7 @@ export default function Header() {
                               selected
                                 ? 'text-blue-600 border-blue-600'
                                 : 'text-gray-900 border-transparent',
-                              'flex-1 whitespace-nowrap py-4 px-1 border-b-2 text-sm font-medium'
+                              'flex-1 whitespace-nowrap py-4 px-1 border-b-2 text-md font-medium'
                             )
                           }>
                           {category.name}
@@ -375,7 +325,7 @@ export default function Header() {
                                   leave="transition ease-in duration-150"
                                   leaveFrom="opacity-100"
                                   leaveTo="opacity-0">
-                                  <Popover.Panel className="absolute z-20 top-full inset-x-0 bg-white text-sm text-gray-500">
+                                  <Popover.Panel className="absolute z-20 top-full inset-x-0 bg-white text-md text-gray-500">
                                     {/* Presentational element used to render the bottom shadow, if we put the shadow on the actual panel it pokes out the top, so we use this shorter element to hide the top of the shadow */}
                                     <div
                                       className="absolute inset-0 top-1/2 bg-white shadow"
@@ -471,9 +421,6 @@ export default function Header() {
           </nav>
         </header>
       </div>
-
-   
-     
     </div>
   )
 }

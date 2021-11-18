@@ -42,37 +42,30 @@ export default function ProgramsPage({ programs }) {
       </div>
 
       {/* Programs */}
-      <div className="p-8 my-10">
-        <ul
-          role="list"
-          className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3">
-          {programs.map((program) => (
-            <li
-              key={program.slug}
-              className="col-span-1 flex flex-col text-center bg-white rounded-lg shadow divide-y divide-gray-200">
-              <div className="flex-1 flex flex-col ">
-              <Link href={`/programs/${program.slug}`} passHref>
+      <div className="p-8 my-10 grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3">
+        {programs.map((program) => (
+          <div
+            className="max-w-sm rounded overflow-hidden shadow-lg"
+            key={program.slug}>
+            <Link href={`/programs/${program.slug}`} passHref>
               <a>
-              <img
-                  className="w-64 h-40 flex-shrink-0 mx-auto rounded"
+                <img
+                  className="w-full"
                   src={program.image.url}
-                  alt=""
+                  alt={program.title}
                 />
               </a>
-                
-                </Link>
-                <Link href={`/programs/${program.slug}`} passHref>
-              <a>
-                <h3 className="my-3 text-gray-900 text-lg font-medium">
-                  {program.title}
-                </h3>
+            </Link>
+            <div className="px-6 py-4">
+              <Link href={`/programs/${program.slug}`} passHref>
+                <a>
+                  <div className="font-bold text-xl mb-2">{program.title}</div>
                 </a>
-                </Link>
-              </div>
-             
-            </li>
-          ))}
-        </ul>
+              </Link>
+              <p className="text-gray-700 text-base">{program.description}</p>
+            </div>
+          </div>
+        ))}
       </div>
     </Layout>
   )

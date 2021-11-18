@@ -5,32 +5,32 @@ import { ChevronDownIcon } from '@heroicons/react/outline'
 
 const faqs = [
   {
-    question: "What's the best thing about Insurance?",
+    question: "What's the best thing about GoGuard?",
     answer:
       'Cursus faucibus nunc nisl netus morbi vel porttitor vitae ut. Amet vitae fames senectus vitae.',
   },
   {
-    question: "What's the best thing about Insurance?",
+    question: "What's the best thing about GoGuard?",
     answer:
       'Cursus faucibus nunc nisl netus morbi vel porttitor vitae ut. Amet vitae fames senectus vitae.',
   },
   {
-    question: "What's the best thing about Insurance?",
+    question: "What's the best thing about GoGuard?",
     answer:
       'Cursus faucibus nunc nisl netus morbi vel porttitor vitae ut. Amet vitae fames senectus vitae.',
   },
   {
-    question: "What's the best thing about Insurance?",
+    question: "What's the best thing about GoGuard?",
     answer:
       'Cursus faucibus nunc nisl netus morbi vel porttitor vitae ut. Amet vitae fames senectus vitae.',
   },
   {
-    question: "What's the best thing about Insurance?",
+    question: "What's the best thing about GoGuard?",
     answer:
       'Cursus faucibus nunc nisl netus morbi vel porttitor vitae ut. Amet vitae fames senectus vitae.',
   },
   {
-    question: "What's the best thing about Insurance?",
+    question: "What's the best thing about GoGuard?",
     answer:
       'Cursus faucibus nunc nisl netus morbi vel porttitor vitae ut. Amet vitae fames senectus vitae.',
   },
