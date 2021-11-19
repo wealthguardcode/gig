@@ -1,3 +1,4 @@
+import { useEffect } from 'react'
 import Layout from '../components/Layout'
 import {
   GlobeAltIcon,
@@ -10,6 +11,9 @@ import {
 } from '@heroicons/react/outline'
 
 import Link from 'next/link'
+
+const isServer = typeof window === 'undefined'
+const WOW = !isServer ? require('wow.js') : null
 
 const features = [
   {
@@ -76,6 +80,10 @@ const features2 = [
 ]
 
 export default function Home() {
+  useEffect(() => {
+    new WOW().init()
+  }, [])
+
   return (
     <Layout>
       <div className="relative bg-gray-50 overflow-hidden">
@@ -86,11 +94,10 @@ export default function Home() {
             <div className="absolute inset-0 flex items-center justify-center h-screen mb-12 bg-fixed bg-center bg-cover custom-img">
               <div className="absolute inset-0 bg-gray-400 mix-blend-multiply" />
             </div>
-            <div className="text-center relative">
+            <div className="text-center relative  wow fadeInUp">
               <h1 className="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
                 <span className="block xl:inline">Commercial Insurance</span>{' '}
-                <span className="block outline-title font-extrabold ">
-                  {' '}
+                <span className="block outline-title font-extrabold">
                   Programs &{' '}
                   <span className="block md:inline mt-3 md:mt-0">
                     Brokerage
@@ -136,9 +143,9 @@ export default function Home() {
       </div>
 
       {/* Features Section */}
-      <div className="bg-gradient-to-b from-gray-50 via-gray-50 to-white">
+      <div className="bg-gradient-to-b from-gray-50 via-gray-50 to-white ">
         <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-3xl font-extrabold text-gray-900 md:pt-2 md:mx-0 pt-1 mx-1">
+          <h2 className="text-3xl font-extrabold text-gray-900 md:pt-2 md:mx-0 pt-1 mx-1 wow slideInLeft">
             Industries We Insure: Boats to Loved Ones to Logistics
           </h2>
         </div>
@@ -146,7 +153,7 @@ export default function Home() {
           <div className="mt-12 lg:mt-0 lg:col-span-2">
             <dl className="space-y-10 sm:space-y-0 sm:grid sm:grid-cols-2 sm:grid-rows-4 sm:grid-flow-col sm:gap-x-6 sm:gap-y-10 lg:gap-x-8">
               {features.map((feature) => (
-                <div key={feature.name} className="relative">
+                <div key={feature.name} className="relative wow slideInRight">
                   <dt>
                     <CheckIcon
                       className="absolute h-6 w-6 text-green-500"
@@ -169,7 +176,7 @@ export default function Home() {
       {/* Broker/Business Tabs */}
       <div className="py-12 bg-gradient-to-t from-gray-50 via-gray-50 to-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="lg:text-center">
+          <div className="lg:text-center wow bounceInUp">
             <p className="my-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl text-center">
               GoGuard&apos;s insurance programs help businesses grow and thrive
             </p>
@@ -181,7 +188,7 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="mt-10">
+          <div className="mt-10 wow fadeInDown">
             <dl className="space-y-10 md:space-y-0 grid grid-cols-1 md:gap-x-8 md:gap-y-10">
               <div className="my-10">
                 <h1 className="text-4xl bg-blue-300 font-bold w-full text-center rounded py-1">
@@ -244,10 +251,10 @@ export default function Home() {
       <section className="py-12 bg-gray-50 overflow-hidden md:py-20 lg:py-24">
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="relative">
-            <h1 className="max-w-3xl mx-auto text-center text-3xl leading-9 font-bold text-gray-900">
+            <h1 className="max-w-3xl mx-auto text-center text-3xl leading-9 font-bold text-gray-900 wow slideInLeft">
               Example Testimonial
             </h1>
-            <blockquote className="mt-6">
+            <blockquote className="mt-6 wow slideInLeft">
               <div className="max-w-3xl mx-auto text-center text-2xl leading-9 font-medium text-gray-900">
                 <p>
                   &ldquo;Lorem ipsum dolor sit amet consectetur adipisicing
@@ -290,16 +297,16 @@ export default function Home() {
       {/* Resources Section */}
       <div className="bg-gray-700">
         <div className="max-w-2xl mx-auto text-center py-16 px-4 sm:py-20 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-extrabold text-white sm:text-4xl">
+          <h2 className="text-3xl font-extrabold text-white sm:text-4xl wow slideInRight">
             <span className="block">Helpful Business Resources</span>
           </h2>
-          <p className="mt-4 text-lg leading-6 text-gray-200">
+          <p className="mt-4 text-lg leading-6 text-gray-200 wow slideInRight">
             In finibus purus sit amet leo tempus, et condimentum justo
             venenatis. Nam ac eros condimentum, blandit risus eu, dapibus
             tortor. Quisque ut scelerisque risus.
           </p>
           <Link href="/#">
-            <a className="mt-8 w-full inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-gray-600 bg-white hover:bg-gray-100 sm:w-auto">
+            <a className="mt-8 w-full inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-gray-600 bg-white hover:bg-gray-100 sm:w-auto wow slideInRight">
               Learn more
             </a>
           </Link>
@@ -308,18 +315,18 @@ export default function Home() {
       {/* Covid Section */}
       <div className="bg-blue-700">
         <div className="max-w-2xl mx-auto text-center py-16 px-4 sm:py-20 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-extrabold text-white sm:text-4xl">
+          <h2 className="text-3xl font-extrabold text-white sm:text-4xl wow fadeInLeft">
             <span className="block">Business Support</span>
             <span className="block">Covid-19 Resource Center</span>
           </h2>
-          <p className="mt-4 text-lg leading-6 text-blue-200">
+          <p className="mt-4 text-lg leading-6 text-blue-200 wow fadeInLeft">
             See the latest federal and state resources available to business
             owners to help offset the effects of the Covid-19 pandemic,
             including business emergency funding and relief programs.
           </p>
           <a
             href="#"
-            className="mt-8 w-full inline-flex items-center justify-center px-5 py-3 border border-solid border-blue-50 text-base font-medium rounded-md text-white bg-transparent hover:bg-blue-50 hover:text-blue-600 sm:w-auto">
+            className="mt-8 w-full inline-flex items-center justify-center px-5 py-3 border border-solid border-blue-50 text-base font-medium rounded-md text-white bg-transparent hover:bg-blue-50 hover:text-blue-600 sm:w-auto wow fadeInLeft">
             Learn more
           </a>
         </div>
@@ -329,17 +336,17 @@ export default function Home() {
       <div className="bg-white">
         <div className="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:py-24 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-3xl font-extrabold text-gray-900">
+            <h2 className="text-3xl font-extrabold text-gray-900 wow fadeInRight">
               Why Work With GIG?
             </h2>
-            <p className="mt-4 text-lg text-gray-500">
+            <p className="mt-4 text-lg text-gray-500 wow fadeInRight">
               Ac euismod vel sit maecenas id pellentesque eu sed consectetur.
               Malesuada adipiscing sagittis vel nulla nec.
             </p>
           </div>
           <dl className="mt-12 space-y-10 sm:space-y-0 sm:grid sm:grid-cols-2 sm:gap-x-6 sm:gap-y-12 lg:grid-cols-3 lg:gap-x-8">
             {features2.map((feature) => (
-              <div key={feature.name}>
+              <div key={feature.name} className="wow bounceInUp">
                 <dt>
                   <div className="flex items-center justify-center h-12 w-12 rounded-md bg-blue-900 opacity-70 text-white mx-auto">
                     <feature.icon className="h-6 w-6" aria-hidden="true" />
