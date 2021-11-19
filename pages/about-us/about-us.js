@@ -1,6 +1,11 @@
 import Layout from '../../components/Layout'
 import Link from 'next/link'
-import { CogIcon, GlobeIcon, UserGroupIcon } from '@heroicons/react/outline'
+import {
+  CogIcon,
+  GlobeIcon,
+  UserGroupIcon,
+  OfficeBuildingIcon,
+} from '@heroicons/react/outline'
 
 export default function AboutUsOverview() {
   return (
@@ -50,33 +55,133 @@ export default function AboutUsOverview() {
       </div>
 
       {/* CTA section */}
-      <div className="grid grid-cols-1 md:grid-cols-3">
-        <div className="p-2 mx-4 flex flex-col">
+      <div className="grid grid-cols-1 md:grid-cols-3 mt-2 md:mt-0">
+        <div className="p-10 mx-10  md:-mt-16 relative flex flex-col bg-white border rounded-lg shadow-xl mb-4">
           <CogIcon height={80} />
-          <h1>Programs</h1>
-          <p>
+          <h1 className="text-3xl tracking-wider my-4 text-center font-semibold">
+            Programs
+          </h1>
+          <p className="prose my-2">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
+            imperdiet metus dolor, sed feugiat velit semper in. Aliquam cursus
+            laoreet laoreet. Sed volutpat augue vitae congue tincidunt.
+          </p>
+          <p className="prose my-2">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
             imperdiet metus dolor, sed feugiat velit semper in. Aliquam cursus
             laoreet laoreet. Sed volutpat augue vitae congue tincidunt.
           </p>
         </div>
-        <div className="p-2 mx-4 flex flex-col">
+        <div className="p-10 mx-10 md:-mt-16 relative flex flex-col bg-white border rounded-lg shadow-xl mb-4">
           <GlobeIcon height={80} />
-          <h1>Wholesale</h1>
-          <p>
+          <h1 className="text-3xl tracking-wider my-4 text-center font-semibold">
+            Wholesale
+          </h1>
+          <p className="prose my-2">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
+            imperdiet metus dolor, sed feugiat velit semper in. Aliquam cursus
+            laoreet laoreet. Sed volutpat augue vitae congue tincidunt.
+          </p>
+          <p className="prose my-2">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
             imperdiet metus dolor, sed feugiat velit semper in. Aliquam cursus
             laoreet laoreet. Sed volutpat augue vitae congue tincidunt.
           </p>
         </div>
-        <div className="p-2 mx-4 flex flex-col">
+        <div className="p-10 mx-10 md:-mt-16 relative flex flex-col bg-white border rounded-lg shadow-xl mb-4">
           <UserGroupIcon height={80} />
-          <h1>Group Captives</h1>
-          <p>
+          <h1 className="text-3xl tracking-wider my-4 text-center font-semibold">
+            Group Captives
+          </h1>
+          <p className="prose my-2">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
             imperdiet metus dolor, sed feugiat velit semper in. Aliquam cursus
             laoreet laoreet. Sed volutpat augue vitae congue tincidunt.
           </p>
+          <p className="prose my-2">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
+            imperdiet metus dolor, sed feugiat velit semper in. Aliquam cursus
+            laoreet laoreet. Sed volutpat augue vitae congue tincidunt.
+          </p>
+        </div>
+      </div>
+
+      {/* Why GoGuard - header */}
+      <div className="bg-white">
+        <div className="max-w-7xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <p className="mt-1 text-4xl font-extrabold text-gray-900 sm:text-4xl sm:tracking-tight lg:text-5xl">
+              Why GoGuard?
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {/* Why GoGuard - content */}
+      <div className="grid grid-cols-1 md:grid-cols-3 mt-2 md:mt-0">
+        <div className="p-10 mx-10  flex flex-col bg-blue-200 border-t-2 border-gray-600 rounded-lg shadow-xl mb-4">
+          <h1 className="text-3xl tracking-wider my-4  font-semibold">
+            Ingenuity
+          </h1>
+          <p className="prose my-2">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
+            imperdiet metus dolor, sed feugiat velit semper in. Aliquam cursus
+            laoreet laoreet. Sed volutpat augue vitae congue tincidunt.
+          </p>
+          <p className="prose my-2">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
+            imperdiet metus dolor, sed feugiat velit semper in. Aliquam cursus
+            laoreet laoreet. Sed volutpat augue vitae congue tincidunt.
+          </p>
+        </div>
+        <div className="p-10 mx-10 flex flex-col bg-gray-200 border-t-2 border-gray-600 rounded-lg shadow-xl mb-4">
+          <h1 className="text-3xl tracking-wider my-4  font-semibold">
+            Service
+          </h1>
+          <p className="prose my-2">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
+            imperdiet metus dolor, sed feugiat velit semper in. Aliquam cursus
+            laoreet laoreet. Sed volutpat augue vitae congue tincidunt.
+          </p>
+          <p className="prose my-2">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
+            imperdiet metus dolor, sed feugiat velit semper in. Aliquam cursus
+            laoreet laoreet. Sed volutpat augue vitae congue tincidunt.
+          </p>
+        </div>
+        <div className="p-10 mx-10 flex flex-col bg-blue-200 border-t-2 border-gray-600 rounded-lg shadow-xl mb-4">
+          <h1 className="text-3xl tracking-wider my-4  font-semibold">
+            Passion
+          </h1>
+          <p className="prose my-2">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
+            imperdiet metus dolor, sed feugiat velit semper in. Aliquam cursus
+            laoreet laoreet. Sed volutpat augue vitae congue tincidunt.
+          </p>
+          <p className="prose my-2">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
+            imperdiet metus dolor, sed feugiat velit semper in. Aliquam cursus
+            laoreet laoreet. Sed volutpat augue vitae congue tincidunt.
+          </p>
+        </div>
+      </div>
+
+      {/* Our Mission */}
+      <div className="flex flex-col justify-around items-center md:flex-row p-4 mx-4 my-10 border-t-2 border-gray-600 rounded-lg shadow-xl">
+        <div className="mx-4 p-4 sm:mx-auto align-middle">
+          <OfficeBuildingIcon height={200} />
+        </div>
+        <div className="mx-8 p-4 flex flex-col">
+          <h1 className="text-3xl font-semibold my-3">Our Mission:</h1>
+          <p className="prose-lg my-3">
+            Aenean imperdiet metus dolor, sed feugiat velit semper in. Aliquam
+            cursus laoreet laoreet. Sed volutpat augue vitae congue tincidunt:
+          </p>
+          <ol className="list-decimal prose my-3 sm:ml-5">
+            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+          </ol>
         </div>
       </div>
     </Layout>
