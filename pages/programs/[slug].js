@@ -61,16 +61,16 @@ export const getStaticProps = async ({ params }) => {
 }
 
 export default function ProgramPage({ program }) {
-  console.log(program)
+  // console.log(program)
   return (
-    <Layout>
+    <Layout title={`GIG || ${program.title}`}>
       {/* Hero */}
       <div className="relative bg-blue-400">
         <div className="absolute inset-0">
           <img
             className="w-full h-full object-cover"
             src={program.image.url}
-            alt=""
+            alt={program.title}
           />
           <div
             className="absolute inset-0 bg-blue-800 mix-blend-multiply"
@@ -133,7 +133,7 @@ export default function ProgramPage({ program }) {
               <blockquote className="relative bg-white rounded-lg shadow-lg">
                 <img
                   src={program.image2.url}
-                  alt="Workcation"
+                  alt={program.title}
                   className="h-auto rounded"
                 />
               </blockquote>

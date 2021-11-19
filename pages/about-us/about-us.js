@@ -5,6 +5,7 @@ import {
   GlobeIcon,
   UserGroupIcon,
   OfficeBuildingIcon,
+  ExternalLinkIcon,
 } from '@heroicons/react/outline'
 
 export default function AboutUsOverview() {
@@ -182,6 +183,46 @@ export default function AboutUsOverview() {
             <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
             <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
           </ol>
+        </div>
+      </div>
+
+      {/* CTA */}
+      <div className="relative bg-gray-800">
+        <div className="h-56 bg-indigo-600 sm:h-72 md:absolute md:left-0 md:h-full md:w-1/2">
+          <img
+            className="w-full h-full object-cover"
+            src="https://images.unsplash.com/photo-1444718070663-99afd7176287?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80&blend=6366F1&sat=-100&blend-mode=multiply"
+            alt=""
+          />
+        </div>
+        <div className="relative max-w-7xl mx-auto px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
+          <div className="md:ml-auto md:w-1/2 md:pl-10">
+            <h2 className="text-base font-semibold uppercase tracking-wider text-gray-300">
+              Don&apos;t worry
+            </h2>
+            <p className="mt-2 text-white text-3xl font-extrabold tracking-tight sm:text-4xl">
+              We&apos;re here to help
+            </p>
+            <p className="mt-3 text-lg text-gray-300">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et,
+              egestas tempus tellus etiam sed. Quam a scelerisque amet
+              ullamcorper eu enim et fermentum, augue. Aliquet amet volutpat
+              quisque ut interdum tincidunt duis.
+            </p>
+            <div className="mt-8">
+              <div className="inline-flex rounded-md shadow">
+                <Link href="/contact-us">
+                  <a className="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-gray-900 bg-white hover:bg-gray-50">
+                    Contact us today
+                    <ExternalLinkIcon
+                      className="-mr-1 ml-3 h-5 w-5 text-gray-400"
+                      aria-hidden="true"
+                    />
+                  </a>
+                </Link>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </Layout>

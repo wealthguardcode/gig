@@ -4,7 +4,7 @@ import Link from 'next/link'
 
 export const getStaticProps = async () => {
   const data = await getPrograms()
-  console.log(data)
+  // console.log(data)
   const programs = data.programs
   return {
     props: {
@@ -14,9 +14,9 @@ export const getStaticProps = async () => {
 }
 
 export default function ProgramsPage({ programs }) {
-  console.log(programs)
+  // console.log(programs)
   return (
-    <Layout>
+    <Layout title="GIG || Our Programs">
       <div className="relative bg-blue-400">
         <div className="absolute inset-0">
           {/* <img

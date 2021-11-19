@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Header from './Header'
 import Footer from './Footer'
+import ScrollToTopButton from './ScrollToTopButton'
 
 export default function Layout({ title, keywords, description, children }) {
   return (
@@ -20,6 +21,7 @@ export default function Layout({ title, keywords, description, children }) {
 
       <main>{children}</main>
 
+      <ScrollToTopButton />
       <Footer />
     </div>
   )

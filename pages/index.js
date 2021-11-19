@@ -298,12 +298,10 @@ export default function Home() {
             venenatis. Nam ac eros condimentum, blandit risus eu, dapibus
             tortor. Quisque ut scelerisque risus.
           </p>
-          <Link href='/resources'>
-
-          <a
-            className="mt-8 w-full inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-gray-600 bg-white hover:bg-gray-100 sm:w-auto">
-            Learn more
-          </a>
+          <Link href="/#">
+            <a className="mt-8 w-full inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-gray-600 bg-white hover:bg-gray-100 sm:w-auto">
+              Learn more
+            </a>
           </Link>
         </div>
       </div>
