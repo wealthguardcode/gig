@@ -94,17 +94,19 @@ export default function Home() {
             <div className="absolute inset-0 flex items-center justify-center h-screen mb-12 bg-fixed bg-center bg-cover custom-img">
               <div className="absolute inset-0 bg-gray-400 mix-blend-multiply" />
             </div>
-            <div className="text-center relative  wow fadeInUp">
+            <div className="text-center relative">
               <h1 className="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
-                <span className="block xl:inline">Commercial Insurance</span>{' '}
-                <span className="block outline-title font-extrabold">
+                <span className="block xl:inline wow slideInLeft">
+                  Commercial Insurance
+                </span>{' '}
+                <span className="block outline-title font-extrabold wow slideInLeft">
                   Programs &{' '}
-                  <span className="block md:inline mt-3 md:mt-0">
+                  <span className="block md:inline mt-3 md:mt-0 wow slideInLeft">
                     Brokerage
                   </span>
                 </span>
               </h1>
-              <p className="outline my-4 pb-4 font-bold text-xl text-yellow-500 lg:text-3xl tracking-tight">
+              <p className="outline my-4 pb-4 font-bold text-xl text-yellow-500 lg:text-3xl tracking-tight wow slideInLeft">
                 <span className="block xl:inline">
                   Since 2016 we have been providing insurance solutions with
                   expertise,
@@ -115,7 +117,7 @@ export default function Home() {
                 </span>
               </p>
               <div className="border-t-4 w-1/5 mx-auto py-2 border-gray-900" />
-              <p className="mt-3 max-w-md mx-auto prose lg:prose-xl text-gray-200 font-semibold  md:mt-5  md:max-w-3xl">
+              <p className="mt-3 max-w-md mx-auto prose lg:prose-xl text-gray-200 font-semibold  md:mt-5  md:max-w-3xl wow slideInRight">
                 Whether you&apos;re a business owner or insurance broker,
                 you&apos;ll find industry-specific resources and specialty
                 insurance coverages to meet the unique needs of the industries
@@ -124,14 +126,14 @@ export default function Home() {
               <div className="flex justify-center my-8">
                 <div className="mt-3 rounded-md shadow sm:mt-0 sm:ml-3">
                   <Link href="/programs">
-                    <a className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 md:py-4 md:text-lg md:px-10">
+                    <a className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 md:py-4 md:text-lg md:px-10 wow slideInLeft">
                       For Brokers
                     </a>
                   </Link>
                 </div>
                 <div className="mt-3 rounded-md shadow sm:mt-0 ml-3">
                   <Link href="/contact-us">
-                    <a className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-indigo-600 bg-white hover:bg-gray-50 md:py-4 md:text-lg md:px-10">
+                    <a className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-indigo-600 bg-white hover:bg-gray-50 md:py-4 md:text-lg md:px-10  wow slideInRight">
                       Contact Us
                     </a>
                   </Link>
@@ -145,7 +147,7 @@ export default function Home() {
       {/* Features Section */}
       <div className="bg-gradient-to-b from-gray-50 via-gray-50 to-white ">
         <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-3xl font-extrabold text-gray-900 md:pt-2 md:mx-0 pt-1 mx-1 wow slideInLeft">
+          <h2 className="text-3xl font-extrabold text-gray-900 md:pt-2 md:mx-0 pt-1 mx-1 wow fadeInDown">
             Industries We Insure: Boats to Loved Ones to Logistics
           </h2>
         </div>
@@ -153,7 +155,7 @@ export default function Home() {
           <div className="mt-12 lg:mt-0 lg:col-span-2">
             <dl className="space-y-10 sm:space-y-0 sm:grid sm:grid-cols-2 sm:grid-rows-4 sm:grid-flow-col sm:gap-x-6 sm:gap-y-10 lg:gap-x-8">
               {features.map((feature) => (
-                <div key={feature.name} className="relative wow slideInRight">
+                <div key={feature.name} className="relative wow fadeIn">
                   <dt>
                     <CheckIcon
                       className="absolute h-6 w-6 text-green-500"
@@ -176,29 +178,31 @@ export default function Home() {
       {/* Broker/Business Tabs */}
       <div className="py-12 bg-gradient-to-t from-gray-50 via-gray-50 to-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="lg:text-center wow bounceInUp">
-            <p className="my-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl text-center">
+          <div className="lg:text-center ">
+            <p className="my-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl text-center wow fadeInDown">
               GoGuard&apos;s insurance programs help businesses grow and thrive
             </p>
-            <div className="border-t-4 w-1/5 mx-auto my-6 border-green-600" />
-            <p className="mt-4 max-w-2xl text-2xl text-gray-500 mx-auto">
+            <div className="border-t-4 w-1/5 mx-auto my-6 border-green-600 wow fadeInRight" />
+            <p className="mt-4 max-w-2xl text-2xl text-gray-500 mx-auto wow fadeIn">
               We partner with businesses to help insure their success by
               protecting their assets, reducing exposure, and maintaining
               compliance.
             </p>
           </div>
 
-          <div className="mt-10 wow fadeInDown">
+          <div className="mt-10">
             <dl className="space-y-10 md:space-y-0 grid grid-cols-1 md:gap-x-8 md:gap-y-10">
               <div className="my-10">
-                <h1 className="text-4xl bg-blue-300 font-bold w-full text-center rounded py-1">
+                <h1 className="text-4xl bg-blue-300 font-bold w-full text-center rounded py-1 wow fadeInLeft">
                   For Brokers
                 </h1>
               </div>
               <div className="flex flex-col md:flex-row">
                 <div className="flex flex-col p-4">
-                  <h3 className="text-4xl tracking-wider">Brokers</h3>
-                  <p className="mt-3">
+                  <h3 className="text-4xl tracking-wider wow fadeInLeft">
+                    Brokers
+                  </h3>
+                  <p className="mt-3 wow fadeInLeft">
                     Aenean dictum varius metus a imperdiet. Donec cursus nulla
                     sem, ac bibendum elit laoreet nec. Nulla facilisi. Fusce
                     tristique lacus enim, vitae mattis ex laoreet et. Fusce
@@ -209,15 +213,15 @@ export default function Home() {
 
                 <div className=" ">
                   <img
-                    className="w-3/4 mx-auto my-2 rounded"
+                    className="w-3/4 mx-auto my-2 rounded wow fadeIn"
                     src="https://cdn.pixabay.com/photo/2021/09/12/08/49/headset-6617715_1280.png"
                     alt=""
                   />
                 </div>
               </div>
-              <div className="flex justify-around">
+              <div className="flex flex-col items-center md:flex-row md:justify-around">
                 <Link href="/programs">
-                  <a className="flex flex-start items-center hover:bg-gray-100 p-2">
+                  <a className="flex flex-start items-center hover:bg-gray-100 p-2 wow fadeIn">
                     <BookOpenIcon height={50} />{' '}
                     <span className="flex items-center text-xl font-bold ml-1">
                       Programs
@@ -225,7 +229,7 @@ export default function Home() {
                   </a>
                 </Link>
                 <Link href="/resources">
-                  <a className="flex flex-start  items-center hover:bg-gray-100 p-2">
+                  <a className="flex flex-start  items-center hover:bg-gray-100 p-2 wow fadeIn">
                     <LinkIcon height={50} />
                     <span className="flex flex-start items-center text-xl font-bold ml-1">
                       Resources
@@ -234,7 +238,7 @@ export default function Home() {
                 </Link>
 
                 <Link href="/contact-us">
-                  <a className="flex flex-start items-center hover:bg-gray-100 p-2">
+                  <a className="flex flex-start items-center hover:bg-gray-100 p-2 wow fadeIn">
                     <MailIcon height={50} />
                     <span className="flex items-center text-xl font-bold ml-1">
                       Contact
@@ -251,12 +255,12 @@ export default function Home() {
       <section className="py-12 bg-gray-50 overflow-hidden md:py-20 lg:py-24">
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="relative">
-            <h1 className="max-w-3xl mx-auto text-center text-3xl leading-9 font-bold text-gray-900 wow slideInLeft">
+            <h1 className="max-w-3xl mx-auto text-center text-3xl leading-9 font-bold text-gray-900 wow bounceIn">
               Example Testimonial
             </h1>
-            <blockquote className="mt-6 wow slideInLeft">
+            <blockquote className="mt-6 ">
               <div className="max-w-3xl mx-auto text-center text-2xl leading-9 font-medium text-gray-900">
-                <p>
+                <p className="wow bounceIn">
                   &ldquo;Lorem ipsum dolor sit amet consectetur adipisicing
                   elit. Nemo expedita voluptas culpa sapiente alias molestiae.
                   Numquam corrupti in laborum sed rerum et corporis.&rdquo;
@@ -266,13 +270,13 @@ export default function Home() {
                 <div className="md:flex md:items-center md:justify-center">
                   <div className="md:flex-shrink-0">
                     <img
-                      className="mx-auto h-10 w-10 rounded-full"
+                      className="mx-auto h-10 w-10 rounded-full wow bounceIn"
                       src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png"
                       alt=""
                     />
                   </div>
                   <div className="mt-3 text-center md:mt-0 md:ml-4 md:flex md:items-center">
-                    <div className="text-base font-medium text-gray-900">
+                    <div className="text-base font-medium text-gray-900 wow bounceIn">
                       John Smith
                     </div>
 
@@ -283,7 +287,7 @@ export default function Home() {
                       <path d="M11 0h3L9 20H6l5-20z" />
                     </svg>
 
-                    <div className="text-base font-medium text-gray-500">
+                    <div className="text-base font-medium text-gray-500 wow bounceIn">
                       CEO, Example Co
                     </div>
                   </div>
@@ -297,16 +301,16 @@ export default function Home() {
       {/* Resources Section */}
       <div className="bg-gray-700">
         <div className="max-w-2xl mx-auto text-center py-16 px-4 sm:py-20 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-extrabold text-white sm:text-4xl wow slideInRight">
+          <h2 className="text-3xl font-extrabold text-white sm:text-4xl wow fadeIn">
             <span className="block">Helpful Business Resources</span>
           </h2>
-          <p className="mt-4 text-lg leading-6 text-gray-200 wow slideInRight">
+          <p className="mt-4 text-lg leading-6 text-gray-200 wow fadeIn">
             In finibus purus sit amet leo tempus, et condimentum justo
             venenatis. Nam ac eros condimentum, blandit risus eu, dapibus
             tortor. Quisque ut scelerisque risus.
           </p>
           <Link href="/#">
-            <a className="mt-8 w-full inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-gray-600 bg-white hover:bg-gray-100 sm:w-auto wow slideInRight">
+            <a className="mt-8 w-full inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-gray-600 bg-white hover:bg-gray-100 sm:w-auto wow fadeIn">
               Learn more
             </a>
           </Link>
@@ -315,18 +319,18 @@ export default function Home() {
       {/* Covid Section */}
       <div className="bg-blue-700">
         <div className="max-w-2xl mx-auto text-center py-16 px-4 sm:py-20 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-extrabold text-white sm:text-4xl wow fadeInLeft">
+          <h2 className="text-3xl font-extrabold text-white sm:text-4xl wow fadeIn">
             <span className="block">Business Support</span>
             <span className="block">Covid-19 Resource Center</span>
           </h2>
-          <p className="mt-4 text-lg leading-6 text-blue-200 wow fadeInLeft">
+          <p className="mt-4 text-lg leading-6 text-blue-200  wow fadeIn">
             See the latest federal and state resources available to business
             owners to help offset the effects of the Covid-19 pandemic,
             including business emergency funding and relief programs.
           </p>
           <a
             href="#"
-            className="mt-8 w-full inline-flex items-center justify-center px-5 py-3 border border-solid border-blue-50 text-base font-medium rounded-md text-white bg-transparent hover:bg-blue-50 hover:text-blue-600 sm:w-auto wow fadeInLeft">
+            className="mt-8 w-full inline-flex items-center justify-center px-5 py-3 border border-solid border-blue-50 text-base font-medium rounded-md text-white bg-transparent hover:bg-blue-50 hover:text-blue-600 sm:w-auto wow fadeIn">
             Learn more
           </a>
         </div>
@@ -336,26 +340,26 @@ export default function Home() {
       <div className="bg-white">
         <div className="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:py-24 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-3xl font-extrabold text-gray-900 wow fadeInRight">
+            <h2 className="text-3xl font-extrabold text-gray-900 wow fadeIn">
               Why Work With GIG?
             </h2>
-            <p className="mt-4 text-lg text-gray-500 wow fadeInRight">
+            <p className="mt-4 text-lg text-gray-500   wow fadeIn">
               Ac euismod vel sit maecenas id pellentesque eu sed consectetur.
               Malesuada adipiscing sagittis vel nulla nec.
             </p>
           </div>
           <dl className="mt-12 space-y-10 sm:space-y-0 sm:grid sm:grid-cols-2 sm:gap-x-6 sm:gap-y-12 lg:grid-cols-3 lg:gap-x-8">
             {features2.map((feature) => (
-              <div key={feature.name} className="wow bounceInUp">
+              <div key={feature.name}>
                 <dt>
-                  <div className="flex items-center justify-center h-12 w-12 rounded-md bg-blue-900 opacity-70 text-white mx-auto">
+                  <div className="flex items-center justify-center h-12 w-12 rounded-md bg-blue-900 opacity-70 text-white mx-auto wow fadeIn">
                     <feature.icon className="h-6 w-6" aria-hidden="true" />
                   </div>
-                  <p className="mt-5 text-lg leading-6 font-medium text-gray-900 text-center">
+                  <p className="mt-5 text-lg leading-6 font-medium text-gray-900 text-center  wow fadeIn">
                     {feature.name}
                   </p>
                 </dt>
-                <dd className="mt-2 text-base text-gray-500">
+                <dd className="mt-2 text-base text-gray-500 wow fadeIn">
                   {feature.description}
                 </dd>
               </div>
