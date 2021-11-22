@@ -9,6 +9,7 @@ import {
   LinkIcon,
   BookOpenIcon,
 } from '@heroicons/react/outline'
+import { motion } from 'framer-motion'
 
 import Link from 'next/link'
 
@@ -94,52 +95,55 @@ export default function Home() {
             <div className="absolute inset-0 flex items-center justify-center h-screen mb-12 bg-fixed bg-center bg-cover custom-img">
               <div className="absolute inset-0 bg-gray-400 mix-blend-multiply" />
             </div>
-            <div className="text-center relative">
-              <h1 className="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
-                <span className="block xl:inline wow slideInLeft">
-                  Commercial Insurance
-                </span>{' '}
-                <span className="block outline-title font-extrabold wow slideInLeft">
-                  Programs &{' '}
-                  <span className="block md:inline mt-3 md:mt-0 wow slideInLeft">
-                    Brokerage
+
+            <motion.div
+              animate={{ y: [0, 25] }}
+              transition={{ ease: 'easeOut', duration: 2 }}>
+              <div className="text-center relative">
+                <h1 className="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
+                  <span className="block xl:inline">Commercial Insurance</span>{' '}
+                  <span className="block outline-title font-extrabold">
+                    Programs &{' '}
+                    <span className="block md:inline mt-3 md:mt-0">
+                      Brokerage
+                    </span>
                   </span>
-                </span>
-              </h1>
-              <p className="outline my-4 pb-4 font-bold text-xl text-yellow-500 lg:text-3xl tracking-tight wow slideInLeft">
-                <span className="block xl:inline">
-                  Since 2016 we have been providing insurance solutions with
-                  expertise,
-                  <br />
-                </span>
-                <span className="mt-2 block xl:inline">
-                  diversity of products, and underwriting integrity!
-                </span>
-              </p>
-              <div className="border-t-4 w-1/5 mx-auto py-2 border-gray-900" />
-              <p className="mt-3 max-w-md mx-auto prose lg:prose-xl text-gray-200 font-semibold  md:mt-5  md:max-w-3xl wow slideInRight">
-                Whether you&apos;re a business owner or insurance broker,
-                you&apos;ll find industry-specific resources and specialty
-                insurance coverages to meet the unique needs of the industries
-                we serve.
-              </p>
-              <div className="flex justify-center my-8">
-                <div className="mt-3 rounded-md shadow sm:mt-0 sm:ml-3">
-                  <Link href="/programs">
-                    <a className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 md:py-4 md:text-lg md:px-10 wow slideInLeft">
-                      For Brokers
-                    </a>
-                  </Link>
-                </div>
-                <div className="mt-3 rounded-md shadow sm:mt-0 ml-3">
-                  <Link href="/contact-us">
-                    <a className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-indigo-600 bg-white hover:bg-gray-50 md:py-4 md:text-lg md:px-10  wow slideInRight">
-                      Contact Us
-                    </a>
-                  </Link>
+                </h1>
+                <p className="outline my-4 pb-4 font-bold text-xl text-yellow-500 lg:text-3xl tracking-tight">
+                  <span className="block xl:inline">
+                    Since 2016 we have been providing insurance solutions with
+                    expertise,
+                    <br />
+                  </span>
+                  <span className="mt-2 block xl:inline">
+                    diversity of products, and underwriting integrity!
+                  </span>
+                </p>
+                <div className="border-t-4 w-1/5 mx-auto py-2 border-gray-900" />
+                <p className="mt-3 max-w-md mx-auto prose lg:prose-xl text-gray-200 font-semibold  md:mt-5  md:max-w-3xl">
+                  Whether you&apos;re a business owner or insurance broker,
+                  you&apos;ll find industry-specific resources and specialty
+                  insurance coverages to meet the unique needs of the industries
+                  we serve.
+                </p>
+                <div className="flex justify-center my-8">
+                  <div className="mt-3 rounded-md shadow sm:mt-0 sm:ml-3">
+                    <Link href="/programs">
+                      <a className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 md:py-4 md:text-lg md:px-10">
+                        For Brokers
+                      </a>
+                    </Link>
+                  </div>
+                  <div className="mt-3 rounded-md shadow sm:mt-0 ml-3">
+                    <Link href="/contact-us">
+                      <a className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-indigo-600 bg-white hover:bg-gray-50 md:py-4 md:text-lg md:px-10">
+                        Contact Us
+                      </a>
+                    </Link>
+                  </div>
                 </div>
               </div>
-            </div>
+            </motion.div>
           </div>
         </div>
       </div>
