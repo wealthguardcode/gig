@@ -198,10 +198,10 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="mt-10">
-            <dl className="space-y-10 md:space-y-0 grid grid-cols-1 md:gap-x-8 md:gap-y-10">
+          <div className="mt-10 shadow-xl rounded-xl">
+            <dl className="space-y-10 md:space-y-0 grid grid-cols-1 md:gap-x-8 md:gap-y-10 shadow-xl">
               <div className="my-10">
-                <h1 className="text-4xl bg-blue-300 font-bold w-full text-center rounded py-1">
+                <h1 className="text-4xl text-blue-100 bg-gradient-to-r from-indigo-400 via-blue-500 to-green-500 font-bold mx-2 text-center rounded py-1">
                   For Brokers
                 </h1>
               </div>
@@ -225,28 +225,37 @@ export default function Home() {
                   />
                 </div>
               </div>
-              <div className="flex flex-col items-center md:flex-row md:justify-around">
+              <div className="flex flex-col items-center mt-3 md:flex-row md:justify-around p-4">
                 <Link href="/programs">
-                  <a className="flex flex-start items-center hover:bg-gray-100 p-2">
-                    <BookOpenIcon height={50} />{' '}
-                    <span className="flex items-center text-xl font-bold ml-1">
+                  <a className="flex flex-start items-center border-2 border-blue-100 rounded group hover:bg-blue-100 hover:border-blue-300 p-2 px-3 mb-3 md:mb-0">
+                    <BookOpenIcon
+                      height={50}
+                      className="text-yellow-400 group-hover:text-white"
+                    />{' '}
+                    <span className="flex items-center text-xl font-bold ml-1 group-hover:text-blue-400">
                       Programs
                     </span>
                   </a>
                 </Link>
                 <Link href="/resources">
-                  <a className="flex flex-start  items-center hover:bg-gray-100 p-2">
-                    <LinkIcon height={50} />
-                    <span className="flex flex-start items-center text-xl font-bold ml-1">
+                  <a className="flex flex-start  items-center border-2 border-blue-100 rounded group hover:bg-blue-100 hover:border-blue-300 p-2 mb-3 md:mb-0">
+                    <LinkIcon
+                      height={50}
+                      className="text-blue-400 group-hover:text-white"
+                    />
+                    <span className="flex flex-start items-center text-xl font-bold ml-1 group-hover:text-blue-400">
                       Resources
                     </span>
                   </a>
                 </Link>
 
                 <Link href="/contact-us">
-                  <a className="flex flex-start items-center hover:bg-gray-100 p-2">
-                    <MailIcon height={50} />
-                    <span className="flex items-center text-xl font-bold ml-1">
+                  <a className="flex flex-start items-center border-2 border-blue-100 rounded group hover:bg-blue-100 hover:border-blue-300 p-2 px-5 mb-3 md:mb-0">
+                    <MailIcon
+                      height={50}
+                      className="text-green-400 group-hover:text-white"
+                    />
+                    <span className="flex items-center text-xl font-bold ml-1 group-hover:text-blue-400">
                       Contact
                     </span>
                   </a>
