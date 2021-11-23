@@ -19,11 +19,11 @@ export default function ProgramsPage({ programs }) {
     <Layout title="GIG || Our Programs">
       <div className="relative bg-blue-400">
         <div className="absolute inset-0">
-          {/* <img
-          className="w-full h-full object-cover"
-          src="https://images.unsplash.com/photo-1525130413817-d45c1d127c42?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1920&q=60&&sat=-100"
-          alt=""
-        /> */}
+          <img
+            className="w-full h-full object-cover"
+            src="https://media.graphcms.com/output=format:jpg/resize=,height:800,fit:max/n8fvyRIWRuK9U3wCa2tT"
+            alt="GoGuard's Programs"
+          />
           <div
             className="absolute inset-0 bg-blue-800 mix-blend-multiply"
             aria-hidden="true"
@@ -45,7 +45,7 @@ export default function ProgramsPage({ programs }) {
       <div className="p-8 my-10 grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3">
         {programs.map((program) => (
           <div
-            className="max-w-sm rounded overflow-hidden shadow-lg"
+            className="max-w-sm rounded overflow-hidden shadow-lg mx-auto"
             key={program.slug}>
             <Link href={`/programs/${program.slug}`} passHref>
               <a>
