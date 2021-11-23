@@ -88,11 +88,11 @@ export default function Home() {
   return (
     <Layout>
       <div className="relative bg-gray-50 overflow-hidden">
-        <div className="relative md:pt-32 pt-16 sm:pb-12">
-          <div className="md:h-screen mx-auto w-full px-4 sm:mt-24">
+        <div className="relative md:pt-32 pt-16 sm:pb-4">
+          <div className="md:h-screen mx-auto w-full px-4 sm:mt-0">
             {/* BG Image */}
 
-            <div className="absolute inset-0 flex items-center justify-center h-screen mb-12 bg-fixed bg-center bg-cover custom-img">
+            <div className="absolute inset-0 flex items-center justify-center h-screen mb-12 bg-fixed md:bg-center bg-cover custom-img">
               <div className="absolute inset-0 bg-gray-400 mix-blend-multiply" />
             </div>
 
@@ -154,7 +154,7 @@ export default function Home() {
           animate={{ y: [0, 25] }}
           transition={{ ease: 'easeOut', duration: 2 }}> */}
         <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-3xl font-extrabold text-gray-900 md:pt-2 md:mx-0 pt-1 mx-1">
+          <h2 className="text-3xl font-extrabold text-gray-900 md:pt-2 mt-10 md:mt-0 md:mx-0 pt-1 mx-1">
             Industries We Insure: Boats to Loved Ones to Logistics
           </h2>
         </div>
