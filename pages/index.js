@@ -102,7 +102,7 @@ export default function Home() {
             <div className="text-center relative">
               <h1 className="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
                 <span className="block xl:inline">Commercial Insurance</span>{' '}
-                <span className="block text-transparent bg-clip-text bg-gradient-to-br sm:from-indigo-400 to-blue-600 outile-title font-extrabold ">
+                <span className="block text-indigo-600 font-extrabold ">
                   Programs &{' '}
                   <span className="block md:inline mt-3 md:mt-0">
                     Brokerage
