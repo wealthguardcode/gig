@@ -16,15 +16,9 @@
   background-image: url('https://media.graphcms.com/output=format:jpg/resize=,height:800,fit:max/6gW60WjTTqiZaNhfQOBD');
 }
 
-.outline-title {
-  font-size: 50px;
-  background: -webkit-linear-gradient(#818cf8, #60a5fa, #34d399);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: rgb(112, 112, 112);
-  margin-top: 2px;
+.outile-title {
+  -webkit-text-stroke-width: 0.5px;
+  -webkit-text-stroke-color: #b45309;
 }
 
 .outline {

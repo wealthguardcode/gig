@@ -88,7 +88,7 @@ export default function Home() {
   return (
     <Layout>
       <div className="relative bg-gray-50 overflow-hidden">
-        <div className="relative md:pt-32 pt-16 sm:pb-4">
+        <div className="relative md:pt-48 pt-16 sm:pb-4">
           <div className="md:h-screen mx-auto w-full px-4 sm:mt-0">
             {/* BG Image */}
 
@@ -102,14 +102,14 @@ export default function Home() {
             <div className="text-center relative">
               <h1 className="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
                 <span className="block xl:inline">Commercial Insurance</span>{' '}
-                <span className="block outline-title font-extrabold">
+                <span className="block text-transparent bg-clip-text bg-gradient-to-br from-indigo-400 to-blue-600 outile-title font-extrabold ">
                   Programs &{' '}
                   <span className="block md:inline mt-3 md:mt-0">
                     Brokerage
                   </span>
                 </span>
               </h1>
-              <p className="outline my-4 pb-4 font-bold text-xl text-yellow-500 lg:text-3xl tracking-tight">
+              <p className="outline my-6 pb-4 font-bold text-xl text-yellow-500 lg:text-3xl tracking-tight">
                 <span className="block xl:inline">
                   Since 2016 we have been providing insurance solutions with
                   expertise,
