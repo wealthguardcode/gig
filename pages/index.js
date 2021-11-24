@@ -109,7 +109,7 @@ export default function Home() {
                   </span>
                 </span>
               </h1>
-              <p className="outline my-6 pb-4 font-bold text-xl text-yellow-500 lg:text-3xl tracking-tight">
+              <p className="outline my-6 pb-4 font-bold text-xl text-green-500 lg:text-3xl tracking-tight">
                 <span className="block xl:inline">
                   Since 2016 we have been providing insurance solutions with
                   expertise,
