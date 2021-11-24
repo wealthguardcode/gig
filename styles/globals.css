@@ -19,6 +19,9 @@
 .outile-title {
   -webkit-text-stroke-width: 0.5px;
   -webkit-text-stroke-color: #b45309;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 }
 
 .outline {
