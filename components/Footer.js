@@ -2,16 +2,16 @@ const footerNavigation = {
   links: [
     { name: 'Programs', href: '/programs' },
     { name: 'Link 1', href: '#' },
-    { name: 'Link 2', href: '#' },
-    { name: 'Link 3', href: '#' },
-    { name: 'Link 4', href: '#' },
+    // { name: 'Link 2', href: '#' },
+    // { name: 'Link 3', href: '#' },
+    // { name: 'Link 4', href: '#' },
   ],
   resources: [
     { name: 'Link 1', href: '#' },
-    { name: 'Link 2', href: '#' },
-    { name: 'Link 3', href: '#' },
-    { name: 'Link 4', href: '#' },
-    { name: 'Link 5', href: '#' },
+    // { name: 'Link 2', href: '#' },
+    // { name: 'Link 3', href: '#' },
+    // { name: 'Link 4', href: '#' },
+    // { name: 'Link 5', href: '#' },
   ],
   company: [
     { name: 'About Us', href: '/about-us/about-us' },
