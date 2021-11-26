@@ -13,6 +13,31 @@ import { motion } from 'framer-motion'
 
 import Link from 'next/link'
 
+import { Disclosure } from '@headlessui/react'
+import { ChevronDownIcon } from '@heroicons/react/outline'
+
+const faqs = [
+  {
+    question: "What's the best thing about GoGuard?",
+    answer:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed mattis mattis tellus. Donec felis turpis, iaculis quis sodales vitae, ultricies et dolor. Fusce finibus nulla non quam pharetra bibendum.',
+  },
+  {
+    question: "What's the best thing about GoGuard?",
+    answer:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed mattis mattis tellus. Donec felis turpis, iaculis quis sodales vitae, ultricies et dolor. Fusce finibus nulla non quam pharetra bibendum.',
+  },
+  {
+    question: "What's the best thing about GoGuard?",
+    answer:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed mattis mattis tellus. Donec felis turpis, iaculis quis sodales vitae, ultricies et dolor. Fusce finibus nulla non quam pharetra bibendum.',
+  },
+]
+
+function classNames(...classes) {
+  return classes.filter(Boolean).join(' ')
+}
+
 const isServer = typeof window === 'undefined'
 const WOW = !isServer ? require('wow.js') : null
 
@@ -225,7 +250,7 @@ export default function Home() {
                   />
                 </div>
               </div>
-              <div className="flex flex-col items-center mt-3 md:flex-row md:justify-around p-4">
+              <div className="flex flex-col items-center mt- md:flex-row md:justify-around p-4">
                 <Link href="/programs">
                   <a className="flex flex-start items-center border-2 border-blue-100 rounded group hover:bg-blue-100 hover:border-blue-300 p-2 px-3 mb-3 md:mb-0">
                     <BookOpenIcon
@@ -262,6 +287,45 @@ export default function Home() {
                 </Link>
               </div>
             </dl>
+
+            {/* Brokers FAQ */}
+            <div className="bg-gray-50">
+              <div className="max-w-7xl mx-auto py-6 px-4 sm:pt-8 sm:pb-16 sm:px-6 lg:px-8">
+                <div className="max-w-3xl mx-auto divide-y-2 divide-gray-200">
+                  <dl className="mt-6 space-y-6 divide-y divide-gray-200">
+                    {faqs.map((faq) => (
+                      <Disclosure as="div" key={faq.question} className="pt-6">
+                        {({ open }) => (
+                          <>
+                            <dt className="text-lg">
+                              <Disclosure.Button className="text-left w-full flex justify-between items-start text-gray-400">
+                                <span className="font-medium text-gray-900">
+                                  {faq.question}
+                                </span>
+                                <span className="ml-6 h-7 flex items-center">
+                                  <ChevronDownIcon
+                                    className={classNames(
+                                      open ? '-rotate-180' : 'rotate-0',
+                                      'h-6 w-6 transform'
+                                    )}
+                                    aria-hidden="true"
+                                  />
+                                </span>
+                              </Disclosure.Button>
+                            </dt>
+                            <Disclosure.Panel as="dd" className="mt-2 pr-12">
+                              <p className="text-base text-gray-500">
+                                {faq.answer}
+                              </p>
+                            </Disclosure.Panel>
+                          </>
+                        )}
+                      </Disclosure>
+                    ))}
+                  </dl>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
