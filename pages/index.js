@@ -9,7 +9,6 @@ import {
   LinkIcon,
   BookOpenIcon,
 } from '@heroicons/react/outline'
-import { motion } from 'framer-motion'
 
 import Link from 'next/link'
 
@@ -106,10 +105,6 @@ const features2 = [
 ]
 
 export default function Home() {
-  useEffect(() => {
-    new WOW().init()
-  }, [])
-
   return (
     <Layout>
       <div className="relative bg-gray-50 overflow-hidden">
@@ -121,9 +116,6 @@ export default function Home() {
               <div className="absolute inset-0 bg-gray-400 mix-blend-multiply" />
             </div>
 
-            {/* <motion.div
-              animate={{ y: [0, 25] }}
-              transition={{ ease: 'easeOut', duration: 2 }}> */}
             <div className="text-center relative">
               <h1 className="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
                 <span className="block xl:inline">Commercial Insurance</span>{' '}
@@ -168,22 +160,18 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            {/* </motion.div> */}
           </div>
         </div>
       </div>
 
       {/* Features Section */}
       <div className="bg-gradient-to-b from-gray-50 via-gray-50 to-white ">
-        {/* <motion.div
-          animate={{ y: [0, 25] }}
-          transition={{ ease: 'easeOut', duration: 2 }}> */}
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-3xl font-extrabold text-gray-900 md:pt-2 mt-10 md:mt-0 md:mx-0 pt-1 mx-1">
             Industries We Insure: Boats to Loved Ones to Logistics
           </h2>
         </div>
-        {/* </motion.div> */}
+
         <div className="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:pb-24 lg:pt-12 lg:px-8 lg:grid lg:grid-cols-2 lg:gap-x-8">
           <div className="mt-12 lg:mt-0 lg:col-span-2">
             <dl className="space-y-10 sm:space-y-0 sm:grid sm:grid-cols-2 sm:grid-rows-4 sm:grid-flow-col sm:gap-x-6 sm:gap-y-10 lg:gap-x-8">
