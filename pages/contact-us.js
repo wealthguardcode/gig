@@ -38,9 +38,9 @@ export default function ContactUsPage() {
                   Let&apos;s work together
                 </h2>
                 <p className="mt-4 text-lg text-gray-500 sm:mt-3">
-                  We&apos;d love to hear from you! Send us a message using the form
-                  opposite, or email us. We’d love to hear from you! Send us a
-                  message using the form opposite, or email us.
+                  We&apos;d love to hear from you! Send us a message using the
+                  form opposite, or email us. We’d love to hear from you! Send
+                  us a message using the form opposite, or email us.
                 </p>
                 <form
                   action="#"
@@ -158,22 +158,7 @@ export default function ContactUsPage() {
                       />
                     </div>
                   </div>
-                 
-                  <div className="sm:col-span-2">
-                    <label
-                      htmlFor="how-did-you-hear-about-us"
-                      className="block text-sm font-medium text-gray-700">
-                      How did you hear about us?
-                    </label>
-                    <div className="mt-1">
-                      <input
-                        type="text"
-                        name="how-did-you-hear-about-us"
-                        id="how-did-you-hear-about-us"
-                        className="shadow-sm focus:ring-grape-500 focus:border-grape-500 block w-full sm:text-sm border-gray-300 rounded-md"
-                      />
-                    </div>
-                  </div>
+
                   <div className="text-right sm:col-span-2">
                     <button
                       type="submit"
@@ -188,12 +173,10 @@ export default function ContactUsPage() {
         </div>
 
         {/* CTA Section */}
-        <div className="bg-blue-400">
+        <div className="bg-gradient-to-r from-blue-400 via-indigo-500 to-blue-500">
           <div className="max-w-md mx-auto text-center py-16 px-4 sm:max-w-2xl sm:py-24 sm:px-6 lg:px-8 lg:py-32">
             <h2 className="text-3xl font-extrabold sm:text-4xl">
-              <span className="block text-white">
-                Need something else?
-              </span>
+              <span className="block text-white">Need something else?</span>
               <span className="block text-blue-900">Drop us a line.</span>
             </h2>
             <a

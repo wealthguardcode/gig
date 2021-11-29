@@ -74,7 +74,7 @@ const features = [
   {
     name: 'Violent Malicious Acts',
     description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras scelerisque efficitur posuere.',
+      'Designed to help you and your facility move forward after a tragedy.',
   },
   {
     name: 'Deductible buy-down options',
@@ -126,7 +126,7 @@ export default function Home() {
                   </span>
                 </span>
               </h1>
-              <p className="outline my-6 pb-4 font-bold text-xl text-green-500 lg:text-3xl tracking-tight">
+              <p className="outline my-6 pb-4 font-bold text-xl text-gray-300 lg:text-3xl tracking-tight">
                 <span className="block xl:inline">
                   Since 2016 we have been providing insurance solutions with
                   expertise,
@@ -136,7 +136,7 @@ export default function Home() {
                   diversity of products, and underwriting integrity!
                 </span>
               </p>
-              <div className="border-t-4 w-1/5 mx-auto py-2 border-gray-900" />
+              <div className="border-t-4 w-1/5 mx-auto py-2 border-indigo-600" />
               <p className="mt-3 max-w-md mx-auto prose lg:prose-xl text-gray-200 font-semibold  md:mt-5  md:max-w-3xl">
                 Whether you&apos;re a business owner or insurance broker,
                 you&apos;ll find industry-specific resources and specialty
@@ -174,21 +174,31 @@ export default function Home() {
 
         <div className="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:pb-24 lg:pt-12 lg:px-8 lg:grid lg:grid-cols-2 lg:gap-x-8">
           <div className="mt-12 lg:mt-0 lg:col-span-2">
-            <dl className="space-y-10 sm:space-y-0 sm:grid sm:grid-cols-2 sm:grid-rows-4 sm:grid-flow-col sm:gap-x-6 sm:gap-y-10 lg:gap-x-8">
+            <dl className="space-y-10 sm:space-y-0 sm:grid sm:grid-cols-2 sm:grid-rows-4 sm:grid-flow-col sm:gap-x-6 sm:gap-y-10 lg:gap-x-8 ">
               {features.map((feature) => (
-                <div key={feature.name} className="relative">
+                <div
+                  key={feature.name}
+                  className="relative cursor-pointer border-4 border-light-blue-500 border-opacity-50 rounded-lg p-4 hover:shadow-2xl hover:border-gray-300">
                   <dt>
                     <CheckIcon
-                      className="absolute h-6 w-6 text-green-500"
+                      className="absolute h-8 w-8 text-green-500"
                       aria-hidden="true"
                     />
-                    <p className="ml-9 text-xl leading-6 font-medium text-gray-900">
-                      {feature.name}
-                    </p>
+                    <Link href="/programs">
+                      <a>
+                        <p className="ml-9 text-xl leading-6 font-medium text-gray-900">
+                          {feature.name}
+                        </p>
+                      </a>
+                    </Link>
                   </dt>
-                  <dd className="mt-2 ml-9  prose-lg text-gray-500">
-                    {feature.description}
-                  </dd>
+                  <Link href="/programs">
+                    <a>
+                      <dd className="mt-2 ml-9  prose-lg text-gray-500">
+                        {feature.description}
+                      </dd>
+                    </a>
+                  </Link>
                 </div>
               ))}
             </dl>
@@ -369,7 +379,7 @@ export default function Home() {
       <div className="bg-gray-700">
         <div className="max-w-2xl mx-auto text-center py-16 px-4 sm:py-20 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-extrabold text-white sm:text-4xl">
-            <span className="block">Helpful Business Resources</span>
+            <span className="block">Helpful Broker Resources</span>
           </h2>
           <p className="mt-4 text-lg leading-6 text-gray-200">
             In finibus purus sit amet leo tempus, et condimentum justo
@@ -387,7 +397,7 @@ export default function Home() {
       <div className="bg-blue-700">
         <div className="max-w-2xl mx-auto text-center py-16 px-4 sm:py-20 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-extrabold text-white sm:text-4xl">
-            <span className="block">Business Support</span>
+            <span className="block">Broker Support</span>
             <span className="block">Covid-19 Resource Center</span>
           </h2>
           <p className="mt-4 text-lg leading-6 text-blue-200 ">
