@@ -89,9 +89,9 @@ export default function leadership() {
                 {people.map((person) => (
                   <li key={person.name}>
                     <div className="space-y-4 sm:grid sm:grid-cols-3 sm:gap-6 sm:space-y-0 lg:gap-8">
-                      <div className="h-0 aspect-w-3 aspect-h-2 sm:aspect-w-3 sm:aspect-h-4">
+                      <div className="h-0 aspect-w-3 aspect-h-2 sm:aspect-w-3 sm:aspect-h-4 bg-white">
                         <img
-                          className="object-cover shadow-lg rounded-lg"
+                          className="md:object-cover object-contain md:shadow-lg rounded-lg"
                           src={person.imageUrl}
                           alt=""
                         />
