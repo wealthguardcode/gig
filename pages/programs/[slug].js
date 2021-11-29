@@ -82,9 +82,7 @@ export default function ProgramPage({ program }) {
             {program.title}
           </h1>
           <p className="mt-6 text-xl text-blue-100 max-w-xl ">
-            Mattis amet hendrerit dolor, quisque lorem pharetra. Pellentesque
-            lacus nisi urna, arcu sociis eu. Orci vellectus nisl eget eget ut
-            consectetur.
+            {program.heroDescription}
           </p>
         </div>
       </div>
