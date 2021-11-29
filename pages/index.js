@@ -229,9 +229,9 @@ export default function Home() {
                 </h1>
               </div>
               <div className="flex flex-col md:flex-row">
-                <div className="flex flex-col p-4">
+                <div className="flex flex-col justify-center items-center p-4">
                   <h3 className="text-4xl tracking-wider ">Brokers</h3>
-                  <p className="mt-3">
+                  <p className="mt-3 prose mx-4">
                     Aenean dictum varius metus a imperdiet. Donec cursus nulla
                     sem, ac bibendum elit laoreet nec. Nulla facilisi. Fusce
                     tristique lacus enim, vitae mattis ex laoreet et. Fusce
@@ -240,11 +240,11 @@ export default function Home() {
                   </p>
                 </div>
 
-                <div className=" ">
+                <div className="">
                   <img
                     className="w-3/4 mx-auto my-2 rounded"
-                    src="https://cdn.pixabay.com/photo/2021/09/12/08/49/headset-6617715_1280.png"
-                    alt=""
+                    src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+                    alt="Insurance Broker"
                   />
                 </div>
               </div>
