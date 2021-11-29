@@ -44,32 +44,32 @@ const features = [
   {
     name: 'Assisted Living Facilities',
     description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras scelerisque efficitur posuere.',
+      'Every day, 10,000 baby boomers are turning 65.  The increased demand for senior care communities has sky rocketed.',
   },
   {
     name: 'Marina Insurance',
     description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras scelerisque efficitur posuere.',
+      'All perils coverage including wind & hail, flood, earthquake and collapse. No co-insurance- Agreed value for property.',
   },
   {
     name: 'Coastal Property',
     description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras scelerisque efficitur posuere.',
+      'Hurricanes cause more damage than any other natural disaster known to man, and every year they are responsible for 28 billion dollars of destruction.',
   },
   {
     name: 'Cargo & Logistics',
     description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras scelerisque efficitur posuere.',
+      'Our Cargo and Logistics team are leaders in helping your business avoid business disruptions and recover from costly perils.',
   },
   {
     name: 'Terrorism & Sabotage',
     description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras scelerisque efficitur posuere.',
+      'The harm of life and property brought by acts of terrorism or sabotage is significant and incidents are increasing each year. ',
   },
   {
     name: 'Active Assailant',
     description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras scelerisque efficitur posuere.',
+      'The financial impact can be devastating to a business and this coverage will help keep you in business as you work through the emotional and financial recovery.',
   },
   {
     name: 'Violent Malicious Acts',
@@ -186,7 +186,7 @@ export default function Home() {
                       {feature.name}
                     </p>
                   </dt>
-                  <dd className="mt-2 ml-9 text-base text-gray-500">
+                  <dd className="mt-2 ml-9  prose-lg text-gray-500">
                     {feature.description}
                   </dd>
                 </div>
