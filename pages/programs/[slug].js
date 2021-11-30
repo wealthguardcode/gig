@@ -1,7 +1,7 @@
 import Layout from '../../components/Layout'
 import { getProgram, getProgramsSlugs } from '../../lib/data'
-import { Disclosure } from '@headlessui/react'
-import { ChevronDownIcon } from '@heroicons/react/outline'
+import Link from 'next/link'
+import { MailIcon } from '@heroicons/react/solid'
 import he from 'he'
 import { MDXRemote } from 'next-mdx-remote'
 import { serialize } from 'next-mdx-remote/serialize'
@@ -103,7 +103,7 @@ export default function ProgramPage({ program, coverage, highlights }) {
                 {program.subHeading}
               </p>
             </div>
-            <div className="relative z-10 prose prose-xl  mx-auto lg:max-w-5xl lg:mx-0 mb-20">
+            <div className="relative z-10 prose prose-xl  mx-auto lg:max-w-5xl lg:mx-0 mb-10">
               <p className="text-lg ">{program.description}</p>
             </div>
           </div>
@@ -144,6 +144,29 @@ export default function ProgramPage({ program, coverage, highlights }) {
             </h2>
             <div className="prose prose-xl max-w-none mt-2">
               {<MDXRemote {...highlights} />}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* CTA section */}
+      <div className="bg-indigo-50">
+        <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-24 lg:px-8 lg:flex lg:items-center lg:justify-between">
+          <h2 className="text-3xl font-extrabold tracking-tight text-gray-900 md:text-4xl">
+            <span className="block">Ready to learn more?</span>
+            <span className="block text-indigo-600">Contact us today.</span>
+          </h2>
+          <div className="mt-8 flex lg:mt-0 lg:flex-shrink-0">
+            <div className="inline-flex rounded-md shadow">
+              <Link href="/contact-us">
+                <a className="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700">
+                  Contact us{' '}
+                  <MailIcon
+                    className="ml-3 h-5 w-5 flex-shrink-0 text-gray-50"
+                    aria-hidden="true"
+                  />
+                </a>
+              </Link>
             </div>
           </div>
         </div>
