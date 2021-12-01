@@ -87,19 +87,19 @@ const features2 = [
   {
     name: 'Claims Experience',
     description:
-      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
+      'Since 2016 we have been providing insurance solutions with expertise, diversity of products, and underwriting integrity!',
     icon: GlobeAltIcon,
   },
   {
     name: 'Risk Control',
     description:
-      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
+      "GoGuard's executive leadership has unprecedented access to innovative commercial insurance products and solutions.",
     icon: ScaleIcon,
   },
   {
     name: 'Extensive Coverage',
     description:
-      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
+      'We have years of insurance experience helping carriers and brokers provide solutions to their clients. Experience the difference!',
     icon: LightningBoltIcon,
   },
 ]
@@ -418,25 +418,27 @@ export default function Home() {
         <div className="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:py-24 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl font-extrabold text-gray-900">
-              Why Work With GIG?
+              Why Work With GoGuard?
             </h2>
-            <p className="mt-4 text-lg text-gray-500  ">
-              Ac euismod vel sit maecenas id pellentesque eu sed consectetur.
-              Malesuada adipiscing sagittis vel nulla nec.
+            <p className="mt-4 text-xl text-gray-500  ">
+              Year over year we have consistently achieved 200% growth,{' '}
+              <span className="font-bold">call us and learn why!</span>
             </p>
           </div>
-          <dl className="mt-12 space-y-10 sm:space-y-0 sm:grid sm:grid-cols-2 sm:gap-x-6 sm:gap-y-12 lg:grid-cols-3 lg:gap-x-8">
+          <dl className="mt-12 space-y-10 sm:space-y-0 sm:grid sm:grid-cols-2 sm:gap-x-6 sm:gap-y-12 lg:grid-cols-3 lg:gap-x-8 hover:border-gray-100">
             {features2.map((feature) => (
-              <div key={feature.name}>
+              <div
+                key={feature.name}
+                className="shadow-xl hover:shadow-2xl rounded-xl m-2 p-4">
                 <dt>
                   <div className="flex items-center justify-center h-12 w-12 rounded-md bg-blue-900 opacity-70 text-white mx-auto">
                     <feature.icon className="h-6 w-6" aria-hidden="true" />
                   </div>
-                  <p className="mt-5 text-lg leading-6 font-medium text-gray-900 text-center ">
+                  <p className="mt-5 text-xl leading-6 font-medium text-gray-900 text-center ">
                     {feature.name}
                   </p>
                 </dt>
-                <dd className="mt-2 text-base text-gray-500">
+                <dd className="mt-3 prose-lg text-gray-500 md:text-center">
                   {feature.description}
                 </dd>
               </div>
