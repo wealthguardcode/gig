@@ -5,6 +5,7 @@ import { MailIcon } from '@heroicons/react/solid'
 import he from 'he'
 import { MDXRemote } from 'next-mdx-remote'
 import { serialize } from 'next-mdx-remote/serialize'
+import SimpleReactLightbox, { SRLWrapper } from 'simple-react-lightbox'
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
@@ -86,16 +87,20 @@ export default function ProgramPage({ program, coverage, highlights }) {
             </div>
             <div className="mt-12 relative text-base max-w-prose mx-auto lg:mt-0 lg:max-w-none md:pt-32">
               <blockquote className="relative bg-gray-50 rounded-lg shadow-lg p-8">
-                <img
-                  src={program.image.url}
-                  alt={program.title}
-                  className="h-auto rounded"
-                />
-                <img
-                  src={program.image2.url}
-                  alt={program.title}
-                  className="h-auto rounded mt-8"
-                />
+                <SimpleReactLightbox>
+                  <SRLWrapper>
+                    <img
+                      src={program.image.url}
+                      alt={program.title}
+                      className="h-auto rounded"
+                    />
+                    <img
+                      src={program.image2.url}
+                      alt={program.title}
+                      className="h-auto rounded mt-8"
+                    />
+                  </SRLWrapper>
+                </SimpleReactLightbox>
               </blockquote>
             </div>
           </div>
