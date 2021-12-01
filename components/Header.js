@@ -11,50 +11,26 @@ const navigation = {
         {
           name: 'View All Programs',
           href: '/programs',
-          imageSrc:
-            'https://tailwindui.com/img/ecommerce-images/mega-menu-category-01.jpg',
-          imageAlt:
-            'Models sitting back to back, wearing Basic Tee in black and bone.',
         },
         {
           name: 'West Wall Marina Program',
           href: '/programs/west-wall-marina',
-          imageSrc:
-            'https://tailwindui.com/img/ecommerce-images/mega-menu-category-02.jpg',
-          imageAlt:
-            'Close up of Basic Tee fall bundle with off-white, ochre, olive, and black tees.',
         },
         {
           name: 'Assistant Living Facility',
           href: '/programs/assistant-living-facility',
-          imageSrc:
-            'https://tailwindui.com/img/ecommerce-images/mega-menu-category-03.jpg',
-          imageAlt:
-            'Model wearing minimalist watch with black wristband and white watch face.',
         },
         {
           name: 'Cargo & Logistics',
           href: '/programs/cargo-and-logistics',
-          imageSrc:
-            'https://tailwindui.com/img/ecommerce-images/mega-menu-category-04.jpg',
-          imageAlt:
-            'Model opening tan leather long wallet with credit card pockets and cash pouch.',
         },
         {
           name: 'Active Assailant',
           href: '/programs/active-assailant',
-          imageSrc:
-            'https://tailwindui.com/img/ecommerce-images/mega-menu-category-04.jpg',
-          imageAlt:
-            'Model opening tan leather long wallet with credit card pockets and cash pouch.',
         },
         {
           name: 'Terrorism & Sabotage',
           href: '/programs/terrorism-and-sabotage',
-          imageSrc:
-            'https://tailwindui.com/img/ecommerce-images/mega-menu-category-04.jpg',
-          imageAlt:
-            'Model opening tan leather long wallet with credit card pockets and cash pouch.',
         },
       ],
     },
@@ -100,18 +76,11 @@ const navigation = {
         {
           name: 'Broker Resources',
           href: '#',
-          imageSrc:
-            'https://tailwindui.com/img/ecommerce-images/mega-menu-01-men-category-01.jpg',
-          imageAlt:
-            'Hats and sweaters on wood shelves next to various colors of t-shirts on hangers.',
         },
-        // {
-        //   name: 'Business Resources',
-        //   href: '#',
-        //   imageSrc:
-        //     'https://tailwindui.com/img/ecommerce-images/mega-menu-01-men-category-02.jpg',
-        //   imageAlt: 'Model wearing light heather gray t-shirt.',
-        // },
+        {
+          name: 'FAQ',
+          href: '/faq',
+        },
       ],
     },
     {
@@ -120,17 +89,10 @@ const navigation = {
         {
           name: 'About Us Overview',
           href: '/about-us/about-us',
-          imageSrc:
-            'https://tailwindui.com/img/ecommerce-images/mega-menu-01-men-category-01.jpg',
-          imageAlt:
-            'Hats and sweaters on wood shelves next to various colors of t-shirts on hangers.',
         },
         {
           name: 'Leadership',
           href: '/about-us/leadership',
-          imageSrc:
-            'https://tailwindui.com/img/ecommerce-images/mega-menu-01-men-category-02.jpg',
-          imageAlt: 'Model wearing light heather gray t-shirt.',
         },
         // {
         //   name: 'Link 1',

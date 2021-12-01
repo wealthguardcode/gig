@@ -1,14 +1,15 @@
 const footerNavigation = {
   links: [
-    { name: 'Programs', href: '/programs' },
-    { name: 'Link 1', href: '#' },
-    // { name: 'Link 2', href: '#' },
-    // { name: 'Link 3', href: '#' },
-    // { name: 'Link 4', href: '#' },
+    { name: 'All Programs', href: '/programs' },
+    { name: 'West Wall Marina', href: '/west-wall-marina' },
+    { name: 'Assistant Living', href: '/assistant-living-facility' },
+    { name: 'Cargo & Logistics', href: '/cargo-and-logistics' },
+    { name: 'Active Assailant', href: '/active-assailant' },
+    { name: 'Terrorism & Sabotage', href: '/terrorism-and-sabotage' },
   ],
   resources: [
-    { name: 'Link 1', href: '#' },
-    // { name: 'Link 2', href: '#' },
+    { name: 'Resources', href: '#' },
+    { name: 'FAQ', href: '/faq' },
     // { name: 'Link 3', href: '#' },
     // { name: 'Link 4', href: '#' },
     // { name: 'Link 5', href: '#' },
@@ -16,7 +17,6 @@ const footerNavigation = {
   company: [
     { name: 'About Us', href: '/about-us/about-us' },
     { name: 'Leadership', href: '/about-us/leadership' },
-    { name: 'FAQ', href: '/faq' },
     { name: 'Contact Us', href: '/contact-us' },
     { name: 'Link 1', href: '#' },
   ],
@@ -46,7 +46,7 @@ export default function Footer() {
             <div className="mt-10 col-span-6 grid grid-cols-2 gap-8 sm:grid-cols-3 md:mt-0 md:row-start-1 md:col-start-3 md:col-span-8 lg:col-start-2 lg:col-span-6">
               <div className="grid grid-cols-1 gap-y-12 sm:col-span-2 sm:grid-cols-2 sm:gap-x-8">
                 <div>
-                  <h3 className="text-sm font-medium text-gray-900">
+                  <h3 className="text-base font-medium tracking-wider text-gray-900">
                     Quick Links
                   </h3>
                   <ul role="list" className="mt-6 space-y-6">
@@ -54,7 +54,7 @@ export default function Footer() {
                       <li key={item.name} className="text-sm">
                         <a
                           href={item.href}
-                          className="text-gray-500 hover:text-gray-600">
+                          className="text-gray-500 hover:font-bold hover:text-blue-600 hover:bg-gray-100">
                           {item.name}
                         </a>
                       </li>
@@ -62,7 +62,7 @@ export default function Footer() {
                   </ul>
                 </div>
                 <div>
-                  <h3 className="text-sm font-medium text-gray-900">
+                  <h3 className="text-base font-medium tracking-wider text-gray-900">
                     Resources
                   </h3>
                   <ul role="list" className="mt-6 space-y-6">
@@ -70,7 +70,7 @@ export default function Footer() {
                       <li key={item.name} className="text-sm">
                         <a
                           href={item.href}
-                          className="text-gray-500 hover:text-gray-600">
+                          className="text-gray-500 hover:font-bold hover:text-blue-600 hover:bg-gray-100">
                           {item.name}
                         </a>
                       </li>
@@ -79,13 +79,15 @@ export default function Footer() {
                 </div>
               </div>
               <div>
-                <h3 className="text-sm font-medium text-gray-900">Company</h3>
+                <h3 className="text-base font-medium tracking-wider text-gray-900">
+                  Company
+                </h3>
                 <ul role="list" className="mt-6 space-y-6">
                   {footerNavigation.company.map((item) => (
                     <li key={item.name} className="text-sm">
                       <a
                         href={item.href}
-                        className="text-gray-500 hover:text-gray-600">
+                        className="text-gray-500 hover:font-bold hover:text-blue-600 hover:bg-gray-100">
                         {item.name}
                       </a>
                     </li>
