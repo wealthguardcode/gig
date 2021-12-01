@@ -222,7 +222,7 @@ export default function Home() {
           </div>
 
           <div className="mt-10 shadow-xl rounded-xl">
-            <dl className="space-y-10 md:space-y-0 grid grid-cols-1 md:gap-x-8 md:gap-y-10 shadow-xl">
+            <dl className="space-y-10 md:space-y-0 grid grid-cols-1 md:gap-x-8 md:gap-y-10 shadow-2xl">
               <div className="my-10">
                 <h1 className="text-4xl text-blue-100 bg-gradient-to-r from-indigo-400 via-blue-500 to-green-500 font-bold mx-2 text-center rounded py-1">
                   For Brokers
