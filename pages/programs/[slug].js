@@ -35,7 +35,7 @@ export const getStaticProps = async ({ params }) => {
 }
 
 export default function ProgramPage({ program, coverage, highlights }) {
-  // console.log(program)
+  console.log(program)
   return (
     <Layout title={`GIG || ${program.title}`}>
       {/* Hero */}
