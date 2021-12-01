@@ -204,7 +204,7 @@ export default function Header() {
                             classNames(
                               selected
                                 ? 'text-blue-600 border-blue-600'
-                                : 'text-gray-900 border-transparent',
+                                : 'text-gray-900 border-transparent hover:text-blue-600',
                               'flex-1 whitespace-nowrap py-4 px-1 border-b-2 text-md font-medium'
                             )
                           }>
@@ -232,7 +232,7 @@ export default function Header() {
                               </div> */}
                               <a
                                 href={item.href}
-                                className="mt-6 block  font-medium text-gray-900">
+                                className="mt-6 block font-medium text-gray-900 hover:text-blue-600">
                                 <span
                                   className="absolute z-10 inset-0"
                                   aria-hidden="true"
@@ -252,7 +252,7 @@ export default function Header() {
                     <div key={page.name} className="flow-root">
                       <a
                         href={page.href}
-                        className="-m-2 p-2 block font-medium text-gray-900 ">
+                        className="-m-2 p-2 block font-medium text-gray-900 hover:text-blue-600">
                         {page.name}
                       </a>
                     </div>
@@ -298,7 +298,7 @@ export default function Header() {
                                     className={classNames(
                                       open
                                         ? 'text-blue-600'
-                                        : 'text-gray-700 hover:text-gray-800',
+                                        : 'text-gray-700 hover:text-blue-600',
                                       'relative flex items-center justify-center transition-colors ease-out duration-200  font-medium'
                                     )}>
                                     {category.name}
@@ -372,7 +372,7 @@ export default function Header() {
                           <a
                             key={page.name}
                             href={page.href}
-                            className="flex items-center font-medium text-gray-700 hover:text-gray-800">
+                            className="flex items-center font-medium text-gray-700 hover:text-blue-600">
                             {page.name}
                           </a>
                         ))}
