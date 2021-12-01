@@ -6,39 +6,6 @@ import he from 'he'
 import { MDXRemote } from 'next-mdx-remote'
 import { serialize } from 'next-mdx-remote/serialize'
 
-const faqs = [
-  {
-    question: "What's the best thing about GoGuard?",
-    answer:
-      'Cursus faucibus nunc nisl netus morbi vel porttitor vitae ut. Amet vitae fames senectus vitae.',
-  },
-  {
-    question: "What's the best thing about GoGuard?",
-    answer:
-      'Cursus faucibus nunc nisl netus morbi vel porttitor vitae ut. Amet vitae fames senectus vitae.',
-  },
-  {
-    question: "What's the best thing about GoGuard?",
-    answer:
-      'Cursus faucibus nunc nisl netus morbi vel porttitor vitae ut. Amet vitae fames senectus vitae.',
-  },
-  {
-    question: "What's the best thing about GoGuard?",
-    answer:
-      'Cursus faucibus nunc nisl netus morbi vel porttitor vitae ut. Amet vitae fames senectus vitae.',
-  },
-  {
-    question: "What's the best thing about GoGuard?",
-    answer:
-      'Cursus faucibus nunc nisl netus morbi vel porttitor vitae ut. Amet vitae fames senectus vitae.',
-  },
-  {
-    question: "What's the best thing about GoGuard?",
-    answer:
-      'Cursus faucibus nunc nisl netus morbi vel porttitor vitae ut. Amet vitae fames senectus vitae.',
-  },
-]
-
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
