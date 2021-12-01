@@ -79,7 +79,7 @@ const navigation = {
         },
         {
           name: 'FAQ',
-          href: '/faq',
+          href: '/resources/faq',
         },
       ],
     },

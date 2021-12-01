@@ -9,7 +9,7 @@ const footerNavigation = {
   ],
   resources: [
     { name: 'Resources', href: '#' },
-    { name: 'FAQ', href: '/faq' },
+    { name: 'FAQ', href: '/resources/faq' },
     // { name: 'Link 3', href: '#' },
     // { name: 'Link 4', href: '#' },
     // { name: 'Link 5', href: '#' },
