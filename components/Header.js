@@ -239,11 +239,6 @@ export default function Header() {
                                 />
                                 {item.name}
                               </a>
-                              {/* <p
-                                aria-hidden="true"
-                                className="mt-1 text-sm text-gray-500">
-                                Shop now
-                              </p> */}
                             </div>
                           ))}
                         </div>
@@ -354,7 +349,7 @@ export default function Header() {
                                               className="group relative">
                                               <a
                                                 href={item.href}
-                                                className="mt-4 font-base block font-medium text-gray-900">
+                                                className="mt-4 font-base block font-medium text-gray-900 hover:text-blue-600 hover:bg-gray-100">
                                                 <span
                                                   className="absolute z-10 inset-0 group-hover:block"
                                                   aria-hidden="true"

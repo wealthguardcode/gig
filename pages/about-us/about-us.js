@@ -213,7 +213,7 @@ export default function AboutUsOverview() {
               <div className="inline-flex rounded-md shadow">
                 <Link href="/contact-us">
                   <a className="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-gray-900 bg-white hover:bg-gray-50">
-                    Contact us today
+                    Contact us
                     <ExternalLinkIcon
                       className="-mr-1 ml-3 h-5 w-5 text-gray-400"
                       aria-hidden="true"
