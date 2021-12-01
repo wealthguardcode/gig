@@ -1,11 +1,11 @@
 const footerNavigation = {
   links: [
     { name: 'All Programs', href: '/programs' },
-    { name: 'West Wall Marina', href: '/west-wall-marina' },
-    { name: 'Assistant Living', href: '/assistant-living-facility' },
-    { name: 'Cargo & Logistics', href: '/cargo-and-logistics' },
-    { name: 'Active Assailant', href: '/active-assailant' },
-    { name: 'Terrorism & Sabotage', href: '/terrorism-and-sabotage' },
+    { name: 'West Wall Marina', href: '/programs/west-wall-marina' },
+    { name: 'Assistant Living', href: '/programs/assistant-living-facility' },
+    { name: 'Cargo & Logistics', href: '/programs/cargo-and-logistics' },
+    { name: 'Active Assailant', href: '/programs/active-assailant' },
+    { name: 'Terrorism & Sabotage', href: '/programs/terrorism-and-sabotage' },
   ],
   resources: [
     { name: 'Resources', href: '#' },
