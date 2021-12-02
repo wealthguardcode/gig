@@ -93,6 +93,45 @@ export default function BrokerResourcesPage() {
         </div>
       </div>
 
+      {/* Programs */}
+      <div className="p-8 my-10 grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3">
+        {/* {programs.map((program) => (
+          <div
+            className="max-w-sm rounded overflow-hidden shadow-xl mx-auto hover:shadow-2xl hover:border-indigo-200"
+            key={program.slug}>
+            <Link href={`/programs/${program.slug}`} passHref>
+              <a>
+                <img
+                  className="w-full"
+                  src={program.image.url}
+                  alt={program.title}
+                />
+              </a>
+            </Link>
+            <div className="px-6 py-4 flex flex-col items-center">
+              <Link href={`/programs/${program.slug}`} passHref>
+                <a>
+                  <div className="font-bold text-xl mb-2 text-center">
+                    {program.title}
+                  </div>
+                </a>
+              </Link>
+              <div className="flex justify-center">
+                <Link href={`/programs/${program.slug}`} passHref>
+                  <a>
+                    <button
+                      type="button"
+                      className="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-indigo-700 bg-indigo-100 hover:bg-indigo-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                      Learn more
+                    </button>
+                  </a>
+                </Link>
+              </div>
+            </div>
+          </div>
+        ))} */}
+      </div>
+
       {/* CTA section */}
       <div className="bg-indigo-700">
         <div className="max-w-2xl mx-auto text-center py-16 px-4 sm:py-20 sm:px-6 lg:px-8">
