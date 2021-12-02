@@ -250,7 +250,7 @@ export default function Home() {
               </div>
               <div className="flex flex-col items-center mt- md:flex-row md:justify-around p-4">
                 <Link href="/programs">
-                  <a className="flex flex-start items-center border-2 border-blue-100 rounded group hover:bg-blue-100 hover:border-blue-300 p-2 px-3 mb-3 md:mb-0">
+                  <a className="flex flex-start items-center border-4 border-blue-100 rounded group hover:bg-blue-100 hover:border-blue-300 hover:shadow-2xl p-2 px-3 mb-3 md:mb-0">
                     <BookOpenIcon
                       height={50}
                       className="text-yellow-400 group-hover:text-white"
@@ -260,8 +260,8 @@ export default function Home() {
                     </span>
                   </a>
                 </Link>
-                <Link href="/resources">
-                  <a className="flex flex-start  items-center border-2 border-blue-100 rounded group hover:bg-blue-100 hover:border-blue-300 p-2 mb-3 md:mb-0">
+                <Link href="#">
+                  <a className="flex flex-start  items-center border-4 border-blue-100 rounded group hover:bg-blue-100 hover:border-blue-300 hover:shadow-2xl p-2 mb-3 md:mb-0">
                     <LinkIcon
                       height={50}
                       className="text-blue-400 group-hover:text-white"
@@ -273,7 +273,7 @@ export default function Home() {
                 </Link>
 
                 <Link href="/contact-us">
-                  <a className="flex flex-start items-center border-2 border-blue-100 rounded group hover:bg-blue-100 hover:border-blue-300 p-2 px-5 mb-3 md:mb-0">
+                  <a className="flex flex-start items-center border-4 border-blue-100 rounded group hover:bg-blue-100 hover:border-blue-300 hover:shadow-2xl p-2 px-5 mb-3 md:mb-0">
                     <MailIcon
                       height={50}
                       className="text-green-400 group-hover:text-white"

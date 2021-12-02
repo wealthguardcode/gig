@@ -59,10 +59,9 @@ export default function FaqPage() {
           <h1 className="text-4xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-6xl">
             FAQ&apos;s
           </h1>
-          <p className="mt-6 text-xl text-blue-100 max-w-3xl">
-            Mattis amet hendrerit dolor, quisque lorem pharetra. Pellentesque
-            lacus nisi urna, arcu sociis eu. Orci vellectus nisl eget eget ut
-            consectetur.
+          <p className="mt-6 text-2xl text-blue-100 max-w-3xl">
+            Got questions? We&apos;ve got answers. Take a look at some of our
+            most commonly asked questions.
           </p>
         </div>
       </div>
@@ -73,13 +72,12 @@ export default function FaqPage() {
           <div className="max-w-xl">
             <h2
               id="faq-heading"
-              className="text-2xl font-extrabold tracking-tight text-gray-900">
+              className="text-2xl font-extrabold tracking-wide text-gray-900">
               Frequently asked questions
             </h2>
-            <p className="mt-4 text-base text-gray-500">
-              Questions. Frequently asked ones. Plus our answers. That&apos;s
-              how FAQs work. If you can&apos;t find what you&apos;re looking
-              for, you can always{' '}
+            <p className="mt-4 text-lg text-gray-500">
+              Take a look at our FAQ and if you still cannot find what you are
+              looking for you can always{' '}
               <a
                 href="#"
                 className="font-medium text-indigo-600 hover:text-indigo-500">

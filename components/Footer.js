@@ -18,7 +18,7 @@ const footerNavigation = {
     { name: 'About Us', href: '/about-us/about-us' },
     { name: 'Leadership', href: '/about-us/leadership' },
     { name: 'Contact Us', href: '/contact-us' },
-    { name: 'Link 1', href: '#' },
+    // { name: 'Link 1', href: '#' },
   ],
 }
 
