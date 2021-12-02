@@ -75,7 +75,7 @@ const navigation = {
       programs: [
         {
           name: 'Broker Resources',
-          href: '#',
+          href: '/resources/broker-resources',
         },
         {
           name: 'FAQ',

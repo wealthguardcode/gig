@@ -260,7 +260,7 @@ export default function Home() {
                     </span>
                   </a>
                 </Link>
-                <Link href="#">
+                <Link href="/resources/broker-resources">
                   <a className="flex flex-start  items-center border-4 border-blue-100 rounded group hover:bg-blue-100 hover:border-blue-300 hover:shadow-2xl p-2 mb-3 md:mb-0">
                     <LinkIcon
                       height={50}

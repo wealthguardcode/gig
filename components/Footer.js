@@ -8,7 +8,7 @@ const footerNavigation = {
     { name: 'Terrorism & Sabotage', href: '/programs/terrorism-and-sabotage' },
   ],
   resources: [
-    { name: 'Resources', href: '#' },
+    { name: 'Resources', href: '/resources/broker-resources' },
     { name: 'FAQ', href: '/resources/faq' },
     // { name: 'Link 3', href: '#' },
     // { name: 'Link 4', href: '#' },
