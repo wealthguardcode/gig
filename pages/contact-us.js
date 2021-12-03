@@ -1,6 +1,55 @@
 import Layout from '../components/Layout'
-
 import { MailIcon } from '@heroicons/react/solid'
+import emailjs from 'emailjs-com'
+import { toast } from 'react-toastify'
+
+function fun() {
+  document.getElementById('first_name').value = ''
+  document.getElementById('last_name').value = ''
+  document.getElementById('email').value = ''
+  document.getElementById('company').value = ''
+  document.getElementById('phone').value = ''
+  document.getElementById('message').value = ''
+}
+
+function sendEmail(e) {
+  e.preventDefault()
+  if (
+    e.target.first_name.value === '' ||
+    e.target.last_name === '' ||
+    e.target.email === '' ||
+    e.target.company === '' ||
+    e.target.message === ''
+  ) {
+    return alert('Form cannot be empty!')
+  } else {
+    emailjs
+      .sendForm(
+        'service_74a7ngi',
+        'template_tsp834s',
+        e.target,
+        'user_1ODnWoNdXKoQipSD1qXJf'
+      )
+      .then(
+        (result) => {
+          toast('🎉 Message sent!', {
+            position: 'top-right',
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+          })
+          console.log(result.text)
+        },
+        (error) => {
+          alert(error.text)
+        }
+      )
+    fun()
+  }
+}
 
 export default function ContactUsPage() {
   return (
@@ -43,9 +92,10 @@ export default function ContactUsPage() {
                   us a message using the form opposite, or email us.
                 </p>
                 <form
-                  action="#"
+                  id="template_tsp834s"
                   method="POST"
-                  className="mt-9 grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8">
+                  className="mt-9 grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8"
+                  onSubmit={sendEmail}>
                   <div>
                     <label
                       htmlFor="first-name"
@@ -55,8 +105,8 @@ export default function ContactUsPage() {
                     <div className="mt-1">
                       <input
                         type="text"
-                        name="first-name"
-                        id="first-name"
+                        name="first_name"
+                        id="first_name"
                         autoComplete="given-name"
                         className="block w-full shadow-sm sm:text-sm focus:ring-blue-500 focus:border-blue-500 border-gray-300 rounded-md"
                       />
@@ -71,8 +121,8 @@ export default function ContactUsPage() {
                     <div className="mt-1">
                       <input
                         type="text"
-                        name="last-name"
-                        id="last-name"
+                        name="last_name"
+                        id="last_name"
                         autoComplete="family-name"
                         className="block w-full shadow-sm sm:text-sm focus:ring-blue-500 focus:border-blue-500 border-gray-300 rounded-md"
                       />
@@ -149,8 +199,8 @@ export default function ContactUsPage() {
                     </div>
                     <div className="mt-1">
                       <textarea
-                        id="how-can-we-help"
-                        name="how-can-we-help"
+                        id="message"
+                        name="message"
                         aria-describedby="how-can-we-help-description"
                         rows={4}
                         className="block w-full shadow-sm sm:text-sm focus:ring-grape-500 focus:border-grape-500 border border-gray-300 rounded-md"
