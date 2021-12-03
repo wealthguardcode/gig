@@ -103,7 +103,7 @@ const features2 = [
 export default function Home() {
   return (
     <Layout>
-      <div className="relative bg-gray-50 overflow-hidden">
+      <div className="relative bg-white dark:bg-gray-800 overflow-hidden">
         <div className="relative md:pt-48 pt-16 sm:pb-4">
           <div className="md:h-screen mx-auto w-full px-4 sm:mt-0">
             {/* BG Image */}
@@ -113,7 +113,7 @@ export default function Home() {
             </div>
 
             <div className="text-center relative">
-              <h1 className="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
+              <h1 className="text-4xl tracking-tight font-extrabold text-gray-900 dark:text-gray-200 sm:text-5xl md:text-6xl">
                 <span className="block xl:inline">Commercial Insurance</span>{' '}
                 <span className="block text-indigo-600 font-extrabold ">
                   Programs &{' '}
@@ -161,9 +161,9 @@ export default function Home() {
       </div>
 
       {/* Features Section */}
-      <div className="bg-gradient-to-b from-gray-50 via-gray-50 to-white ">
+      <div className="bg-white dark:bg-gray-800">
         <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-3xl font-extrabold text-gray-900 md:pt-2 mt-10 md:mt-0 md:mx-0 pt-1 mx-1">
+          <h2 className="text-3xl font-extrabold text-gray-900 dark:text-gray-300 md:pt-2 mt-10 md:mt-0 md:mx-0 pt-1 mx-1">
             Industries We Insure: Boats to Loved Ones to Logistics
           </h2>
         </div>
@@ -174,7 +174,7 @@ export default function Home() {
               {features.map((feature) => (
                 <div
                   key={feature.name}
-                  className="relative cursor-pointer border-4 border-light-blue-500 border-opacity-50 rounded-lg p-4 hover:shadow-2xl hover:border-gray-300">
+                  className="relative cursor-pointer border-4  border-opacity-50 rounded-lg p-4 hover:shadow-2xl hover:border-gray-300 dark:hover:border-blue-600">
                   <dt>
                     <CheckIcon
                       className="absolute h-8 w-8 text-green-500"
@@ -182,7 +182,7 @@ export default function Home() {
                     />
                     <Link href="/programs">
                       <a>
-                        <p className="ml-9 text-xl leading-6 font-medium text-gray-900">
+                        <p className="ml-9 text-xl leading-6 font-medium text-gray-900 dark:text-gray-300">
                           {feature.name}
                         </p>
                       </a>
@@ -190,7 +190,7 @@ export default function Home() {
                   </dt>
                   <Link href="/programs">
                     <a>
-                      <dd className="mt-2 ml-9  prose-lg text-gray-500">
+                      <dd className="mt-2 ml-9  prose-lg text-gray-500 dark:text-gray-400">
                         {feature.description}
                       </dd>
                     </a>
@@ -203,14 +203,14 @@ export default function Home() {
       </div>
 
       {/* Broker/Business Tabs */}
-      <div className="py-12 bg-gradient-to-t from-gray-50 via-gray-50 to-white">
+      <div className="py-12 bg-white dark:bg-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="lg:text-center ">
-            <p className="my-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl text-center">
+            <p className="my-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 dark:text-gray-300 sm:text-4xl text-center">
               GoGuard&apos;s insurance programs help businesses grow and thrive
             </p>
             <div className="border-t-4 w-1/5 mx-auto my-6 border-green-600" />
-            <p className="mt-4 max-w-2xl text-2xl text-gray-500 mx-auto">
+            <p className="mt-4 max-w-2xl text-2xl text-gray-500 dark:text-gray-400 mx-auto">
               We partner with businesses to help insure their success by
               protecting their assets, reducing exposure, and maintaining
               compliance.
@@ -227,7 +227,7 @@ export default function Home() {
               <div className="flex flex-col md:flex-row">
                 <div className="flex flex-col justify-center items-center p-4">
                   <h3 className="text-4xl tracking-wider ">Brokers</h3>
-                  <p className="mt-3 prose mx-4">
+                  <p className="mt-3 prose mx-4 dark:text-gray-400">
                     Aenean dictum varius metus a imperdiet. Donec cursus nulla
                     sem, ac bibendum elit laoreet nec. Nulla facilisi. Fusce
                     tristique lacus enim, vitae mattis ex laoreet et. Fusce
@@ -246,35 +246,35 @@ export default function Home() {
               </div>
               <div className="flex flex-col items-center mt- md:flex-row md:justify-around p-4">
                 <Link href="/programs">
-                  <a className="flex flex-start items-center border-4 border-blue-100 rounded group hover:bg-blue-100 hover:border-blue-300 hover:shadow-2xl p-2 px-3 mb-3 md:mb-0">
+                  <a className="flex flex-start items-center border-4 border-blue-100 dark:border-gray-600 dark:hover:border-blue-800 rounded group hover:bg-blue-100 dark:hover:bg-blue-900 hover:border-blue-300 hover:shadow-2xl p-2 px-3 mb-3 md:mb-0">
                     <BookOpenIcon
                       height={50}
                       className="text-yellow-400 group-hover:text-white"
                     />{' '}
-                    <span className="flex items-center text-xl font-bold ml-1 group-hover:text-blue-400">
+                    <span className="flex items-center text-xl font-bold ml-1 group-hover:text-blue-400 dark:group-hover:text-blue-300">
                       Programs
                     </span>
                   </a>
                 </Link>
                 <Link href="/resources/broker-resources">
-                  <a className="flex flex-start  items-center border-4 border-blue-100 rounded group hover:bg-blue-100 hover:border-blue-300 hover:shadow-2xl p-2 mb-3 md:mb-0">
+                  <a className="flex flex-start  items-center border-4 border-blue-100 dark:border-gray-600 dark:hover:border-blue-800 rounded group hover:bg-blue-100 dark:hover:bg-blue-900 hover:border-blue-300 hover:shadow-2xl p-2 mb-3 md:mb-0">
                     <LinkIcon
                       height={50}
                       className="text-blue-400 group-hover:text-white"
                     />
-                    <span className="flex flex-start items-center text-xl font-bold ml-1 group-hover:text-blue-400">
+                    <span className="flex flex-start items-center text-xl font-bold ml-1 group-hover:text-blue-400 dark:group-hover:text-blue-300">
                       Resources
                     </span>
                   </a>
                 </Link>
 
                 <Link href="/contact-us">
-                  <a className="flex flex-start items-center border-4 border-blue-100 rounded group hover:bg-blue-100 hover:border-blue-300 hover:shadow-2xl p-2 px-5 mb-3 md:mb-0">
+                  <a className="flex flex-start items-center border-4 border-blue-100 dark:border-gray-600 dark:hover:border-blue-800 rounded group hover:bg-blue-100 dark:hover:bg-blue-900 hover:border-blue-300 hover:shadow-2xl p-2 px-5 mb-3 md:mb-0">
                     <MailIcon
                       height={50}
                       className="text-green-400 group-hover:text-white"
                     />
-                    <span className="flex items-center text-xl font-bold ml-1 group-hover:text-blue-400">
+                    <span className="flex items-center text-xl font-bold ml-1 group-hover:text-blue-400 dark:group-hover:text-blue-300">
                       Contact
                     </span>
                   </a>
@@ -283,24 +283,24 @@ export default function Home() {
             </dl>
 
             {/* Brokers FAQ */}
-            <div className="bg-gray-50">
+            <div className="bg-gray-50 dark:bg-gray-700">
               <div className="max-w-7xl mx-auto py-6 px-4 sm:pt-8 sm:pb-16 sm:px-6 lg:px-8">
                 <div className="max-w-3xl mx-auto divide-y-2 divide-gray-200">
-                  <dl className="mt-6 space-y-6 divide-y divide-gray-200">
+                  <dl className="mt-6 space-y-6 divide-y divide-gray-200 dark:divide-gray-500">
                     {faqs.map((faq) => (
                       <Disclosure as="div" key={faq.question} className="pt-6">
                         {({ open }) => (
                           <>
                             <dt className="text-lg">
                               <Disclosure.Button className="text-left w-full flex justify-between items-start text-gray-400">
-                                <span className="font-medium text-gray-900">
+                                <span className="font-medium text-gray-900 dark:text-gray-300">
                                   {faq.question}
                                 </span>
                                 <span className="ml-6 h-7 flex items-center">
                                   <ChevronDownIcon
                                     className={classNames(
                                       open ? '-rotate-180' : 'rotate-0',
-                                      'h-6 w-6 transform'
+                                      'h-6 w-6 transform dark:text-gray-500'
                                     )}
                                     aria-hidden="true"
                                   />
@@ -308,7 +308,7 @@ export default function Home() {
                               </Disclosure.Button>
                             </dt>
                             <Disclosure.Panel as="dd" className="mt-2 pr-12">
-                              <p className="text-base text-gray-500">
+                              <p className="text-base text-gray-500 dark:text-gray-400">
                                 {faq.answer}
                               </p>
                             </Disclosure.Panel>
@@ -325,14 +325,14 @@ export default function Home() {
       </div>
 
       {/* Testimonial */}
-      <section className="py-12 bg-gray-50 overflow-hidden md:py-20 lg:py-24">
+      <section className="py-12 bg-gray-50 dark:bg-gray-700 overflow-hidden md:py-20 lg:py-24">
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="relative">
-            <h1 className="max-w-3xl mx-auto text-center text-3xl leading-9 font-bold text-gray-900 ">
+            <h1 className="max-w-3xl mx-auto text-center text-3xl leading-9 font-bold text-gray-900 dark:text-gray-300">
               Example Testimonial
             </h1>
             <blockquote className="mt-6 ">
-              <div className="max-w-3xl mx-auto text-center text-2xl leading-9 font-medium text-gray-900">
+              <div className="max-w-3xl mx-auto text-center text-2xl leading-9 font-medium text-gray-900 dark:text-gray-400">
                 <p className="">
                   &ldquo;Lorem ipsum dolor sit amet consectetur adipisicing
                   elit. Nemo expedita voluptas culpa sapiente alias molestiae.
@@ -349,7 +349,7 @@ export default function Home() {
                     />
                   </div>
                   <div className="mt-3 text-center md:mt-0 md:ml-4 md:flex md:items-center">
-                    <div className="text-base font-medium text-gray-900">
+                    <div className="text-base font-medium text-gray-900 dark:text-gray-400">
                       John Smith
                     </div>
 
@@ -360,7 +360,7 @@ export default function Home() {
                       <path d="M11 0h3L9 20H6l5-20z" />
                     </svg>
 
-                    <div className="text-base font-medium text-gray-500">
+                    <div className="text-base font-medium text-gray-500 dark:text-gray-400">
                       CEO, Example Co
                     </div>
                   </div>
@@ -372,18 +372,18 @@ export default function Home() {
       </section>
 
       {/* Resources Section */}
-      <div className="bg-gray-700">
+      <div className="bg-gray-700 dark:bg-gray-300">
         <div className="max-w-2xl mx-auto text-center py-16 px-4 sm:py-20 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-extrabold text-white sm:text-4xl">
+          <h2 className="text-3xl font-extrabold text-white dark:text-gray-600 sm:text-4xl">
             <span className="block">Helpful Broker Resources</span>
           </h2>
-          <p className="mt-4 text-lg leading-6 text-gray-200">
+          <p className="mt-4 text-lg leading-6 text-gray-200 dark:text-gray-500">
             In finibus purus sit amet leo tempus, et condimentum justo
             venenatis. Nam ac eros condimentum, blandit risus eu, dapibus
             tortor. Quisque ut scelerisque risus.
           </p>
           <Link href="/resources/broker-resources">
-            <a className="mt-8 w-full inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-gray-600 bg-white hover:bg-gray-100 sm:w-auto">
+            <a className="mt-8 w-full inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-gray-600 bg-white dark:text-gray-300 dark:bg-gray-600 dark:hover:text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-500 sm:w-auto">
               Learn more
             </a>
           </Link>
@@ -410,13 +410,13 @@ export default function Home() {
       </div>
 
       {/* Why Work with GIG */}
-      <div className="bg-white">
+      <div className="bg-white dark:bg-gray-800">
         <div className="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:py-24 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-3xl font-extrabold text-gray-900">
+            <h2 className="text-3xl font-extrabold text-gray-900 dark:text-gray-300">
               Why Work With GoGuard?
             </h2>
-            <p className="mt-4 text-xl text-gray-500  ">
+            <p className="mt-4 text-xl text-gray-500 dark:text-gray-400">
               Year over year we have consistently achieved 200% growth,{' '}
               <span className="font-bold">call us and learn why!</span>
             </p>
@@ -425,16 +425,16 @@ export default function Home() {
             {features2.map((feature) => (
               <div
                 key={feature.name}
-                className="shadow-xl hover:shadow-2xl rounded-xl m-2 p-4">
+                className="shadow-xl hover:shadow-2xl rounded-xl m-2 p-4 dark:bg-gray-700">
                 <dt>
-                  <div className="flex items-center justify-center h-12 w-12 rounded-md bg-blue-900 opacity-70 text-white mx-auto">
+                  <div className="flex items-center justify-center h-12 w-12 rounded-md bg-blue-900 dark:bg-indigo-600 opacity-70 text-white mx-auto">
                     <feature.icon className="h-6 w-6" aria-hidden="true" />
                   </div>
-                  <p className="mt-5 text-xl leading-6 font-medium text-gray-900 text-center ">
+                  <p className="mt-5 text-xl leading-6 font-medium text-gray-900 dark:text-gray-300 text-center ">
                     {feature.name}
                   </p>
                 </dt>
-                <dd className="mt-3 prose-lg text-gray-500 md:text-center">
+                <dd className="mt-3 prose-lg text-gray-500 dark:text-gray-400 md:text-center">
                   {feature.description}
                 </dd>
               </div>

@@ -2,6 +2,7 @@ import { Fragment, useState } from 'react'
 import Link from 'next/link'
 import { Dialog, Popover, Tab, Transition } from '@headlessui/react'
 import { MenuIcon, XIcon } from '@heroicons/react/outline'
+import { useTheme } from 'next-themes'
 
 const navigation = {
   categories: [
@@ -115,9 +116,10 @@ function classNames(...classes) {
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false)
+  const { theme, setTheme } = useTheme()
 
   return (
-    <div className="bg-gray-50">
+    <div className="bg-gray-50 ">
       <div>
         {/* Mobile menu */}
         <Transition.Root show={mobileMenuOpen} as={Fragment}>
@@ -230,7 +232,7 @@ export default function Header() {
         <header className="relative z-10">
           <nav aria-label="Top">
             {/* Secondary navigation */}
-            <div className="bg-white shadow-xl">
+            <div className="bg-white dark:bg-gray-800 shadow-xl">
               <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="h-16 flex items-center justify-between">
                   {/* Logo (lg+) */}
@@ -260,7 +262,7 @@ export default function Header() {
                                     className={classNames(
                                       open
                                         ? 'text-blue-600'
-                                        : 'text-gray-700 hover:text-blue-600',
+                                        : 'text-gray-700 dark:text-gray-50 hover:text-blue-600 dark:hover:text-blue-600',
                                       'relative flex items-center justify-center transition-colors ease-out duration-200  font-medium'
                                     )}>
                                     {category.name}
@@ -282,10 +284,10 @@ export default function Header() {
                                   leave="transition ease-in duration-150"
                                   leaveFrom="opacity-100"
                                   leaveTo="opacity-0">
-                                  <Popover.Panel className="absolute z-20 top-full inset-x-0 bg-white text-md text-gray-500">
+                                  <Popover.Panel className="absolute z-20 top-full inset-x-0 bg-white dark:bg-gray-800 text-md text-gray-500 dark:text-white">
                                     {/* Presentational element used to render the bottom shadow, if we put the shadow on the actual panel it pokes out the top, so we use this shorter element to hide the top of the shadow */}
                                     <div
-                                      className="absolute inset-0 top-1/2 bg-white shadow"
+                                      className="absolute inset-0 top-1/2 bg-white dark:bg-gray-800 shadow"
                                       aria-hidden="true"
                                     />
                                     {/* Fake border when menu is open */}
@@ -295,7 +297,7 @@ export default function Header() {
                                       <div
                                         className={classNames(
                                           open
-                                            ? 'bg-gray-200'
+                                            ? 'bg-gray-200 dark:bg-gray-600'
                                             : 'bg-transparent',
                                           'w-full h-px transition-colors ease-out duration-200'
                                         )}
@@ -311,7 +313,7 @@ export default function Header() {
                                               className="group relative">
                                               <a
                                                 href={item.href}
-                                                className="mt-4 font-base block font-medium text-gray-900 hover:text-blue-600 hover:bg-gray-100">
+                                                className="mt-4 font-base block font-medium text-gray-900 hover:text-blue-600 hover:bg-gray-100 dark:hover:bg-gray-700 dark:text-gray-50 dark:hover:text-blue-600">
                                                 <span
                                                   className="absolute z-10 inset-0 group-hover:block"
                                                   aria-hidden="true"
@@ -334,10 +336,47 @@ export default function Header() {
                           <a
                             key={page.name}
                             href={page.href}
-                            className="flex items-center font-medium text-gray-700 hover:text-blue-600">
+                            className="flex items-center font-medium text-gray-700 hover:text-blue-600 dark:text-gray-50 dark:hover:text-blue-600">
                             {page.name}
                           </a>
                         ))}
+                        <button
+                          aria-label="Toggle Dark Mode"
+                          type="button"
+                          className="md:order-3"
+                          onClick={() =>
+                            setTheme(theme === 'dark' ? 'light' : 'dark')
+                          }>
+                          {theme === 'dark' ? (
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              className="h-6 w-6"
+                              fill="none"
+                              viewBox="0 0 24 24"
+                              stroke="yellow">
+                              <path
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                strokeWidth={2}
+                                d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"
+                              />
+                            </svg>
+                          ) : (
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              className="h-6 w-6 text-indigo-500"
+                              fill="none"
+                              viewBox="0 0 24 24"
+                              stroke="currentColor">
+                              <path
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                strokeWidth={2}
+                                d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"
+                              />
+                            </svg>
+                          )}
+                        </button>
                       </div>
                     </Popover.Group>
                   </div>
