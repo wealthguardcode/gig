@@ -1,4 +1,3 @@
-import { useEffect } from 'react'
 import Layout from '../components/Layout'
 import {
   GlobeAltIcon,
@@ -36,9 +35,6 @@ const faqs = [
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
-
-const isServer = typeof window === 'undefined'
-const WOW = !isServer ? require('wow.js') : null
 
 const features = [
   {
