@@ -2,6 +2,7 @@ import Layout from '../components/Layout'
 import { MailIcon } from '@heroicons/react/solid'
 import emailjs from 'emailjs-com'
 import { toast } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
 
 function fun() {
   document.getElementById('first_name').value = ''
@@ -11,6 +12,12 @@ function fun() {
   document.getElementById('phone').value = ''
   document.getElementById('message').value = ''
 }
+
+toast.configure({
+  autoClose: 8000,
+  draggable: false,
+  //etc you get the idea
+})
 
 function sendEmail(e) {
   e.preventDefault()
