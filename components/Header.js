@@ -119,7 +119,7 @@ export default function Header() {
   const { theme, setTheme } = useTheme()
 
   return (
-    <div className="bg-gray-50 ">
+    <div className="bg-gray-50 dark:bg-gray-800">
       <div>
         {/* Mobile menu */}
         <Transition.Root show={mobileMenuOpen} as={Fragment}>
@@ -146,11 +146,11 @@ export default function Header() {
               leave="transition ease-in-out duration-300 transform"
               leaveFrom="translate-x-0"
               leaveTo="-translate-x-full">
-              <div className="relative w-full bg-white shadow-xl pb-12 flex flex-col overflow-y-auto ">
+              <div className="relative w-full bg-white dark:bg-gray-800 shadow-xl pb-12 flex flex-col overflow-y-auto ">
                 <div className="px-4 pt-5 pb-2 flex">
                   <button
                     type="button"
-                    className="-m-2 p-2 rounded-md inline-flex items-center justify-center text-gray-400"
+                    className="-m-2 p-2 rounded-md inline-flex items-center dark:bg-gray-800 justify-center text-gray-400 dark:text-gray-400"
                     onClick={() => setMobileMenuOpen(false)}>
                     <span className="sr-only">Close menu</span>
                     <XIcon className="h-6 w-6" aria-hidden="true" />
@@ -159,7 +159,7 @@ export default function Header() {
 
                 {/* Links */}
                 <Tab.Group as="div" className="mt-2">
-                  <div className="border-b border-gray-200">
+                  <div className="border-b border-gray-200 dark:border-gray-500">
                     <Tab.List className="-mb-px flex px-4 space-x-2 md:space-x-8">
                       {navigation.categories.map((category) => (
                         <Tab
@@ -168,7 +168,7 @@ export default function Header() {
                             classNames(
                               selected
                                 ? 'text-blue-600 border-blue-600'
-                                : 'text-gray-900 border-transparent hover:text-blue-600',
+                                : 'text-gray-900 dark:text-gray-300 border-transparent hover:text-blue-600 dark:hover:text-blue-600',
                               'flex-1 whitespace-nowrap py-4 px-1 border-b-2 text-md font-medium'
                             )
                           }>
@@ -196,7 +196,7 @@ export default function Header() {
                               </div> */}
                               <a
                                 href={item.href}
-                                className="mt-6 block font-medium text-gray-900 hover:text-blue-600">
+                                className="mt-6 block font-medium text-gray-900 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-600">
                                 <span
                                   className="absolute z-10 inset-0"
                                   aria-hidden="true"
@@ -211,17 +211,52 @@ export default function Header() {
                   </Tab.Panels>
                 </Tab.Group>
 
-                <div className="border-t divide-y border-gray-200 py-6 px-4 space-y-6 mx-auto">
+                <div className="border-t divide-y border-gray-200 dark:border-gray-500 py-6 px-4 space-y-6 mx-auto">
                   {navigation.pages.map((page) => (
                     <div key={page.name} className="flow-root">
                       <a
                         href={page.href}
-                        className="-m-2 p-2 block font-medium text-gray-900 hover:text-blue-600">
+                        className="-m-2 p-2 block font-medium text-gray-900 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-600">
                         {page.name}
                       </a>
                     </div>
                   ))}
                 </div>
+                <button
+                  aria-label="Toggle Dark Mode"
+                  type="button"
+                  className="md:order-3 mx-auto"
+                  onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}>
+                  {theme === 'dark' ? (
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="h-6 w-6"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="yellow">
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"
+                      />
+                    </svg>
+                  ) : (
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="h-6 w-6 text-indigo-500"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor">
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"
+                      />
+                    </svg>
+                  )}
+                </button>
               </div>
             </Transition.Child>
           </Dialog>
@@ -385,7 +420,7 @@ export default function Header() {
                   <div className="flex-1 flex items-center lg:hidden">
                     <button
                       type="button"
-                      className="-ml-2 bg-white p-2 rounded-md text-gray-400"
+                      className="-ml-2 bg-white dark:bg-gray-700 p-2 rounded-md text-gray-400"
                       onClick={() => setMobileMenuOpen(true)}>
                       <span className="sr-only">Open menu</span>
                       <MenuIcon className="h-6 w-6" aria-hidden="true" />

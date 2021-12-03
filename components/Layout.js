@@ -5,7 +5,7 @@ import ScrollToTopButton from './ScrollToTopButton'
 
 export default function Layout({ title, keywords, description, children }) {
   return (
-    <div>
+    <div className="bg-white dark:bg-gray-800">
       <Head>
         <title>{title}</title>
         <meta name="keywords" content={keywords} />
