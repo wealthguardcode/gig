@@ -34,7 +34,7 @@ const people = [
     name: 'Sam Klepper',
     role: 'Full Stack Web Developer',
     imageUrl:
-      'https://media.graphcms.com/output=format:jpg/resize=,height:800,fit:max/pDpAofQ3SNWkK15XOqjh',
+      'https://media.graphcms.com/output=format:jpg/resize=,height:800,fit:max/nVMFnTnbT4mqjz6YkwQ6',
     bio: 'Ultricies massa malesuada viverra cras lobortis. Tempor orci hac ligula dapibus mauris sit ut eu. Eget turpis urna maecenas cras. Nisl dictum.',
   },
   {
