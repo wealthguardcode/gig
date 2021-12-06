@@ -135,8 +135,8 @@ export default function Footer() {
 
         <div className="border-t border-gray-100 dark:border-gray-500 py-10 text-center">
           <p className="text-sm text-gray-500 dark:text-gray-300">
-            &copy; {new Date().getFullYear()} GoGuard Insurance Group, Inc. All
-            rights reserved.
+            &copy; {new Date().getFullYear()} WealthGuard Insurance Group, Inc.
+            All rights reserved.
           </p>
         </div>
       </div>

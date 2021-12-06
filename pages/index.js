@@ -7,6 +7,7 @@ import {
   MailIcon,
   LinkIcon,
   BookOpenIcon,
+  DocumentDownloadIcon,
 } from '@heroicons/react/outline'
 
 import Link from 'next/link'
@@ -16,17 +17,17 @@ import { ChevronDownIcon } from '@heroicons/react/outline'
 
 const faqs = [
   {
-    question: "What's the best thing about GoGuard?",
+    question: "What's the best thing about WealthGuard?",
     answer:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed mattis mattis tellus. Donec felis turpis, iaculis quis sodales vitae, ultricies et dolor. Fusce finibus nulla non quam pharetra bibendum.',
   },
   {
-    question: "What's the best thing about GoGuard?",
+    question: "What's the best thing about WealthGuard?",
     answer:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed mattis mattis tellus. Donec felis turpis, iaculis quis sodales vitae, ultricies et dolor. Fusce finibus nulla non quam pharetra bibendum.',
   },
   {
-    question: "What's the best thing about GoGuard?",
+    question: "What's the best thing about WealthGuard?",
     answer:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed mattis mattis tellus. Donec felis turpis, iaculis quis sodales vitae, ultricies et dolor. Fusce finibus nulla non quam pharetra bibendum.',
   },
@@ -89,7 +90,7 @@ const features2 = [
   {
     name: 'Risk Control',
     description:
-      "GoGuard's executive leadership has unprecedented access to innovative commercial insurance products and solutions.",
+      "WealthGuard's executive leadership has unprecedented access to innovative commercial insurance products and solutions.",
     icon: ScaleIcon,
   },
   {
@@ -104,8 +105,8 @@ export default function Home() {
   return (
     <Layout>
       <div className="relative bg-white dark:bg-gray-800 overflow-hidden">
-        <div className="relative md:pt-48 pt-16 sm:pb-4">
-          <div className="md:h-screen mx-auto w-full px-4 sm:mt-0">
+        <div className="relative md:pt-12 pt-10 sm:pb-4">
+          <div className="h-screen mx-auto w-full px-4 sm:mt-0">
             {/* BG Image */}
 
             <div className="absolute inset-0 flex items-center justify-center h-screen mb-12 bg-fixed md:bg-center bg-cover custom-img">
@@ -139,7 +140,7 @@ export default function Home() {
                 insurance coverages to meet the unique needs of the industries
                 we serve.
               </p>
-              <div className="flex justify-center my-8">
+              <div className="flex justify-center mt-8 mb-4">
                 <div className="mt-3 rounded-md shadow sm:mt-0 sm:ml-3">
                   <Link href="/programs">
                     <a className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 md:py-4 md:text-lg md:px-10">
@@ -153,6 +154,24 @@ export default function Home() {
                       Contact Us
                     </a>
                   </Link>
+                </div>
+              </div>
+
+              <div className="flex flex-col justify-center items-center">
+                <div className="">
+                  <h1 className="text-xl font-semibold text-gray-200 mb-1">
+                    Download Our{' '}
+                  </h1>
+                </div>
+                <div className="mt-3 rounded-md shadow sm:mt-0 ml-3">
+                  <a
+                    href="/images/agentRetentionFlyer.pdf"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="w-full flex items-center justify-center px-8 py-3 border-2 border-indigo-300 text-base font-medium rounded-md text-black bg-gray-200 hover:bg-gray-50 md:py-4 md:text-lg md:px-10">
+                    <DocumentDownloadIcon height={30} />
+                    <span>The WealthGuard Difference</span>
+                  </a>
                 </div>
               </div>
             </div>
@@ -207,7 +226,8 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="lg:text-center ">
             <p className="my-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 dark:text-gray-300 sm:text-4xl text-center">
-              GoGuard&apos;s insurance programs help businesses grow and thrive
+              WealthGuard&apos;s insurance programs help businesses grow and
+              thrive
             </p>
             <div className="border-t-4 w-1/5 mx-auto my-6 border-green-600" />
             <p className="mt-4 max-w-2xl text-2xl text-gray-500 dark:text-gray-400 mx-auto">
@@ -246,37 +266,49 @@ export default function Home() {
               </div>
               <div className="flex flex-col items-center mt- md:flex-row md:justify-around p-4">
                 <Link href="/programs">
-                  <a className="flex flex-start items-center border-4 border-blue-100 dark:border-gray-600 dark:hover:border-blue-800 rounded group hover:bg-blue-100 dark:hover:bg-blue-900 hover:border-blue-300 hover:shadow-2xl p-2 px-3 mb-3 md:mb-0">
-                    <BookOpenIcon
-                      height={50}
-                      className="text-yellow-400 group-hover:text-white"
-                    />{' '}
-                    <span className="flex items-center text-xl font-bold ml-1 group-hover:text-blue-400 dark:group-hover:text-blue-300">
-                      Programs
-                    </span>
+                  <a className="flex flex-start items-center rounded group  hover:shadow-2xl mb-3 md:mb-0">
+                    <button
+                      type="button"
+                      className="inline-flex items-center px-6 py-3 border-2 border-gray-300 dark:border-blue-600 shadow-sm text-base font-medium rounded-md text-gray-700 bg-white dark:bg-gray-300 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                      <BookOpenIcon
+                        height={50}
+                        className="text-yellow-400 group-hover:text-yellow-300 dark:group-hover:text-yellow-500"
+                      />
+                      <span className="flex items-center text-xl font-bold ml-1 group-hover:text-blue-400 dark:group-hover:text-blue-600">
+                        Programs
+                      </span>
+                    </button>
                   </a>
                 </Link>
                 <Link href="/resources/broker-resources">
-                  <a className="flex flex-start  items-center border-4 border-blue-100 dark:border-gray-600 dark:hover:border-blue-800 rounded group hover:bg-blue-100 dark:hover:bg-blue-900 hover:border-blue-300 hover:shadow-2xl p-2 mb-3 md:mb-0">
-                    <LinkIcon
-                      height={50}
-                      className="text-blue-400 group-hover:text-white"
-                    />
-                    <span className="flex flex-start items-center text-xl font-bold ml-1 group-hover:text-blue-400 dark:group-hover:text-blue-300">
-                      Resources
-                    </span>
+                  <a className="flex flex-start items-center rounded group  hover:shadow-2xl mb-3 md:mb-0">
+                    <button
+                      type="button"
+                      className="inline-flex items-center px-6 py-3 border-2 border-gray-300 dark:border-blue-600 shadow-sm text-base font-medium rounded-md text-gray-700 bg-white dark:bg-gray-300 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                      <LinkIcon
+                        height={50}
+                        className="text-blue-400 group-hover:text-blue-300 dark:group-hover:text-blue-500"
+                      />
+                      <span className="flex flex-start items-center text-xl font-bold ml-1 group-hover:text-blue-400 dark:group-hover:text-blue-600">
+                        Resources
+                      </span>
+                    </button>
                   </a>
                 </Link>
 
                 <Link href="/contact-us">
-                  <a className="flex flex-start items-center border-4 border-blue-100 dark:border-gray-600 dark:hover:border-blue-800 rounded group hover:bg-blue-100 dark:hover:bg-blue-900 hover:border-blue-300 hover:shadow-2xl p-2 px-5 mb-3 md:mb-0">
-                    <MailIcon
-                      height={50}
-                      className="text-green-400 group-hover:text-white"
-                    />
-                    <span className="flex items-center text-xl font-bold ml-1 group-hover:text-blue-400 dark:group-hover:text-blue-300">
-                      Contact
-                    </span>
+                  <a className="flex flex-start items-center rounded group  hover:shadow-2xl mb-3 md:mb-0">
+                    <button
+                      type="button"
+                      className="inline-flex items-center px-6 py-3 border-2 border-gray-300 dark:border-blue-600 shadow-sm text-base font-medium rounded-md text-gray-700 bg-white dark:bg-gray-300 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                      <MailIcon
+                        height={50}
+                        className="text-green-400 group-hover:text-green-300 dark:group-hover:text-green-500"
+                      />
+                      <span className="flex items-center text-xl font-bold ml-1 group-hover:text-blue-400 dark:group-hover:text-blue-600">
+                        Contact Us
+                      </span>
+                    </button>
                   </a>
                 </Link>
               </div>
@@ -414,7 +446,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:py-24 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl font-extrabold text-gray-900 dark:text-gray-300">
-              Why Work With GoGuard?
+              Why Work With WealthGuard?
             </h2>
             <p className="mt-4 text-xl text-gray-500 dark:text-gray-400">
               Year over year we have consistently achieved 200% growth,{' '}

@@ -3,37 +3,37 @@ import Layout from '../../components/Layout'
 const faqs = [
   {
     id: 1,
-    question: "What's the best thing about GoGuard?",
+    question: "What's the best thing about WealthGuard?",
     answer:
       'Duis ultricies eu tellus vel condimentum. Nulla non ligula eu quam euismod egestas. Maecenas at ipsum non lorem laoreet placerat eget nec nibh. Cras et augue pharetra, tincidunt libero at, hendrerit urna.',
   },
   {
     id: 2,
-    question: "What's the best thing about GoGuard?",
+    question: "What's the best thing about WealthGuard?",
     answer:
       'Duis ultricies eu tellus vel condimentum. Nulla non ligula eu quam euismod egestas. Maecenas at ipsum non lorem laoreet placerat eget nec nibh. Cras et augue pharetra, tincidunt libero at, hendrerit urna.',
   },
   {
     id: 3,
-    question: "What's the best thing about GoGuard?",
+    question: "What's the best thing about WealthGuard?",
     answer:
       'Duis ultricies eu tellus vel condimentum. Nulla non ligula eu quam euismod egestas. Maecenas at ipsum non lorem laoreet placerat eget nec nibh. Cras et augue pharetra, tincidunt libero at, hendrerit urna.',
   },
   {
     id: 4,
-    question: "What's the best thing about GoGuard?",
+    question: "What's the best thing about WealthGuard?",
     answer:
       'Duis ultricies eu tellus vel condimentum. Nulla non ligula eu quam euismod egestas. Maecenas at ipsum non lorem laoreet placerat eget nec nibh. Cras et augue pharetra, tincidunt libero at, hendrerit urna.',
   },
   {
     id: 5,
-    question: "What's the best thing about GoGuard?",
+    question: "What's the best thing about WealthGuard?",
     answer:
       'Duis ultricies eu tellus vel condimentum. Nulla non ligula eu quam euismod egestas. Maecenas at ipsum non lorem laoreet placerat eget nec nibh. Cras et augue pharetra, tincidunt libero at, hendrerit urna.',
   },
   {
     id: 6,
-    question: "What's the best thing about GoGuard?",
+    question: "What's the best thing about WealthGuard?",
     answer:
       'Duis ultricies eu tellus vel condimentum. Nulla non ligula eu quam euismod egestas. Maecenas at ipsum non lorem laoreet placerat eget nec nibh. Cras et augue pharetra, tincidunt libero at, hendrerit urna.',
   },
@@ -119,7 +119,7 @@ export default function FaqPage() {
               /> */}
               <blockquote className="mt-6 text-white">
                 <p className="text-xl font-medium sm:text-2xl">
-                  GoGuard has completely transformed how we interact with
+                  WealthGuard has completely transformed how we interact with
                   brokers. Proin pulvinar, quam a porta consequat, mi lorem
                   mattis diam, in laoreet massa neque sit amet turpis.
                 </p>

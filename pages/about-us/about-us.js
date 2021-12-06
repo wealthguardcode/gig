@@ -107,18 +107,18 @@ export default function AboutUsOverview() {
         </div>
       </div>
 
-      {/* Why GoGuard - header */}
+      {/* Why WealthGuard - header */}
       <div className="bg-white">
         <div className="max-w-7xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:px-8">
           <div className="text-center">
             <p className="mt-1 text-4xl font-extrabold text-gray-900 sm:text-4xl sm:tracking-tight lg:text-5xl">
-              Why GoGuard?
+              Why WealthGuard?
             </p>
           </div>
         </div>
       </div>
 
-      {/* Why GoGuard - content */}
+      {/* Why WealthGuard - content */}
       <div className="grid grid-cols-1 md:grid-cols-3 mt-2 md:mt-0">
         <div className="p-10 mx-10  flex flex-col bg-blue-200 border-t-2 border-gray-600 rounded-lg shadow-xl mb-4">
           <h1 className="text-3xl tracking-wider my-4  font-semibold">
