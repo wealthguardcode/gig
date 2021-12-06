@@ -157,9 +157,9 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className="flex flex-col justify-center items-center">
+              <div className="flex flex-col justify-center items-center xl:mt-12">
                 <div className="">
-                  <h1 className="text-xl font-semibold text-gray-200 mb-1">
+                  <h1 className="text-xl font-semibold text-gray-200 mb-1 xl:mb-4">
                     Download Our{' '}
                   </h1>
                 </div>
