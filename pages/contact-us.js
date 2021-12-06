@@ -16,7 +16,7 @@ function fun() {
 toast.configure({
   autoClose: 8000,
   draggable: false,
-  //etc you get the idea
+
 })
 
 function sendEmail(e) {

@@ -6,9 +6,66 @@ import he from 'he'
 import { MDXRemote } from 'next-mdx-remote'
 import { serialize } from 'next-mdx-remote/serialize'
 import SimpleReactLightbox, { SRLWrapper } from 'simple-react-lightbox'
+import emailjs from 'emailjs-com'
+import { toast } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
+}
+
+function fun() {
+  document.getElementById('first_name').value = ''
+  document.getElementById('last_name').value = ''
+  document.getElementById('work_email').value = ''
+  document.getElementById('account_quantity').value = ''
+  document.getElementById('account_future').value = ''
+  document.getElementById('company').value = ''
+  document.getElementById('phone').value = ''
+  document.getElementById('state').value = ''
+}
+
+toast.configure({
+  autoClose: 8000,
+  draggable: false,
+})
+
+function sendEmail(e) {
+  e.preventDefault()
+  if (
+    e.target.first_name.value === '' ||
+    e.target.last_name === '' ||
+    e.target.email === '' ||
+    e.target.company === ''
+  ) {
+    return alert('Form cannot be empty!')
+  } else {
+    emailjs
+      .sendForm(
+        'service_74a7ngi',
+        'template_78io7bt',
+        e.target,
+        'user_1ODnWoNdXKoQipSD1qXJf'
+      )
+      .then(
+        (result) => {
+          toast('🎉 Message sent!', {
+            position: 'top-right',
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+          })
+          console.log(result.text)
+        },
+        (error) => {
+          alert(error.text)
+        }
+      )
+    fun()
+  }
 }
 
 export const getStaticPaths = async () => {
@@ -83,7 +140,8 @@ export default function ProgramPage({ program, coverage, highlights }) {
                 <div className="md:grid md:grid-cols-2 md:gap-3">
                   <div className="mt-5 md:-mt-40 md:col-span-2 md:ml-12">
                     <form
-                      action="#"
+                      id="template_78io7bt"
+                      onSubmit={sendEmail}
                       method="POST"
                       className="shadow-2xl md:absolute md:mb-6 mx-4">
                       <div className="shadow overflow-hidden sm:rounded-md">
@@ -106,8 +164,8 @@ export default function ProgramPage({ program, coverage, highlights }) {
                               </label>
                               <input
                                 type="text"
-                                name="first-name"
-                                id="first-name"
+                                name="first_name"
+                                id="first_name"
                                 autoComplete="given-name"
                                 className="mt-1 focus:ring-blue-500 focus:border-blue-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
                               />
@@ -121,8 +179,8 @@ export default function ProgramPage({ program, coverage, highlights }) {
                               </label>
                               <input
                                 type="text"
-                                name="last-name"
-                                id="last-name"
+                                name="last_name"
+                                id="last_name"
                                 autoComplete="family-name"
                                 className="mt-1 focus:ring-blue-500 focus:border-blue-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
                               />
@@ -130,14 +188,14 @@ export default function ProgramPage({ program, coverage, highlights }) {
 
                             <div className="col-span-6">
                               <label
-                                htmlFor="email-address"
+                                htmlFor="work_email"
                                 className="block text-sm font-medium text-gray-700">
                                 Work Email
                               </label>
                               <input
                                 type="text"
-                                name="email-address"
-                                id="email-address"
+                                name="work_email"
+                                id="work_email"
                                 autoComplete="email"
                                 className="mt-1 focus:ring-blue-500 focus:border-blue-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
                               />
@@ -145,14 +203,14 @@ export default function ProgramPage({ program, coverage, highlights }) {
 
                             <div className="col-span-6">
                               <label
-                                htmlFor="country"
+                                htmlFor="account_quantity"
                                 className="block text-sm font-medium text-gray-700">
                                 How Many Accounts Do You Have That Fit This
                                 Program?
                               </label>
                               <select
-                                id="account-quantity"
-                                name="account-quantity"
+                                id="account_quantity"
+                                name="account_quantity"
                                 className="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm">
                                 <option>1</option>
                                 <option>2</option>
@@ -169,14 +227,14 @@ export default function ProgramPage({ program, coverage, highlights }) {
 
                             <div className="col-span-6">
                               <label
-                                htmlFor="street-address"
+                                htmlFor="account_future"
                                 className="block text-sm font-medium text-gray-700">
                                 How Many of These Accounts Are Coming Up in the
                                 Next 90 Days?
                               </label>
                               <select
-                                id="account-future"
-                                name="account-future"
+                                id="account_future"
+                                name="account_future"
                                 className="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm">
                                 <option>1</option>
                                 <option>2</option>
@@ -215,13 +273,13 @@ export default function ProgramPage({ program, coverage, highlights }) {
 
                             <div className="col-span-6">
                               <label
-                                htmlFor="region"
+                                htmlFor="state"
                                 className="block text-sm font-medium text-gray-700">
                                 State / Province
                               </label>
                               <select
-                                id="region"
-                                name="region"
+                                id="state"
+                                name="state"
                                 className="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm">
                                 <option>Alabama</option>
                                 <option>Alaska</option>
