@@ -95,7 +95,7 @@ export const getStaticProps = async ({ params }) => {
 export default function ProgramPage({ program, coverage, highlights }) {
   console.log(program)
   return (
-    <Layout title={`GIG || ${program.title}`}>
+    <Layout title={`WIG | ${program.title}`}>
       {/* Hero */}
       <div className="relative bg-blue-400">
         <div className="absolute inset-0">

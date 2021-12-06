@@ -16,7 +16,6 @@ function fun() {
 toast.configure({
   autoClose: 8000,
   draggable: false,
-
 })
 
 function sendEmail(e) {
@@ -60,7 +59,7 @@ function sendEmail(e) {
 
 export default function ContactUsPage() {
   return (
-    <Layout>
+    <Layout title="WIG | Contact Us">
       <main>
         {/* Header */}
         <div className="py-24 bg-gray-50 sm:py-32">

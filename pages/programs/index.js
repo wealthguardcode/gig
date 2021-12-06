@@ -17,7 +17,7 @@ export const getStaticProps = async () => {
 export default function ProgramsPage({ programs }) {
   // console.log(programs)
   return (
-    <Layout title="GIG || Our Programs">
+    <Layout title="WIG | Our Programs">
       <div className="relative bg-blue-400">
         <div className="absolute inset-0">
           <img

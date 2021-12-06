@@ -55,7 +55,7 @@ const people = [
 
 export default function leadership() {
   return (
-    <Layout>
+    <Layout title="WIG | Leadership">
       <div>
         {/* Hero */}
 

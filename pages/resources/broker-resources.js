@@ -27,7 +27,7 @@ const resources = [
 
 export default function BrokerResourcesPage() {
   return (
-    <Layout title="GIG || Broker Resources">
+    <Layout title="WIG | Broker Resources">
       <div className="relative bg-blue-400">
         <div className="absolute inset-0">
           <img

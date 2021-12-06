@@ -42,7 +42,7 @@ const faqs = [
 
 export default function FaqPage() {
   return (
-    <Layout title="GIG || Faq's">
+    <Layout title="WIG | Faq's">
       <div className="relative bg-blue-400">
         <div className="absolute inset-0">
           <img

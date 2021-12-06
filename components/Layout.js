@@ -28,7 +28,7 @@ export default function Layout({ title, keywords, description, children }) {
 }
 
 Layout.defaultProps = {
-  title: 'GIG || GoGuard Insurance Group',
-  keywords: 'GoGuard, GIG, insurance, small business insurance',
-  description: 'GoGuard Insurance Group',
+  title: 'WIG | WealthGuard Insurance Group',
+  keywords: 'WealthGuard, WIG, insurance, small business insurance',
+  description: 'WealthGuard Insurance Group',
 }

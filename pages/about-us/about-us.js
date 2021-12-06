@@ -10,7 +10,7 @@ import {
 
 export default function AboutUsOverview() {
   return (
-    <Layout>
+    <Layout title="WIG | About Us">
       {/* Hero */}
       <div className="relative bg-white">
         <div className="h-80 absolute inset-x-0 bottom-0 xl:top-0 xl:h-full">
