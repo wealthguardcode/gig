@@ -366,7 +366,7 @@ export default function Home() {
               <div className="max-w-3xl mx-auto text-center text-2xl leading-9 font-medium text-gray-900 dark:text-gray-400">
                 <p className="">
                   &ldquo;WealthGuard&apos;s program manager and team were a
-                  pleasure to work with. Thhey were very knowledgeable, sincere,
+                  pleasure to work with. They were very knowledgeable, sincere,
                   had great communication, and provided a level of service that
                   is rare from an underwriter. In addition to seeking out the
                   best coverages for my clients, he also explained the many risk
