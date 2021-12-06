@@ -17,19 +17,19 @@ import { ChevronDownIcon } from '@heroicons/react/outline'
 
 const faqs = [
   {
-    question: "What's the best thing about WealthGuard?",
+    question: 'Why should I work with WealthGuard?',
     answer:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed mattis mattis tellus. Donec felis turpis, iaculis quis sodales vitae, ultricies et dolor. Fusce finibus nulla non quam pharetra bibendum.',
+      'As a specialized business insurance and risk management insurance intermediary ranked among the 100 largest in the United States and with many programs existing for over 30 years, we are unique in our ability to innovate, have a unique depth of knowledge in key markets, and our employees are expert in a wide range of brokerage, underwriting, and risk management services for numerous industries.',
   },
   {
-    question: "What's the best thing about WealthGuard?",
+    question: 'What industries do you insure?',
     answer:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed mattis mattis tellus. Donec felis turpis, iaculis quis sodales vitae, ultricies et dolor. Fusce finibus nulla non quam pharetra bibendum.',
+      'WealthGuard provides insurance coverage for the following industries: landscaping & tree care, greenhouse & nursery growers, paving & road contractors, grading & excavation contractors, trade contractors, glass & sign fabrication installation, janitorial services, physicians & surgeons, municipalities & schools, specialty business insurance.',
   },
   {
-    question: "What's the best thing about WealthGuard?",
+    question: 'What insurance coverages do you provide?',
     answer:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed mattis mattis tellus. Donec felis turpis, iaculis quis sodales vitae, ultricies et dolor. Fusce finibus nulla non quam pharetra bibendum.',
+      'WealthGuard provides insurance coverage for the following programs: West Wall Marina insurance, Assistant Living Facility insurance, Cargo & Logistics insurance, Active Assailant insurance, and Terrorism & Sabotage insurance.',
   },
 ]
 
@@ -71,12 +71,12 @@ const features = [
   {
     name: 'Violent Malicious Acts',
     description:
-      'Designed to help you and your facility move forward after a tragedy.',
+      'Designed to help you and your facility move forward after a tragedy, homicide, nonfatal injuries, or substantial damage to property.',
   },
   {
     name: 'Deductible buy-down options',
     description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras scelerisque efficitur posuere.',
+      'Helping you limit the first-dollar losses that you may experience by reducing or eliminating the deductible.',
   },
 ]
 
@@ -165,7 +165,7 @@ export default function Home() {
                 </div>
                 <div className="mt-3 rounded-md shadow sm:mt-0 ml-3">
                   <a
-                    href="/images/agentRetentionFlyer.pdf"
+                    href="/images/theWealthGuardDifference.pdf"
                     target="_blank"
                     rel="noreferrer"
                     className="w-full flex items-center justify-center px-8 py-3 border-2 border-indigo-300 text-base font-medium rounded-md text-black bg-gray-200 hover:bg-gray-50 md:py-4 md:text-lg md:px-10">
@@ -193,7 +193,7 @@ export default function Home() {
               {features.map((feature) => (
                 <div
                   key={feature.name}
-                  className="relative cursor-pointer border-4  border-opacity-50 rounded-lg p-4 hover:shadow-2xl hover:border-gray-300 dark:hover:border-blue-600">
+                  className="relative cursor-pointer border-4  border-opacity-50 rounded-lg p-4 shadow-lg hover:shadow-2xl hover:border-gray-300 dark:hover:border-blue-600">
                   <dt>
                     <CheckIcon
                       className="absolute h-8 w-8 text-green-500"
@@ -225,12 +225,12 @@ export default function Home() {
       <div className="py-12 bg-white dark:bg-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="lg:text-center ">
-            <p className="my-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 dark:text-gray-300 sm:text-4xl text-center">
+            <p className="my-2 text-3xl leading-8 font-extrabold tracking-tight md:tracking-wider text-gray-900 dark:text-gray-300 sm:text-4xl text-center">
               WealthGuard&apos;s insurance programs help businesses grow and
               thrive
             </p>
             <div className="border-t-4 w-1/5 mx-auto my-6 border-green-600" />
-            <p className="mt-4 max-w-2xl text-2xl text-gray-500 dark:text-gray-400 mx-auto">
+            <p className="mt-4 max-w-2xl prose-2xl md:tracking-wide text-gray-500 dark:text-gray-400 mx-auto">
               We partner with businesses to help insure their success by
               protecting their assets, reducing exposure, and maintaining
               compliance.
@@ -240,19 +240,18 @@ export default function Home() {
           <div className="mt-10 shadow-xl rounded-xl">
             <dl className="space-y-10 md:space-y-0 grid grid-cols-1 md:gap-x-8 md:gap-y-10 shadow-2xl">
               <div className="my-10">
-                <h1 className="text-4xl text-blue-100 bg-gradient-to-r from-indigo-400 via-blue-500 to-green-500 font-bold mx-2 text-center rounded py-1">
+                <h1 className="text-4xl text-blue-100 bg-gradient-to-r from-gray-400 via-gray-500 to-blue-500 font-bold mx-2 text-center rounded py-1">
                   For Brokers
                 </h1>
               </div>
               <div className="flex flex-col md:flex-row">
                 <div className="flex flex-col justify-center items-center p-4">
-                  <h3 className="text-4xl tracking-wider ">Brokers</h3>
-                  <p className="mt-3 prose mx-4 dark:text-gray-400">
-                    Aenean dictum varius metus a imperdiet. Donec cursus nulla
-                    sem, ac bibendum elit laoreet nec. Nulla facilisi. Fusce
-                    tristique lacus enim, vitae mattis ex laoreet et. Fusce
-                    fringilla lacus et neque convallis, eu bibendum urna
-                    maximus.
+                  <h3 className="text-5xl tracking-wider ">Brokers</h3>
+                  <p className="mt-3 prose-xl mx-4 dark:text-gray-400">
+                    We work with more than 5,500 broker partners across the USA
+                    to bring your clients best-in-class insurance solutions and
+                    provide extensive resources to help you expand your
+                    business.
                   </p>
                 </div>
 
@@ -323,7 +322,7 @@ export default function Home() {
                       <Disclosure as="div" key={faq.question} className="pt-6">
                         {({ open }) => (
                           <>
-                            <dt className="text-lg">
+                            <dt className="text-xl">
                               <Disclosure.Button className="text-left w-full flex justify-between items-start text-gray-400">
                                 <span className="font-medium text-gray-900 dark:text-gray-300">
                                   {faq.question}
@@ -340,7 +339,7 @@ export default function Home() {
                               </Disclosure.Button>
                             </dt>
                             <Disclosure.Panel as="dd" className="mt-2 pr-12">
-                              <p className="text-base text-gray-500 dark:text-gray-400">
+                              <p className="text-lg text-gray-500 dark:text-gray-400">
                                 {faq.answer}
                               </p>
                             </Disclosure.Panel>
@@ -361,14 +360,20 @@ export default function Home() {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="relative">
             <h1 className="max-w-3xl mx-auto text-center text-3xl leading-9 font-bold text-gray-900 dark:text-gray-300">
-              Example Testimonial
+              WealthGuard Testimonial
             </h1>
             <blockquote className="mt-6 ">
               <div className="max-w-3xl mx-auto text-center text-2xl leading-9 font-medium text-gray-900 dark:text-gray-400">
                 <p className="">
-                  &ldquo;Lorem ipsum dolor sit amet consectetur adipisicing
-                  elit. Nemo expedita voluptas culpa sapiente alias molestiae.
-                  Numquam corrupti in laborum sed rerum et corporis.&rdquo;
+                  &ldquo;WealthGuard&apos;s program manager and team were a
+                  pleasure to work with. Thhey were very knowledgeable, sincere,
+                  had great communication, and provided a level of service that
+                  is rare from an underwriter. In addition to seeking out the
+                  best coverages for my clients, he also explained the many risk
+                  control services that WealthGuard offers. I look forward to a
+                  long and fruitful relationship with both WealthGuard as well
+                  as the whole team. I would recommend their services for any
+                  one in need of broker services.&rdquo;
                 </p>
               </div>
               <footer className="mt-8">
@@ -409,10 +414,10 @@ export default function Home() {
           <h2 className="text-3xl font-extrabold text-white dark:text-gray-600 sm:text-4xl">
             <span className="block">Helpful Broker Resources</span>
           </h2>
-          <p className="mt-4 text-lg leading-6 text-gray-200 dark:text-gray-500">
-            In finibus purus sit amet leo tempus, et condimentum justo
-            venenatis. Nam ac eros condimentum, blandit risus eu, dapibus
-            tortor. Quisque ut scelerisque risus.
+          <p className="mt-4 text-xl leading-9 text-gray-200 dark:text-gray-500">
+            WealthGuard supports the continual education of brokers through our
+            own collection of articles, webinars, industry white papers, case
+            studies, videos, infographics, and program supplementals.
           </p>
           <Link href="/resources/broker-resources">
             <a className="mt-8 w-full inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-gray-600 bg-white dark:text-gray-300 dark:bg-gray-600 dark:hover:text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-500 sm:w-auto">
@@ -428,7 +433,7 @@ export default function Home() {
             <span className="block">Broker Support</span>
             <span className="block">Covid-19 Resource Center</span>
           </h2>
-          <p className="mt-4 text-lg leading-6 text-blue-200 ">
+          <p className="mt-4 text-xl leading-9 text-blue-200 ">
             See the latest federal and state resources available to business
             owners to help offset the effects of the Covid-19 pandemic,
             including business emergency funding and relief programs.
@@ -448,9 +453,11 @@ export default function Home() {
             <h2 className="text-3xl font-extrabold text-gray-900 dark:text-gray-300">
               Why Work With WealthGuard?
             </h2>
-            <p className="mt-4 text-xl text-gray-500 dark:text-gray-400">
+            <p className="mt-4 text-2xl text-gray-500 dark:text-gray-400">
               Year over year we have consistently achieved 200% growth,{' '}
-              <span className="font-bold">call us and learn why!</span>
+              <span className="font-bold text-blue-600">
+                call us and learn why!
+              </span>
             </p>
           </div>
           <dl className="mt-12 space-y-10 sm:space-y-0 sm:grid sm:grid-cols-2 sm:gap-x-6 sm:gap-y-12 lg:grid-cols-3 lg:gap-x-8 hover:border-gray-100">
