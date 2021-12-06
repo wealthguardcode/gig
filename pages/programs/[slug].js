@@ -48,7 +48,7 @@ export default function ProgramPage({ program, coverage, highlights }) {
             alt={program.title}
           />
           <div
-            className="absolute inset-0 bg-blue-800 mix-blend-multiply"
+            className="absolute inset-0 bg-blue-800 mix-blend-multiply z-0"
             aria-hidden="true"
           />
         </div>
@@ -63,52 +63,270 @@ export default function ProgramPage({ program, coverage, highlights }) {
       </div>
 
       {/* Main content */}
-      <div className="pt-16 bg-gray-50 overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 space-y-8 sm:px-6 lg:px-8">
-          <div className="flex flex-col justify-center items-center my-6">
-            <div className="text-base max-w-prose  lg:max-w-none">
-              <p className="mt-2 mb-4 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
-                {program.subHeading}
-              </p>
+      <div className="pt-16 bg-white">
+        <div className="max-w-5xl mx-auto px-4 space-y-8 sm:px-6 lg:px-8">
+          {/* Description & Form */}
+          <div className="flex flex-col md:flex-row">
+            <div className="flex flex-col my-6">
+              <div className="text-base max-w-prose lg:max-w-none">
+                <p className="mt-2 mb-4 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-3xl text-left">
+                  {program.subHeading}
+                </p>
+              </div>
+              <div className="relative z-10 prose prose-xl max-w-sm sm:mx-4 md:max-w-md md:mx-2 lg:max-w-lg lg:mx-0 mb-10 mx-4">
+                <p className="text-lg mr-3">{program.description}</p>
+              </div>
             </div>
-            <div className="relative z-10 prose prose-xl  mx-auto lg:max-w-5xl lg:mx-0 mb-10">
-              <p className="text-lg ">{program.description}</p>
+
+            <div className="flex flex-col ">
+              <div className="mt-10 sm:mt-0">
+                <div className="md:grid md:grid-cols-2 md:gap-3">
+                  <div className="mt-5 md:-mt-40 md:col-span-2 md:ml-12">
+                    <form
+                      action="#"
+                      method="POST"
+                      className="shadow-2xl md:absolute md:mb-6 mx-4">
+                      <div className="shadow overflow-hidden sm:rounded-md">
+                        <div className="px-4 py-5 bg-white p-6 ">
+                          <div className="my-4">
+                            <h1 className="sm:text-xl text-2xl text-center lg:text-3xl font-semibold">
+                              Speak With a{' '}
+                              <span className="text-blue-600">
+                                {program.title}
+                              </span>{' '}
+                              Specialist
+                            </h1>
+                          </div>
+                          <div className="grid grid-cols-6 gap-6">
+                            <div className="col-span-6">
+                              <label
+                                htmlFor="first-name"
+                                className="block text-sm font-medium text-gray-700">
+                                First name
+                              </label>
+                              <input
+                                type="text"
+                                name="first-name"
+                                id="first-name"
+                                autoComplete="given-name"
+                                className="mt-1 focus:ring-blue-500 focus:border-blue-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
+                              />
+                            </div>
+
+                            <div className="col-span-6">
+                              <label
+                                htmlFor="last-name"
+                                className="block text-sm font-medium text-gray-700">
+                                Last name
+                              </label>
+                              <input
+                                type="text"
+                                name="last-name"
+                                id="last-name"
+                                autoComplete="family-name"
+                                className="mt-1 focus:ring-blue-500 focus:border-blue-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
+                              />
+                            </div>
+
+                            <div className="col-span-6">
+                              <label
+                                htmlFor="email-address"
+                                className="block text-sm font-medium text-gray-700">
+                                Work Email
+                              </label>
+                              <input
+                                type="text"
+                                name="email-address"
+                                id="email-address"
+                                autoComplete="email"
+                                className="mt-1 focus:ring-blue-500 focus:border-blue-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
+                              />
+                            </div>
+
+                            <div className="col-span-6">
+                              <label
+                                htmlFor="country"
+                                className="block text-sm font-medium text-gray-700">
+                                How Many Accounts Do You Have That Fit This
+                                Program?
+                              </label>
+                              <select
+                                id="account-quantity"
+                                name="account-quantity"
+                                className="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                                <option>6</option>
+                                <option>7</option>
+                                <option>8</option>
+                                <option>9</option>
+                                <option>10+</option>
+                              </select>
+                            </div>
+
+                            <div className="col-span-6">
+                              <label
+                                htmlFor="street-address"
+                                className="block text-sm font-medium text-gray-700">
+                                How Many of These Accounts Are Coming Up in the
+                                Next 90 Days?
+                              </label>
+                              <select
+                                id="account-future"
+                                name="account-future"
+                                className="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3+</option>
+                              </select>
+                            </div>
+
+                            <div className="col-span-6">
+                              <label
+                                htmlFor="company"
+                                className="block text-sm font-medium text-gray-700">
+                                Company
+                              </label>
+                              <input
+                                type="text"
+                                name="company"
+                                id="company"
+                                autoComplete="address-level2"
+                                className="mt-1 focus:ring-blue-500 focus:border-blue-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
+                              />
+                            </div>
+                            <div className="col-span-6">
+                              <label
+                                htmlFor="phone"
+                                className="block text-sm font-medium text-gray-700">
+                                Phone
+                              </label>
+                              <input
+                                type="text"
+                                name="phone"
+                                id="phone"
+                                autoComplete="address-level2"
+                                className="mt-1 focus:ring-blue-500 focus:border-blue-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
+                              />
+                            </div>
+
+                            <div className="col-span-6">
+                              <label
+                                htmlFor="region"
+                                className="block text-sm font-medium text-gray-700">
+                                State / Province
+                              </label>
+                              <select
+                                id="region"
+                                name="region"
+                                className="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm">
+                                <option>Alabama</option>
+                                <option>Alaska</option>
+                                <option>Arizona</option>
+                                <option>Arkansas</option>
+                                <option>California</option>
+                                <option>Colorado</option>
+                                <option>Connecticut</option>
+                                <option>Delaware</option>
+                                <option>Florida</option>
+                                <option>Georgia</option>
+                                <option>Hawaii</option>
+                                <option>Idaho</option>
+                                <option>Illinois</option>
+                                <option>Indiana</option>
+                                <option>Iowa</option>
+                                <option>Kansas</option>
+                                <option>Kentucky</option>
+                                <option>Louisiana</option>
+                                <option>Maine</option>
+                                <option>Maryland</option>
+                                <option>Massachusetts</option>
+                                <option>Michigan</option>
+                                <option>Minnesota</option>
+                                <option>Mississippi</option>
+                                <option>Missouri</option>
+                                <option>Montana</option>
+                                <option>Nebraska</option>
+                                <option>Nevada</option>
+                                <option>New Hampshire</option>
+                                <option>New Jersey</option>
+                                <option>New Mexico</option>
+                                <option>New York</option>
+                                <option>North Carolina</option>
+                                <option>North Dakota</option>
+                                <option>Ohio</option>
+                                <option>Oklahoma</option>
+                                <option>Oregon</option>
+                                <option>Pennsylvania</option>
+                                <option>Rhode Island</option>
+                                <option>South Carolina</option>
+                                <option>South Dakota</option>
+                                <option>Tennessee</option>
+                                <option>Texas</option>
+                                <option>Utah</option>
+                                <option>Vermont</option>
+                                <option>Virginia</option>
+                                <option>Washington</option>
+                                <option>West Virginia</option>
+                                <option>Wisconsin</option>
+                                <option>Wyoming</option>
+                              </select>
+                            </div>
+                          </div>
+                        </div>
+                        <div className="px-4 py-3 bg-white text-center sm:px-6">
+                          <button
+                            type="submit"
+                            className="inline-flex items-center justify-center py-2 px-4 border border-transparent shadow-sm text-lg font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+                            Request a Consultation
+                          </button>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
 
-          <div className="lg:grid lg:grid-cols-2 lg:gap-8 lg:items-start">
+          <div className="lg:grid lg:grid-cols-2 lg:gap-8 lg:items-end">
             <div className="relative z-10">
-              <div className="prose prose-xl max-w-none">
+              <div className="prose prose-xl md:max-w-lg">
                 <p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
                   Coverage
                 </p>
                 {<MDXRemote {...coverage} />}
               </div>
             </div>
-            <div className="mt-12 relative text-base max-w-prose mx-auto lg:mt-0 lg:max-w-none md:pt-32">
-              <blockquote className="relative bg-gray-50 rounded-lg shadow-lg p-8">
+            <div className="mt-12 relative text-base max-w-lg mx-auto lg:mt-0 md:pt-28">
+              <div className="relative bg-gray-50 rounded-lg shadow-2xl p-4 mb-8">
                 <SimpleReactLightbox>
                   <SRLWrapper>
-                    <img
-                      src={program.image.url}
-                      alt={program.title}
-                      className="h-auto rounded"
-                    />
-                    <img
-                      src={program.image2.url}
-                      alt={program.title}
-                      className="h-auto rounded mt-8"
-                    />
+                    <div className="flex justify-between">
+                      <img
+                        src={program.image.url}
+                        alt={program.title}
+                        className="h-32 w-48 rounded m-2"
+                      />
+                      <img
+                        src={program.image2.url}
+                        alt={program.title}
+                        className="h-32 w-48 rounded m-2"
+                      />
+                    </div>
                   </SRLWrapper>
                 </SimpleReactLightbox>
-              </blockquote>
+              </div>
             </div>
           </div>
         </div>
       </div>
 
       {/* FAQs */}
-      <div className="bg-gray-50">
+      <div className="bg-white">
         <div className="max-w-7xl mx-auto py-12 px-4 sm:py-16 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto ">
             <h2 className="text-center text-3xl font-extrabold text-gray-900 sm:text-4xl my-4">
