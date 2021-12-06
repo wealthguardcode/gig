@@ -454,9 +454,10 @@ export default function Home() {
               Why Work With WealthGuard?
             </h2>
             <p className="mt-4 text-2xl text-gray-500 dark:text-gray-400">
-              Year over year we have consistently achieved 200% growth,{' '}
+              Year over year we have consistently achieved{' '}
+              <strong>200% growth</strong>,{' '}
               <span className="font-bold text-blue-600">
-                call us and learn why!
+                <a href="tel:832-930-3827">call us and learn why!</a>
               </span>
             </p>
           </div>
