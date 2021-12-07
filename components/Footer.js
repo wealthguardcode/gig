@@ -12,8 +12,8 @@ const footerNavigation = {
   resources: [
     { name: 'Resources', href: '/resources/broker-resources' },
     { name: 'FAQ', href: '/resources/faq' },
-    // { name: 'Link 3', href: '#' },
-    // { name: 'Link 4', href: '#' },
+    { name: 'Privacy Policy', href: '/resources/privacy' },
+    { name: 'Terms & Conditions', href: '/resources/terms' },
     // { name: 'Link 5', href: '#' },
   ],
   company: [
