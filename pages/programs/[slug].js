@@ -239,7 +239,7 @@ export default function ProgramPage({ program, coverage, highlights }) {
                                 id="program"
                                 name="program"
                                 defaultValue={program.title}
-                                className="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm">
+                                className="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm dark:text-gray-900">
                                 <option value="Wels Wall Marina">
                                   West Wall Marina
                                 </option>
@@ -268,7 +268,7 @@ export default function ProgramPage({ program, coverage, highlights }) {
                               <select
                                 id="account_quantity"
                                 name="account_quantity"
-                                className="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm">
+                                className="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm dark:text-gray-900">
                                 <option>1</option>
                                 <option>2</option>
                                 <option>3</option>
@@ -292,7 +292,8 @@ export default function ProgramPage({ program, coverage, highlights }) {
                               <select
                                 id="account_future"
                                 name="account_future"
-                                className="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm">
+                                defaultValue="1"
+                                className="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm dark:text-gray-900">
                                 <option>1</option>
                                 <option>2</option>
                                 <option>3+</option>
@@ -300,17 +301,14 @@ export default function ProgramPage({ program, coverage, highlights }) {
                             </div>
 
                             <div className="col-span-6">
-                              <label
-                                htmlFor="company"
-                                className="block text-sm font-medium text-gray-700">
+                              <label className="block text-sm font-medium text-gray-700">
                                 Company
                               </label>
                               <input
                                 type="text"
                                 name="company"
                                 id="company"
-                                autoComplete="address-level2"
-                                className="mt-1 focus:ring-blue-500 focus:border-blue-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
+                                className="mt-1 focus:ring-blue-500 focus:border-blue-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md dark:text-gray-900"
                               />
                             </div>
                             <div className="col-span-6">
@@ -320,10 +318,9 @@ export default function ProgramPage({ program, coverage, highlights }) {
                                 Phone
                               </label>
                               <input
-                                type="text"
+                                type="tel"
                                 name="phone"
                                 id="phone"
-                                autoComplete="address-level2"
                                 className="mt-1 focus:ring-blue-500 focus:border-blue-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
                               />
                             </div>
@@ -337,7 +334,8 @@ export default function ProgramPage({ program, coverage, highlights }) {
                               <select
                                 id="state"
                                 name="state"
-                                className="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm">
+                                defaultValue="Texas"
+                                className="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm dark:text-gray-900">
                                 <option>Alabama</option>
                                 <option>Alaska</option>
                                 <option>Arizona</option>
@@ -413,9 +411,9 @@ export default function ProgramPage({ program, coverage, highlights }) {
                 <p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 dark:text-gray-300 sm:text-4xl">
                   Coverage
                 </p>
-                <p className="dark:text-gray-400">
+                <div className="dark:text-gray-400">
                   {<MDXRemote {...coverage} />}
-                </p>
+                </div>
               </div>
             </div>
             <div className="mt-12 relative text-base max-w-lg mx-auto lg:mt-0 md:pt-28">
