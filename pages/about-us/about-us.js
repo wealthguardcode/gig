@@ -2,7 +2,7 @@ import Layout from '../../components/Layout'
 import Link from 'next/link'
 import {
   CogIcon,
-  GlobeIcon,
+  ScaleIcon,
   UserGroupIcon,
   OfficeBuildingIcon,
   ExternalLinkIcon,
@@ -34,19 +34,17 @@ export default function AboutUsOverview() {
               About Us
             </h1>
             <p className="mt-5 text-xl text-gray-800">
-              Rhoncus sagittis risus arcu erat lectus bibendum. Ut in adipiscing
-              quis in viverra tristique sem. Ornare feugiat viverra eleifend
-              fusce orci in quis amet.
-            </p>
-            <p className="mt-5 text-xl text-gray-800">
-              Sit in et vitae tortor, massa. Dapibus laoreet amet lacus nibh
-              integer quis. Eu vulputate diam sit tellus quis at.
+              WealthGuard Insurance Group is a company built on relationships.
+              Our combined leadership has 50+ years of cultivating, delivering
+              and continuing the best relationships in the business. Over time,
+              we have surrounded ourselves with the best talent available and
+              are poised to continue our success in providing insurance.
             </p>
             <Link href="/about-us/leadership" passHref>
               <a>
                 <button
                   type="button"
-                  className="inline-flex items-center uppercase mt-6 px-5 py-2 border border-transparent text-base font-medium rounded-full shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                  className="inline-flex items-center uppercase mt-6 px-5 py-2 border border-transparent text-base font-medium rounded-full shadow-lg hover:shadow-2xl text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
                   Meet Our Leadership
                 </button>
               </a>
@@ -56,53 +54,52 @@ export default function AboutUsOverview() {
       </div>
 
       {/* CTA section */}
-      <div className="grid grid-cols-1 md:grid-cols-3 mt-2 md:mt-0">
-        <div className="p-10 mx-10  md:-mt-16 relative flex flex-col bg-white border rounded-lg shadow-xl mb-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-2 md:mt-0">
+        <div className="p-10 mx-10 -mt-16 md:-mt-16 relative flex flex-col bg-white border-2 border-gray-300 hover:border-gray-400 rounded-lg shadow-xl hover:shadow-2xl mb-4">
           <CogIcon height={80} />
           <h1 className="text-3xl tracking-wider my-4 text-center font-semibold">
             Programs
           </h1>
           <p className="prose my-2">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
-            imperdiet metus dolor, sed feugiat velit semper in. Aliquam cursus
-            laoreet laoreet. Sed volutpat augue vitae congue tincidunt.
+            We have years of insurance experience helping carriers and brokers
+            provide solutions to their clients. Experience the difference of
+            WealthGuard&apos;s newest Programs and Binding Authority division:
           </p>
-          <p className="prose my-2">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
-            imperdiet metus dolor, sed feugiat velit semper in. Aliquam cursus
-            laoreet laoreet. Sed volutpat augue vitae congue tincidunt.
-          </p>
+          <ul className="list-disc ml-6">
+            <li>Assisted Living Facilities Insurance</li>
+            <li>Marina Insurance </li>
+            <li>Coastal Property</li>
+            <li>Cargo & Logistics Insurance</li>
+            <li>Terrorism & Sabotage Insurance</li>
+            <li>Active Assailant and Violent Malicious Acts Insurance</li>
+            <li>Deductible buy-down options</li>
+          </ul>
         </div>
-        <div className="p-10 mx-10 md:-mt-16 relative flex flex-col bg-white border rounded-lg shadow-xl mb-4">
-          <GlobeIcon height={80} />
+        <div className="p-10 mx-10 md:-mt-16 relative flex flex-col bg-white border-2 border-gray-300 hover:border-gray-400 rounded-lg shadow-xl hover:shadow-2xl mb-4">
+          <ScaleIcon height={80} />
           <h1 className="text-3xl tracking-wider my-4 text-center font-semibold">
-            Wholesale
+            Stability
           </h1>
           <p className="prose my-2">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
-            imperdiet metus dolor, sed feugiat velit semper in. Aliquam cursus
-            laoreet laoreet. Sed volutpat augue vitae congue tincidunt.
-          </p>
-          <p className="prose my-2">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
-            imperdiet metus dolor, sed feugiat velit semper in. Aliquam cursus
-            laoreet laoreet. Sed volutpat augue vitae congue tincidunt.
+            As an independent broker, you have the privilege of going to market
+            for your client. WealthGuard&apos;s executive leadership has
+            unprecedented access to innovative commercial insurance products and
+            solutions that are broad in scope, properly priced and highly
+            serviced.
           </p>
         </div>
-        <div className="p-10 mx-10 md:-mt-16 relative flex flex-col bg-white border rounded-lg shadow-xl mb-4">
+        <div className="p-10 mx-10 md:mt-16 lg:-mt-16 relative flex flex-col bg-white border-2 border-gray-300 hover:border-gray-400 rounded-lg shadow-xl hover:shadow-2xl mb-4 ">
           <UserGroupIcon height={80} />
           <h1 className="text-3xl tracking-wider my-4 text-center font-semibold">
-            Group Captives
+            Relationships
           </h1>
           <p className="prose my-2">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
-            imperdiet metus dolor, sed feugiat velit semper in. Aliquam cursus
-            laoreet laoreet. Sed volutpat augue vitae congue tincidunt.
-          </p>
-          <p className="prose my-2">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
-            imperdiet metus dolor, sed feugiat velit semper in. Aliquam cursus
-            laoreet laoreet. Sed volutpat augue vitae congue tincidunt.
+            Each client has different insurance needs. For 30+ years, our
+            leadership team has delivered strong results, year over year, for
+            our key trading partners and brokers. We credit this success for the
+            personal and professional relationships that have enjoyed over the
+            past years and years to come. If your looking for a partner, we are
+            here for you!
           </p>
         </div>
       </div>
@@ -119,8 +116,8 @@ export default function AboutUsOverview() {
       </div>
 
       {/* Why WealthGuard - content */}
-      <div className="grid grid-cols-1 md:grid-cols-3 mt-2 md:mt-0">
-        <div className="p-10 mx-10  flex flex-col bg-blue-200 border-t-2 border-gray-600 rounded-lg shadow-xl mb-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-2 md:mt-0">
+        <div className="p-10 mx-10 flex flex-col bg-blue-200 border-t-2 border-gray-600 rounded-lg shadow-xl hover:shadow-2xl mb-4">
           <h1 className="text-3xl tracking-wider my-4  font-semibold">
             Ingenuity
           </h1>
@@ -135,7 +132,7 @@ export default function AboutUsOverview() {
             laoreet laoreet. Sed volutpat augue vitae congue tincidunt.
           </p>
         </div>
-        <div className="p-10 mx-10 flex flex-col bg-gray-200 border-t-2 border-gray-600 rounded-lg shadow-xl mb-4">
+        <div className="p-10 mx-10 flex flex-col bg-gray-200 border-t-2 border-gray-600 rounded-lg shadow-xl hover:shadow-2xl mb-4">
           <h1 className="text-3xl tracking-wider my-4  font-semibold">
             Service
           </h1>
@@ -150,7 +147,7 @@ export default function AboutUsOverview() {
             laoreet laoreet. Sed volutpat augue vitae congue tincidunt.
           </p>
         </div>
-        <div className="p-10 mx-10 flex flex-col bg-blue-200 border-t-2 border-gray-600 rounded-lg shadow-xl mb-4">
+        <div className="p-10 mx-10 flex flex-col bg-blue-200 border-t-2 border-gray-600 rounded-lg shadow-xl hover:shadow-2xl mb-4">
           <h1 className="text-3xl tracking-wider my-4  font-semibold">
             Passion
           </h1>
@@ -168,7 +165,7 @@ export default function AboutUsOverview() {
       </div>
 
       {/* Our Mission */}
-      <div className="flex flex-col justify-around items-center md:flex-row p-4 mx-4 my-10 border-t-2 border-gray-600 rounded-lg shadow-xl">
+      <div className="flex flex-col justify-around items-center md:flex-row p-4 mx-4 my-10 border-t-2 border-gray-600 hover:border-2 rounded-lg shadow-xl hover:shadow-2xl">
         <div className="mx-4 p-4 sm:mx-auto align-middle">
           <OfficeBuildingIcon height={200} />
         </div>
@@ -188,7 +185,7 @@ export default function AboutUsOverview() {
 
       {/* CTA */}
       <div className="relative bg-gray-800">
-        <div className="h-56 bg-indigo-600 sm:h-72 md:absolute md:left-0 md:h-full md:w-1/2">
+        <div className="h-56 bg-blue-600 sm:h-72 md:absolute md:left-0 md:h-full md:w-1/2">
           <img
             className="w-full h-full object-cover"
             src="https://images.unsplash.com/photo-1444718070663-99afd7176287?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80&blend=6366F1&sat=-100&blend-mode=multiply"
