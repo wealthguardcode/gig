@@ -117,7 +117,7 @@ export default function AboutUsOverview() {
 
       {/* Why WealthGuard - content */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-2 md:mt-0">
-        <div className="p-10 mx-10 flex flex-col bg-blue-200 border-t-2 border-gray-600 rounded-lg shadow-xl hover:shadow-2xl mb-4">
+        <div className="p-10 mx-10 flex flex-col bg-blue-200 dark:bg-blue-300 border-t-2 border-gray-600 dark:border-blue-400 rounded-lg shadow-xl hover:shadow-2xl mb-4">
           <h1 className="text-3xl tracking-wider my-4 font-semibold dark:text-gray-800">
             Ingenuity
           </h1>
@@ -132,7 +132,7 @@ export default function AboutUsOverview() {
             laoreet laoreet. Sed volutpat augue vitae congue tincidunt.
           </p>
         </div>
-        <div className="p-10 mx-10 flex flex-col bg-gray-200 border-t-2 border-gray-600 rounded-lg shadow-xl hover:shadow-2xl mb-4">
+        <div className="p-10 mx-10 flex flex-col bg-gray-200 dark:bg-gray-300 border-t-2 border-gray-600 dark:border-blue-400 rounded-lg shadow-xl hover:shadow-2xl mb-4">
           <h1 className="text-3xl tracking-wider my-4 font-semibold dark:text-gray-800">
             Service
           </h1>
@@ -147,7 +147,7 @@ export default function AboutUsOverview() {
             laoreet laoreet. Sed volutpat augue vitae congue tincidunt.
           </p>
         </div>
-        <div className="p-10 mx-10 flex flex-col bg-blue-200 border-t-2 border-gray-600 rounded-lg shadow-xl hover:shadow-2xl mb-4">
+        <div className="p-10 mx-10 flex flex-col bg-blue-200 dark:bg-blue-300 border-t-2 border-gray-600 dark:border-blue-400 rounded-lg shadow-xl hover:shadow-2xl mb-4">
           <h1 className="text-3xl tracking-wider my-4 font-semibold dark:text-gray-800">
             Passion
           </h1>
