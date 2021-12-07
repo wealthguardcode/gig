@@ -46,7 +46,7 @@ export default function ProgramsPage({ programs }) {
       <div className="p-8 my-10 grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3">
         {programs.map((program) => (
           <div
-            className="max-w-sm rounded overflow-hidden shadow-xl mx-auto hover:shadow-2xl hover:border-indigo-200"
+            className="max-w-sm rounded overflow-hidden shadow-xl mx-auto hover:shadow-2xl border hover:border-blue-300 dark:hover:border-blue-600 dark:bg-gray-900"
             key={program.slug}>
             <Link href={`/programs/${program.slug}`} passHref>
               <a>
@@ -60,7 +60,7 @@ export default function ProgramsPage({ programs }) {
             <div className="px-6 py-4 flex flex-col items-center">
               <Link href={`/programs/${program.slug}`} passHref>
                 <a>
-                  <div className="font-bold text-xl mb-2 text-center">
+                  <div className="font-bold text-xl mb-2 text-center dark:text-gray-300">
                     {program.title}
                   </div>
                 </a>
@@ -70,7 +70,7 @@ export default function ProgramsPage({ programs }) {
                   <a>
                     <button
                       type="button"
-                      className="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-indigo-700 bg-indigo-100 hover:bg-indigo-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                      className="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-blue-700 bg-blue-100 dark:bg-blue-300 dark:text-blue-800 hover:bg-blue-200 dark:hover:bg-blue-300 dark:hover:text-blue-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
                       Learn more
                     </button>
                   </a>
