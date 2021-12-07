@@ -9,6 +9,8 @@ import SimpleReactLightbox, { SRLWrapper } from 'simple-react-lightbox'
 import emailjs from 'emailjs-com'
 import { toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
+import { useRouter } from 'next/router'
+import { useState, useEffect } from 'react'
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
@@ -18,6 +20,7 @@ function fun() {
   document.getElementById('first_name').value = ''
   document.getElementById('last_name').value = ''
   document.getElementById('work_email').value = ''
+  document.getElementById('program').value = ''
   document.getElementById('account_quantity').value = ''
   document.getElementById('account_future').value = ''
   document.getElementById('company').value = ''
@@ -72,7 +75,7 @@ export const getStaticPaths = async () => {
   const slugRes = await getProgramsSlugs()
   const slugs = slugRes.programs
 
-  console.log(slugs)
+  // console.log(slugs)
 
   return {
     paths: slugs.map((slug) => ({ params: { slug: slug.slug } })),
@@ -92,8 +95,33 @@ export const getStaticProps = async ({ params }) => {
   }
 }
 
+const initialValue = () => {
+  let option_id = [0, 1, 2, 3, 4, 5]
+  let options = [
+    { name: 'West Wall Marina' },
+    { name: 'Assistant Living Facility' },
+    { name: 'Cargo & Logistics' },
+    { name: 'Active Assailant' },
+    { name: 'Terrorism & Sabotage' },
+  ]
+  let selectedOptionId = 0
+
+  return (
+    <select defaultValue={selectedOptionId}>
+      {option_id.map((id) => (
+        <option key={id} value={id}>
+          {options[id].name}
+        </option>
+      ))}
+    </select>
+  )
+}
+
 export default function ProgramPage({ program, coverage, highlights }) {
-  console.log(program)
+  const [defaultValue, setDefaultValue] = useState({
+    value: `${program.title}`,
+  })
+
   return (
     <Layout title={`WIG | ${program.title}`}>
       {/* Hero */}
@@ -199,6 +227,34 @@ export default function ProgramPage({ program, coverage, highlights }) {
                                 autoComplete="email"
                                 className="mt-1 focus:ring-blue-500 focus:border-blue-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
                               />
+                            </div>
+                            <div className="col-span-6">
+                              <label
+                                htmlFor="program"
+                                className="block text-sm font-medium text-gray-700">
+                                Program
+                              </label>
+                              <select
+                                id="program"
+                                name="program"
+                                defaultValue={program.title}
+                                className="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm">
+                                <option value="Wels Wall Marina">
+                                  West Wall Marina
+                                </option>
+                                <option value="Assistant Living Facility">
+                                  Assistant Living Facility
+                                </option>
+                                <option value="Cargo & Logistics">
+                                  Cargo & Logistics
+                                </option>
+                                <option value="Active Assailant">
+                                  Active Assailant
+                                </option>
+                                <option value="Terrorism & Sabotage">
+                                  Terrorism & Sabotage
+                                </option>
+                              </select>
                             </div>
 
                             <div className="col-span-6">
@@ -350,7 +406,7 @@ export default function ProgramPage({ program, coverage, highlights }) {
             </div>
           </div>
 
-          <div className="lg:grid lg:grid-cols-2 lg:gap-8 lg:items-end">
+          <div className="lg:grid lg:grid-cols-1 lg:gap-8 lg:items-end">
             <div className="relative z-10">
               <div className="prose prose-xl md:max-w-lg">
                 <p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
