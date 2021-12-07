@@ -12,7 +12,7 @@ export default function AboutUsOverview() {
   return (
     <Layout title="WIG | About Us">
       {/* Hero */}
-      <div className="relative bg-white">
+      <div className="relative bg-white dark:bg-gray-800">
         <div className="h-80 absolute inset-x-0 bottom-0 xl:top-0 xl:h-full">
           <div className="h-full w-full xl:grid xl:grid-cols-2">
             <div className="h-full xl:relative xl:col-start-2">
@@ -23,17 +23,17 @@ export default function AboutUsOverview() {
               />
               <div
                 aria-hidden="true"
-                className="absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-white xl:inset-y-0 xl:left-0 xl:h-full xl:w-32 xl:bg-gradient-to-r"
+                className="absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-white dark:from-gray-800 xl:inset-y-0 xl:left-0 xl:h-full xl:w-32 xl:bg-gradient-to-r"
               />
             </div>
           </div>
         </div>
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:max-w-7xl lg:px-8 xl:grid xl:grid-cols-2 xl:grid-flow-col-dense xl:gap-x-8">
           <div className="relative pt-12 pb-64 sm:pt-24 sm:pb-64 xl:col-start-1 xl:pb-24">
-            <h1 className="text-4xl font-extrabold tracking-tight text-gray-900  sm:text-5xl lg:text-6xl">
+            <h1 className="text-4xl font-extrabold tracking-tight text-gray-900 dark:text-gray-300 sm:text-5xl lg:text-6xl">
               About Us
             </h1>
-            <p className="mt-5 text-xl text-gray-800">
+            <p className="mt-5 text-xl text-gray-800 dark:text-gray-400">
               WealthGuard Insurance Group is a company built on relationships.
               Our combined leadership has 50+ years of cultivating, delivering
               and continuing the best relationships in the business. Over time,
@@ -54,18 +54,18 @@ export default function AboutUsOverview() {
       </div>
 
       {/* CTA section */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-2 md:mt-0">
-        <div className="p-10 mx-10 -mt-16 md:-mt-16 relative flex flex-col bg-white border-2 border-gray-300 hover:border-gray-400 rounded-lg shadow-xl hover:shadow-2xl mb-4">
-          <CogIcon height={80} />
-          <h1 className="text-3xl tracking-wider my-4 text-center font-semibold">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-2 md:mt-0 ">
+        <div className="p-10 mx-10 -mt-16 md:-mt-16 relative flex flex-col bg-white border-2 border-gray-300 hover:border-gray-400 dark:hover:border-blue-600 rounded-lg shadow-xl hover:shadow-2xl mb-4 dark:bg-gray-900">
+          <CogIcon height={80} className="dark:text-gray-300" />
+          <h1 className="text-3xl tracking-wider my-4 text-center font-semibold dark:text-gray-300">
             Programs
           </h1>
-          <p className="prose-lg my-2">
+          <p className="prose-lg my-2 dark:text-gray-400">
             We have years of insurance experience helping carriers and brokers
             provide solutions to their clients. Experience the difference of
             WealthGuard&apos;s newest Programs and Binding Authority division:
           </p>
-          <ul className="list-disc ml-6">
+          <ul className="list-disc ml-6 dark:text-gray-400">
             <li>Assisted Living Facilities Insurance</li>
             <li>Marina Insurance </li>
             <li>Coastal Property</li>
@@ -75,12 +75,12 @@ export default function AboutUsOverview() {
             <li>Deductible buy-down options</li>
           </ul>
         </div>
-        <div className="p-10 mx-10 md:-mt-16 relative flex flex-col bg-white border-2 border-gray-300 hover:border-gray-400 rounded-lg shadow-xl hover:shadow-2xl mb-4">
-          <ScaleIcon height={80} />
-          <h1 className="text-3xl tracking-wider my-4 text-center font-semibold">
+        <div className="p-10 mx-10 md:-mt-16 relative flex flex-col bg-white border-2 border-gray-300 hover:border-gray-400 dark:hover:border-blue-600 rounded-lg shadow-xl hover:shadow-2xl mb-4 dark:bg-gray-900">
+          <ScaleIcon height={80} className="dark:text-gray-300" />
+          <h1 className="text-3xl tracking-wider my-4 text-center font-semibold dark:text-gray-300">
             Stability
           </h1>
-          <p className="prose-lg my-2">
+          <p className="prose-lg my-2 dark:text-gray-400">
             As an independent broker, you have the privilege of going to market
             for your client. WealthGuard&apos;s executive leadership has
             unprecedented access to innovative commercial insurance products and
@@ -88,12 +88,12 @@ export default function AboutUsOverview() {
             serviced.
           </p>
         </div>
-        <div className="p-10 mx-10 md:mt-16 lg:-mt-16 relative flex flex-col bg-white border-2 border-gray-300 hover:border-gray-400 rounded-lg shadow-xl hover:shadow-2xl mb-4 ">
-          <UserGroupIcon height={80} />
-          <h1 className="text-3xl tracking-wider my-4 text-center font-semibold">
+        <div className="p-10 mx-10 md:mt-16 lg:-mt-16 relative flex flex-col bg-white border-2 border-gray-300 hover:border-gray-400 dark:hover:border-blue-600 rounded-lg shadow-xl hover:shadow-2xl mb-4 dark:bg-gray-900">
+          <UserGroupIcon height={80} className="dark:text-gray-300" />
+          <h1 className="text-3xl tracking-wider my-4 text-center font-semibold dark:text-gray-300">
             Relationships
           </h1>
-          <p className="prose-lg my-2">
+          <p className="prose-lg my-2 dark:text-gray-400">
             Each client has different insurance needs. For 30+ years, our
             leadership team has delivered strong results, year over year, for
             our key trading partners and brokers. We credit this success for the
@@ -105,10 +105,10 @@ export default function AboutUsOverview() {
       </div>
 
       {/* Why WealthGuard - header */}
-      <div className="bg-white">
+      <div className="bg-white dark:bg-gray-800">
         <div className="max-w-7xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:px-8">
           <div className="text-center">
-            <p className="mt-1 text-4xl font-extrabold text-gray-900 sm:text-4xl sm:tracking-tight lg:text-5xl">
+            <p className="mt-1 text-4xl font-extrabold text-gray-900 dark:text-gray-300 sm:text-4xl sm:tracking-tight lg:text-5xl">
               Why WealthGuard?
             </p>
           </div>
@@ -118,7 +118,7 @@ export default function AboutUsOverview() {
       {/* Why WealthGuard - content */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-2 md:mt-0">
         <div className="p-10 mx-10 flex flex-col bg-blue-200 border-t-2 border-gray-600 rounded-lg shadow-xl hover:shadow-2xl mb-4">
-          <h1 className="text-3xl tracking-wider my-4  font-semibold">
+          <h1 className="text-3xl tracking-wider my-4 font-semibold dark:text-gray-800">
             Ingenuity
           </h1>
           <p className="prose my-2">
@@ -133,7 +133,7 @@ export default function AboutUsOverview() {
           </p>
         </div>
         <div className="p-10 mx-10 flex flex-col bg-gray-200 border-t-2 border-gray-600 rounded-lg shadow-xl hover:shadow-2xl mb-4">
-          <h1 className="text-3xl tracking-wider my-4  font-semibold">
+          <h1 className="text-3xl tracking-wider my-4 font-semibold dark:text-gray-800">
             Service
           </h1>
           <p className="prose my-2">
@@ -148,7 +148,7 @@ export default function AboutUsOverview() {
           </p>
         </div>
         <div className="p-10 mx-10 flex flex-col bg-blue-200 border-t-2 border-gray-600 rounded-lg shadow-xl hover:shadow-2xl mb-4">
-          <h1 className="text-3xl tracking-wider my-4  font-semibold">
+          <h1 className="text-3xl tracking-wider my-4 font-semibold dark:text-gray-800">
             Passion
           </h1>
           <p className="prose my-2">
@@ -165,13 +165,15 @@ export default function AboutUsOverview() {
       </div>
 
       {/* Our Mission */}
-      <div className="flex flex-col justify-around items-center md:flex-row p-4 mx-4 my-10 border-t-2 border-gray-600 hover:border-2 rounded-lg shadow-xl hover:shadow-2xl">
+      <div className="flex flex-col justify-around items-center md:flex-row p-4 mx-4 my-10 border-t-2 border-gray-600 hover:border-2 rounded-lg shadow-xl hover:shadow-2xl dark:bg-gray-700">
         <div className="mx-4 p-4 sm:mx-auto align-middle">
-          <OfficeBuildingIcon height={200} />
+          <OfficeBuildingIcon height={200} className="dark:text-gray-300" />
         </div>
         <div className="mx-8 p-4 flex flex-col">
-          <h1 className="text-3xl font-semibold my-3">Our Mission:</h1>
-          <p className="prose-lg my-3">
+          <h1 className="text-3xl font-semibold my-3 dark:text-gray-300">
+            Our Mission:
+          </h1>
+          <p className="prose-lg my-3 dark:text-gray-400">
             Aenean imperdiet metus dolor, sed feugiat velit semper in. Aliquam
             cursus laoreet laoreet. Sed volutpat augue vitae congue tincidunt:
           </p>
@@ -184,7 +186,7 @@ export default function AboutUsOverview() {
       </div>
 
       {/* CTA */}
-      <div className="relative bg-gray-800">
+      <div className="relative bg-gray-800 dark:bg-gray-900">
         <div className="h-56 bg-blue-600 sm:h-72 md:absolute md:left-0 md:h-full md:w-1/2">
           <img
             className="w-full h-full object-cover"
