@@ -67,20 +67,22 @@ export default function FaqPage() {
       </div>
 
       {/* FAQ section */}
-      <section aria-labelledby="faq-heading" className="bg-white">
+      <section
+        aria-labelledby="faq-heading"
+        className="bg-white dark:bg-gray-800">
         <div className="max-2xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8">
           <div className="max-w-xl">
             <h2
               id="faq-heading"
-              className="text-2xl font-extrabold tracking-wide text-gray-900">
+              className="text-2xl font-extrabold tracking-wide text-gray-900 dark:text-gray-300">
               Frequently asked questions
             </h2>
-            <p className="mt-4 text-lg text-gray-500">
+            <p className="mt-4 text-lg text-gray-500 dark:text-gray-400">
               Take a look at our FAQ and if you still cannot find what you are
               looking for you can always{' '}
               <a
                 href="#"
-                className="font-medium text-indigo-600 hover:text-indigo-500">
+                className="font-medium text-blue-600 hover:text-blue-500">
                 send us an email
               </a>{' '}
               with your enquiry.
@@ -90,10 +92,12 @@ export default function FaqPage() {
           <dl className="mt-12 grid grid-cols-1 gap-y-10 sm:mt-16 md:grid-cols-2 md:gap-x-6 lg:grid-cols-3">
             {faqs.map((faq) => (
               <div key={faq.id}>
-                <dt className="text-base font-medium text-gray-900">
+                <dt className="text-base font-medium text-gray-900 dark:text-gray-300">
                   {faq.question}
                 </dt>
-                <dd className="mt-3 text-sm text-gray-500">{faq.answer}</dd>
+                <dd className="mt-3 text-sm text-gray-500 dark:text-gray-400">
+                  {faq.answer}
+                </dd>
               </div>
             ))}
           </dl>
@@ -101,9 +105,9 @@ export default function FaqPage() {
       </section>
 
       {/* Testimonial section */}
-      <div className="bg-white py-16 lg:py-24">
+      <div className="bg-white dark:bg-gray-800 py-16 lg:py-24">
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="relative py-24 px-8 bg-indigo-500 rounded-xl shadow-2xl overflow-hidden lg:px-16 lg:grid lg:grid-cols-2 lg:gap-x-8">
+          <div className="relative py-24 px-8 bg-blue-500 rounded-xl shadow-2xl overflow-hidden lg:px-16 lg:grid lg:grid-cols-2 lg:gap-x-8">
             <div className="absolute inset-0 opacity-50 filter saturate-0 mix-blend-multiply">
               <img
                 src="https://images.unsplash.com/photo-1609902726285-00668009f004?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1470&q=80"
