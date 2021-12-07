@@ -62,12 +62,12 @@ export default function ContactUsPage() {
     <Layout title="WIG | Contact Us">
       <main>
         {/* Header */}
-        <div className="py-24 bg-gray-50 sm:py-32">
+        <div className="py-24 bg-gray-50 dark:bg-gray-900 sm:py-32">
           <div className="max-w-md mx-auto pl-4 pr-8 sm:max-w-lg sm:px-6 lg:max-w-7xl lg:px-8">
-            <h1 className="text-4xl leading-10 font-extrabold tracking-tight text-gray-900 text-center sm:text-5xl sm:leading-none lg:text-6xl">
+            <h1 className="text-4xl leading-10 font-extrabold tracking-tight text-gray-900 dark:text-gray-300 text-center sm:text-5xl sm:leading-none lg:text-6xl">
               Contact Us
             </h1>
-            <p className="mt-6 max-w-3xl mx-auto text-xl leading-normal text-gray-500 text-center">
+            <p className="mt-6 max-w-3xl mx-auto text-xl leading-normal text-gray-500 dark:text-gray-400 text-center">
               Convallis feugiat et aliquet pellentesque dictum nisi, velit.
               Egestas fermentum adipiscing risus quam ac consectetur mattis
               turpis tristique.
@@ -76,7 +76,7 @@ export default function ContactUsPage() {
         </div>
 
         {/* Contact Section */}
-        <div className="relative bg-white">
+        <div className="relative bg-white dark:bg-gray-800">
           <div className="lg:absolute lg:inset-0">
             <div className="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
               <img
@@ -89,10 +89,10 @@ export default function ContactUsPage() {
           <div className="relative py-16 px-4 sm:py-24 sm:px-6 lg:px-8 lg:max-w-7xl lg:mx-auto lg:py-32 lg:grid lg:grid-cols-2">
             <div className="lg:pr-8">
               <div className="max-w-md mx-auto sm:max-w-lg lg:mx-0">
-                <h2 className="text-3xl font-extrabold tracking-tight sm:text-4xl">
+                <h2 className="text-3xl font-extrabold tracking-tight sm:text-4xl dark:text-gray-300">
                   Let&apos;s work together
                 </h2>
-                <p className="mt-4 text-lg text-gray-500 sm:mt-3">
+                <p className="mt-4 text-lg text-gray-500 sm:mt-3 dark:text-gray-400">
                   We&apos;d love to hear from you! Send us a message using the
                   form opposite, or email us. We’d love to hear from you! Send
                   us a message using the form opposite, or email us.
@@ -105,7 +105,7 @@ export default function ContactUsPage() {
                   <div>
                     <label
                       htmlFor="first-name"
-                      className="block text-sm font-medium text-gray-700">
+                      className="block text-sm font-medium text-gray-700 dark:text-gray-400">
                       First name
                     </label>
                     <div className="mt-1">
@@ -121,7 +121,7 @@ export default function ContactUsPage() {
                   <div>
                     <label
                       htmlFor="last-name"
-                      className="block text-sm font-medium text-gray-700">
+                      className="block text-sm font-medium text-gray-700 dark:text-gray-400">
                       Last name
                     </label>
                     <div className="mt-1">
@@ -137,7 +137,7 @@ export default function ContactUsPage() {
                   <div className="sm:col-span-2">
                     <label
                       htmlFor="email"
-                      className="block text-sm font-medium text-gray-700">
+                      className="block text-sm font-medium text-gray-700 dark:text-gray-400">
                       Email
                     </label>
                     <div className="mt-1">
@@ -153,7 +153,7 @@ export default function ContactUsPage() {
                   <div className="sm:col-span-2">
                     <label
                       htmlFor="company"
-                      className="block text-sm font-medium text-gray-700">
+                      className="block text-sm font-medium text-gray-700 dark:text-gray-400">
                       Company
                     </label>
                     <div className="mt-1">
@@ -170,12 +170,12 @@ export default function ContactUsPage() {
                     <div className="flex justify-between">
                       <label
                         htmlFor="phone"
-                        className="block text-sm font-medium text-gray-700">
+                        className="block text-sm font-medium text-gray-700 dark:text-gray-400">
                         Phone
                       </label>
                       <span
                         id="phone-description"
-                        className="text-sm text-gray-500">
+                        className="text-sm text-gray-500 dark:text-gray-500">
                         Optional
                       </span>
                     </div>
@@ -194,7 +194,7 @@ export default function ContactUsPage() {
                     <div className="flex justify-between">
                       <label
                         htmlFor="how-can-we-help"
-                        className="block text-sm font-medium text-gray-700">
+                        className="block text-sm font-medium text-gray-700 dark:text-gray-400">
                         How can we help you?
                       </label>
                       <span
