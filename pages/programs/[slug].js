@@ -147,18 +147,20 @@ export default function ProgramPage({ program, coverage, highlights }) {
       </div>
 
       {/* Main content */}
-      <div className="pt-16 bg-white">
+      <div className="pt-16 bg-white dark:bg-gray-800">
         <div className="max-w-5xl mx-auto px-4 space-y-8 sm:px-6 lg:px-8">
           {/* Description & Form */}
           <div className="flex flex-col md:flex-row">
             <div className="flex flex-col my-6">
               <div className="text-base max-w-prose lg:max-w-none">
-                <p className="mt-2 mb-4 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-3xl text-left">
+                <p className="mt-2 mb-4 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 dark:text-gray-300 sm:text-3xl text-left">
                   {program.subHeading}
                 </p>
               </div>
               <div className="relative z-10 prose prose-xl max-w-sm sm:mx-4 md:max-w-md md:mx-2 lg:max-w-lg lg:mx-0 mb-10 mx-4">
-                <p className="text-lg mr-3">{program.description}</p>
+                <p className="text-lg mr-3 dark:text-gray-400">
+                  {program.description}
+                </p>
               </div>
             </div>
 
@@ -172,9 +174,9 @@ export default function ProgramPage({ program, coverage, highlights }) {
                       method="POST"
                       className="shadow-2xl md:absolute md:mb-6 mx-4">
                       <div className="shadow overflow-hidden sm:rounded-md">
-                        <div className="px-4 py-5 bg-white p-6 ">
+                        <div className="px-4 py-5 bg-white dark:bg-gray-200 p-6 ">
                           <div className="my-4">
-                            <h1 className="sm:text-xl text-2xl text-center lg:text-3xl font-semibold">
+                            <h1 className="sm:text-xl text-2xl text-center lg:text-3xl font-semibold dark:text-gray-800">
                               Speak With a{' '}
                               <span className="text-blue-600">
                                 {program.title}
@@ -390,7 +392,7 @@ export default function ProgramPage({ program, coverage, highlights }) {
                             </div>
                           </div>
                         </div>
-                        <div className="px-4 py-3 bg-white text-center sm:px-6">
+                        <div className="px-4 py-3 bg-white dark:bg-gray-200 text-center sm:px-6">
                           <button
                             type="submit"
                             className="inline-flex items-center justify-center py-2 px-4 border border-transparent shadow-sm text-lg font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
@@ -408,14 +410,16 @@ export default function ProgramPage({ program, coverage, highlights }) {
           <div className="lg:grid lg:grid-cols-1 lg:gap-8 lg:items-end">
             <div className="relative z-10">
               <div className="prose prose-xl md:max-w-lg">
-                <p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+                <p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 dark:text-gray-300 sm:text-4xl">
                   Coverage
                 </p>
-                {<MDXRemote {...coverage} />}
+                <p className="dark:text-gray-400">
+                  {<MDXRemote {...coverage} />}
+                </p>
               </div>
             </div>
             <div className="mt-12 relative text-base max-w-lg mx-auto lg:mt-0 md:pt-28">
-              <div className="relative bg-gray-50 rounded-lg shadow-2xl p-4 mb-8">
+              <div className="relative bg-gray-50 dark:bg-gray-900 rounded-lg shadow-2xl p-4 mb-8">
                 <SimpleReactLightbox>
                   <SRLWrapper>
                     <div className="flex justify-between">
@@ -439,13 +443,13 @@ export default function ProgramPage({ program, coverage, highlights }) {
       </div>
 
       {/* FAQs */}
-      <div className="bg-white">
+      <div className="bg-white dark:bg-gray-800">
         <div className="max-w-7xl mx-auto py-12 px-4 sm:py-16 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto ">
-            <h2 className="text-center text-3xl font-extrabold text-gray-900 sm:text-4xl my-4">
+            <h2 className="text-center text-3xl font-extrabold text-gray-900 dark:text-gray-300 sm:text-4xl my-4">
               Highlights
             </h2>
-            <div className="prose prose-xl max-w-none mt-2">
+            <div className="prose prose-xl max-w-none mt-2 dark:text-gray-400">
               {<MDXRemote {...highlights} />}
             </div>
           </div>
@@ -453,16 +457,18 @@ export default function ProgramPage({ program, coverage, highlights }) {
       </div>
 
       {/* CTA section */}
-      <div className="bg-blue-50">
+      <div className="bg-blue-50 dark:bg-blue-600">
         <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-24 lg:px-8 lg:flex lg:items-center lg:justify-between">
           <h2 className="text-3xl font-extrabold tracking-tight text-gray-900 md:text-4xl">
             <span className="block">Ready to learn more?</span>
-            <span className="block text-blue-600">Contact us today.</span>
+            <span className="block text-blue-600 dark:text-blue-200">
+              Contact us today.
+            </span>
           </h2>
           <div className="mt-8 flex lg:mt-0 lg:flex-shrink-0">
             <div className="inline-flex rounded-md shadow">
               <Link href="/contact-us">
-                <a className="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700">
+                <a className="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 dark:bg-blue-400 dark:hover:bg-blue-500 hover:text-gray-300">
                   Contact us{' '}
                   <MailIcon
                     className="ml-3 h-5 w-5 flex-shrink-0 text-gray-50"
