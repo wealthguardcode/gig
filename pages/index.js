@@ -105,7 +105,7 @@ export default function Home() {
   return (
     <Layout>
       <div className="relative bg-white dark:bg-gray-800 overflow-hidden">
-        <div className="relative md:pt-12 pt-10 sm:pb-4">
+        <div className="relative md:pt-12 pt-20 sm:pb-4">
           <div className="h-screen mx-auto w-full px-4 sm:mt-0">
             {/* BG Image */}
 
@@ -237,17 +237,19 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="mt-10 shadow-xl rounded-xl">
+          <div className="mt-10 shadow-xl rounded-xl dark:bg-gray-300">
             <dl className="space-y-10 md:space-y-0 grid grid-cols-1 md:gap-x-8 md:gap-y-10 shadow-2xl">
               <div className="my-10">
                 <h1 className="text-4xl text-blue-100 bg-gradient-to-r from-gray-400 via-gray-500 to-blue-500 font-bold mx-2 text-center rounded py-1">
                   For Brokers
                 </h1>
               </div>
-              <div className="flex flex-col md:flex-row">
+              <div className="flex flex-col md:flex-row ">
                 <div className="flex flex-col justify-center items-center p-4">
-                  <h3 className="text-5xl tracking-wider ">Brokers</h3>
-                  <p className="mt-3 prose-xl mx-4 dark:text-gray-400">
+                  <h3 className="text-5xl tracking-wider dark:text-gray-900">
+                    Brokers
+                  </h3>
+                  <p className="mt-3 prose-xl mx-4 dark:text-gray-500">
                     We work with more than 5,500 broker partners across the USA
                     to bring your clients best-in-class insurance solutions and
                     provide extensive resources to help you expand your
@@ -457,7 +459,9 @@ export default function Home() {
               Year over year we have consistently achieved{' '}
               <strong>200% growth</strong>,{' '}
               <span className="font-bold text-blue-600">
-                <a href="tel:832-930-3827">call us</a>
+                <a href="tel:832-930-3827" target="_blank" rel="noreferrer">
+                  call us
+                </a>
               </span>{' '}
               and learn why!
             </p>

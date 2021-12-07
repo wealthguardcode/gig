@@ -60,7 +60,7 @@ export default function AboutUsOverview() {
           <h1 className="text-3xl tracking-wider my-4 text-center font-semibold">
             Programs
           </h1>
-          <p className="prose my-2">
+          <p className="prose-lg my-2">
             We have years of insurance experience helping carriers and brokers
             provide solutions to their clients. Experience the difference of
             WealthGuard&apos;s newest Programs and Binding Authority division:
@@ -80,7 +80,7 @@ export default function AboutUsOverview() {
           <h1 className="text-3xl tracking-wider my-4 text-center font-semibold">
             Stability
           </h1>
-          <p className="prose my-2">
+          <p className="prose-lg my-2">
             As an independent broker, you have the privilege of going to market
             for your client. WealthGuard&apos;s executive leadership has
             unprecedented access to innovative commercial insurance products and
@@ -93,7 +93,7 @@ export default function AboutUsOverview() {
           <h1 className="text-3xl tracking-wider my-4 text-center font-semibold">
             Relationships
           </h1>
-          <p className="prose my-2">
+          <p className="prose-lg my-2">
             Each client has different insurance needs. For 30+ years, our
             leadership team has delivered strong results, year over year, for
             our key trading partners and brokers. We credit this success for the
