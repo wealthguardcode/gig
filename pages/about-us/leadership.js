@@ -59,16 +59,16 @@ export default function leadership() {
       <div>
         {/* Hero */}
 
-        <div className="relative bg-indigo-800">
+        <div className="relative bg-blue-800">
           <div className="absolute inset-0">
             <div className="absolute inset-0 flex items-center justify-center h-full mb-12 bg-fixed bg-center bg-cover leadership-img"></div>
             <div
-              className="absolute inset-0 bg-indigo-800 mix-blend-multiply"
+              className="absolute inset-0 bg-blue-800 mix-blend-multiply"
               aria-hidden="true"
             />
           </div>
           <div className="relative max-w-7xl mx-auto py-24 px-4 sm:py-32 sm:px-6 lg:px-8">
-            <h1 className="text-4xl font-extrabold text-center tracking-tight text-white sm:text-5xl lg:text-6xl">
+            <h1 className="text-4xl font-extrabold text-center tracking-tight text-white  sm:text-5xl lg:text-6xl">
               Leadership
             </h1>
             <div className="border-t-4 w-1/5 mx-auto mt-2 py-2 border-white" />
@@ -76,10 +76,10 @@ export default function leadership() {
         </div>
 
         {/* Our Leadership / Team */}
-        <div className="relative bg-white">
+        <div className="relative bg-white dark:bg-gray-800">
           <div className="mx-auto py-12 px-4 max-w-7xl sm:px-6 lg:px-8 lg:py-24">
             <div className="space-y-12">
-              <h2 className="text-3xl font-extrabold tracking-tight sm:text-4xl">
+              <h2 className="text-3xl font-extrabold tracking-tight sm:text-4xl dark:text-gray-300">
                 Meet our leadership
               </h2>
 
@@ -88,8 +88,8 @@ export default function leadership() {
                 className="space-y-12 lg:grid lg:grid-cols-1 lg:items-start lg:gap-x-8 lg:gap-y-12 lg:space-y-0">
                 {people.map((person) => (
                   <li key={person.name}>
-                    <div className="space-y-4 sm:grid sm:grid-cols-3 sm:gap-6 sm:space-y-0 lg:gap-8">
-                      <div className="h-0 aspect-w-3 aspect-h-2 sm:aspect-w-3 sm:aspect-h-4 bg-white">
+                    <div className="space-y-4 sm:grid sm:grid-cols-3 sm:gap-6 sm:space-y-0 lg:gap-8 dark:text-gray-400">
+                      <div className="h-0 aspect-w-3 aspect-h-2 sm:aspect-w-3 sm:aspect-h-4 bg-white dark:bg-gray-800">
                         <img
                           className="md:object-cover object-contain md:shadow-lg rounded-lg"
                           src={person.imageUrl}
@@ -100,10 +100,12 @@ export default function leadership() {
                         <div className="space-y-4">
                           <div className="text-lg leading-6 font-medium space-y-1">
                             <h3>{person.name}</h3>
-                            <p className="text-indigo-600">{person.role}</p>
+                            <p className="text-blue-600">{person.role}</p>
                           </div>
                           <div className="text-lg">
-                            <p className="text-gray-500">{person.bio}</p>
+                            <p className="text-gray-500 dark:text-gray-400">
+                              {person.bio}
+                            </p>
                           </div>
                         </div>
                       </div>
