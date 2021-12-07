@@ -102,7 +102,7 @@ export default function leadership() {
                             <h3>{person.name}</h3>
                             <p className="text-blue-600">{person.role}</p>
                           </div>
-                          <div className="text-lg">
+                          <div className="prose-lg">
                             <p className="text-gray-500 dark:text-gray-400">
                               {person.bio}
                             </p>
