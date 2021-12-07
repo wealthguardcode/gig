@@ -22,9 +22,9 @@ const faqs = [
       'As a specialized business insurance and risk management insurance intermediary ranked among the 100 largest in the United States and with many programs existing for over 30 years, we are unique in our ability to innovate, have a unique depth of knowledge in key markets, and our employees are expert in a wide range of brokerage, underwriting, and risk management services for numerous industries.',
   },
   {
-    question: 'What industries do you insure?',
+    question: 'Lorem ipsum dolor sit amet?',
     answer:
-      'WealthGuard provides insurance coverage for the following industries: landscaping & tree care, greenhouse & nursery growers, paving & road contractors, grading & excavation contractors, trade contractors, glass & sign fabrication installation, janitorial services, physicians & surgeons, municipalities & schools, specialty business insurance.',
+      'Vivamus posuere facilisis ex sed elementum. Nullam ac dignissim ligula, at ultricies orci. Aliquam vitae porttitor felis. Vestibulum vel elit vel odio rhoncus pharetra. Fusce vitae viverra nulla, et vulputate tortor',
   },
   {
     question: 'What insurance coverages do you provide?',
@@ -74,7 +74,7 @@ const features = [
       'Designed to help you and your facility move forward after a tragedy, homicide, nonfatal injuries, or substantial damage to property.',
   },
   {
-    name: 'Deductible buy-down options',
+    name: 'Deductible Buy-down Options',
     description:
       'Helping you limit the first-dollar losses that you may experience by reducing or eliminating the deductible.',
   },
