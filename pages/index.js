@@ -116,7 +116,7 @@ export default function Home() {
             <div className="text-center relative">
               <h1 className="text-4xl tracking-tight font-extrabold text-gray-900 dark:text-gray-200 sm:text-5xl md:text-6xl">
                 <span className="block xl:inline">Commercial Insurance</span>{' '}
-                <span className="block text-indigo-600 font-extrabold ">
+                <span className="block text-blue-600 font-extrabold ">
                   Programs &{' '}
                   <span className="block md:inline mt-3 md:mt-0">
                     Brokerage
@@ -133,7 +133,7 @@ export default function Home() {
                   diversity of products, and underwriting integrity!
                 </span>
               </p>
-              <div className="border-t-4 w-1/5 mx-auto py-2 border-indigo-600" />
+              <div className="border-t-4 w-1/5 mx-auto py-2 border-blue-600" />
               <p className="mt-3 max-w-md mx-auto prose lg:prose-xl text-gray-200 font-semibold  md:mt-5  md:max-w-3xl">
                 Whether you&apos;re a business owner or insurance broker,
                 you&apos;ll find industry-specific resources and specialty
@@ -143,14 +143,14 @@ export default function Home() {
               <div className="flex justify-center mt-8 mb-4">
                 <div className="mt-3 rounded-md shadow sm:mt-0 sm:ml-3">
                   <Link href="/programs">
-                    <a className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 md:py-4 md:text-lg md:px-10">
+                    <a className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 md:py-4 md:text-lg md:px-10">
                       For Brokers
                     </a>
                   </Link>
                 </div>
                 <div className="mt-3 rounded-md shadow sm:mt-0 ml-3">
                   <Link href="/contact-us">
-                    <a className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-indigo-600 bg-white hover:bg-gray-50 md:py-4 md:text-lg md:px-10">
+                    <a className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-blue-600 bg-white hover:bg-gray-50 md:py-4 md:text-lg md:px-10">
                       Contact Us
                     </a>
                   </Link>
@@ -168,7 +168,7 @@ export default function Home() {
                     href="/images/theWealthGuardDifference.pdf"
                     target="_blank"
                     rel="noreferrer"
-                    className="w-full flex items-center justify-center px-8 py-3 border-2 border-indigo-300 text-base font-medium rounded-md text-black bg-gray-200 hover:bg-gray-50 md:py-4 md:text-lg md:px-10">
+                    className="w-full flex items-center justify-center px-8 py-3 border-2 border-blue-300 text-base font-medium rounded-md text-black bg-gray-200 hover:bg-gray-50 md:py-4 md:text-lg md:px-10">
                     <DocumentDownloadIcon height={30} />
                     <span>The WealthGuard Difference</span>
                   </a>
@@ -268,7 +268,7 @@ export default function Home() {
                   <a className="flex flex-start items-center rounded group  hover:shadow-2xl mb-3 md:mb-0">
                     <button
                       type="button"
-                      className="inline-flex items-center px-6 py-3 border-2 border-gray-300 dark:border-blue-600 shadow-sm text-base font-medium rounded-md text-gray-700 bg-white dark:bg-gray-300 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                      className="inline-flex items-center px-6 py-3 border-2 border-gray-300 dark:border-blue-600 shadow-sm text-base font-medium rounded-md text-gray-700 bg-white dark:bg-gray-300 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
                       <BookOpenIcon
                         height={50}
                         className="text-yellow-400 group-hover:text-yellow-300 dark:group-hover:text-yellow-500"
@@ -283,7 +283,7 @@ export default function Home() {
                   <a className="flex flex-start items-center rounded group  hover:shadow-2xl mb-3 md:mb-0">
                     <button
                       type="button"
-                      className="inline-flex items-center px-6 py-3 border-2 border-gray-300 dark:border-blue-600 shadow-sm text-base font-medium rounded-md text-gray-700 bg-white dark:bg-gray-300 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                      className="inline-flex items-center px-6 py-3 border-2 border-gray-300 dark:border-blue-600 shadow-sm text-base font-medium rounded-md text-gray-700 bg-white dark:bg-gray-300 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
                       <LinkIcon
                         height={50}
                         className="text-blue-400 group-hover:text-blue-300 dark:group-hover:text-blue-500"
@@ -299,7 +299,7 @@ export default function Home() {
                   <a className="flex flex-start items-center rounded group  hover:shadow-2xl mb-3 md:mb-0">
                     <button
                       type="button"
-                      className="inline-flex items-center px-6 py-3 border-2 border-gray-300 dark:border-blue-600 shadow-sm text-base font-medium rounded-md text-gray-700 bg-white dark:bg-gray-300 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                      className="inline-flex items-center px-6 py-3 border-2 border-gray-300 dark:border-blue-600 shadow-sm text-base font-medium rounded-md text-gray-700 bg-white dark:bg-gray-300 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
                       <MailIcon
                         height={50}
                         className="text-green-400 group-hover:text-green-300 dark:group-hover:text-green-500"
@@ -391,7 +391,7 @@ export default function Home() {
                     </div>
 
                     <svg
-                      className="hidden md:block mx-1 h-5 w-5 text-indigo-600"
+                      className="hidden md:block mx-1 h-5 w-5 text-blue-600"
                       fill="currentColor"
                       viewBox="0 0 20 20">
                       <path d="M11 0h3L9 20H6l5-20z" />
@@ -446,7 +446,7 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Why Work with GIG */}
+      {/* Why Work with WealthGuard */}
       <div className="bg-white dark:bg-gray-800">
         <div className="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:py-24 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
@@ -457,8 +457,9 @@ export default function Home() {
               Year over year we have consistently achieved{' '}
               <strong>200% growth</strong>,{' '}
               <span className="font-bold text-blue-600">
-                <a href="tel:832-930-3827">call us and learn why!</a>
-              </span>
+                <a href="tel:832-930-3827">call us</a>
+              </span>{' '}
+              and learn why!
             </p>
           </div>
           <dl className="mt-12 space-y-10 sm:space-y-0 sm:grid sm:grid-cols-2 sm:gap-x-6 sm:gap-y-12 lg:grid-cols-3 lg:gap-x-8 hover:border-gray-100">
@@ -467,7 +468,7 @@ export default function Home() {
                 key={feature.name}
                 className="shadow-xl hover:shadow-2xl rounded-xl m-2 p-4 dark:bg-gray-700">
                 <dt>
-                  <div className="flex items-center justify-center h-12 w-12 rounded-md bg-blue-900 dark:bg-indigo-600 opacity-70 text-white mx-auto">
+                  <div className="flex items-center justify-center h-12 w-12 rounded-md bg-blue-900 dark:bg-blue-600 opacity-70 text-white mx-auto">
                     <feature.icon className="h-6 w-6" aria-hidden="true" />
                   </div>
                   <p className="mt-5 text-xl leading-6 font-medium text-gray-900 dark:text-gray-300 text-center ">

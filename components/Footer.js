@@ -40,7 +40,7 @@ export default function Footer() {
               <Link href="/">
                 <a>
                   <img
-                    src="https://tailwindui.com/img/logos/workflow-mark.svg?color=indigo&shade=600"
+                    src="https://tailwindui.com/img/logos/workflow-mark.svg?color=blue&shade=600"
                     alt="Logo"
                     className="h-8 w-auto"
                   />
@@ -119,12 +119,12 @@ export default function Footer() {
                   type="text"
                   autoComplete="email"
                   required
-                  className="appearance-none min-w-0 w-full bg-white dark:bg-gray-300 border border-gray-300 rounded-md shadow-sm py-2 px-4 text-base text-gray-900 placeholder-gray-500 focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500"
+                  className="appearance-none min-w-0 w-full bg-white dark:bg-gray-300 border border-gray-300 rounded-md shadow-sm py-2 px-4 text-base text-gray-900 placeholder-gray-500 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500"
                 />
                 <div className="ml-4 flex-shrink-0">
                   <button
                     type="submit"
-                    className="w-full bg-indigo-600 border border-transparent rounded-md shadow-sm py-2 px-4 flex items-center justify-center text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                    className="w-full bg-blue-600 border border-transparent rounded-md shadow-sm py-2 px-4 flex items-center justify-center text-base font-medium text-white hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
                     Sign up
                   </button>
                 </div>
