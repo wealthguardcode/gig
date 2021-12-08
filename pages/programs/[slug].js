@@ -240,21 +240,7 @@ export default function ProgramPage({ program, coverage, highlights }) {
                                 name="program"
                                 defaultValue={program.title}
                                 className="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm dark:text-gray-900">
-                                <option value="Wels Wall Marina">
-                                  West Wall Marina
-                                </option>
-                                <option value="Assistant Living Facility">
-                                  Assistant Living Facility
-                                </option>
-                                <option value="Cargo & Logistics">
-                                  Cargo & Logistics
-                                </option>
-                                <option value="Active Assailant">
-                                  Active Assailant
-                                </option>
-                                <option value="Terrorism & Sabotage">
-                                  Terrorism & Sabotage
-                                </option>
+                                <option>{program.title}</option>
                               </select>
                             </div>
 
@@ -301,7 +287,9 @@ export default function ProgramPage({ program, coverage, highlights }) {
                             </div>
 
                             <div className="col-span-6">
-                              <label className="block text-sm font-medium text-gray-700">
+                              <label
+                                htmlFor="company"
+                                className="block text-sm font-medium text-gray-700">
                                 Company
                               </label>
                               <input
@@ -313,7 +301,7 @@ export default function ProgramPage({ program, coverage, highlights }) {
                             </div>
                             <div className="col-span-6">
                               <label
-                                htmlFor="phone"
+                                htmlFor="tel"
                                 className="block text-sm font-medium text-gray-700">
                                 Phone
                               </label>
