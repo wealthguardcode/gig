@@ -116,7 +116,7 @@ export default function Home() {
             <div className="text-center relative">
               <h1 className="text-4xl tracking-tight font-extrabold text-gray-900  sm:text-5xl md:text-6xl">
                 <span className="block xl:inline">Commercial Insurance</span>{' '}
-                <span className="block text-blue-600 font-extrabold ">
+                <span className="block text-red-600 font-extrabold ">
                   Programs &{' '}
                   <span className="block md:inline mt-3 md:mt-0">
                     Brokerage
@@ -133,7 +133,7 @@ export default function Home() {
                   diversity of products, and underwriting integrity!
                 </span>
               </p>
-              <div className="border-t-4 w-1/5 mx-auto py-2 border-blue-600" />
+              <div className="border-t-4 w-1/5 mx-auto py-2 border-red-600" />
               <p className="mt-3 max-w-md mx-auto prose lg:prose-xl md:text-gray-200 text-gray-900 font-semibold  md:mt-5  md:max-w-3xl">
                 Whether you&apos;re a business owner or insurance broker,
                 you&apos;ll find industry-specific resources and specialty
@@ -143,14 +143,14 @@ export default function Home() {
               <div className="flex justify-center mt-8 mb-4">
                 <div className="mt-3 rounded-md shadow sm:mt-0 sm:ml-3">
                   <Link href="/programs">
-                    <a className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 md:py-4 md:text-lg md:px-10">
+                    <a className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-red-600 hover:bg-red-700 md:py-4 md:text-lg md:px-10">
                       For Brokers
                     </a>
                   </Link>
                 </div>
                 <div className="mt-3 rounded-md shadow sm:mt-0 ml-3">
                   <Link href="/contact-us">
-                    <a className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-blue-600 bg-white hover:bg-gray-50 md:py-4 md:text-lg md:px-10">
+                    <a className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-red-600 bg-white hover:bg-gray-50 md:py-4 md:text-lg md:px-10">
                       Contact Us
                     </a>
                   </Link>
@@ -168,7 +168,7 @@ export default function Home() {
                     href="/images/theWealthGuardDifference.pdf"
                     target="_blank"
                     rel="noreferrer"
-                    className="w-full flex items-center justify-center px-8 py-3 border-2 border-blue-300 text-base font-medium rounded-md text-black bg-gray-200 hover:bg-gray-50 md:py-4 md:text-lg md:px-10">
+                    className="w-full flex items-center justify-center px-8 py-3 border-2 border-red-300 text-base font-medium rounded-md text-black bg-gray-200 hover:bg-gray-50 md:py-4 md:text-lg md:px-10">
                     <DocumentDownloadIcon height={30} />
                     <span>The WealthGuard Difference</span>
                   </a>
@@ -193,7 +193,7 @@ export default function Home() {
               {features.map((feature) => (
                 <div
                   key={feature.name}
-                  className="relative cursor-pointer border-4  border-opacity-50 rounded-lg p-4 shadow-lg hover:shadow-2xl hover:border-gray-300 dark:hover:border-blue-600">
+                  className="relative cursor-pointer border-4  border-opacity-50 rounded-lg p-4 shadow-lg hover:shadow-2xl hover:border-gray-300 dark:hover:border-red-600">
                   <dt>
                     <CheckIcon
                       className="absolute h-8 w-8 text-green-500"
@@ -240,7 +240,7 @@ export default function Home() {
           <div className="mt-10 shadow-xl rounded-xl dark:bg-gray-300">
             <dl className="space-y-10 md:space-y-0 grid grid-cols-1 md:gap-x-8 md:gap-y-10 shadow-2xl">
               <div className="my-10">
-                <h1 className="text-4xl text-blue-100 bg-gradient-to-r from-gray-400 via-gray-500 to-blue-500 font-bold mx-2 text-center rounded py-1">
+                <h1 className="text-4xl text-red-100 bg-gradient-to-r from-gray-400 via-gray-500 to-red-500 font-bold mx-2 text-center rounded py-1">
                   For Brokers
                 </h1>
               </div>
@@ -270,12 +270,12 @@ export default function Home() {
                   <a className="flex flex-start items-center rounded group  hover:shadow-2xl mb-3 md:mb-0">
                     <button
                       type="button"
-                      className="inline-flex items-center px-6 py-3 border-2 border-gray-300 dark:border-blue-600 shadow-sm text-base font-medium rounded-md text-gray-700 bg-white dark:bg-gray-300 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+                      className="inline-flex items-center px-6 py-3 border-2 border-gray-300 dark:border-red-600 shadow-sm text-base font-medium rounded-md text-gray-700 bg-white dark:bg-gray-300 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500">
                       <BookOpenIcon
                         height={50}
                         className="text-yellow-400 group-hover:text-yellow-300 dark:group-hover:text-yellow-500"
                       />
-                      <span className="flex items-center text-xl font-bold ml-1 group-hover:text-blue-400 dark:group-hover:text-blue-600">
+                      <span className="flex items-center text-xl font-bold ml-1 group-hover:text-red-400 dark:group-hover:text-red-600">
                         Programs
                       </span>
                     </button>
@@ -285,12 +285,12 @@ export default function Home() {
                   <a className="flex flex-start items-center rounded group  hover:shadow-2xl mb-3 md:mb-0">
                     <button
                       type="button"
-                      className="inline-flex items-center px-6 py-3 border-2 border-gray-300 dark:border-blue-600 shadow-sm text-base font-medium rounded-md text-gray-700 bg-white dark:bg-gray-300 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+                      className="inline-flex items-center px-6 py-3 border-2 border-gray-300 dark:border-red-600 shadow-sm text-base font-medium rounded-md text-gray-700 bg-white dark:bg-gray-300 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500">
                       <LinkIcon
                         height={50}
-                        className="text-blue-400 group-hover:text-blue-300 dark:group-hover:text-blue-500"
+                        className="text-red-400 group-hover:text-red-300 dark:group-hover:text-red-500"
                       />
-                      <span className="flex flex-start items-center text-xl font-bold ml-1 group-hover:text-blue-400 dark:group-hover:text-blue-600">
+                      <span className="flex flex-start items-center text-xl font-bold ml-1 group-hover:text-red-400 dark:group-hover:text-red-600">
                         Resources
                       </span>
                     </button>
@@ -301,12 +301,12 @@ export default function Home() {
                   <a className="flex flex-start items-center rounded group  hover:shadow-2xl mb-3 md:mb-0">
                     <button
                       type="button"
-                      className="inline-flex items-center px-6 py-3 border-2 border-gray-300 dark:border-blue-600 shadow-sm text-base font-medium rounded-md text-gray-700 bg-white dark:bg-gray-300 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+                      className="inline-flex items-center px-6 py-3 border-2 border-gray-300 dark:border-red-600 shadow-sm text-base font-medium rounded-md text-gray-700 bg-white dark:bg-gray-300 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500">
                       <MailIcon
                         height={50}
                         className="text-green-400 group-hover:text-green-300 dark:group-hover:text-green-500"
                       />
-                      <span className="flex items-center text-xl font-bold ml-1 group-hover:text-blue-400 dark:group-hover:text-blue-600">
+                      <span className="flex items-center text-xl font-bold ml-1 group-hover:text-red-400 dark:group-hover:text-red-600">
                         Contact Us
                       </span>
                     </button>
@@ -393,7 +393,7 @@ export default function Home() {
                     </div>
 
                     <svg
-                      className="hidden md:block mx-1 h-5 w-5 text-blue-600"
+                      className="hidden md:block mx-1 h-5 w-5 text-red-600"
                       fill="currentColor"
                       viewBox="0 0 20 20">
                       <path d="M11 0h3L9 20H6l5-20z" />
@@ -429,20 +429,20 @@ export default function Home() {
         </div>
       </div>
       {/* Covid Section */}
-      <div className="bg-blue-700">
+      <div className="bg-red-700">
         <div className="max-w-2xl mx-auto text-center py-16 px-4 sm:py-20 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-extrabold text-white sm:text-4xl">
             <span className="block">Broker Support</span>
             <span className="block">Covid-19 Resource Center</span>
           </h2>
-          <p className="mt-4 text-xl leading-9 text-blue-200 ">
+          <p className="mt-4 text-xl leading-9 text-red-200 ">
             See the latest federal and state resources available to business
             owners to help offset the effects of the Covid-19 pandemic,
             including business emergency funding and relief programs.
           </p>
           <a
             href="#"
-            className="mt-8 w-full inline-flex items-center justify-center px-5 py-3 border border-solid border-blue-50 text-base font-medium rounded-md text-white bg-transparent hover:bg-blue-50 hover:text-blue-600 sm:w-auto">
+            className="mt-8 w-full inline-flex items-center justify-center px-5 py-3 border border-solid border-red-50 text-base font-medium rounded-md text-white bg-transparent hover:bg-red-50 hover:text-red-600 sm:w-auto">
             Learn more
           </a>
         </div>
@@ -458,7 +458,7 @@ export default function Home() {
             <p className="mt-4 text-2xl text-gray-500 dark:text-gray-400">
               Year over year we have consistently achieved{' '}
               <strong>200% growth</strong>,{' '}
-              <span className="font-bold text-blue-600">
+              <span className="font-bold text-red-600">
                 <a href="tel:832-930-3827" target="_blank" rel="noreferrer">
                   call us
                 </a>
@@ -472,7 +472,7 @@ export default function Home() {
                 key={feature.name}
                 className="shadow-xl hover:shadow-2xl rounded-xl m-2 p-4 dark:bg-gray-700">
                 <dt>
-                  <div className="flex items-center justify-center h-12 w-12 rounded-md bg-blue-900 dark:bg-blue-600 opacity-70 text-white mx-auto">
+                  <div className="flex items-center justify-center h-12 w-12 rounded-md bg-gray-900 dark:bg-red-600 opacity-70 text-white mx-auto">
                     <feature.icon className="h-6 w-6" aria-hidden="true" />
                   </div>
                   <p className="mt-5 text-xl leading-6 font-medium text-gray-900 dark:text-gray-300 text-center ">
