@@ -35,7 +35,7 @@ const people = [
     role: 'Full Stack Web Developer',
     imageUrl:
       'https://media.graphcms.com/output=format:jpg/resize=,height:800,fit:max/nVMFnTnbT4mqjz6YkwQ6',
-    bio: 'Ultricies massa malesuada viverra cras lobortis. Tempor orci hac ligula dapibus mauris sit ut eu. Eget turpis urna maecenas cras. Nisl dictum.',
+    bio: 'Sam is a Full-Stack Web Developer that graduated from Digital Crafts coding bootcamp. Sam has partnered with numerous local businesses to help bring their ideas to fruition and maintain their websites. Previously, Sam graduated from HCC with a degree in Graphic Design, to which assists in completing the package in creating robust, data-driven websites.',
   },
   {
     name: 'Jeff Fluker',
