@@ -273,7 +273,7 @@ export default function Home() {
                       className="inline-flex items-center px-6 py-3 border-2 border-gray-300 dark:border-red-600 shadow-sm text-base font-medium rounded-md text-gray-700 bg-white dark:bg-gray-300 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500">
                       <BookOpenIcon
                         height={50}
-                        className="text-yellow-400 group-hover:text-yellow-300 dark:group-hover:text-yellow-500"
+                        className="text-gray-400 group-hover:text-gray-300 dark:group-hover:text-gray-500"
                       />
                       <span className="flex items-center text-xl font-bold ml-1 group-hover:text-red-400 dark:group-hover:text-red-600">
                         Programs
@@ -288,7 +288,7 @@ export default function Home() {
                       className="inline-flex items-center px-6 py-3 border-2 border-gray-300 dark:border-red-600 shadow-sm text-base font-medium rounded-md text-gray-700 bg-white dark:bg-gray-300 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500">
                       <LinkIcon
                         height={50}
-                        className="text-red-400 group-hover:text-red-300 dark:group-hover:text-red-500"
+                        className="text-gray-400 group-hover:text-gray-300 dark:group-hover:text-gray-500"
                       />
                       <span className="flex flex-start items-center text-xl font-bold ml-1 group-hover:text-red-400 dark:group-hover:text-red-600">
                         Resources
@@ -304,7 +304,7 @@ export default function Home() {
                       className="inline-flex items-center px-6 py-3 border-2 border-gray-300 dark:border-red-600 shadow-sm text-base font-medium rounded-md text-gray-700 bg-white dark:bg-gray-300 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500">
                       <MailIcon
                         height={50}
-                        className="text-green-400 group-hover:text-green-300 dark:group-hover:text-green-500"
+                        className="text-gray-400 group-hover:text-gray-300 dark:group-hover:text-gray-500"
                       />
                       <span className="flex items-center text-xl font-bold ml-1 group-hover:text-red-400 dark:group-hover:text-red-600">
                         Contact Us
