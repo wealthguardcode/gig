@@ -270,9 +270,9 @@ export default function Home() {
                   <a className="flex flex-start items-center rounded group  hover:shadow-2xl mb-3 md:mb-0">
                     <button
                       type="button"
-                      className="inline-flex items-center px-6 py-3 border-2 border-gray-300 dark:border-red-700 shadow-sm text-base font-medium rounded-md text-gray-700 bg-white dark:bg-gray-300 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-700">
+                      className="inline-flex items-center px-6 py-3 border-2 border-gray-300 hover:border-gray-400 dark:border-red-700 shadow-sm text-base font-medium rounded-md text-gray-700 bg-white dark:bg-gray-300 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-700">
                       <BookOpenIcon
-                        height={50}
+                        height={40}
                         className="text-gray-400 group-hover:text-gray-300 dark:group-hover:text-gray-500"
                       />
                       <span className="flex items-center text-xl font-bold ml-1 group-hover:text-red-400 dark:group-hover:text-red-700">
@@ -285,9 +285,9 @@ export default function Home() {
                   <a className="flex flex-start items-center rounded group  hover:shadow-2xl mb-3 md:mb-0">
                     <button
                       type="button"
-                      className="inline-flex items-center px-6 py-3 border-2 border-gray-300 dark:border-red-700 shadow-sm text-base font-medium rounded-md text-gray-700 bg-white dark:bg-gray-300 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-700">
+                      className="inline-flex items-center px-6 py-3 border-2 border-gray-300 hover:border-gray-400 dark:border-red-700 shadow-sm text-base font-medium rounded-md text-gray-700 bg-white dark:bg-gray-300 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-700">
                       <LinkIcon
-                        height={50}
+                        height={40}
                         className="text-gray-400 group-hover:text-gray-300 dark:group-hover:text-gray-500"
                       />
                       <span className="flex flex-start items-center text-xl font-bold ml-1 group-hover:text-red-700 dark:group-hover:text-red-600">
@@ -301,9 +301,9 @@ export default function Home() {
                   <a className="flex flex-start items-center rounded group  hover:shadow-2xl mb-3 md:mb-0">
                     <button
                       type="button"
-                      className="inline-flex items-center px-6 py-3 border-2 border-gray-300 dark:border-red-700 shadow-sm text-base font-medium rounded-md text-gray-700 bg-white dark:bg-gray-300 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-700">
+                      className="inline-flex items-center px-6 py-3 border-2 border-gray-300 hover:border-gray-400 dark:border-red-700 shadow-sm text-base font-medium rounded-md text-gray-700 bg-white dark:bg-gray-300 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-700">
                       <MailIcon
-                        height={50}
+                        height={40}
                         className="text-gray-400 group-hover:text-gray-300 dark:group-hover:text-gray-500"
                       />
                       <span className="flex items-center text-xl font-bold ml-1 group-hover:text-red-700 dark:group-hover:text-red-700">
