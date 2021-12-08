@@ -1,4 +1,49 @@
 import Link from 'next/link'
+import emailjs from 'emailjs-com'
+import { toast } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
+
+function fun() {
+  document.getElementById('subscriber_email').value = ''
+}
+
+toast.configure({
+  autoClose: 8000,
+  draggable: false,
+})
+
+function sendEmail(e) {
+  e.preventDefault()
+  if (e.target.subscriber_email === '') {
+    return alert('Form cannot be empty!')
+  } else {
+    emailjs
+      .sendForm(
+        'service_74a7ngi',
+        'template_1gc83qd',
+        e.target,
+        'user_1ODnWoNdXKoQipSD1qXJf'
+      )
+      .then(
+        (result) => {
+          toast('🎉 Thank You!', {
+            position: 'top-right',
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+          })
+          console.log(result.text)
+        },
+        (error) => {
+          alert(error.text)
+        }
+      )
+    fun()
+  }
+}
 
 const footerNavigation = {
   links: [
@@ -110,12 +155,13 @@ export default function Footer() {
               <p className="mt-6 text-sm text-gray-500 dark:text-gray-400">
                 The latest info & updates, sent to your inbox weekly.
               </p>
-              <form className="mt-2 flex sm:max-w-md">
+              <form className="mt-2 flex sm:max-w-md" onSubmit={sendEmail}>
                 <label htmlFor="email-address" className="sr-only">
                   Email address
                 </label>
                 <input
-                  id="email-address"
+                  id="subscriber_email"
+                  name="subscriber_email"
                   type="text"
                   autoComplete="email"
                   required
