@@ -153,11 +153,11 @@ export default function ProgramPage({ program, coverage, highlights }) {
           <div className="flex flex-col md:flex-row">
             <div className="flex flex-col my-6">
               <div className="text-base max-w-prose lg:max-w-none">
-                <p className="mt-2 mb-4 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 dark:text-gray-300 sm:text-3xl text-left">
+                <p className="mt-2 mb-4 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 dark:text-gray-300 sm:text-3xl text-center">
                   {program.subHeading}
                 </p>
               </div>
-              <div className="relative z-10 prose prose-xl max-w-sm sm:mx-4 md:max-w-md md:mx-2 lg:max-w-lg lg:mx-0 mb-10 mx-4">
+              <div className="relative z-10 prose prose-xl md:max-w-md sm:mx-4 md:mx-2 lg:max-w-lg lg:mx-0 mb-10 mx-4">
                 <p className="text-lg mr-3 dark:text-gray-400">
                   {program.description}
                 </p>
@@ -174,7 +174,7 @@ export default function ProgramPage({ program, coverage, highlights }) {
                       method="POST"
                       className="shadow-2xl md:absolute md:mb-6 mx-4">
                       <div className="shadow overflow-hidden sm:rounded-md">
-                        <div className="px-4 py-5 bg-white dark:bg-gray-200 p-6 ">
+                        <div className="px-4 py-5 bg-white dark:bg-gray-200 p-6 z-10">
                           <div className="my-4">
                             <h1 className="sm:text-xl text-2xl text-center lg:text-3xl font-semibold dark:text-gray-800">
                               Speak With a{' '}
@@ -394,7 +394,7 @@ export default function ProgramPage({ program, coverage, highlights }) {
           </div>
 
           <div className="lg:grid lg:grid-cols-1 lg:gap-8 lg:items-end">
-            <div className="relative z-10">
+            <div className=" ">
               <div className="prose prose-xl md:max-w-lg">
                 <p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 dark:text-gray-300 sm:text-4xl">
                   Coverage
@@ -412,12 +412,12 @@ export default function ProgramPage({ program, coverage, highlights }) {
                       <img
                         src={program.image.url}
                         alt={program.title}
-                        className="h-32 w-48 rounded m-2"
+                        className="md:h-32 h-auto md:w-48 w-32 rounded mx-2 md:m-2"
                       />
                       <img
                         src={program.image2.url}
                         alt={program.title}
-                        className="h-32 w-48 rounded m-2"
+                        className="md:h-32 h-auto md:w-48 w-32 rounded mx-2 md:m-2"
                       />
                     </div>
                   </SRLWrapper>
