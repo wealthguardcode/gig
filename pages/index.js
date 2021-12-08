@@ -275,7 +275,7 @@ export default function Home() {
                         height={40}
                         className="text-gray-400 group-hover:text-gray-300 dark:group-hover:text-gray-500"
                       />
-                      <span className="flex items-center text-xl font-bold ml-1 group-hover:text-red-400 dark:group-hover:text-red-700">
+                      <span className="flex items-center text-xl font-bold ml-1 group-hover:text-red-700 dark:group-hover:text-red-700">
                         Programs
                       </span>
                     </button>
