@@ -85,7 +85,7 @@ export default function Footer() {
               <Link href="/">
                 <a>
                   <img
-                    src="https://tailwindui.com/img/logos/workflow-mark.svg?color=blue&shade=600"
+                    src="https://tailwindui.com/img/logos/workflow-mark.svg?color=red&shade=600"
                     alt="Logo"
                     className="h-8 w-auto"
                   />
@@ -105,7 +105,7 @@ export default function Footer() {
                       <li key={item.name} className="text-sm">
                         <a
                           href={item.href}
-                          className="text-gray-500 dark:text-gray-400 hover:font-bold hover:text-blue-600 dark:hover:text-blue-600 hover:bg-gray-100 dark:hover:bg-gray-800">
+                          className="text-gray-500 dark:text-gray-400 hover:font-bold hover:text-red-700 dark:hover:text-red-700 hover:bg-gray-100 dark:hover:bg-gray-800">
                           {item.name}
                         </a>
                       </li>
@@ -121,7 +121,7 @@ export default function Footer() {
                       <li key={item.name} className="text-sm">
                         <a
                           href={item.href}
-                          className="text-gray-500 dark:text-gray-400 hover:font-bold hover:text-blue-600 dark:hover:text-blue-600 hover:bg-gray-100 dark:hover:bg-gray-800">
+                          className="text-gray-500 dark:text-gray-400 hover:font-bold hover:text-red-700 dark:hover:text-red-700 hover:bg-gray-100 dark:hover:bg-gray-800">
                           {item.name}
                         </a>
                       </li>
@@ -138,7 +138,7 @@ export default function Footer() {
                     <li key={item.name} className="text-sm">
                       <a
                         href={item.href}
-                        className="text-gray-500 dark:text-gray-400 hover:font-bold hover:text-blue-600 dark:hover:text-blue-600 hover:bg-gray-100 dark:hover:bg-gray-800">
+                        className="text-gray-500 dark:text-gray-400 hover:font-bold hover:text-red-700 dark:hover:text-red-700 hover:bg-gray-100 dark:hover:bg-gray-800">
                         {item.name}
                       </a>
                     </li>
@@ -165,12 +165,12 @@ export default function Footer() {
                   type="text"
                   autoComplete="email"
                   required
-                  className="appearance-none min-w-0 w-full bg-white dark:bg-gray-300 border border-gray-300 rounded-md shadow-sm py-2 px-4 text-base text-gray-900 placeholder-gray-500 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500"
+                  className="appearance-none min-w-0 w-full bg-white dark:bg-gray-300 border border-gray-300 rounded-md shadow-sm py-2 px-4 text-base text-gray-900 placeholder-gray-500 focus:outline-none focus:border-red-700 focus:ring-1 focus:ring-red-700"
                 />
                 <div className="ml-4 flex-shrink-0">
                   <button
                     type="submit"
-                    className="w-full bg-blue-600 border border-transparent rounded-md shadow-sm py-2 px-4 flex items-center justify-center text-base font-medium text-white hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+                    className="w-full bg-red-700 border border-transparent rounded-md shadow-sm py-2 px-4 flex items-center justify-center text-base font-medium text-white hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-700">
                     Sign up
                   </button>
                 </div>

@@ -167,8 +167,8 @@ export default function Header() {
                           className={({ selected }) =>
                             classNames(
                               selected
-                                ? 'text-blue-600 border-blue-600'
-                                : 'text-gray-900 dark:text-gray-300 border-transparent hover:text-blue-600 dark:hover:text-blue-600',
+                                ? 'text-red-700 border-red-700'
+                                : 'text-gray-900 dark:text-gray-300 border-transparent hover:text-red-700 dark:hover:text-red-700',
                               'flex-1 whitespace-nowrap py-4 px-1 border-b-2 text-md font-medium'
                             )
                           }>
@@ -196,7 +196,7 @@ export default function Header() {
                               </div> */}
                               <a
                                 href={item.href}
-                                className="mt-6 block font-medium text-gray-900 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-600">
+                                className="mt-6 block font-medium text-gray-900 dark:text-gray-300 hover:text-red-700 dark:hover:text-red-700">
                                 <span
                                   className="absolute z-10 inset-0"
                                   aria-hidden="true"
@@ -216,7 +216,7 @@ export default function Header() {
                     <div key={page.name} className="flow-root">
                       <a
                         href={page.href}
-                        className="-m-2 p-2 block font-medium text-gray-900 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-600">
+                        className="-m-2 p-2 block font-medium text-gray-900 dark:text-gray-300 hover:text-red-700 dark:hover:text-red-700">
                         {page.name}
                       </a>
                     </div>
@@ -244,7 +244,7 @@ export default function Header() {
                   ) : (
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
-                      className="h-6 w-6 text-blue-600"
+                      className="h-6 w-6 text-red-700"
                       fill="none"
                       viewBox="0 0 24 24"
                       stroke="currentColor">
@@ -277,7 +277,7 @@ export default function Header() {
                         <span className="sr-only">Workflow</span>
                         <img
                           className="h-8 w-auto"
-                          src="https://tailwindui.com/img/logos/workflow-mark.svg?color=blue&shade=600"
+                          src="https://tailwindui.com/img/logos/workflow-mark.svg?color=red&shade=600"
                           alt=""
                         />
                       </a>
@@ -296,14 +296,14 @@ export default function Header() {
                                   <Popover.Button
                                     className={classNames(
                                       open
-                                        ? 'text-blue-600'
-                                        : 'text-gray-700 dark:text-gray-50 hover:text-blue-600 dark:hover:text-blue-600',
+                                        ? 'text-red-700'
+                                        : 'text-gray-700 dark:text-gray-50 hover:text-red-700 dark:hover:text-red-700',
                                       'relative flex items-center justify-center transition-colors ease-out duration-200  font-medium'
                                     )}>
                                     {category.name}
                                     <span
                                       className={classNames(
-                                        open ? 'bg-blue-600' : '',
+                                        open ? 'bg-red-700' : '',
                                         'absolute z-30 -bottom-px inset-x-0 h-0.5 transition ease-out duration-200'
                                       )}
                                       aria-hidden="true"
@@ -348,7 +348,7 @@ export default function Header() {
                                               className="group relative">
                                               <a
                                                 href={item.href}
-                                                className="mt-4 font-base block font-medium text-gray-900 hover:text-blue-600 hover:bg-gray-100 dark:hover:bg-gray-700 dark:text-gray-50 dark:hover:text-blue-600">
+                                                className="mt-4 font-base block font-medium text-gray-900 hover:text-red-700 hover:bg-gray-100 dark:hover:bg-gray-700 dark:text-gray-50 dark:hover:text-red-700">
                                                 <span
                                                   className="absolute z-10 inset-0 group-hover:block"
                                                   aria-hidden="true"
@@ -371,7 +371,7 @@ export default function Header() {
                           <a
                             key={page.name}
                             href={page.href}
-                            className="flex items-center font-medium text-gray-700 hover:text-blue-600 dark:text-gray-50 dark:hover:text-blue-600">
+                            className="flex items-center font-medium text-gray-700 hover:text-red-700 dark:text-gray-50 dark:hover:text-red-700">
                             {page.name}
                           </a>
                         ))}
@@ -399,7 +399,7 @@ export default function Header() {
                           ) : (
                             <svg
                               xmlns="http://www.w3.org/2000/svg"
-                              className="h-6 w-6 text-blue-600"
+                              className="h-6 w-6 text-red-700"
                               fill="none"
                               viewBox="0 0 24 24"
                               stroke="currentColor">
@@ -440,7 +440,7 @@ export default function Header() {
                     <a className="lg:hidden">
                       <span className="sr-only">Workflow</span>
                       <img
-                        src="https://tailwindui.com/img/logos/workflow-mark.svg?color=blue&shade=600"
+                        src="https://tailwindui.com/img/logos/workflow-mark.svg?color=red&shade=600"
                         alt=""
                         className="h-8 w-auto"
                       />
