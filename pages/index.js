@@ -240,7 +240,7 @@ export default function Home() {
           <div className="mt-10 shadow-xl rounded-xl dark:bg-gray-300">
             <dl className="space-y-10 md:space-y-0 grid grid-cols-1 md:gap-x-8 md:gap-y-10 shadow-2xl">
               <div className="my-10">
-                <h1 className="text-4xl text-red-100 bg-gradient-to-r from-gray-400 via-gray-500 to-red-700 font-bold mx-2 text-center rounded py-1">
+                <h1 className="text-4xl text-white bg-gradient-to-r from-gray-400 via-gray-500 to-red-700 font-bold mx-2 text-center rounded py-1">
                   For Brokers
                 </h1>
               </div>
