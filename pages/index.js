@@ -105,16 +105,16 @@ export default function Home() {
   return (
     <Layout>
       <div className="relative bg-white dark:bg-gray-800 overflow-hidden">
-        <div className="relative md:pt-12 pt-20 sm:pb-4">
+        <div className="relative md:pt-12 pt-10 ">
           <div className="h-screen mx-auto w-full px-4 sm:mt-0">
             {/* BG Image */}
 
-            <div className="absolute inset-0 flex items-center justify-center h-screen mb-12 bg-fixed md:bg-center bg-cover custom-img">
-              <div className="absolute inset-0 bg-gray-400 mix-blend-multiply" />
+            <div className="absolute inset-0 flex items-center justify-center h-screen md:mb-12 bg-fixed md:bg-center bg-cover custom-img">
+              <div className="absolute inset-0 md:bg-gray-400 mix-blend-multiply" />
             </div>
 
             <div className="text-center relative">
-              <h1 className="text-4xl tracking-tight font-extrabold text-gray-900 dark:text-gray-200 sm:text-5xl md:text-6xl">
+              <h1 className="text-4xl tracking-tight font-extrabold text-gray-900  sm:text-5xl md:text-6xl">
                 <span className="block xl:inline">Commercial Insurance</span>{' '}
                 <span className="block text-blue-600 font-extrabold ">
                   Programs &{' '}
@@ -123,7 +123,7 @@ export default function Home() {
                   </span>
                 </span>
               </h1>
-              <p className="outline my-6 pb-4 font-bold text-xl text-gray-300 lg:text-3xl tracking-tight">
+              <p className="outline my-6 pb-4 font-bold text-xl md:text-gray-300 text-gray-900 lg:text-3xl tracking-tight">
                 <span className="block xl:inline">
                   Since 2016 we have been providing insurance solutions with
                   expertise,
@@ -134,7 +134,7 @@ export default function Home() {
                 </span>
               </p>
               <div className="border-t-4 w-1/5 mx-auto py-2 border-blue-600" />
-              <p className="mt-3 max-w-md mx-auto prose lg:prose-xl text-gray-200 font-semibold  md:mt-5  md:max-w-3xl">
+              <p className="mt-3 max-w-md mx-auto prose lg:prose-xl md:text-gray-200 text-gray-900 font-semibold  md:mt-5  md:max-w-3xl">
                 Whether you&apos;re a business owner or insurance broker,
                 you&apos;ll find industry-specific resources and specialty
                 insurance coverages to meet the unique needs of the industries
@@ -159,7 +159,7 @@ export default function Home() {
 
               <div className="flex flex-col justify-center items-center xl:mt-12">
                 <div className="">
-                  <h1 className="text-xl font-semibold text-gray-200 mb-1 xl:mb-4">
+                  <h1 className="text-xl font-semibold md:text-gray-200 text-gray-900 mb-1 xl:mb-4">
                     Download Our{' '}
                   </h1>
                 </div>
