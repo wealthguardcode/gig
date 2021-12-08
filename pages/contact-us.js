@@ -1,5 +1,5 @@
 import Layout from '../components/Layout'
-import { MailIcon } from '@heroicons/react/solid'
+import { MailIcon, PhoneIcon } from '@heroicons/react/solid'
 import emailjs from 'emailjs-com'
 import { toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
@@ -223,6 +223,65 @@ export default function ContactUsPage() {
                     </button>
                   </div>
                 </form>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Contact Information */}
+        <div className="bg-white dark:bg-gray-800">
+          <div className="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:py-24 lg:px-8">
+            <div className="divide-y-2 divide-gray-200">
+              <div className="grid md:grid-cols-2 lg:gap-8">
+                <h2 className="text-2xl font-extrabold text-gray-900 dark:text-gray-300 sm:text-3xl">
+                  Get in touch
+                </h2>
+                <div className="mt-8 1 gap-12 sm:gap-x-8 sm:gap-y-12 lg:mt-0 ">
+                  <div>
+                    <h3 className="text-2xl leading-6 tracking-wider font-medium text-gray-900 dark:text-gray-300">
+                      Office
+                    </h3>
+                    <dl className="mt-2 text-lg text-gray-500 dark:text-gray-400">
+                      <div>
+                        <dt className="sr-only">Address</dt>
+                        <dd>7205 FM 1488 Rd, Ste-A</dd>
+                        <dd>Magnolia, TX 77354</dd>
+                      </div>
+                      <div>
+                        <dt className="sr-only">Email</dt>
+                        <dd className="inline-flex items-center group">
+                          <MailIcon
+                            height={20}
+                            className="mr-1 group-hover:text-blue-600 dark:group-hover:text-blue-600"
+                          />
+                          <a
+                            className="hover:text-blue-600 dark:hover:text-blue-600"
+                            href="mailto:sales@wealthguardig.com"
+                            target="_blank"
+                            rel="noreferrer">
+                            sales@wealthguardig.com
+                          </a>
+                        </dd>
+                      </div>
+                      <div className="mt-1">
+                        <dt className="sr-only">Phone number</dt>
+                        <dd className="inline-flex items-center group">
+                          <PhoneIcon
+                            height={20}
+                            className="mr-1 group-hover:text-blue-600 dark:group-hover:text-blue-600"
+                          />
+                          <a
+                            className="hover:text-blue-600 dark:hover:text-blue-600"
+                            href="tel:832-930-3827"
+                            target="_blank"
+                            rel="noreferrer">
+                            832-930-3827
+                          </a>
+                        </dd>
+                      </div>
+                    </dl>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
