@@ -116,7 +116,7 @@ export default function Home() {
             <div className="text-center relative">
               <h1 className="text-4xl tracking-tight font-extrabold text-gray-900  sm:text-5xl md:text-6xl">
                 <span className="block xl:inline">Commercial Insurance</span>{' '}
-                <span className="block text-red-600 font-extrabold ">
+                <span className="block text-red-700 font-extrabold ">
                   Programs &{' '}
                   <span className="block md:inline mt-3 md:mt-0">
                     Brokerage
@@ -133,7 +133,7 @@ export default function Home() {
                   diversity of products, and underwriting integrity!
                 </span>
               </p>
-              <div className="border-t-4 w-1/5 mx-auto py-2 border-red-600" />
+              <div className="border-t-4 w-1/5 mx-auto py-2 border-red-700" />
               <p className="mt-3 max-w-md mx-auto prose lg:prose-xl md:text-gray-200 text-gray-900 font-semibold  md:mt-5  md:max-w-3xl">
                 Whether you&apos;re a business owner or insurance broker,
                 you&apos;ll find industry-specific resources and specialty
@@ -143,7 +143,7 @@ export default function Home() {
               <div className="flex justify-center mt-8 mb-4">
                 <div className="mt-3 rounded-md shadow sm:mt-0 sm:ml-3">
                   <Link href="/programs">
-                    <a className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-red-600 hover:bg-red-700 md:py-4 md:text-lg md:px-10">
+                    <a className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-red-700 hover:bg-red-600 md:py-4 md:text-lg md:px-10">
                       For Brokers
                     </a>
                   </Link>
@@ -168,7 +168,7 @@ export default function Home() {
                     href="/images/theWealthGuardDifference.pdf"
                     target="_blank"
                     rel="noreferrer"
-                    className="w-full flex items-center justify-center px-8 py-3 border-2 border-red-300 text-base font-medium rounded-md text-black bg-gray-200 hover:bg-gray-50 md:py-4 md:text-lg md:px-10">
+                    className="w-full flex items-center justify-center px-8 py-3 border-2 border-red-700 hover:border-red-600 dark:hover:border-red-600 text-base font-medium rounded-md text-black bg-gray-200 hover:bg-gray-50 md:py-4 md:text-lg md:px-10">
                     <DocumentDownloadIcon height={30} />
                     <span>The WealthGuard Difference</span>
                   </a>
@@ -193,7 +193,7 @@ export default function Home() {
               {features.map((feature) => (
                 <div
                   key={feature.name}
-                  className="relative cursor-pointer border-4  border-opacity-50 rounded-lg p-4 shadow-lg hover:shadow-2xl hover:border-gray-300 dark:hover:border-red-600">
+                  className="relative cursor-pointer border-4  border-opacity-50 rounded-lg p-4 shadow-lg hover:shadow-2xl hover:border-gray-300 dark:hover:border-red-700">
                   <dt>
                     <CheckIcon
                       className="absolute h-8 w-8 text-green-500"
@@ -229,7 +229,7 @@ export default function Home() {
               WealthGuard&apos;s insurance programs help businesses grow and
               thrive
             </p>
-            <div className="border-t-4 w-1/5 mx-auto my-6 border-green-600" />
+            <div className="border-t-4 w-1/5 mx-auto my-6 border-red-700" />
             <p className="mt-4 max-w-2xl prose-2xl md:tracking-wide text-gray-500 dark:text-gray-400 mx-auto">
               We partner with businesses to help insure their success by
               protecting their assets, reducing exposure, and maintaining
@@ -240,7 +240,7 @@ export default function Home() {
           <div className="mt-10 shadow-xl rounded-xl dark:bg-gray-300">
             <dl className="space-y-10 md:space-y-0 grid grid-cols-1 md:gap-x-8 md:gap-y-10 shadow-2xl">
               <div className="my-10">
-                <h1 className="text-4xl text-red-100 bg-gradient-to-r from-gray-400 via-gray-500 to-red-500 font-bold mx-2 text-center rounded py-1">
+                <h1 className="text-4xl text-red-100 bg-gradient-to-r from-gray-400 via-gray-500 to-red-700 font-bold mx-2 text-center rounded py-1">
                   For Brokers
                 </h1>
               </div>
@@ -270,12 +270,12 @@ export default function Home() {
                   <a className="flex flex-start items-center rounded group  hover:shadow-2xl mb-3 md:mb-0">
                     <button
                       type="button"
-                      className="inline-flex items-center px-6 py-3 border-2 border-gray-300 dark:border-red-600 shadow-sm text-base font-medium rounded-md text-gray-700 bg-white dark:bg-gray-300 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500">
+                      className="inline-flex items-center px-6 py-3 border-2 border-gray-300 dark:border-red-700 shadow-sm text-base font-medium rounded-md text-gray-700 bg-white dark:bg-gray-300 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-700">
                       <BookOpenIcon
                         height={50}
                         className="text-gray-400 group-hover:text-gray-300 dark:group-hover:text-gray-500"
                       />
-                      <span className="flex items-center text-xl font-bold ml-1 group-hover:text-red-400 dark:group-hover:text-red-600">
+                      <span className="flex items-center text-xl font-bold ml-1 group-hover:text-red-400 dark:group-hover:text-red-700">
                         Programs
                       </span>
                     </button>
@@ -285,12 +285,12 @@ export default function Home() {
                   <a className="flex flex-start items-center rounded group  hover:shadow-2xl mb-3 md:mb-0">
                     <button
                       type="button"
-                      className="inline-flex items-center px-6 py-3 border-2 border-gray-300 dark:border-red-600 shadow-sm text-base font-medium rounded-md text-gray-700 bg-white dark:bg-gray-300 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500">
+                      className="inline-flex items-center px-6 py-3 border-2 border-gray-300 dark:border-red-700 shadow-sm text-base font-medium rounded-md text-gray-700 bg-white dark:bg-gray-300 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-700">
                       <LinkIcon
                         height={50}
                         className="text-gray-400 group-hover:text-gray-300 dark:group-hover:text-gray-500"
                       />
-                      <span className="flex flex-start items-center text-xl font-bold ml-1 group-hover:text-red-400 dark:group-hover:text-red-600">
+                      <span className="flex flex-start items-center text-xl font-bold ml-1 group-hover:text-red-700 dark:group-hover:text-red-600">
                         Resources
                       </span>
                     </button>
@@ -301,12 +301,12 @@ export default function Home() {
                   <a className="flex flex-start items-center rounded group  hover:shadow-2xl mb-3 md:mb-0">
                     <button
                       type="button"
-                      className="inline-flex items-center px-6 py-3 border-2 border-gray-300 dark:border-red-600 shadow-sm text-base font-medium rounded-md text-gray-700 bg-white dark:bg-gray-300 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500">
+                      className="inline-flex items-center px-6 py-3 border-2 border-gray-300 dark:border-red-700 shadow-sm text-base font-medium rounded-md text-gray-700 bg-white dark:bg-gray-300 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-700">
                       <MailIcon
                         height={50}
                         className="text-gray-400 group-hover:text-gray-300 dark:group-hover:text-gray-500"
                       />
-                      <span className="flex items-center text-xl font-bold ml-1 group-hover:text-red-400 dark:group-hover:text-red-600">
+                      <span className="flex items-center text-xl font-bold ml-1 group-hover:text-red-700 dark:group-hover:text-red-700">
                         Contact Us
                       </span>
                     </button>
@@ -393,7 +393,7 @@ export default function Home() {
                     </div>
 
                     <svg
-                      className="hidden md:block mx-1 h-5 w-5 text-red-600"
+                      className="hidden md:block mx-1 h-5 w-5 text-red-700"
                       fill="currentColor"
                       viewBox="0 0 20 20">
                       <path d="M11 0h3L9 20H6l5-20z" />
