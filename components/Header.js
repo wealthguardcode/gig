@@ -35,42 +35,6 @@ const navigation = {
         },
       ],
     },
-    // {
-    //   name: 'For Business Owners',
-    //   programs: [
-    //     {
-    //       name: 'For Business Owners Overview',
-    //       href: '#',
-    //       imageSrc:
-    //         'https://tailwindui.com/img/ecommerce-images/mega-menu-01-men-category-01.jpg',
-    //       imageAlt:
-    //         'Hats and sweaters on wood shelves next to various colors of t-shirts on hangers.',
-    //     },
-    //     {
-    //       name: 'Link 1',
-    //       href: '#',
-    //       imageSrc:
-    //         'https://tailwindui.com/img/ecommerce-images/mega-menu-01-men-category-02.jpg',
-    //       imageAlt: 'Model wearing light heather gray t-shirt.',
-    //     },
-    //     {
-    //       name: 'Link 2',
-    //       href: '#',
-    //       imageSrc:
-    //         'https://tailwindui.com/img/ecommerce-images/mega-menu-01-men-category-03.jpg',
-    //       imageAlt:
-    //         'Grey 6-panel baseball hat with black brim, black mountain graphic on front, and light heather gray body.',
-    //     },
-    //     {
-    //       name: 'Link 3',
-    //       href: '#',
-    //       imageSrc:
-    //         'https://tailwindui.com/img/ecommerce-images/mega-menu-01-men-category-04.jpg',
-    //       imageAlt:
-    //         'Model putting folded cash into slim card holder olive leather wallet with hand stitching.',
-    //     },
-    //   ],
-    // },
     {
       name: 'Resources',
       programs: [
@@ -95,14 +59,6 @@ const navigation = {
           name: 'Leadership',
           href: '/about-us/leadership',
         },
-        // {
-        //   name: 'Link 1',
-        //   href: '#',
-        //   imageSrc:
-        //     'https://tailwindui.com/img/ecommerce-images/mega-menu-01-men-category-03.jpg',
-        //   imageAlt:
-        //     'Grey 6-panel baseball hat with black brim, black mountain graphic on front, and light heather gray body.',
-        // },
       ],
     },
   ],
@@ -187,13 +143,6 @@ export default function Header() {
                             <div
                               key={item.name}
                               className='group relative mx-auto'>
-                              {/* <div className="aspect-w-1 aspect-h-1 rounded-md bg-gray-100 overflow-hidden group-hover:opacity-75">
-                                <img
-                                  src={item.imageSrc}
-                                  alt={item.imageAlt}
-                                  className="object-center object-cover"
-                                />
-                              </div> */}
                               <a
                                 href={item.href}
                                 className='mt-6 block font-medium text-gray-900 dark:text-gray-300 hover:text-red-700 dark:hover:text-red-700'>
@@ -320,7 +269,6 @@ export default function Header() {
                                   leaveFrom='opacity-100'
                                   leaveTo='opacity-0'>
                                   <Popover.Panel className='absolute z-20 top-full inset-x-0 bg-white dark:bg-gray-800 text-md text-gray-500 dark:text-white'>
-                                    {/* Presentational element used to render the bottom shadow, if we put the shadow on the actual panel it pokes out the top, so we use this shorter element to hide the top of the shadow */}
                                     <div
                                       className='absolute inset-0 top-1/2 bg-white dark:bg-gray-800 shadow'
                                       aria-hidden='true'
@@ -425,14 +373,6 @@ export default function Header() {
                       <span className='sr-only'>Open menu</span>
                       <MenuIcon className='h-6 w-6' aria-hidden='true' />
                     </button>
-
-                    {/* Search */}
-                    {/* <a
-                      href="#"
-                      className="ml-2 p-2 text-gray-400 hover:text-gray-500">
-                      <span className="sr-only">Search</span>
-                      <SearchIcon className="w-6 h-6" aria-hidden="true" />
-                    </a> */}
                   </div>
 
                   {/* Logo (lg-) */}
