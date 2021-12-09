@@ -474,7 +474,7 @@ export default function Home() {
                   <div className='flex items-center justify-center h-12 w-12 rounded-md bg-gray-900 dark:bg-red-600 opacity-70 text-white mx-auto'>
                     <feature.icon className='h-6 w-6' aria-hidden='true' />
                   </div>
-                  <p className='mt-5 text-xl leading-6 font-medium text-gray-900 dark:text-gray-300 text-center '>
+                  <p className='mt-5 text-xl leading-6 font-medium text-red-700 dark:text-gray-300 text-center '>
                     {feature.name}
                   </p>
                 </dt>
