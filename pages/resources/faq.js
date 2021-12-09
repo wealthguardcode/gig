@@ -87,7 +87,7 @@ export default function FaqPage() {
                 className='font-medium text-red-600 hover:text-red-500'>
                 send us an email
               </a>{' '}
-              with your enquiry.
+              with your inquiry.
             </p>
           </div>
 
