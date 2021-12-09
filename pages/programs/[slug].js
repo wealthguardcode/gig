@@ -124,137 +124,137 @@ export default function ProgramPage({ program, coverage, highlights }) {
   return (
     <Layout title={`WIG | ${program.title}`}>
       {/* Hero */}
-      <div className="relative bg-blue-400">
-        <div className="absolute inset-0">
+      <div className='relative bg-gray-400'>
+        <div className='absolute inset-0'>
           <img
-            className="w-full h-full object-cover"
+            className='w-full h-full object-cover'
             src={program.image.url}
             alt={program.title}
           />
           <div
-            className="absolute inset-0 bg-blue-800 mix-blend-multiply z-0"
-            aria-hidden="true"
+            className='absolute inset-0 bg-gray-400 mix-blend-multiply z-0'
+            aria-hidden='true'
           />
         </div>
-        <div className="relative max-w-7xl mx-auto py-24 px-4 sm:py-32 sm:px-6 lg:px-8 ">
-          <h1 className="text-4xl font-extrabold tracking-tight text-white  sm:text-5xl lg:text-6xl">
+        <div className='relative max-w-7xl mx-auto py-24 px-4 sm:py-32 sm:px-6 lg:px-8 '>
+          <h1 className='text-4xl font-extrabold tracking-tight text-white  sm:text-5xl lg:text-6xl'>
             {program.title}
           </h1>
-          <p className="mt-6 text-xl text-blue-100 max-w-xl ">
+          <p className='mt-6 text-xl text-gray-100 max-w-xl '>
             {program.heroDescription}
           </p>
         </div>
       </div>
 
       {/* Main content */}
-      <div className="pt-16 bg-white dark:bg-gray-800">
-        <div className="max-w-5xl mx-auto px-4 space-y-8 sm:px-6 lg:px-8">
+      <div className='pt-16 bg-white dark:bg-gray-800'>
+        <div className='max-w-5xl mx-auto px-4 space-y-8 sm:px-6 lg:px-8'>
           {/* Description & Form */}
-          <div className="flex flex-col md:flex-row">
-            <div className="flex flex-col my-6">
-              <div className="text-base max-w-prose lg:max-w-none">
-                <p className="mt-2 mb-4 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 dark:text-gray-300 sm:text-3xl text-center">
+          <div className='flex flex-col md:flex-row'>
+            <div className='flex flex-col my-6'>
+              <div className='text-base max-w-prose lg:max-w-none'>
+                <p className='mt-2 mb-4 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 dark:text-gray-300 sm:text-3xl text-center'>
                   {program.subHeading}
                 </p>
               </div>
-              <div className="relative z-10 prose prose-xl md:max-w-md sm:mx-4 md:mx-2 lg:max-w-lg lg:mx-0 mb-10 mx-4">
-                <p className="text-lg mr-3 dark:text-gray-400">
+              <div className='relative z-10 prose prose-xl md:max-w-md sm:mx-4 md:mx-2 lg:max-w-lg lg:mx-0 mb-10 mx-4'>
+                <p className='text-lg mr-3 dark:text-gray-400'>
                   {program.description}
                 </p>
               </div>
             </div>
 
-            <div className="flex flex-col ">
-              <div className="mt-10 sm:mt-0">
-                <div className="md:grid md:grid-cols-2 md:gap-3">
-                  <div className="mt-5 md:-mt-40 md:col-span-2 md:ml-12">
+            <div className='flex flex-col '>
+              <div className='mt-10 sm:mt-0'>
+                <div className='md:grid md:grid-cols-2 md:gap-3'>
+                  <div className='mt-5 md:-mt-40 md:col-span-2 md:ml-12'>
                     <form
-                      id="template_78io7bt"
+                      id='template_78io7bt'
                       onSubmit={sendEmail}
-                      method="POST"
-                      className="shadow-2xl md:absolute md:mb-6 mx-4">
-                      <div className="shadow overflow-hidden sm:rounded-md">
-                        <div className="px-4 py-5 bg-white dark:bg-gray-200 p-6 z-10">
-                          <div className="my-4">
-                            <h1 className="sm:text-xl text-2xl text-center lg:text-3xl font-semibold dark:text-gray-800">
+                      method='POST'
+                      className='shadow-2xl md:absolute md:mb-6 mx-4'>
+                      <div className='shadow overflow-hidden sm:rounded-md'>
+                        <div className='px-4 py-5 bg-white dark:bg-gray-200 p-6 z-10'>
+                          <div className='my-4'>
+                            <h1 className='sm:text-xl text-2xl text-center lg:text-3xl font-semibold dark:text-gray-800'>
                               Speak With a{' '}
-                              <span className="text-blue-600">
+                              <span className='text-red-700'>
                                 {program.title}
                               </span>{' '}
                               Specialist
                             </h1>
                           </div>
-                          <div className="grid grid-cols-6 gap-6">
-                            <div className="col-span-6">
+                          <div className='grid grid-cols-6 gap-6'>
+                            <div className='col-span-6'>
                               <label
-                                htmlFor="first-name"
-                                className="block text-sm font-medium text-gray-700">
+                                htmlFor='first-name'
+                                className='block text-sm font-medium text-gray-700'>
                                 First name
                               </label>
                               <input
-                                type="text"
-                                name="first_name"
-                                id="first_name"
-                                autoComplete="given-name"
-                                className="mt-1 focus:ring-blue-500 focus:border-blue-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
+                                type='text'
+                                name='first_name'
+                                id='first_name'
+                                autoComplete='given-name'
+                                className='mt-1 focus:ring-red-500 focus:border-red-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md'
                               />
                             </div>
 
-                            <div className="col-span-6">
+                            <div className='col-span-6'>
                               <label
-                                htmlFor="last-name"
-                                className="block text-sm font-medium text-gray-700">
+                                htmlFor='last-name'
+                                className='block text-sm font-medium text-gray-700'>
                                 Last name
                               </label>
                               <input
-                                type="text"
-                                name="last_name"
-                                id="last_name"
-                                autoComplete="family-name"
-                                className="mt-1 focus:ring-blue-500 focus:border-blue-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
+                                type='text'
+                                name='last_name'
+                                id='last_name'
+                                autoComplete='family-name'
+                                className='mt-1 focus:ring-red-500 focus:border-red-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md'
                               />
                             </div>
 
-                            <div className="col-span-6">
+                            <div className='col-span-6'>
                               <label
-                                htmlFor="work_email"
-                                className="block text-sm font-medium text-gray-700">
+                                htmlFor='work_email'
+                                className='block text-sm font-medium text-gray-700'>
                                 Work Email
                               </label>
                               <input
-                                type="text"
-                                name="work_email"
-                                id="work_email"
-                                autoComplete="email"
-                                className="mt-1 focus:ring-blue-500 focus:border-blue-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
+                                type='text'
+                                name='work_email'
+                                id='work_email'
+                                autoComplete='email'
+                                className='mt-1 focus:ring-red-500 focus:border-red-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md'
                               />
                             </div>
-                            <div className="col-span-6">
+                            <div className='col-span-6'>
                               <label
-                                htmlFor="program"
-                                className="block text-sm font-medium text-gray-700">
+                                htmlFor='program'
+                                className='block text-sm font-medium text-gray-700'>
                                 Program
                               </label>
                               <select
-                                id="program"
-                                name="program"
+                                id='program'
+                                name='program'
                                 defaultValue={program.title}
-                                className="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm dark:text-gray-900">
+                                className='mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-red-500 focus:border-red-500 sm:text-sm dark:text-gray-900'>
                                 <option>{program.title}</option>
                               </select>
                             </div>
 
-                            <div className="col-span-6">
+                            <div className='col-span-6'>
                               <label
-                                htmlFor="account_quantity"
-                                className="block text-sm font-medium text-gray-700">
+                                htmlFor='account_quantity'
+                                className='block text-sm font-medium text-gray-700'>
                                 How Many Accounts Do You Have That Fit This
                                 Program?
                               </label>
                               <select
-                                id="account_quantity"
-                                name="account_quantity"
-                                className="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm dark:text-gray-900">
+                                id='account_quantity'
+                                name='account_quantity'
+                                className='mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-red-500 focus:border-red-500 sm:text-sm dark:text-gray-900'>
                                 <option>1</option>
                                 <option>2</option>
                                 <option>3</option>
@@ -268,62 +268,62 @@ export default function ProgramPage({ program, coverage, highlights }) {
                               </select>
                             </div>
 
-                            <div className="col-span-6">
+                            <div className='col-span-6'>
                               <label
-                                htmlFor="account_future"
-                                className="block text-sm font-medium text-gray-700">
+                                htmlFor='account_future'
+                                className='block text-sm font-medium text-gray-700'>
                                 How Many of These Accounts Are Coming Up in the
                                 Next 90 Days?
                               </label>
                               <select
-                                id="account_future"
-                                name="account_future"
-                                defaultValue="1"
-                                className="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm dark:text-gray-900">
+                                id='account_future'
+                                name='account_future'
+                                defaultValue='1'
+                                className='mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-red-500 focus:border-red-500 sm:text-sm dark:text-gray-900'>
                                 <option>1</option>
                                 <option>2</option>
                                 <option>3+</option>
                               </select>
                             </div>
 
-                            <div className="col-span-6">
+                            <div className='col-span-6'>
                               <label
-                                htmlFor="company"
-                                className="block text-sm font-medium text-gray-700">
+                                htmlFor='company'
+                                className='block text-sm font-medium text-gray-700'>
                                 Company
                               </label>
                               <input
-                                type="text"
-                                name="company"
-                                id="company"
-                                className="mt-1 focus:ring-blue-500 focus:border-blue-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md dark:text-gray-900"
+                                type='text'
+                                name='company'
+                                id='company'
+                                className='mt-1 focus:ring-red-500 focus:border-red-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md dark:text-gray-900'
                               />
                             </div>
-                            <div className="col-span-6">
+                            <div className='col-span-6'>
                               <label
-                                htmlFor="tel"
-                                className="block text-sm font-medium text-gray-700">
+                                htmlFor='tel'
+                                className='block text-sm font-medium text-gray-700'>
                                 Phone
                               </label>
                               <input
-                                type="tel"
-                                name="phone"
-                                id="phone"
-                                className="mt-1 focus:ring-blue-500 focus:border-blue-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
+                                type='tel'
+                                name='phone'
+                                id='phone'
+                                className='mt-1 focus:ring-red-500 focus:border-red-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md'
                               />
                             </div>
 
-                            <div className="col-span-6">
+                            <div className='col-span-6'>
                               <label
-                                htmlFor="state"
-                                className="block text-sm font-medium text-gray-700">
+                                htmlFor='state'
+                                className='block text-sm font-medium text-gray-700'>
                                 State / Province
                               </label>
                               <select
-                                id="state"
-                                name="state"
-                                defaultValue="Texas"
-                                className="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm dark:text-gray-900">
+                                id='state'
+                                name='state'
+                                defaultValue='Texas'
+                                className='mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-red-500 focus:border-red-500 sm:text-sm dark:text-gray-900'>
                                 <option>Alabama</option>
                                 <option>Alaska</option>
                                 <option>Arizona</option>
@@ -378,10 +378,10 @@ export default function ProgramPage({ program, coverage, highlights }) {
                             </div>
                           </div>
                         </div>
-                        <div className="px-4 py-3 bg-white dark:bg-gray-200 text-center sm:px-6">
+                        <div className='px-4 py-3 bg-white dark:bg-gray-200 text-center sm:px-6'>
                           <button
-                            type="submit"
-                            className="inline-flex items-center justify-center py-2 px-4 border border-transparent shadow-sm text-lg font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+                            type='submit'
+                            className='inline-flex items-center justify-center py-2 px-4 border border-transparent shadow-sm text-lg font-medium rounded-md text-white bg-red-600 hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500'>
                             Request a Consultation
                           </button>
                         </div>
@@ -393,31 +393,31 @@ export default function ProgramPage({ program, coverage, highlights }) {
             </div>
           </div>
 
-          <div className="lg:grid lg:grid-cols-1 lg:gap-8 lg:items-end">
-            <div className=" ">
-              <div className="prose prose-xl md:max-w-lg">
-                <p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 dark:text-gray-300 sm:text-4xl">
+          <div className='lg:grid lg:grid-cols-1 lg:gap-8 lg:items-end'>
+            <div className=' '>
+              <div className='prose prose-xl md:max-w-lg'>
+                <p className='mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 dark:text-gray-300 sm:text-4xl'>
                   Coverage
                 </p>
-                <div className="dark:text-gray-400">
+                <div className='dark:text-gray-400'>
                   {<MDXRemote {...coverage} />}
                 </div>
               </div>
             </div>
-            <div className="mt-12 relative text-base max-w-lg mx-auto lg:mt-0 md:pt-28">
-              <div className="relative bg-gray-50 dark:bg-gray-900 rounded-lg shadow-2xl p-4 mb-8">
+            <div className='mt-12 relative text-base max-w-lg mx-auto lg:mt-0 md:pt-28'>
+              <div className='relative bg-gray-50 dark:bg-gray-900 rounded-lg shadow-2xl p-4 mb-8'>
                 <SimpleReactLightbox>
                   <SRLWrapper>
-                    <div className="flex justify-between">
+                    <div className='flex justify-between'>
                       <img
                         src={program.image.url}
                         alt={program.title}
-                        className="md:h-32 h-auto md:w-48 w-32 rounded mx-2 md:m-2"
+                        className='md:h-32 h-auto md:w-48 w-32 rounded mx-2 md:m-2'
                       />
                       <img
                         src={program.image2.url}
                         alt={program.title}
-                        className="md:h-32 h-auto md:w-48 w-32 rounded mx-2 md:m-2"
+                        className='md:h-32 h-auto md:w-48 w-32 rounded mx-2 md:m-2'
                       />
                     </div>
                   </SRLWrapper>
@@ -429,13 +429,13 @@ export default function ProgramPage({ program, coverage, highlights }) {
       </div>
 
       {/* FAQs */}
-      <div className="bg-white dark:bg-gray-800">
-        <div className="max-w-7xl mx-auto py-12 px-4 sm:py-16 sm:px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto ">
-            <h2 className="text-center text-3xl font-extrabold text-gray-900 dark:text-gray-300 sm:text-4xl my-4">
+      <div className='bg-white dark:bg-gray-800'>
+        <div className='max-w-7xl mx-auto py-12 px-4 sm:py-16 sm:px-6 lg:px-8'>
+          <div className='max-w-3xl mx-auto '>
+            <h2 className='text-center text-3xl font-extrabold text-gray-900 dark:text-gray-300 sm:text-4xl my-4'>
               Highlights
             </h2>
-            <div className="prose prose-xl max-w-none mt-2 dark:text-gray-400">
+            <div className='prose prose-xl max-w-none mt-2 dark:text-gray-400'>
               {<MDXRemote {...highlights} />}
             </div>
           </div>
@@ -443,22 +443,22 @@ export default function ProgramPage({ program, coverage, highlights }) {
       </div>
 
       {/* CTA section */}
-      <div className="bg-blue-50 dark:bg-blue-600">
-        <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-24 lg:px-8 lg:flex lg:items-center lg:justify-between">
-          <h2 className="text-3xl font-extrabold tracking-tight text-gray-900 md:text-4xl">
-            <span className="block">Ready to learn more?</span>
-            <span className="block text-blue-600 dark:text-blue-200">
+      <div className='bg-gray-300 dark:bg-gray-600'>
+        <div className='max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-24 lg:px-8 lg:flex lg:items-center lg:justify-between'>
+          <h2 className='text-3xl font-extrabold tracking-tight text-gray-500 dark:text-gray-300 md:text-4xl'>
+            <span className='block'>Ready to learn more?</span>
+            <span className='block text-red-700 dark:text-red-600'>
               Contact us today.
             </span>
           </h2>
-          <div className="mt-8 flex lg:mt-0 lg:flex-shrink-0">
-            <div className="inline-flex rounded-md shadow">
-              <Link href="/contact-us">
-                <a className="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 dark:bg-blue-400 dark:hover:bg-blue-500 hover:text-gray-300">
+          <div className='mt-8 flex lg:mt-0 lg:flex-shrink-0'>
+            <div className='inline-flex rounded-md shadow'>
+              <Link href='/contact-us'>
+                <a className='inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-gray-600 hover:bg-gray-700 dark:bg-gray-400 dark:hover:bg-gray-500 hover:text-gray-300'>
                   Contact us{' '}
                   <MailIcon
-                    className="ml-3 h-5 w-5 flex-shrink-0 text-gray-50"
-                    aria-hidden="true"
+                    className='ml-3 h-5 w-5 flex-shrink-0 text-gray-50'
+                    aria-hidden='true'
                   />
                 </a>
               </Link>
