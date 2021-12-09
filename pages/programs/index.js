@@ -18,7 +18,7 @@ export default function ProgramsPage({ programs }) {
   // console.log(programs)
   return (
     <Layout title='WIG | Our Programs'>
-      <div className='relative bg-blue-400'>
+      <div className='relative bg-gray-400'>
         <div className='absolute inset-0'>
           <img
             className='w-full h-full object-cover'
