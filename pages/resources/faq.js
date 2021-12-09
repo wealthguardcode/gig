@@ -43,7 +43,7 @@ const faqs = [
 export default function FaqPage() {
   return (
     <Layout title="WIG | Faq's">
-      <div className='relative bg-red-400'>
+      <div className='relative bg-gray-400'>
         <div className='absolute inset-0'>
           <img
             className='w-full h-full object-cover'
