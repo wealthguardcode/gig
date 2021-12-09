@@ -60,12 +60,12 @@ export default function AboutUsOverview() {
           <h1 className='text-3xl tracking-wider my-4 text-center font-semibold dark:text-gray-300'>
             Programs
           </h1>
-          <p className='prose-lg my-2 dark:text-gray-400'>
+          <p className='prose prose-lg g my-2 dark:text-gray-400'>
             We have years of insurance experience helping carriers and brokers
             provide solutions to their clients. Experience the difference of
             WealthGuard&apos;s newest Programs and Binding Authority division:
           </p>
-          <ul className='list-disc ml-6 dark:text-gray-400'>
+          <ul className='list-disc prose prose-lg  ml-6 dark:text-gray-400'>
             <li>Assisted Living Facilities Insurance</li>
             <li>Marina Insurance </li>
             <li>Coastal Property</li>
@@ -80,7 +80,7 @@ export default function AboutUsOverview() {
           <h1 className='text-3xl tracking-wider my-4 text-center font-semibold dark:text-gray-300'>
             Stability
           </h1>
-          <p className='prose-lg my-2 dark:text-gray-400'>
+          <p className='prose prose-lg my-2 dark:text-gray-400'>
             As an independent broker, you have the privilege of going to market
             for your client. WealthGuard&apos;s executive leadership has
             unprecedented access to innovative commercial insurance products and
@@ -93,7 +93,7 @@ export default function AboutUsOverview() {
           <h1 className='text-3xl tracking-wider my-4 text-center font-semibold dark:text-gray-300'>
             Relationships
           </h1>
-          <p className='prose-lg my-2 dark:text-gray-400'>
+          <p className='prose prose-lg my-2 dark:text-gray-400'>
             Each client has different insurance needs. For 30+ years, our
             leadership team has delivered strong results, year over year, for
             our key trading partners and brokers. We credit this success for the
@@ -109,7 +109,7 @@ export default function AboutUsOverview() {
         <div className='max-w-7xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:px-8'>
           <div className='text-center'>
             <p className='mt-1 text-4xl font-extrabold text-gray-900 dark:text-gray-300 sm:text-4xl sm:tracking-tight lg:text-5xl'>
-              Why WealthGuard?
+              Why <span className='text-red-700'>WealthGuard?</span>
             </p>
           </div>
         </div>
@@ -121,12 +121,12 @@ export default function AboutUsOverview() {
           <h1 className='text-3xl tracking-wider my-4 font-semibold dark:text-gray-800'>
             Focus
           </h1>
-          <p className='prose my-2'>
+          <p className='prose prose-lg my-2'>
             Independent Agents have limited time and resources to place their
             commercial business. They are seeking insurance advisors who
             understand their needs and the complexity of the risk being placed.
           </p>
-          <p className='prose my-2'>
+          <p className='prose prose-lg  my-2'>
             WealthGuard Insurance Group has access to innovative commercial
             insurance products and solutions that are broad in scope, properly
             priced and highly serviced. We closely partner with Independent
@@ -140,7 +140,7 @@ export default function AboutUsOverview() {
             Differentiator
           </h1>
 
-          <ul className='list-disc prose my-2'>
+          <ul className='list-disc prose prose-lg  my-2'>
             <li>
               Partner with our capacity providers to make the platform as “low
               touch” as possible
@@ -160,7 +160,7 @@ export default function AboutUsOverview() {
           <h1 className='text-3xl tracking-wider my-4 font-semibold dark:text-gray-800'>
             Passion
           </h1>
-          <p className='prose my-2'>
+          <p className='prose prose-lg my-2'>
             Each client has different insurance needs. For 30+ years, our
             leadership team has delivered strong results, year over year, for
             our key trading partners and brokers. We credit this success for the
@@ -197,7 +197,7 @@ export default function AboutUsOverview() {
         <div className='h-56 bg-red-600 sm:h-72 md:absolute md:left-0 md:h-full md:w-1/2'>
           <img
             className='w-full h-full object-cover'
-            src='https://images.unsplash.com/photo-1444718070663-99afd7176287?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80&blend=6366F1&sat=-100&blend-mode=multiply'
+            src='https://images.unsplash.com/39/lIZrwvbeRuuzqOoWJUEn_Photoaday_CSD%20(1%20of%201)-5.jpg?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80'
             alt='WealthGuard is here to help'
           />
         </div>
