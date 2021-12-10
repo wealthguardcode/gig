@@ -73,7 +73,7 @@ export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false)
   const { theme, setTheme } = useTheme()
-  // Copy changes
+
   return (
     <div className='bg-gray-50 dark:bg-gray-800'>
       <div>

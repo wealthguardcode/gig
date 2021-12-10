@@ -210,13 +210,7 @@ export default function AboutUsOverview() {
               We&apos;re here to help
             </p>
             <p className='mt-3 text-lg text-gray-300'>
-              Choosing the write partner that takes an interest in your success
-              is hard to find. Finding one that will personally work with you
-              for year over year results is unheard of, especially with
-              wholesalers acquiring and or merging, which creates turnover. At
-              WealthGuard you will work with your advocate for years and YOU
-              will not be passed around, we still believe this is a relationship
-              driven business and we are here to help!
+            Choosing the right partner, one who takes an interest in your success is hard to find. Finding one that will personally work with you for years and years is unheard of, especially with wholesalers acquiring and/or merging, which creates turnover. At WealthGuard you will work with your advocate for years to come and will NOT be passed around. We still believe this is a relationship-driven business and we are here to help.
             </p>
             <div className='mt-8'>
               <div className='inline-flex rounded-md shadow'>
