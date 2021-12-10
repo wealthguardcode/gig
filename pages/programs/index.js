@@ -37,7 +37,7 @@ export default function ProgramsPage({ programs }) {
           <p className='mt-6 text-xl text-gray-100 max-w-3xl'>
             We have years of insurance experience helping carriers and brokers
             provide solutions to their clients. Experience the difference of
-            GoGuard&apos;s newest Programs and Binding Authority division.
+            WealthGuard&apos;s newest Programs and Binding Authority division.
           </p>
         </div>
       </div>
