@@ -116,47 +116,54 @@ export default function AboutUsOverview() {
       </div>
 
       {/* Why WealthGuard - content */}
-      <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-2 md:mt-0'>
-        <div className='p-10 mx-10 flex flex-col bg-red-300 dark:bg-red-400 border-t-2 border-gray-600 dark:border-red-500 rounded-lg shadow-xl hover:shadow-2xl mb-4'>
-          <h1 className='text-3xl tracking-wider my-4 font-semibold dark:text-gray-800'>
-            Focus
-          </h1>
-          <p className='prose prose-lg my-2'>
-            Independent Agents have limited time and resources to place their
-            commercial business. They are seeking insurance advisors who
-            understand their needs and the complexity of the risk being placed.
-          </p>
-          <p className='prose prose-lg  my-2'>
-            WealthGuard Insurance Group has access to innovative commercial
-            insurance products and solutions that are broad in scope, properly
-            priced and highly serviced. We closely partner with Independent
-            Agents and Brokers who seek the value in our expertise, enjoy our
-            relationship and utilize our diversity of products.
-          </p>
+      <div className='grid grid-cols-1 md:grid-cols-2 md:col-span-6 lg:col-span-4 mt-2 md:mt-0'>
+        <div className='p-10 mx-5 lg:mx-16 flex flex-col bg-red-300 dark:bg-red-400 border-t-2 border-gray-600 dark:border-red-500 rounded-lg shadow-xl hover:shadow-2xl mb-4'>
+          <div className='mx-auto'>
+            <h1 className='text-3xl tracking-wider my-4 font-semibold dark:text-gray-800'>
+              Focus
+            </h1>
+
+            <p className='prose prose-lg my-2'>
+              Independent Agents have limited time and resources to place their
+              commercial business. They are seeking insurance advisors who
+              understand their needs and the complexity of the risk being
+              placed.
+            </p>
+            <p className='prose prose-lg my-2'>
+              WealthGuard Insurance Group has access to innovative commercial
+              insurance products and solutions that are broad in scope, properly
+              priced and highly serviced. We closely partner with Independent
+              Agents and Brokers who seek the value in our expertise, enjoy our
+              relationship and utilize our diversity of products.
+            </p>
+          </div>
         </div>
 
-        <div className='p-10 mx-10 flex flex-col bg-gray-300 dark:bg-gray-300 border-t-2 dark:border-red-500 border-gray-600  rounded-lg shadow-xl hover:shadow-2xl mb-4'>
-          <h1 className='text-3xl tracking-wider my-4 font-semibold dark:text-gray-800'>
-            Differentiator
-          </h1>
+        <div className='p-10 mx-5 lg:mx-16 flex flex-col bg-gray-300 dark:bg-gray-300 border-t-2 dark:border-red-500 border-gray-600  rounded-lg shadow-xl hover:shadow-2xl mb-4'>
+          <div className='mx-auto'>
+            <h1 className='text-3xl tracking-wider my-4 font-semibold dark:text-gray-800'>
+              Differentiator
+            </h1>
 
-          <ul className='list-disc prose prose-lg  my-2'>
-            <li>
-              Partner with our capacity providers to make the platform as “low
-              touch” as possible
-            </li>
-            <li>
-              Align our interests with our partner carriers/companies for
-              collaborative terms of coverage, rate/deductibles and commissions
-            </li>
-            <li>
-              Underwriting discipline is paramount as we develop opportunistic
-              strategies for each class/segment so we can stay ahead of the
-              market
-            </li>
-          </ul>
+            <ul className='list-disc prose prose-lg my-2'>
+              <li>
+                Partner with our capacity providers to make the platform as “low
+                touch” as possible
+              </li>
+              <li>
+                Align our interests with our partner carriers/companies for
+                collaborative terms of coverage, rate/deductibles and
+                commissions
+              </li>
+              <li>
+                Underwriting discipline is paramount as we develop opportunistic
+                strategies for each class/segment so we can stay ahead of the
+                market
+              </li>
+            </ul>
+          </div>
         </div>
-        <div className='p-10 mx-10 flex flex-col dark:border-red-500 bg-red-300 dark:bg-red-400 border-t-2 border-gray-600  rounded-lg shadow-xl hover:shadow-2xl mb-4'>
+        {/* <div className='p-10 mx-10 flex flex-col dark:border-red-500 bg-red-300 dark:bg-red-400 border-t-2 border-gray-600  rounded-lg shadow-xl hover:shadow-2xl mb-4'>
           <h1 className='text-3xl tracking-wider my-4 font-semibold dark:text-gray-800'>
             Passion
           </h1>
@@ -168,7 +175,7 @@ export default function AboutUsOverview() {
             past years and years to come. If your looking for a partner, we are
             here for you!
           </p>
-        </div>
+        </div> */}
       </div>
 
       {/* Our Mission */}
@@ -210,7 +217,13 @@ export default function AboutUsOverview() {
               We&apos;re here to help
             </p>
             <p className='mt-3 text-lg text-gray-300'>
-            Choosing the right partner, one who takes an interest in your success is hard to find. Finding one that will personally work with you for years and years is unheard of, especially with wholesalers acquiring and/or merging, which creates turnover. At WealthGuard you will work with your advocate for years to come and will NOT be passed around. We still believe this is a relationship-driven business and we are here to help.
+              Choosing the right partner, one who takes an interest in your
+              success is hard to find. Finding one that will personally work
+              with you for years and years is unheard of, especially with
+              wholesalers acquiring and/or merging, which creates turnover. At
+              WealthGuard you will work with your advocate for years to come and
+              will NOT be passed around. We still believe this is a
+              relationship-driven business and we are here to help.
             </p>
             <div className='mt-8'>
               <div className='inline-flex rounded-md shadow'>
