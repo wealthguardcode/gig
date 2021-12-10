@@ -56,8 +56,8 @@ function sendEmail(e) {
 const footerNavigation = {
   links: [
     { name: 'All Programs', href: '/programs' },
-    { name: 'West Wall Marina', href: '/programs/west-wall-marina' },
-    { name: 'Assistant Living', href: '/programs/assistant-living-facility' },
+    { name: 'WestWall Marina', href: '/programs/westwall-marina' },
+    { name: 'Assisted Living', href: '/programs/assisted-living-facility' },
     { name: 'Cargo & Logistics', href: '/programs/cargo-and-logistics' },
     { name: 'Active Assailant', href: '/programs/active-assailant' },
     { name: 'Terrorism & Sabotage', href: '/programs/terrorism-and-sabotage' },

@@ -15,11 +15,11 @@ const navigation = {
         },
         {
           name: 'WestWall Marina Program',
-          href: '/programs/west-wall-marina',
+          href: '/programs/westwall-marina',
         },
         {
-          name: 'Assistant Living Facility',
-          href: '/programs/assistant-living-facility',
+          name: 'Assisted Living Facility',
+          href: '/programs/assisted-living-facility',
         },
         {
           name: 'Cargo & Logistics',
