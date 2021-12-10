@@ -14,7 +14,7 @@ const navigation = {
           href: '/programs',
         },
         {
-          name: 'West Wall Marina Program',
+          name: 'WestWall Marina Program',
           href: '/programs/west-wall-marina',
         },
         {
