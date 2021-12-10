@@ -85,9 +85,9 @@ export default function Footer() {
               <Link href='/'>
                 <a>
                   <img
-                    src='https://tailwindui.com/img/logos/workflow-mark.svg?color=red&shade=600'
+                    src='/images/wig-logo.png'
                     alt='Logo'
-                    className='h-8 w-auto'
+                    className='h-12 w-auto'
                   />
                 </a>
               </Link>

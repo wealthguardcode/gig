@@ -225,9 +225,9 @@ export default function Header() {
                       <a>
                         <span className='sr-only'>Workflow</span>
                         <img
-                          className='h-8 w-auto'
-                          src='https://tailwindui.com/img/logos/workflow-mark.svg?color=red&shade=600'
-                          alt=''
+                          className='h-12 w-auto'
+                          src='/images/wig-logo-full.png'
+                          alt='WealthGuard Logo'
                         />
                       </a>
                     </Link>
@@ -380,9 +380,9 @@ export default function Header() {
                     <a className='lg:hidden'>
                       <span className='sr-only'>Workflow</span>
                       <img
-                        src='https://tailwindui.com/img/logos/workflow-mark.svg?color=red&shade=600'
-                        alt=''
-                        className='h-8 w-auto'
+                        src='/images/wig-logo-full.png'
+                        alt='WealthGuard Logo'
+                        className='h-12 w-auto'
                       />
                     </a>
                   </Link>
