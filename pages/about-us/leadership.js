@@ -1,5 +1,4 @@
 import Layout from '../../components/Layout'
-import { Parallax } from 'react-scroll-parallax'
 import { MailIcon } from '@heroicons/react/outline'
 
 const people = [

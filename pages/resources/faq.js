@@ -37,7 +37,6 @@ const faqs = [
     answer:
       'Duis ultricies eu tellus vel condimentum. Nulla non ligula eu quam euismod egestas. Maecenas at ipsum non lorem laoreet placerat eget nec nibh. Cras et augue pharetra, tincidunt libero at, hendrerit urna.',
   },
-  // More questions...
 ]
 
 export default function FaqPage() {

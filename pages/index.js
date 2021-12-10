@@ -12,9 +12,6 @@ import {
 
 import Link from 'next/link'
 
-import { Disclosure } from '@headlessui/react'
-import { ChevronDownIcon } from '@heroicons/react/outline'
-
 const faqs = [
   {
     question: 'Why should I work with WealthGuard?',
