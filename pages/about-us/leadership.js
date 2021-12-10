@@ -12,10 +12,10 @@ const people = [
   },
   {
     name: 'Alexandria Cantrell',
-    role: 'Director of Underwriting Programs',
+    role: 'Director of Underwriting Operations',
     imageUrl:
       'https://media.graphcms.com/output=format:jpg/resize=,height:800,fit:max/78a3p2VNTfi2Q0AXAVnc',
-    bio: 'Allie is our Director of Underwriting Operations.  Allie is an LSU graduate and resides in the Houston area.  She started her insurance career with a large regional wholesaler and has held several different positions within the programs and binding authority department.  Allie now has oversight of the underwriting workflow operation for WealthGuard.',
+    bio: 'Alexandria is our Director of Underwriting Operations. Alexandria is an LSU Graduate and resides in the Houston area. She started her insurance career with a large regional wholesaler and has held several different positions with the programs and binding authority department. Alexandria now has oversight of the underwriting workflow operation for WealthGuard.',
     contact: 'alexandria@wealthguardig.com',
   },
   {
@@ -35,7 +35,7 @@ const people = [
     contact: 'theresa@wealthguardig.com',
   },
   {
-    name: 'Sam Klepper',
+    name: 'Samuel Klepper',
     role: 'Web Dev / Graphic Design',
     imageUrl:
       'https://media.graphcms.com/output=format:jpg/resize=,height:800,fit:max/nVMFnTnbT4mqjz6YkwQ6',
@@ -43,11 +43,11 @@ const people = [
     contact: 'sam@wealthguardig.com',
   },
   {
-    name: 'Jeff Fluker',
-    role: ' Sr Account Executive',
+    name: 'Jeffrey Fluker',
+    role: ' Senior Account Executive',
     imageUrl:
       'https://media.graphcms.com/output=format:jpg/resize=,height:800,fit:max/Me8VDakpR1CLJrmh0Zrh',
-    bio: 'Jeff is a specialist, he takes pride in the “details” and has a personal interest in helping each broker succeed. When not working, you will find Jeff supporting the community with a special interest in FFA and local associations.',
+    bio: 'Jeffrey is a specialist who takes pride in the “details”. He has a personal interest in helping each broker succeed. When not working, you will find Jeffrey supporting the community, with a special interest in FFA and local associations.',
     contact: 'jeff@wealthguardig.com',
   },
   {
