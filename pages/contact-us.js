@@ -22,12 +22,20 @@ function sendEmail(e) {
   e.preventDefault()
   if (
     e.target.first_name.value === '' ||
-    e.target.last_name === '' ||
-    e.target.email === '' ||
-    e.target.company === '' ||
-    e.target.message === ''
+    e.target.last_name.value === '' ||
+    e.target.email.value === '' ||
+    e.target.company.value === '' ||
+    e.target.message.value === ''
   ) {
-    return alert('Form cannot be empty!')
+    return toast.error('Form cannot be empty!', {
+      position: 'top-right',
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+    })
   } else {
     emailjs
       .sendForm(
