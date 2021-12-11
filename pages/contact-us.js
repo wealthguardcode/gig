@@ -75,11 +75,11 @@ export default function ContactUsPage() {
             <h1 className='text-4xl leading-10 font-extrabold tracking-tight text-gray-900 dark:text-gray-300 text-center sm:text-5xl sm:leading-none lg:text-6xl'>
               Contact Us
             </h1>
-            <p className='mt-6 max-w-3xl mx-auto text-xl leading-normal text-gray-500 dark:text-gray-400 text-center'>
+            {/* <p className='mt-6 max-w-3xl mx-auto text-xl leading-normal text-gray-500 dark:text-gray-400 text-center'>
               Convallis feugiat et aliquet pellentesque dictum nisi, velit.
               Egestas fermentum adipiscing risus quam ac consectetur mattis
               turpis tristique.
-            </p>
+            </p> */}
           </div>
         </div>
 
@@ -102,8 +102,15 @@ export default function ContactUsPage() {
                 </h2>
                 <p className='mt-4 text-lg text-gray-500 sm:mt-3 dark:text-gray-400'>
                   We&apos;d love to hear from you! Send us a message using the
-                  form opposite, or email us. We’d love to hear from you! Send
-                  us a message using the form opposite, or email us.
+                  form opposite, or{' '}
+                  <a
+                    className='text-red-700 hover:text-red-600 dark:hover:text-red-600'
+                    href='mailto:sales@wealthguardig.com'
+                    target='_blank'
+                    rel='noreferrer'>
+                    email us
+                  </a>
+                  .
                 </p>
                 <form
                   id='template_tsp834s'
