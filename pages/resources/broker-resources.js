@@ -4,25 +4,27 @@ import { MailIcon } from '@heroicons/react/solid'
 
 const resources = [
   {
-    title: 'Resource 1',
+    title: 'Flood Action Plan',
     imageUrl:
       'https://media.graphcms.com/output=format:jpg/resize=,height:800,fit:max/70P5WHoARt24PjDRuo7C',
+    link: '/images/floodActionPlan.pdf',
   },
   {
-    title: 'Resource 2',
+    title: 'Hail Action Plan',
     imageUrl:
       'https://media.graphcms.com/output=format:jpg/resize=,height:800,fit:max/70P5WHoARt24PjDRuo7C',
+    link: '/images/hailActionPlan.pdf',
   },
-  {
-    title: 'Resource 3',
-    imageUrl:
-      'https://media.graphcms.com/output=format:jpg/resize=,height:800,fit:max/70P5WHoARt24PjDRuo7C',
-  },
-  {
-    title: 'Resource 4',
-    imageUrl:
-      'https://media.graphcms.com/output=format:jpg/resize=,height:800,fit:max/70P5WHoARt24PjDRuo7C',
-  },
+  // {
+  //   title: 'Resource 3',
+  //   imageUrl:
+  //     'https://media.graphcms.com/output=format:jpg/resize=,height:800,fit:max/70P5WHoARt24PjDRuo7C',
+  // },
+  // {
+  //   title: 'Resource 4',
+  //   imageUrl:
+  //     'https://media.graphcms.com/output=format:jpg/resize=,height:800,fit:max/70P5WHoARt24PjDRuo7C',
+  // },
 ]
 
 export default function BrokerResourcesPage() {
@@ -51,12 +53,10 @@ export default function BrokerResourcesPage() {
       <div className='bg-white dark:bg-gray-800'>
         <div className='max-w-7xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:px-8'>
           <div className='text-center'>
-            <p className='max-w-3xl mt-5 mx-auto text-xl text-gray-500 dark:text-gray-400'>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
-              ornare eleifend justo, hendrerit venenatis ligula posuere sed.
-              Duis ac odio eget turpis accumsan dignissim quis sollicitudin
-              diam. Sed dictum nibh vitae hendrerit imperdiet. Aenean tincidunt
-              sed est at hendrerit.
+            <p className='max-w-3xl mt-5 mx-auto text-xl md:text-2xl text-gray-500 dark:text-gray-400'>
+              WealthGuard supports the continual education of brokers through
+              our own collection of articles, webinars, industry white papers,
+              case studies, videos, infographics, and program supplementals.
             </p>
           </div>
         </div>
@@ -64,14 +64,14 @@ export default function BrokerResourcesPage() {
 
       {/* Resources */}
       <div className='mx-5'>
-        <div className='grid grid-cols-2 md:grid-cols-4 gap-4'>
+        <div className='grid grid-cols-2 md:grid-cols-2 gap-4'>
           {resources.map((resource) => (
             <div
               key={resource.title}
               className='relative rounded-lg border-2 border-gray-300 bg-white px-6 py-5 shadow-xl group hover:shadow-2xl flex justify-center items-center hover:border-gray-400 dark:hover:border-red-600 focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-indigo-500'>
               <div className='flex flex-col justify-center items-center'>
                 <div className=''>
-                  <a href='#'>
+                  <a href={resource.link} target='_blank' rel='noreferrer'>
                     <img
                       className='h-20 w-20 rounded-full '
                       src={resource.imageUrl}
@@ -80,7 +80,11 @@ export default function BrokerResourcesPage() {
                   </a>
                 </div>
                 <div className=''>
-                  <a href='#' className='focus:outline-none'>
+                  <a
+                    href={resource.link}
+                    target='_blank'
+                    rel='noreferrer'
+                    className='focus:outline-none'>
                     <span className=' ' aria-hidden='true' />
                     <p className='text-lg font-medium text-gray-900'>
                       {resource.title}

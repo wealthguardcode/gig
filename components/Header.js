@@ -42,10 +42,10 @@ const navigation = {
           name: 'Broker Resources',
           href: '/resources/broker-resources',
         },
-        {
-          name: 'FAQ',
-          href: '/resources/faq',
-        },
+        // {
+        //   name: 'FAQ',
+        //   href: '/resources/faq',
+        // },
       ],
     },
     {
