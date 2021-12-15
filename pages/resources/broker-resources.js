@@ -15,16 +15,18 @@ const resources = [
       'https://media.graphcms.com/output=format:jpg/resize=,height:800,fit:max/70P5WHoARt24PjDRuo7C',
     link: '/images/hailActionPlan.pdf',
   },
-  // {
-  //   title: 'Resource 3',
-  //   imageUrl:
-  //     'https://media.graphcms.com/output=format:jpg/resize=,height:800,fit:max/70P5WHoARt24PjDRuo7C',
-  // },
-  // {
-  //   title: 'Resource 4',
-  //   imageUrl:
-  //     'https://media.graphcms.com/output=format:jpg/resize=,height:800,fit:max/70P5WHoARt24PjDRuo7C',
-  // },
+  {
+    title: 'Hurricane Action Plan',
+    imageUrl:
+      'https://media.graphcms.com/output=format:jpg/resize=,height:800,fit:max/70P5WHoARt24PjDRuo7C',
+    link: '/images/hurricaneActionPlan.pdf',
+  },
+  {
+    title: 'Tornado Action Plan',
+    imageUrl:
+      'https://media.graphcms.com/output=format:jpg/resize=,height:800,fit:max/70P5WHoARt24PjDRuo7C',
+    link: '/images/tornadoActionPlan.pdf',
+  },
 ]
 
 export default function BrokerResourcesPage() {
@@ -64,7 +66,7 @@ export default function BrokerResourcesPage() {
 
       {/* Resources */}
       <div className='mx-5'>
-        <div className='grid grid-cols-2 md:grid-cols-2 gap-4'>
+        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4'>
           {resources.map((resource) => (
             <div
               key={resource.title}
