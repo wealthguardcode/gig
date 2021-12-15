@@ -67,13 +67,11 @@ const footerNavigation = {
     // { name: 'FAQ', href: '/resources/faq' },
     // { name: 'Privacy Policy', href: '/resources/privacy' },
     { name: 'Terms & Conditions', href: '/resources/terms' },
-    // { name: 'Link 5', href: '#' },
   ],
   company: [
     { name: 'About Us', href: '/about-us/about-us' },
     { name: 'Leadership', href: '/about-us/leadership' },
     { name: 'Contact Us', href: '/contact-us' },
-    // { name: 'Link 1', href: '#' },
   ],
 }
 

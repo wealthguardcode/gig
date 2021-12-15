@@ -179,7 +179,7 @@ export default function AboutUsOverview() {
       </div>
 
       {/* Our Mission */}
-      <div className='flex flex-col justify-around items-center md:flex-row p-4 mx-4 my-10 border-t-2 border-gray-600 hover:border-2 rounded-lg shadow-xl hover:shadow-2xl dark:bg-gray-700'>
+      {/* <div className='flex flex-col justify-around items-center md:flex-row p-4 mx-4 my-10 border-t-2 border-gray-600 hover:border-2 rounded-lg shadow-xl hover:shadow-2xl dark:bg-gray-700'>
         <div className='mx-4 p-4 sm:mx-auto align-middle'>
           <OfficeBuildingIcon height={200} className='dark:text-gray-300' />
         </div>
@@ -197,10 +197,10 @@ export default function AboutUsOverview() {
             <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
           </ol>
         </div>
-      </div>
+      </div> */}
 
       {/* CTA */}
-      <div className='relative bg-gray-800 dark:bg-gray-900'>
+      <div className='relative bg-gray-800 dark:bg-gray-900 mt-10'>
         <div className='h-56 bg-red-600 sm:h-72 md:absolute md:left-0 md:h-full md:w-1/2'>
           <img
             className='w-full h-full object-cover'

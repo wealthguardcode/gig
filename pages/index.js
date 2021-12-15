@@ -376,13 +376,6 @@ export default function Home() {
               </div>
               <footer className='mt-8'>
                 <div className='md:flex md:items-center md:justify-center'>
-                  {/* <div className='md:flex-shrink-0'>
-                    <img
-                      className='mx-auto h-10 w-10 rounded-full'
-                      src='https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png'
-                      alt=''
-                    />
-                  </div> */}
                   <div className='mt-3 text-center md:mt-0 md:ml-4 md:flex md:items-center'>
                     <div className='text-base font-medium text-gray-900 dark:text-gray-400'>
                       Bill H
@@ -424,25 +417,6 @@ export default function Home() {
           </Link>
         </div>
       </div>
-      {/* Covid Section */}
-      {/* <div className='bg-red-700'>
-        <div className='max-w-2xl mx-auto text-center py-16 px-4 sm:py-20 sm:px-6 lg:px-8'>
-          <h2 className='text-3xl font-extrabold text-white sm:text-4xl'>
-            <span className='block'>Broker Support</span>
-            <span className='block'>Covid-19 Resource Center</span>
-          </h2>
-          <p className='mt-4 text-xl leading-9 text-red-200 '>
-            See the latest federal and state resources available to business
-            owners to help offset the effects of the Covid-19 pandemic,
-            including business emergency funding and relief programs.
-          </p>
-          <a
-            href='#'
-            className='mt-8 w-full inline-flex items-center justify-center px-5 py-3 border border-solid border-red-50 text-base font-medium rounded-md text-white bg-transparent hover:bg-red-50 hover:text-red-600 sm:w-auto'>
-            Learn more
-          </a>
-        </div>
-      </div> */}
 
       {/* Why Work with WealthGuard */}
       <div className='bg-white dark:bg-gray-800'>
