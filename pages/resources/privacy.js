@@ -163,13 +163,15 @@ export default function privacy() {
           <p className='max-w-3xl mx-auto prose md:prose-lg leading-normal text-gray-500 dark:text-gray-400'>
             If you have any questions or suggestions about our Privacy Policy,
             do not hesitate to{' '}
-            <a
-              className='text-red-700 hover:text-red-600 dark:hover:text-red-600'
-              href='mailto:sales@wealthguardig.com'
-              target='_blank'
-              rel='noreferrer'>
-              contact us
-            </a>
+            <span className='text-red-700'>
+              <a
+                className='text-red-700 hover:text-red-600 dark:hover:text-red-600'
+                href='mailto:sales@wealthguardig.com'
+                target='_blank'
+                rel='noreferrer'>
+                contact us
+              </a>
+            </span>
             .
           </p>
         </div>
