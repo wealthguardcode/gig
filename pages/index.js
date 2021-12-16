@@ -102,7 +102,7 @@ export default function Home() {
   return (
     <Layout>
       <div className='relative bg-white dark:bg-gray-800 overflow-hidden'>
-        <div className='relative md:pt-12 pt-10 '>
+        <div className='relative md:pt-12 pt-16 '>
           <div className='h-screen mx-auto w-full px-4 sm:mt-0'>
             {/* BG Image */}
 
@@ -110,7 +110,7 @@ export default function Home() {
               <div className='absolute inset-0 md:bg-gray-400 mix-blend-multiply' />
             </div>
 
-            <div className='text-center relative'>
+            <div className='md:py-16 text-center relative'>
               <h1 className='text-4xl tracking-tight font-extrabold text-gray-900  sm:text-5xl md:text-6xl'>
                 <span className='block xl:inline'>Commercial Insurance</span>{' '}
                 <span className='block text-red-700 font-extrabold '>
@@ -184,7 +184,7 @@ export default function Home() {
           </h2>
         </div>
 
-        <div className='max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:pb-24 lg:pt-12 lg:px-8 lg:grid lg:grid-cols-2 lg:gap-x-8'>
+        <div className='max-w-7xl mx-auto py-8 px-4 sm:px-6 lg:pb-24 lg:pt-12 lg:px-8 lg:grid lg:grid-cols-2 lg:gap-x-8'>
           <div className='mt-12 lg:mt-0 lg:col-span-2'>
             <dl className='space-y-10 sm:space-y-0 sm:grid sm:grid-cols-2 sm:grid-rows-4 sm:grid-flow-col sm:gap-x-6 sm:gap-y-10 lg:gap-x-8 '>
               {features.map((feature) => (
