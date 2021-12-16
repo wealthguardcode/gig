@@ -179,25 +179,28 @@ export default function AboutUsOverview() {
       </div>
 
       {/* Our Mission */}
-      {/* <div className='flex flex-col justify-around items-center md:flex-row p-4 mx-4 my-10 border-t-2 border-gray-600 hover:border-2 rounded-lg shadow-xl hover:shadow-2xl dark:bg-gray-700'>
+      <div className='flex flex-col justify-between items-center md:flex-row p-4 mx-10 md:mx-32 my-10 border-t-2 border-gray-600 hover:border-2 rounded-lg shadow-xl hover:shadow-2xl dark:bg-gray-700'>
         <div className='mx-4 p-4 sm:mx-auto align-middle'>
           <OfficeBuildingIcon height={200} className='dark:text-gray-300' />
         </div>
-        <div className='mx-8 p-4 flex flex-col'>
-          <h1 className='text-3xl font-semibold my-3 dark:text-gray-300'>
+        <div className='mx-6 p-4 flex flex-col'>
+          <h1 className='text-3xl font-semibold my-3 text-red-700 dark:text-red-600'>
             Our Mission:
           </h1>
           <p className='prose-lg my-3 dark:text-gray-400'>
-            Aenean imperdiet metus dolor, sed feugiat velit semper in. Aliquam
-            cursus laoreet laoreet. Sed volutpat augue vitae congue tincidunt:
+            Create and manage insurance programs for companies in similar
+            industries to achieve the following three goals:
           </p>
-          <ol className='list-decimal prose my-3 sm:ml-5'>
-            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-            <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+          <ol className='list-decimal prose my-3 sm:ml-5 dark:text-gray-400'>
+            <li>Gain greater control over their insurance costs.</li>
+            <li>Reduce their exposure to loss.</li>
+            <li>
+              Protect the safety of their work environments while improving the
+              quality of their work.
+            </li>
           </ol>
         </div>
-      </div> */}
+      </div>
 
       {/* CTA */}
       <div className='relative bg-gray-800 dark:bg-gray-900 mt-10'>
