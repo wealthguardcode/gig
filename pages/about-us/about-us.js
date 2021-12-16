@@ -183,18 +183,20 @@ export default function AboutUsOverview() {
         <div className='mx-4 p-4 sm:mx-auto align-middle'>
           <OfficeBuildingIcon height={200} className='dark:text-gray-300' />
         </div>
-        <div className='mx-6 p-4 flex flex-col'>
+        <div className='md:mx-6 p-4 flex flex-col'>
           <h1 className='text-3xl font-semibold my-3 text-red-700 dark:text-red-600'>
             Our Mission:
           </h1>
           <p className='prose-lg my-3 dark:text-gray-400'>
-            Create and manage insurance programs for companies in similar
-            industries to achieve the following three goals:
+            Create and manage insurance programs for partners to achieve the
+            following three goals:
           </p>
-          <ol className='list-decimal prose my-3 sm:ml-5 dark:text-gray-400'>
-            <li>Gain greater control over their insurance costs.</li>
-            <li>Reduce their exposure to loss.</li>
-            <li>
+          <ol className='list-decimal prose my-3 ml-5 dark:text-gray-400'>
+            <li className='ml-5'>
+              Gain greater control over their insurance costs.
+            </li>
+            <li className='ml-5'>Reduce their exposure to loss.</li>
+            <li className='ml-5'>
               Protect the safety of their work environments while improving the
               quality of their work.
             </li>
