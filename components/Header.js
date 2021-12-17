@@ -145,7 +145,8 @@ export default function Header() {
                               className='group relative mx-auto'>
                               <a
                                 href={item.href}
-                                className='mt-6 block font-medium text-gray-900 dark:text-gray-300 hover:text-red-700 dark:hover:text-red-700'>
+                                className='mt-6 block font-medium text-gray-900 dark:text-gray-300 hover:text-red-700 dark:hover:text-red-700'
+                                aria-label={item.name}>
                                 <span
                                   className='absolute z-10 inset-0'
                                   aria-hidden='true'
@@ -165,7 +166,8 @@ export default function Header() {
                     <div key={page.name} className='flow-root'>
                       <a
                         href={page.href}
-                        className='-m-2 p-2 block font-medium text-gray-900 dark:text-gray-300 hover:text-red-700 dark:hover:text-red-700'>
+                        className='-m-2 p-2 block font-medium text-gray-900 dark:text-gray-300 hover:text-red-700 dark:hover:text-red-700'
+                        aria-label={page.name}>
                         {page.name}
                       </a>
                     </div>
@@ -296,7 +298,8 @@ export default function Header() {
                                               className='group relative'>
                                               <a
                                                 href={item.href}
-                                                className='mt-4 font-base block font-medium text-gray-900 hover:text-red-700 hover:bg-gray-100 dark:hover:bg-gray-700 dark:text-gray-50 dark:hover:text-red-700'>
+                                                className='mt-4 font-base block font-medium text-gray-900 hover:text-red-700 hover:bg-gray-100 dark:hover:bg-gray-700 dark:text-gray-50 dark:hover:text-red-700'
+                                                aria-label={item.name}>
                                                 <span
                                                   className='absolute z-10 inset-0 group-hover:block'
                                                   aria-hidden='true'
@@ -319,7 +322,8 @@ export default function Header() {
                           <a
                             key={page.name}
                             href={page.href}
-                            className='flex items-center font-medium text-gray-700 hover:text-red-700 dark:text-gray-50 dark:hover:text-red-700'>
+                            className='flex items-center font-medium text-gray-700 hover:text-red-700 dark:text-gray-50 dark:hover:text-red-700'
+                            aria-label={page.name}>
                             {page.name}
                           </a>
                         ))}

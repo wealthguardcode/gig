@@ -111,7 +111,8 @@ export default function Footer() {
                       <li key={item.name} className='text-sm'>
                         <a
                           href={item.href}
-                          className='text-gray-500 dark:text-gray-400 hover:font-bold hover:text-red-700 dark:hover:text-red-700 hover:bg-gray-100 dark:hover:bg-gray-800'>
+                          className='text-gray-500 dark:text-gray-400 hover:font-bold hover:text-red-700 dark:hover:text-red-700 hover:bg-gray-100 dark:hover:bg-gray-800'
+                          aria-label={item.name}>
                           {item.name}
                         </a>
                       </li>
@@ -127,7 +128,8 @@ export default function Footer() {
                       <li key={item.name} className='text-sm'>
                         <a
                           href={item.href}
-                          className='text-gray-500 dark:text-gray-400 hover:font-bold hover:text-red-700 dark:hover:text-red-700 hover:bg-gray-100 dark:hover:bg-gray-800'>
+                          className='text-gray-500 dark:text-gray-400 hover:font-bold hover:text-red-700 dark:hover:text-red-700 hover:bg-gray-100 dark:hover:bg-gray-800'
+                          aria-label={item.name}>
                           {item.name}
                         </a>
                       </li>
@@ -144,7 +146,8 @@ export default function Footer() {
                     <li key={item.name} className='text-sm'>
                       <a
                         href={item.href}
-                        className='text-gray-500 dark:text-gray-400 hover:font-bold hover:text-red-700 dark:hover:text-red-700 hover:bg-gray-100 dark:hover:bg-gray-800'>
+                        className='text-gray-500 dark:text-gray-400 hover:font-bold hover:text-red-700 dark:hover:text-red-700 hover:bg-gray-100 dark:hover:bg-gray-800'
+                        aria-label={item.name}>
                         {item.name}
                       </a>
                     </li>
