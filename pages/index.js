@@ -277,8 +277,10 @@ export default function Home() {
                     </button>
                   </a>
                 </Link>
-                <Link href='/resources/broker-resources'>
-                  <a className='flex flex-start items-center rounded group  hover:shadow-2xl mb-3 md:mb-0'>
+                <Link href='/resources/agent-resources'>
+                  <a
+                    className='flex flex-start items-center rounded group  hover:shadow-2xl mb-3 md:mb-0'
+                    aria-label='Useful Resources for Brokers'>
                     <button
                       type='button'
                       className='inline-flex items-center px-6 py-3 border-2 border-gray-300 hover:border-gray-400 dark:border-red-700 shadow-sm text-base font-medium rounded-md text-gray-700 bg-white dark:bg-gray-300 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-700'>
@@ -410,8 +412,10 @@ export default function Home() {
             own collection of articles, webinars, industry white papers, case
             studies, videos, infographics, and program supplementals.
           </p>
-          <Link href='/resources/broker-resources'>
-            <a className='mt-8 w-full inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-gray-600 bg-white dark:text-gray-300 dark:bg-gray-600 dark:hover:text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-500 sm:w-auto'>
+          <Link href='/resources/agent-resources'>
+            <a
+              className='mt-8 w-full inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-gray-600 bg-white dark:text-gray-300 dark:bg-gray-600 dark:hover:text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-500 sm:w-auto'
+              aria-label='Useful Resources for Brokers'>
               Learn more
             </a>
           </Link>
