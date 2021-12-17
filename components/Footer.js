@@ -165,7 +165,7 @@ export default function Footer() {
                 The latest info & updates, sent to your inbox weekly.
               </p>
               <form className='mt-2 flex sm:max-w-md' onSubmit={sendEmail}>
-                <label htmlFor='email-address' className='sr-only'>
+                <label htmlFor='subscriber_email' className='sr-only'>
                   Email address
                 </label>
                 <input
