@@ -46,7 +46,7 @@ const navigation = {
       programs: [
         {
           name: 'Broker Resources',
-          href: '/resources/broker-resources',
+          href: '/resources/agent-resources',
           aria: 'Useful Resources for Brokers',
         },
         // {
