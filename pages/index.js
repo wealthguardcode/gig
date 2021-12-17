@@ -113,7 +113,7 @@ export default function Home() {
             <div className='md:py-16 text-center relative'>
               <h1 className='text-4xl tracking-tight font-extrabold text-gray-900  sm:text-5xl md:text-6xl'>
                 <span className='block xl:inline'>Commercial Insurance</span>{' '}
-                <span className='block text-red-700 font-extrabold '>
+                <span className='block text-red-600 font-extrabold '>
                   Programs &{' '}
                   <span className='block md:inline mt-3 md:mt-0'>
                     Brokerage
@@ -130,7 +130,7 @@ export default function Home() {
                   diversity of products, and underwriting integrity!
                 </span>
               </p>
-              <div className='border-t-4 w-1/5 mx-auto py-2 border-red-700' />
+              <div className='border-t-4 w-1/5 mx-auto py-2 border-red-600' />
               <p className='mt-3 max-w-md mx-auto prose lg:prose-xl md:text-gray-200 text-gray-900 font-semibold  md:mt-5  md:max-w-3xl'>
                 Whether you&apos;re a business owner or insurance broker,
                 you&apos;ll find industry-specific resources and specialty
@@ -140,7 +140,7 @@ export default function Home() {
               <div className='flex justify-center mt-8 mb-4'>
                 <div className='mt-3 rounded-md shadow sm:mt-0 sm:ml-3'>
                   <Link href='/programs'>
-                    <a className='w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-red-700 hover:bg-red-600 md:py-4 md:text-lg md:px-10'>
+                    <a className='w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-red-600 hover:bg-red-700 md:py-4 md:text-lg md:px-10'>
                       For Brokers
                     </a>
                   </Link>
@@ -165,7 +165,7 @@ export default function Home() {
                     href='/images/theWealthGuardDifference.pdf'
                     target='_blank'
                     rel='noreferrer'
-                    className='w-full flex items-center justify-center px-8 py-3 border-2 border-red-700 hover:border-red-600 dark:hover:border-red-600 text-base font-medium rounded-md text-black bg-gray-200 hover:bg-gray-50 md:py-4 md:text-lg md:px-10'>
+                    className='w-full flex items-center justify-center px-8 py-3 border-2 border-red-600 hover:border-red-700 dark:hover:border-red-600 text-base font-medium rounded-md text-black bg-gray-200 hover:bg-gray-50 md:py-4 md:text-lg md:px-10'>
                     <DocumentDownloadIcon height={30} />
                     <span>The WealthGuard Difference</span>
                   </a>
