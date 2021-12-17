@@ -416,7 +416,7 @@ export default function Home() {
             <a
               className='mt-8 w-full inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-gray-600 bg-white dark:text-gray-300 dark:bg-gray-600 dark:hover:text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-500 sm:w-auto'
               aria-label='Useful Resources for Brokers'>
-              Learn more
+              Broker Resources
             </a>
           </Link>
         </div>
