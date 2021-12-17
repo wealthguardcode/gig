@@ -1,5 +1,6 @@
 import { Fragment, useState } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { Dialog, Popover, Tab, Transition } from '@headlessui/react'
 import { MenuIcon, XIcon } from '@heroicons/react/outline'
 import { useTheme } from 'next-themes'
@@ -235,8 +236,9 @@ export default function Header() {
                     <Link href='/'>
                       <a>
                         <span className='sr-only'>Workflow</span>
-                        <img
-                          className='h-12 w-auto'
+                        <Image
+                          height={50}
+                          width={160}
                           src='/images/wig-logo-full.png'
                           alt='WealthGuard Logo'
                         />
@@ -392,7 +394,9 @@ export default function Header() {
                   <Link href='/'>
                     <a className='lg:hidden'>
                       <span className='sr-only'>Workflow</span>
-                      <img
+                      <Image
+                        height={50}
+                        width={160}
                         src='/images/wig-logo-full.png'
                         alt='WealthGuard Logo'
                         className='h-12 w-auto'

@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import emailjs from 'emailjs-com'
 import { toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
@@ -130,7 +131,9 @@ export default function Footer() {
             <div className='col-span-1 md:col-span-2 lg:row-start-1 lg:col-start-1'>
               <Link href='/'>
                 <a>
-                  <img
+                  <Image
+                    height={60}
+                    width={60}
                     src='/images/wig-logo.png'
                     alt='Logo'
                     className='h-12 w-auto'
