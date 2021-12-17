@@ -9,7 +9,7 @@ import {
   BookOpenIcon,
   DocumentDownloadIcon,
 } from '@heroicons/react/outline'
-
+import Image from 'next/image'
 import Link from 'next/link'
 
 const faqs = [
@@ -241,23 +241,25 @@ export default function Home() {
                   For Brokers
                 </h1>
               </div>
-              <div className='flex flex-col md:flex-row '>
+              <div className='grid grid-cols-1 md:grid-cols-2'>
                 <div className='flex flex-col justify-center items-center p-4'>
                   <h1 className='text-5xl tracking-wider dark:text-gray-900'>
                     Brokers
                   </h1>
-                  <p className='mt-3 prose-xl mx-4 dark:text-gray-500'>
+                  <p className='mt-3 prose-xl mx-8 dark:text-gray-500'>
                     We work with selective brokers across the USA to bring your
                     clients best-in-class insurance solutions and provide
                     extensive resources to help you expand your business.
                   </p>
                 </div>
 
-                <div className=''>
-                  <img
-                    className='w-3/4 mx-auto my-2 rounded'
+                <div className='mx-4'>
+                  <Image
+                    className='mx-auto my-2 rounded'
                     src='https://images.unsplash.com/photo-1450101499163-c8848c66ca85?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80'
                     alt='Insurance Broker'
+                    width={600}
+                    height={400}
                   />
                 </div>
               </div>
