@@ -243,9 +243,9 @@ export default function Home() {
               </div>
               <div className='flex flex-col md:flex-row '>
                 <div className='flex flex-col justify-center items-center p-4'>
-                  <h3 className='text-5xl tracking-wider dark:text-gray-900'>
+                  <h1 className='text-5xl tracking-wider dark:text-gray-900'>
                     Brokers
-                  </h3>
+                  </h1>
                   <p className='mt-3 prose-xl mx-4 dark:text-gray-500'>
                     We work with selective brokers across the USA to bring your
                     clients best-in-class insurance solutions and provide
