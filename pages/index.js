@@ -186,12 +186,12 @@ export default function Home() {
 
         <div className='max-w-7xl mx-auto py-8 px-4 sm:px-6 lg:pb-24 lg:pt-12 lg:px-8 lg:grid lg:grid-cols-2 lg:gap-x-8'>
           <div className='mt-12 lg:mt-0 lg:col-span-2'>
-            <dl className='space-y-10 sm:space-y-0 sm:grid sm:grid-cols-2 sm:grid-rows-4 sm:grid-flow-col sm:gap-x-6 sm:gap-y-10 lg:gap-x-8 '>
+            <div className='space-y-10 sm:space-y-0 sm:grid sm:grid-cols-2 sm:grid-rows-4 sm:grid-flow-col sm:gap-x-6 sm:gap-y-10 lg:gap-x-8 '>
               {features.map((feature) => (
                 <div
                   key={feature.name}
                   className='relative cursor-pointer border-4  border-opacity-50 rounded-lg p-4 shadow-lg hover:shadow-2xl hover:border-gray-300 dark:hover:border-red-700'>
-                  <dt>
+                  <div>
                     <CheckIcon
                       className='absolute h-8 w-8 text-green-500'
                       aria-hidden='true'
@@ -203,17 +203,17 @@ export default function Home() {
                         </p>
                       </a>
                     </Link>
-                  </dt>
+                  </div>
                   <Link href='/programs'>
                     <a>
-                      <dd className='mt-2 ml-9  prose-lg text-gray-500 dark:text-gray-400'>
+                      <div className='mt-2 ml-9  prose-lg text-gray-500 dark:text-gray-400'>
                         {feature.description}
-                      </dd>
+                      </div>
                     </a>
                   </Link>
                 </div>
               ))}
-            </dl>
+            </div>
           </div>
         </div>
       </div>
@@ -235,7 +235,7 @@ export default function Home() {
           </div>
 
           <div className='mt-10 shadow-xl rounded-xl dark:bg-gray-300'>
-            <dl className='space-y-10 md:space-y-0 grid grid-cols-1 md:gap-x-8 md:gap-y-10 shadow-2xl'>
+            <div className='space-y-10 md:space-y-0 grid grid-cols-1 md:gap-x-8 md:gap-y-10 shadow-2xl'>
               <div className='my-10'>
                 <h1 className='text-4xl text-white bg-gradient-to-r from-gray-400 via-gray-500 to-red-700 font-bold mx-2 text-center rounded py-1'>
                   For Brokers
@@ -311,7 +311,7 @@ export default function Home() {
                   </a>
                 </Link>
               </div>
-            </dl>
+            </div>
 
             {/* Brokers FAQ */}
             {/* <div className='bg-gray-50 dark:bg-gray-700'>
