@@ -55,23 +55,63 @@ function sendEmail(e) {
 
 const footerNavigation = {
   links: [
-    { name: 'All Programs', href: '/programs' },
-    { name: 'WestWall Marina', href: '/programs/westwall-marina' },
-    { name: 'Assisted Living', href: '/programs/assisted-living-facility' },
-    { name: 'Cargo & Logistics', href: '/programs/cargo-and-logistics' },
-    { name: 'Active Assailant', href: '/programs/active-assailant' },
-    { name: 'Terrorism & Sabotage', href: '/programs/terrorism-and-sabotage' },
+    { name: 'All Programs', href: '/programs', aria: 'View All Programs' },
+    {
+      name: 'WestWall Marina',
+      href: '/programs/westwall-marina',
+      aria: 'WestWall Marina',
+    },
+    {
+      name: 'Assisted Living',
+      href: '/programs/assisted-living-facility',
+      aria: 'Assisted Living',
+    },
+    {
+      name: 'Cargo & Logistics',
+      href: '/programs/cargo-and-logistics',
+      aria: 'Cargo & Logistics',
+    },
+    {
+      name: 'Active Assailant',
+      href: '/programs/active-assailant',
+      aria: 'Active Assailant',
+    },
+    {
+      name: 'Terrorism & Sabotage',
+      href: '/programs/terrorism-and-sabotage',
+      aria: 'Terrorism & Sabotage',
+    },
   ],
   resources: [
-    { name: 'Resources', href: '/resources/broker-resources' },
-    { name: 'Privacy Policy', href: '/resources/privacy' },
-    { name: 'Terms & Conditions', href: '/resources/terms' },
+    {
+      name: 'Resources',
+      href: '/resources/broker-resources',
+      aria: 'Useful Resources for Brokers',
+    },
+    {
+      name: 'Privacy Policy',
+      href: '/resources/privacy',
+      aria: 'Privacy Policy',
+    },
+    {
+      name: 'Terms & Conditions',
+      href: '/resources/terms',
+      aria: 'Terms & Conditions',
+    },
     // { name: 'FAQ', href: '/resources/faq' },
   ],
   company: [
-    { name: 'About Us', href: '/about-us/about-us' },
-    { name: 'Leadership', href: '/about-us/leadership' },
-    { name: 'Contact Us', href: '/contact-us' },
+    {
+      name: 'About Us',
+      href: '/about-us/about-us',
+      aria: 'About Us',
+    },
+    {
+      name: 'Leadership',
+      href: '/about-us/leadership',
+      aria: "WealthGuard's Leadership",
+    },
+    { name: 'Contact Us', href: '/contact-us', aria: 'Contact Us' },
   ],
 }
 

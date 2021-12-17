@@ -12,26 +12,32 @@ const navigation = {
         {
           name: 'View All Programs',
           href: '/programs',
+          aria: 'View All Programs',
         },
         {
           name: 'WestWall Marina Program',
           href: '/programs/westwall-marina',
+          aria: 'WestWall Marina Program',
         },
         {
           name: 'Assisted Living Facility',
           href: '/programs/assisted-living-facility',
+          aria: 'Assisted Living Facility',
         },
         {
           name: 'Cargo & Logistics',
           href: '/programs/cargo-and-logistics',
+          aria: 'Cargo & Logistics',
         },
         {
           name: 'Active Assailant',
           href: '/programs/active-assailant',
+          aria: 'Active Assailant',
         },
         {
           name: 'Terrorism & Sabotage',
           href: '/programs/terrorism-and-sabotage',
+          aria: 'Terrorism & Sabotage',
         },
       ],
     },
@@ -41,6 +47,7 @@ const navigation = {
         {
           name: 'Broker Resources',
           href: '/resources/broker-resources',
+          aria: 'Useful Resources for Brokers',
         },
         // {
         //   name: 'FAQ',
@@ -54,15 +61,17 @@ const navigation = {
         {
           name: 'About Us Overview',
           href: '/about-us/about-us',
+          aria: 'About Us Overview',
         },
         {
           name: 'Leadership',
           href: '/about-us/leadership',
+          aria: "WealthGuard's Leadership",
         },
       ],
     },
   ],
-  pages: [{ name: 'Contact Us', href: '/contact-us' }],
+  pages: [{ name: 'Contact Us', href: '/contact-us', aria: 'Contact Us' }],
 }
 
 function classNames(...classes) {
@@ -146,7 +155,7 @@ export default function Header() {
                               <a
                                 href={item.href}
                                 className='mt-6 block font-medium text-gray-900 dark:text-gray-300 hover:text-red-700 dark:hover:text-red-700'
-                                aria-label={item.name}>
+                                aria-label={item.aria}>
                                 <span
                                   className='absolute z-10 inset-0'
                                   aria-hidden='true'
@@ -167,7 +176,7 @@ export default function Header() {
                       <a
                         href={page.href}
                         className='-m-2 p-2 block font-medium text-gray-900 dark:text-gray-300 hover:text-red-700 dark:hover:text-red-700'
-                        aria-label={page.name}>
+                        aria-label={page.aria}>
                         {page.name}
                       </a>
                     </div>
@@ -299,7 +308,7 @@ export default function Header() {
                                               <a
                                                 href={item.href}
                                                 className='mt-4 font-base block font-medium text-gray-900 hover:text-red-700 hover:bg-gray-100 dark:hover:bg-gray-700 dark:text-gray-50 dark:hover:text-red-700'
-                                                aria-label={item.name}>
+                                                aria-label={item.aria}>
                                                 <span
                                                   className='absolute z-10 inset-0 group-hover:block'
                                                   aria-hidden='true'
@@ -323,7 +332,7 @@ export default function Header() {
                             key={page.name}
                             href={page.href}
                             className='flex items-center font-medium text-gray-700 hover:text-red-700 dark:text-gray-50 dark:hover:text-red-700'
-                            aria-label={page.name}>
+                            aria-label={page.aria}>
                             {page.name}
                           </a>
                         ))}
