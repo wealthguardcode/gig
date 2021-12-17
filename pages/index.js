@@ -440,26 +440,25 @@ export default function Home() {
               and learn why!
             </p>
           </div>
-          <div>
-            <dl className='mt-12 space-y-10 sm:space-y-0 sm:grid sm:grid-cols-2 sm:gap-x-6 sm:gap-y-12 lg:grid-cols-3 lg:gap-x-8 hover:border-gray-100'>
-              {features2.map((feature) => (
-                <div
-                  key={feature.name}
-                  className='shadow-xl hover:shadow-2xl rounded-xl m-2 p-4 dark:bg-gray-700'>
-                  <dt>
-                    <div className='flex items-center justify-center h-12 w-12 rounded-md bg-gray-900 dark:bg-red-600 opacity-70 text-white mx-auto'>
-                      <feature.icon className='h-6 w-6' aria-hidden='true' />
-                    </div>
-                    <p className='mt-5 text-xl leading-6 font-medium text-red-700 dark:text-gray-300 text-center '>
-                      {feature.name}
-                    </p>
-                  </dt>
-                  <dd className='mt-3 prose-lg text-gray-500 dark:text-gray-400 md:text-center'>
-                    {feature.description}
-                  </dd>
+
+          <div className='mt-12 space-y-10 sm:space-y-0 sm:grid sm:grid-cols-2 sm:gap-x-6 sm:gap-y-12 lg:grid-cols-3 lg:gap-x-8 hover:border-gray-100'>
+            {features2.map((feature) => (
+              <div
+                key={feature.name}
+                className='shadow-xl hover:shadow-2xl rounded-xl m-2 p-4 dark:bg-gray-700'>
+                <div>
+                  <div className='flex items-center justify-center h-12 w-12 rounded-md bg-gray-900 dark:bg-red-600 opacity-70 text-white mx-auto'>
+                    <feature.icon className='h-6 w-6' aria-hidden='true' />
+                  </div>
+                  <p className='mt-5 text-xl leading-6 font-medium text-red-700 dark:text-gray-300 text-center '>
+                    {feature.name}
+                  </p>
                 </div>
-              ))}
-            </dl>
+                <div className='mt-3 prose-lg text-gray-500 dark:text-gray-400 md:text-center'>
+                  {feature.description}
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </div>
