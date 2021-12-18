@@ -120,7 +120,7 @@ export default function Home() {
                   </span>
                 </span>
               </h1>
-              <p className='outline my-6 pb-4 font-bold text-xl md:text-gray-300 text-gray-900 lg:text-3xl tracking-tight'>
+              <p className='outline my-3 pb-4 font-bold text-xl md:text-gray-300 text-gray-900 lg:text-3xl tracking-tight'>
                 <span className='block xl:inline'>
                   Since 2016 we have been providing insurance solutions with
                   expertise,
@@ -131,7 +131,7 @@ export default function Home() {
                 </span>
               </p>
               <div className='border-t-4 w-1/5 mx-auto py-2 border-red-700' />
-              <p className='mt-3 max-w-md mx-auto prose lg:prose-xl md:text-gray-300 text-gray-900 font-semibold  md:mt-5  md:max-w-3xl'>
+              <p className='hidden md:block mt-3 max-w-md mx-auto prose lg:prose-xl md:text-gray-300 text-gray-900 font-semibold  md:mt-5  md:max-w-3xl'>
                 Whether you&apos;re a business owner or insurance broker,
                 you&apos;ll find industry-specific resources and specialty
                 insurance coverages to meet the unique needs of the industries
@@ -365,7 +365,7 @@ export default function Home() {
               WealthGuard Testimonial
             </h1>
             <blockquote className='mt-6 '>
-              <div className='max-w-3xl mx-auto text-center text-2xl leading-9 font-medium text-gray-900 dark:text-gray-400'>
+              <div className='max-w-3xl mx-auto text-center text-lg md:text-2xl leading-9 font-medium text-gray-900 dark:text-gray-400'>
                 <p className=''>
                   &ldquo;WealthGuard&apos;s program manager and team were a
                   pleasure to work with. They were very knowledgeable, sincere,

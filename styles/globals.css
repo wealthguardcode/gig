@@ -35,6 +35,46 @@
   -webkit-text-stroke-color: #494949;
 }
 
+/* Media Queries */
+
+/* iPad Pro */
+/* Landscape */
+/* @media only screen and (min-width: 1366px) and (orientation: landscape) {
+  .custom-img {
+    background-image: url('https://images.unsplash.com/photo-1541777594744-addc2de9d110?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1470&q=80');
+    background-size: 100vw 100vh;
+    background-repeat: no-repeat;
+  }
+} */
+
+/*Portrait*/
+/* @media only screen and (min-width: 1024px) and (orientation: portrait) {
+  .custom-img {
+    background-image: url('https://images.unsplash.com/photo-1541777594744-addc2de9d110?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1470&q=80');
+    background-size: 100vw 100vh;
+    background-repeat: no-repeat;
+  }
+} */
+
+/* Landscape */
+/* @media only screen and (min-device-width: 1112px) and (orientation: landscape) {
+  .custom-img {
+    background-image: url('https://images.unsplash.com/photo-1541777594744-addc2de9d110?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1470&q=80');
+    background-size: 100vw 100vh;
+    background-repeat: no-repeat;
+  }
+} */
+
+/*Portrait*/
+/* @media only screen and (min-device-width: 834px) and (orientation: portrait) {
+  .custom-img {
+    background-image: url('https://images.unsplash.com/photo-1541777594744-addc2de9d110?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1470&q=80');
+    background-size: 100vw 100vh;
+    background-repeat: no-repeat;
+  }
+} */
+
+/* Mobile */
 @media only screen and (max-width: 600px) {
   .custom-img {
     background-image: url('https://images.unsplash.com/photo-1541777594744-addc2de9d110?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1470&q=80');
