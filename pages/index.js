@@ -106,7 +106,7 @@ export default function Home() {
           <div className='h-screen mx-auto w-full px-4 sm:mt-0'>
             {/* BG Image */}
 
-            <div className='absolute inset-0 flex items-center justify-center h-screen md:mb-12 bg-fixed md:bg-center bg-cover custom-img'>
+            <div className='absolute inset-0 flex items-center justify-center h-screen md:mb-12 bg-fixed lg:bg-center bg-cover custom-img'>
               <div className='absolute inset-0 md:bg-gray-400 mix-blend-multiply' />
             </div>
 
