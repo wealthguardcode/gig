@@ -54,13 +54,13 @@ export default function AboutUsOverview() {
       </div>
 
       {/* CTA section */}
-      <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-2 md:mt-0 '>
-        <div className='p-10 mx-10 -mt-16 md:-mt-16 relative flex flex-col bg-white border-2 border-gray-300 hover:border-gray-400 dark:hover:border-red-600 rounded-lg shadow-xl hover:shadow-2xl mb-4 dark:bg-gray-900'>
+      <div className='grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 mt-2 md:mt-0 '>
+        <div className='p-4 lg:p-10 mx-3 md:mx-5 xl:mx-10 -mt-16 md:-mt-16 relative flex flex-col bg-white border-2 border-gray-300 hover:border-gray-400 dark:hover:border-red-600 rounded-lg shadow-xl hover:shadow-2xl mb-4 dark:bg-gray-900'>
           <CogIcon height={80} className='dark:text-gray-300' />
           <h1 className='text-3xl tracking-wider my-4 text-center font-semibold dark:text-gray-300'>
             Programs
           </h1>
-          <p className='prose prose-lg g my-2 dark:text-gray-400'>
+          <p className='prose prose-lg  my-2 dark:text-gray-400'>
             We have years of insurance experience helping carriers and brokers
             provide solutions to their clients. Experience the difference of
             WealthGuard&apos;s newest Programs and Binding Authority division:
@@ -75,7 +75,7 @@ export default function AboutUsOverview() {
             <li>Deductible buy-down options</li>
           </ul>
         </div>
-        <div className='p-10 mx-10 md:-mt-16 relative flex flex-col bg-white border-2 border-gray-300 hover:border-gray-400 dark:hover:border-red-600 rounded-lg shadow-xl hover:shadow-2xl mb-4 dark:bg-gray-900'>
+        <div className='p-4 lg:p-10 mx-3 md:mx-5 xl:mx-10 md:-mt-16 relative flex flex-col bg-white border-2 border-gray-300 hover:border-gray-400 dark:hover:border-red-600 rounded-lg shadow-xl hover:shadow-2xl mb-4 dark:bg-gray-900'>
           <ScaleIcon height={80} className='dark:text-gray-300' />
           <h1 className='text-3xl tracking-wider my-4 text-center font-semibold dark:text-gray-300'>
             Stability
@@ -88,7 +88,7 @@ export default function AboutUsOverview() {
             serviced.
           </p>
         </div>
-        <div className='p-10 mx-10 md:mt-16 lg:-mt-16 relative flex flex-col bg-white border-2 border-gray-300 hover:border-gray-400 dark:hover:border-red-600 rounded-lg shadow-xl hover:shadow-2xl mb-4 dark:bg-gray-900'>
+        <div className='p-4 lg:p-10 mx-3 md:mx-5 xl:mx-10 md:mt-16 xl:-mt-16 relative flex flex-col bg-white border-2 border-gray-300 hover:border-gray-400 dark:hover:border-red-600 rounded-lg shadow-xl hover:shadow-2xl mb-4 dark:bg-gray-900'>
           <UserGroupIcon height={80} className='dark:text-gray-300' />
           <h1 className='text-3xl tracking-wider my-4 text-center font-semibold dark:text-gray-300'>
             Relationships
@@ -117,7 +117,7 @@ export default function AboutUsOverview() {
 
       {/* Why WealthGuard - content */}
       <div className='grid grid-cols-1 md:grid-cols-2 md:col-span-6 lg:col-span-4 mt-2 md:mt-0'>
-        <div className='p-10 mx-5 lg:mx-16 flex flex-col bg-red-300 dark:bg-red-400 border-t-2 border-gray-600 dark:border-red-500 rounded-lg shadow-xl hover:shadow-2xl mb-4'>
+        <div className='p-6 lg:p-10 mx-5 lg:mx-16 flex flex-col bg-red-300 dark:bg-red-400 border-t-2 border-gray-600 dark:border-red-500 rounded-lg shadow-xl hover:shadow-2xl mb-4'>
           <div className='mx-auto'>
             <h1 className='text-3xl tracking-wider my-4 font-semibold dark:text-gray-800'>
               Focus
@@ -139,7 +139,7 @@ export default function AboutUsOverview() {
           </div>
         </div>
 
-        <div className='p-10 mx-5 lg:mx-16 flex flex-col bg-gray-300 dark:bg-gray-300 border-t-2 dark:border-red-500 border-gray-600  rounded-lg shadow-xl hover:shadow-2xl mb-4'>
+        <div className='p-8 lg:p-10 mx-5 lg:mx-16 flex flex-col bg-gray-300 dark:bg-gray-300 border-t-2 dark:border-red-500 border-gray-600  rounded-lg shadow-xl hover:shadow-2xl mb-4'>
           <div className='mx-auto'>
             <h1 className='text-3xl tracking-wider my-4 font-semibold dark:text-gray-800'>
               Differentiator
@@ -179,7 +179,7 @@ export default function AboutUsOverview() {
       </div>
 
       {/* Our Mission */}
-      <div className='flex flex-col justify-between items-center md:flex-row p-4 mx-10 md:mx-32 my-10 border-t-2 border-gray-600 hover:border-2 rounded-lg shadow-xl hover:shadow-2xl dark:bg-gray-700'>
+      <div className='flex flex-col justify-between items-center md:flex-row p-2 mx-3 md:mx-10 lg:mx-32 my-10 border-t-2 border-gray-600 hover:border-2 rounded-lg shadow-xl hover:shadow-2xl dark:bg-gray-700'>
         <div className='mx-4 p-4 sm:mx-auto align-middle'>
           <OfficeBuildingIcon height={200} className='dark:text-gray-300' />
         </div>
