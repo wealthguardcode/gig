@@ -279,7 +279,7 @@ export default function Home() {
                     </button>
                   </a>
                 </Link>
-                <Link href='/resources/agent-resources'>
+                <Link href='/resources/broker-resources'>
                   <a
                     className='flex flex-start items-center rounded group  hover:shadow-2xl mb-3 md:mb-0'
                     aria-label='Useful Resources for Brokers'>
@@ -414,7 +414,7 @@ export default function Home() {
             own collection of articles, webinars, industry white papers, case
             studies, videos, infographics, and program supplementals.
           </p>
-          <Link href='/resources/agent-resources'>
+          <Link href='/resources/broker-resources'>
             <a
               className='mt-8 w-full inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-gray-600 bg-white dark:text-gray-300 dark:bg-gray-600 dark:hover:text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-500 sm:w-auto'
               aria-label='Useful Resources for Brokers'>

@@ -86,7 +86,7 @@ const footerNavigation = {
   resources: [
     {
       name: 'Resources',
-      href: '/resources/agent-resources',
+      href: '/resources/broker-resources',
       aria: 'Useful Resources for Brokers',
     },
     {
