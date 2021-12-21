@@ -25,6 +25,9 @@ export default function ProgramsPage({ programs }) {
             src='https://media.graphcms.com/output=format:jpg/resize=,height:800,fit:max/n8fvyRIWRuK9U3wCa2tT'
             layout='fill'
             objectFit='cover'
+            priority={true}
+            placeholder='blur'
+            blurDataURL
             alt="GoGuard's Programs"
           />
           <div
