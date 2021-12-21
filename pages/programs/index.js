@@ -82,17 +82,6 @@ export default function ProgramsPage({ programs }) {
                   </div>
                 </a>
               </Link>
-              <div className='flex justify-center'>
-                <Link href={`/programs/${program.slug}`} passHref>
-                  <a>
-                    {/* <button
-                      type='button'
-                      className='inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-white bg-red-500 dark:bg-red-700 dark:text-white hover:bg-red-700 dark:hover:bg-red-500 dark:hover:text-red-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500'>
-                      Learn more
-                    </button> */}
-                  </a>
-                </Link>
-              </div>
             </div>
           </div>
         ))}
