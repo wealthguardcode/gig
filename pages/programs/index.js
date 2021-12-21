@@ -21,9 +21,10 @@ export default function ProgramsPage({ programs }) {
     <Layout title='WIG | Our Programs'>
       <div className='relative bg-gray-400'>
         <div className='absolute inset-0'>
-          <img
-            className='w-full h-full object-cover'
+          <Image
             src='https://media.graphcms.com/output=format:jpg/resize=,height:800,fit:max/n8fvyRIWRuK9U3wCa2tT'
+            layout='fill'
+            objectFit='cover'
             alt="GoGuard's Programs"
           />
           <div
