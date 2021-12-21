@@ -60,6 +60,9 @@ export default function ProgramsPage({ programs }) {
                   src={program.image.url}
                   height={300}
                   width={400}
+                  priority={true}
+                  placeholder='blur'
+                  blurDataURL
                   alt={program.title}
                 />
               </a>
