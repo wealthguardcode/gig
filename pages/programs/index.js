@@ -58,8 +58,8 @@ export default function ProgramsPage({ programs }) {
                 <Image
                   className='w-full'
                   src={program.image.url}
-                  height={program.image.height}
-                  width={program.image.width}
+                  height={300}
+                  width={400}
                   alt={program.title}
                 />
               </a>
