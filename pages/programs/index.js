@@ -1,6 +1,7 @@
 import Layout from '../../components/Layout'
 import { getPrograms } from '../../lib/data'
 import Link from 'next/link'
+import Image from 'next/image'
 import { MailIcon } from '@heroicons/react/solid'
 
 export const getStaticProps = async () => {
@@ -50,9 +51,11 @@ export default function ProgramsPage({ programs }) {
             key={program.slug}>
             <Link href={`/programs/${program.slug}`} passHref>
               <a>
-                <img
+                <Image
                   className='w-full'
                   src={program.image.url}
+                  height={program.image.height}
+                  width={program.image.width}
                   alt={program.title}
                 />
               </a>
