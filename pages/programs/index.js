@@ -2,7 +2,7 @@ import Layout from '../../components/Layout'
 import { getPrograms } from '../../lib/data'
 import Link from 'next/link'
 import Image from 'next/image'
-import { MailIcon } from '@heroicons/react/solid'
+import { MailIcon, ExternalLinkIcon } from '@heroicons/react/solid'
 
 export const getStaticProps = async () => {
   const data = await getPrograms()
@@ -70,19 +70,26 @@ export default function ProgramsPage({ programs }) {
             <div className='px-6 py-4 flex flex-col items-center'>
               <Link href={`/programs/${program.slug}`} passHref>
                 <a>
-                  <div className='font-bold text-xl mb-2 text-center dark:text-gray-300'>
-                    {program.title}
+                  <div className='font-bold  mb-2 text-center dark:text-gray-300'>
+                    <button
+                      type='button'
+                      className='inline-flex items-center px-3 py-2 border border-transparent text-xl leading-4 font-medium rounded-md text-white bg-red-500 dark:bg-red-700 dark:text-white hover:bg-red-700 dark:hover:bg-red-500 dark:hover:text-red-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500'>
+                      {program.title}{' '}
+                      <span>
+                        <ExternalLinkIcon className='ml-1' height={20} />
+                      </span>
+                    </button>
                   </div>
                 </a>
               </Link>
               <div className='flex justify-center'>
                 <Link href={`/programs/${program.slug}`} passHref>
                   <a>
-                    <button
+                    {/* <button
                       type='button'
                       className='inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-white bg-red-500 dark:bg-red-700 dark:text-white hover:bg-red-700 dark:hover:bg-red-500 dark:hover:text-red-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500'>
                       Learn more
-                    </button>
+                    </button> */}
                   </a>
                 </Link>
               </div>
