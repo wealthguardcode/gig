@@ -1,6 +1,7 @@
 import Layout from '../../components/Layout'
 import { getProgram, getProgramsSlugs } from '../../lib/data'
 import Link from 'next/link'
+import Image from 'next/image'
 import { MailIcon } from '@heroicons/react/solid'
 import he from 'he'
 import { MDXRemote } from 'next-mdx-remote'
@@ -134,9 +135,14 @@ export default function ProgramPage({ program, coverage, highlights }) {
       {/* Hero */}
       <div className='relative bg-gray-400'>
         <div className='absolute inset-0'>
-          <img
-            className='w-full h-full object-cover'
+          <Image
+            className='object-cover'
             src={program.image.url}
+            layout='fill'
+            objectFit='cover'
+            priority={true}
+            placeholder='blur'
+            blurDataURL
             alt={program.title}
           />
           <div
