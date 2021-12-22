@@ -423,16 +423,24 @@ export default function ProgramPage({ program, coverage, highlights }) {
                 <SimpleReactLightbox>
                   <SRLWrapper>
                     <div className='flex justify-between'>
-                      <img
-                        src={program.image.url}
-                        alt={program.title}
-                        className='md:h-32 h-auto md:w-48 w-32 rounded mx-2 md:m-2'
-                      />
-                      <img
-                        src={program.image2.url}
-                        alt={program.title}
-                        className='md:h-32 h-auto md:w-48 w-32 rounded mx-2 md:m-2'
-                      />
+                      <div className='mr-2'>
+                        <Image
+                          src={program.image.url}
+                          alt={program.title}
+                          width={400}
+                          height={300}
+                          className='rounded mx-2 md:m-2'
+                        />
+                      </div>
+                      <div>
+                        <Image
+                          src={program.image2.url}
+                          alt={program.title}
+                          width={400}
+                          height={300}
+                          className='rounded mx-2 md:m-2'
+                        />
+                      </div>
                     </div>
                   </SRLWrapper>
                 </SimpleReactLightbox>
