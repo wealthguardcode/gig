@@ -195,7 +195,7 @@ export default function ProgramPage({ program, coverage, highlights }) {
                           <div className='grid grid-cols-6 gap-6'>
                             <div className='col-span-6'>
                               <label
-                                htmlFor='first-name'
+                                htmlFor='first_name'
                                 className='block text-sm font-medium text-gray-700'>
                                 First name
                               </label>
@@ -210,7 +210,7 @@ export default function ProgramPage({ program, coverage, highlights }) {
 
                             <div className='col-span-6'>
                               <label
-                                htmlFor='last-name'
+                                htmlFor='last_name'
                                 className='block text-sm font-medium text-gray-700'>
                                 Last name
                               </label>
@@ -309,7 +309,7 @@ export default function ProgramPage({ program, coverage, highlights }) {
                             </div>
                             <div className='col-span-6'>
                               <label
-                                htmlFor='tel'
+                                htmlFor='phone'
                                 className='block text-sm font-medium text-gray-700'>
                                 Phone
                               </label>
