@@ -229,10 +229,10 @@ export default function AboutUsOverview() {
             <h2 className='text-base font-semibold uppercase tracking-wider md:text-gray-300 text-red-700'>
               Don&apos;t worry
             </h2>
-            <p className='mt-2 text-white  text-3xl font-extrabold tracking-tight sm:text-4xl'>
+            <p className='mt-2 md:text-white text-red-400 text-3xl font-extrabold tracking-tight sm:text-4xl'>
               We&apos;re here to help
             </p>
-            <p className='mt-3 text-lg md:text-gray-300 text-gray-300'>
+            <p className='mt-3 text-lg md:text-gray-300 text-white'>
               Choosing the right partner, one who takes an interest in your
               success is hard to find. Finding one that will personally work
               with you for years and years is unheard of, especially with
