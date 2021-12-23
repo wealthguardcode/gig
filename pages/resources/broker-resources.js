@@ -80,8 +80,12 @@ export default function BrokerResourcesPage() {
               <div className='flex flex-col justify-center items-center'>
                 <div className=''>
                   <a href={resource.link} target='_blank' rel='noreferrer'>
-                    <img
-                      className='h-20 w-20 rounded-full '
+                    <Image
+                      className='h-20 w-20 rounded-full'
+                      height={80}
+                      width={80}
+                      placeholder='blur'
+                      blurDataURL
                       src={resource.imageUrl}
                       alt={resource.title}
                     />
