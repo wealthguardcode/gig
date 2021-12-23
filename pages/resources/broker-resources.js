@@ -1,5 +1,6 @@
 import Layout from '../../components/Layout'
 import Link from 'next/link'
+import Image from 'next/image'
 import { MailIcon } from '@heroicons/react/solid'
 
 const resources = [
@@ -34,9 +35,14 @@ export default function BrokerResourcesPage() {
     <Layout title='WIG | Broker Resources'>
       <div className='relative bg-red-400'>
         <div className='absolute inset-0'>
-          <img
+          <Image
             className='w-full h-full object-cover'
             src='https://images.unsplash.com/photo-1501290836517-b22a21c522a4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1332&q=80'
+            layout='fill'
+            objectFit='cover'
+            priority={true}
+            placeholder='blur'
+            blurDataURL
             alt='Broker Resources'
           />
           <div
