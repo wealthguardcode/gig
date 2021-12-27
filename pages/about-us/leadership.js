@@ -1,5 +1,6 @@
 import Layout from '../../components/Layout'
 import { MailIcon } from '@heroicons/react/outline'
+import Image from 'next/image'
 
 const people = [
   {
@@ -67,9 +68,14 @@ export default function leadership() {
         {/* Hero */}
         <div className='relative bg-gray-400'>
           <div className='absolute inset-0'>
-            <img
+            <Image
               className='w-full h-full object-cover'
               src='https://media.graphcms.com/output=format:jpg/resize=,height:800,fit:max/6gW60WjTTqiZaNhfQOBD'
+              layout='fill'
+              objectFit='cover'
+              priority={true}
+              placeholder='blur'
+              blurDataURL
               alt="Wealthguard's Leadership"
             />
             <div
@@ -100,8 +106,13 @@ export default function leadership() {
                   <li key={person.name}>
                     <div className='space-y-4 sm:grid sm:grid-cols-3 sm:gap-6 sm:space-y-0 lg:gap-8 dark:text-gray-400'>
                       <div className='h-0 aspect-w-3 aspect-h-2 sm:aspect-w-3 sm:aspect-h-4 bg-white dark:bg-gray-800'>
-                        <img
+                        <Image
                           className='md:object-cover object-contain md:shadow-lg rounded-lg'
+                          layout='fill'
+                          objectFit='cover'
+                          priority={true}
+                          placeholder='blur'
+                          blurDataURL
                           src={person.imageUrl}
                           alt=''
                         />
