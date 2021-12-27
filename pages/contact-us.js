@@ -119,7 +119,7 @@ export default function ContactUsPage() {
                   onSubmit={sendEmail}>
                   <div>
                     <label
-                      htmlFor='first-name'
+                      htmlFor='first_name'
                       className='block text-sm font-medium text-gray-700 dark:text-gray-400'>
                       First name
                     </label>
@@ -135,7 +135,7 @@ export default function ContactUsPage() {
                   </div>
                   <div>
                     <label
-                      htmlFor='last-name'
+                      htmlFor='last_name'
                       className='block text-sm font-medium text-gray-700 dark:text-gray-400'>
                       Last name
                     </label>
@@ -208,7 +208,7 @@ export default function ContactUsPage() {
                   <div className='sm:col-span-2'>
                     <div className='flex justify-between'>
                       <label
-                        htmlFor='how-can-we-help'
+                        htmlFor='message'
                         className='block text-sm font-medium text-gray-700 dark:text-gray-400'>
                         How can we help you?
                       </label>
