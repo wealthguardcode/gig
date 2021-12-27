@@ -212,10 +212,14 @@ export default function AboutUsOverview() {
 
       {/* CTA */}
       <div className='relative bg-gray-800 dark:bg-gray-900 mt-10'>
-        <div className='h-56 bg-gray-800  md:absolute md:left-0 md:h-full md:w-1/2'>
-          <img
+        <div className='relative h-56 bg-gray-800  md:absolute md:left-0 md:h-full md:w-1/2'>
+          <Image
             className='w-full h-full object-cover'
             src='https://images.unsplash.com/39/lIZrwvbeRuuzqOoWJUEn_Photoaday_CSD%20(1%20of%201)-5.jpg?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80'
+            width={940}
+            height={490}
+            layout='fill'
+            objectFit='cover'
             alt='WealthGuard is here to help'
           />
         </div>
