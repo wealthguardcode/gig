@@ -212,27 +212,22 @@ export default function AboutUsOverview() {
 
       {/* CTA */}
       <div className='relative bg-gray-800 dark:bg-gray-900 mt-10'>
-        <div className='h-56 bg-red-600 sm:h-72 md:absolute md:left-0 md:h-full md:w-1/2'>
-          <Image
+        <div className='h-56 bg-gray-800  md:absolute md:left-0 md:h-full md:w-1/2'>
+          <img
             className='w-full h-full object-cover'
             src='https://images.unsplash.com/39/lIZrwvbeRuuzqOoWJUEn_Photoaday_CSD%20(1%20of%201)-5.jpg?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80'
-            layout='fill'
-            objectFit='cover'
-            priority={true}
-            placeholder='blur'
-            blurDataURL
             alt='WealthGuard is here to help'
           />
         </div>
         <div className='relative max-w-7xl mx-auto px-4 py-12 sm:px-6 lg:px-8 lg:py-16'>
           <div className='md:ml-auto md:w-1/2 md:pl-10'>
-            <h2 className='text-base font-semibold uppercase tracking-wider md:text-gray-300 text-red-700'>
+            <h2 className='text-base font-semibold uppercase tracking-wider text-gray-300'>
               Don&apos;t worry
             </h2>
-            <p className='mt-2 md:text-white text-red-400 text-3xl font-extrabold tracking-tight sm:text-4xl'>
+            <p className='mt-2 text-white  text-3xl font-extrabold tracking-tight sm:text-4xl'>
               We&apos;re here to help
             </p>
-            <p className='mt-3 text-lg md:text-gray-300 text-white'>
+            <p className='mt-3 text-lg text-gray-300'>
               Choosing the right partner, one who takes an interest in your
               success is hard to find. Finding one that will personally work
               with you for years and years is unheard of, especially with
