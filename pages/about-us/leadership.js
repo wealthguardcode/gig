@@ -110,11 +110,10 @@ export default function leadership() {
                           className='md:object-cover object-contain md:shadow-lg rounded-lg'
                           layout='fill'
                           objectFit='cover'
-                          priority={true}
                           placeholder='blur'
                           blurDataURL
                           src={person.imageUrl}
-                          alt=''
+                          alt={person.name}
                         />
                       </div>
                       <div className='sm:col-span-2'>
