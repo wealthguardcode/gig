@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import Layout from '../components/Layout'
 
 export default function NotFound() {
@@ -9,11 +10,12 @@ export default function NotFound() {
           <div className='flex-shrink-0 flex justify-center'>
             <Link href='/'>
               <a className='inline-flex'>
-                <span className='sr-only'>Workflow</span>
-                <img
+                <span className='sr-only'>WealthGuard</span>
+                <Image
                   src='/images/wig-logo-full.png'
                   alt='Logo'
-                  className='h-24 w-auto'
+                  height={96}
+                  width={260}
                 />
               </a>
             </Link>
@@ -27,7 +29,7 @@ export default function NotFound() {
                 Page not found.
               </h1>
               <p className='mt-2 text-base text-gray-500 dark:text-gray-400'>
-                Sorry, we couldn’t find the page you’re looking for.
+                Sorry, we couldn&apos;t find the page you&apos;re looking for.
               </p>
               <div className='mt-6'>
                 <Link href='/'>
