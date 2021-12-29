@@ -39,7 +39,7 @@ const features = [
     name: 'Healthcare Facilities',
     description:
       'Every day, 10,000 baby boomers are turning 65.  The increased demand for senior care communities has sky rocketed.',
-    href: '/programs/assisted-living-facility',
+    href: '/programs/healthcare-facility',
   },
   {
     name: 'Marina Insurance',

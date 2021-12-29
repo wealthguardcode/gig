@@ -21,9 +21,9 @@ const navigation = {
           aria: 'WestWall Marina Program',
         },
         {
-          name: 'Assisted Living Facility',
-          href: '/programs/assisted-living-facility',
-          aria: 'Assisted Living Facility',
+          name: 'Healthcare Facility',
+          href: '/programs/healthcare-facility',
+          aria: 'Healthcare Facility',
         },
         {
           name: 'Cargo & Logistics',
