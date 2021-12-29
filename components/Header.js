@@ -40,6 +40,11 @@ const navigation = {
           href: '/programs/terrorism-and-sabotage',
           aria: 'Terrorism & Sabotage',
         },
+        {
+          name: 'Violent & Malicious Acts',
+          href: '/programs/violent-malicious-acts',
+          aria: 'Violent & Malicious Acts',
+        },
       ],
     },
     {

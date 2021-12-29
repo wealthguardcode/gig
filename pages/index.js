@@ -75,7 +75,7 @@ const features = [
     name: 'Violent Malicious Acts',
     description:
       'Designed to help you and your facility move forward after a tragedy, homicide, nonfatal injuries, or substantial damage to property.',
-    href: '/programs',
+    href: '/programs/violent-malicious-acts',
   },
   {
     name: 'Deductible Buy-down Options',
