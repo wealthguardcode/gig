@@ -63,9 +63,9 @@ const footerNavigation = {
       aria: 'WestWall Marina',
     },
     {
-      name: 'Healthcare Facility',
-      href: '/programs/healthcare-facility',
-      aria: 'Healthcare Facility',
+      name: 'Healthcare Facilities',
+      href: '/programs/healthcare-facilities',
+      aria: 'Healthcare Facilities',
     },
     {
       name: 'Cargo & Logistics',
