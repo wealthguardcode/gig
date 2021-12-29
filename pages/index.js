@@ -36,7 +36,7 @@ function classNames(...classes) {
 
 const features = [
   {
-    name: 'Assisted Living Facilities',
+    name: 'Healthcare Facilities',
     description:
       'Every day, 10,000 baby boomers are turning 65.  The increased demand for senior care communities has sky rocketed.',
   },
@@ -180,7 +180,7 @@ export default function Home() {
       <div className='bg-white dark:bg-gray-800'>
         <div className='max-w-3xl mx-auto text-center'>
           <h2 className='text-3xl font-extrabold text-gray-900 dark:text-gray-300 md:pt-2 mt-10 md:mt-0 md:mx-0 pt-1 mx-1'>
-            Specialty Programs Offered: Boats to Loved Ones to Logistics
+            WealthGuard Specialty Programs
           </h2>
         </div>
 
