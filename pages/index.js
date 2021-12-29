@@ -39,61 +39,69 @@ const features = [
     name: 'Healthcare Facilities',
     description:
       'Every day, 10,000 baby boomers are turning 65.  The increased demand for senior care communities has sky rocketed.',
+    href: '/programs/assisted-living-facility',
   },
   {
     name: 'Marina Insurance',
     description:
       'All perils coverage including wind & hail, flood, earthquake and collapse. No co-insurance- Agreed value for property.',
+    href: '/programs/westwall-marina',
   },
   {
     name: 'Coastal Property',
     description:
       'Hurricanes cause more damage than any other natural disaster known to man, and every year they are responsible for 28 billion dollars of destruction.',
+    href: '/programs',
   },
   {
     name: 'Cargo & Logistics',
     description:
       'Our Cargo and Logistics team are leaders in helping your business avoid business disruptions and recover from costly perils.',
+    href: '/programs/cargo-and-logistics',
   },
   {
     name: 'Terrorism & Sabotage',
     description:
       'The harm of life and property brought by acts of terrorism or sabotage is significant and incidents are increasing each year. ',
+    href: '/programs/terrorism-and-sabotage',
   },
   {
     name: 'Active Assailant',
     description:
       'The financial impact can be devastating to a business and this coverage will help keep you in business as you work through the emotional and financial recovery.',
+    href: '/programs/active-assailant',
   },
   {
     name: 'Violent Malicious Acts',
     description:
       'Designed to help you and your facility move forward after a tragedy, homicide, nonfatal injuries, or substantial damage to property.',
+    href: '/programs',
   },
   {
     name: 'Deductible Buy-down Options',
     description:
       'Helping you limit the first-dollar losses that you may experience by reducing or eliminating the deductible.',
+    href: '/programs',
   },
 ]
 
 const features2 = [
   {
-    name: 'Claims Experience',
+    name: 'Experience',
     description:
       'Since 2016 we have been providing insurance solutions with expertise, diversity of products, and underwriting integrity!',
     icon: GlobeAltIcon,
   },
   {
-    name: 'Risk Control',
+    name: 'Innovation',
     description:
       "WealthGuard's executive leadership has unprecedented access to innovative commercial insurance products and solutions.",
     icon: ScaleIcon,
   },
   {
-    name: 'Extensive Coverage',
+    name: 'Relationship Driven',
     description:
-      'We have years of insurance experience helping carriers and brokers provide solutions to their clients. Experience the difference!',
+      'We have years of insurance experience helping carriers and brokers provide solutions to their clients. You will build a one on one relationship at WealthGuard',
     icon: LightningBoltIcon,
   },
 ]
@@ -196,7 +204,7 @@ export default function Home() {
                       className='absolute h-8 w-8 text-green-500'
                       aria-hidden='true'
                     />
-                    <Link href='/programs'>
+                    <Link href={feature.href}>
                       <a>
                         <p className='ml-9 text-xl leading-6 font-medium text-gray-900 dark:text-gray-300'>
                           {feature.name}
@@ -204,7 +212,7 @@ export default function Home() {
                       </a>
                     </Link>
                   </div>
-                  <Link href='/programs'>
+                  <Link href={feature.href}>
                     <a>
                       <div className='mt-2 ml-9  prose-lg text-gray-500 dark:text-gray-400'>
                         {feature.description}
@@ -228,9 +236,9 @@ export default function Home() {
             </p>
             <div className='border-t-4 w-1/5 mx-auto my-6 border-red-700' />
             <p className='mt-4 max-w-2xl prose-2xl md:tracking-wide text-gray-500 dark:text-gray-400 mx-auto'>
-              We partner with businesses to help insure their success by
-              protecting their assets, reducing exposure, and maintaining
-              compliance.
+              We provide our partners help to insure their success by protecting
+              their client&apos;s assets, minimizing exposure, while providing
+              exceptional service.
             </p>
           </div>
 
@@ -404,7 +412,7 @@ export default function Home() {
       </section>
 
       {/* Resources Section */}
-      <div className='bg-gray-700 dark:bg-gray-300'>
+      {/* <div className='bg-gray-700 dark:bg-gray-300'>
         <div className='max-w-2xl mx-auto text-center py-16 px-4 sm:py-20 sm:px-6 lg:px-8'>
           <h2 className='text-3xl font-extrabold text-white dark:text-gray-600 sm:text-4xl'>
             <span className='block'>Helpful Broker Resources</span>
@@ -422,7 +430,7 @@ export default function Home() {
             </a>
           </Link>
         </div>
-      </div>
+      </div> */}
 
       {/* Why Work with WealthGuard */}
       <div className='bg-white dark:bg-gray-800'>
