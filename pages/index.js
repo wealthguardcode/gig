@@ -12,24 +12,6 @@ import {
 import Image from 'next/image'
 import Link from 'next/link'
 
-// const faqs = [
-//   {
-//     question: 'Why should I work with WealthGuard?',
-//     answer:
-//       'As a specialized business insurance and risk management insurance intermediary ranked among the 100 largest in the United States and with many programs existing for over 30 years, we are unique in our ability to innovate, have a unique depth of knowledge in key markets, and our employees are expert in a wide range of brokerage, underwriting, and risk management services for numerous industries.',
-//   },
-//   {
-//     question: 'Lorem ipsum dolor sit amet?',
-//     answer:
-//       'Vivamus posuere facilisis ex sed elementum. Nullam ac dignissim ligula, at ultricies orci. Aliquam vitae porttitor felis. Vestibulum vel elit vel odio rhoncus pharetra. Fusce vitae viverra nulla, et vulputate tortor',
-//   },
-//   {
-//     question: 'What insurance coverages do you provide?',
-//     answer:
-//       'WealthGuard provides insurance coverage for the following programs: West Wall Marina insurance, Assistant Living Facility insurance, Cargo & Logistics insurance, Active Assailant insurance, and Terrorism & Sabotage insurance.',
-//   },
-// ]
-
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
