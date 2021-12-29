@@ -3,7 +3,6 @@ import Image from 'next/image'
 import emailjs from 'emailjs-com'
 import { toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
-// Coastal
 
 function fun() {
   document.getElementById('subscriber_email').value = ''
