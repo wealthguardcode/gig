@@ -33,7 +33,7 @@ const features = [
     name: 'Coastal Property',
     description:
       'Hurricanes cause more damage than any other natural disaster known to man, and every year they are responsible for 28 billion dollars of destruction.',
-    href: '/programs',
+    href: '/programs/coastal-property',
   },
   {
     name: 'Cargo & Logistics',

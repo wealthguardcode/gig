@@ -63,6 +63,11 @@ const footerNavigation = {
       aria: 'WestWall Marina',
     },
     {
+      name: 'Coastal Property Program',
+      href: '/programs/coastal-property',
+      aria: 'Coastal Property Program',
+    },
+    {
       name: 'Healthcare Facilities',
       href: '/programs/healthcare-facilities',
       aria: 'Healthcare Facilities',
