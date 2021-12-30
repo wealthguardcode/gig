@@ -247,9 +247,10 @@ export default function Header() {
                       <a>
                         <span className='sr-only'>Workflow</span>
                         <Image
-                          height={50}
+                          height={60}
                           width={160}
-                          src='/images/wig-logo-full.png'
+                          className=''
+                          src='/images/wig-logo-v3.svg'
                           alt='WealthGuard Logo'
                         />
                       </a>
@@ -407,7 +408,7 @@ export default function Header() {
                       <Image
                         height={50}
                         width={160}
-                        src='/images/wig-logo-full.png'
+                        src='/images/wig-logo-v3.svg'
                         alt='WealthGuard Logo'
                         className='h-12 w-auto'
                       />

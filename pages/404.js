@@ -12,7 +12,7 @@ export default function NotFound() {
               <a className='inline-flex'>
                 <span className='sr-only'>WealthGuard</span>
                 <Image
-                  src='/images/wig-logo-full.png'
+                  src='/images/wig-logo-v3.svg'
                   alt='Logo'
                   height={96}
                   width={260}
