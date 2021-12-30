@@ -92,12 +92,12 @@ export default function Home() {
   return (
     <Layout>
       <div className='relative bg-white dark:bg-gray-800 overflow-hidden'>
-        <div className='relative md:pt-12 pt-16 '>
-          <div className='h-screen mx-auto w-full px-4 sm:mt-0'>
+        <div className='relative pt-16 pb-10 md:pt-12'>
+          <div className='h-3/4 md:h-screen pb-12 mx-auto w-full px-4 sm:mt-0'>
             {/* BG Image */}
 
             <div className='absolute inset-0 flex items-center justify-center h-screen md:mb-12 bg-fixed lg:bg-center bg-cover custom-img'>
-              <div className='absolute inset-0 lg:bg-gray-400 mix-blend-multiply' />
+              <div className='absolute inset-0 bg-gray-400 mix-blend-multiply' />
             </div>
 
             <div className='md:py-16 text-center relative'>
@@ -110,7 +110,7 @@ export default function Home() {
                   </span>
                 </span>
               </h1>
-              <p className='outline my-3 pb-4 font-bold text-xl lg:text-gray-300 text-gray-900 lg:text-3xl tracking-tight'>
+              <p className='outline my-3 pb-4 font-bold text-xl text-gray-300 lg:text-3xl tracking-tight'>
                 <span className='block xl:inline'>
                   Since 2016 we have been providing insurance solutions with
                   expertise,
@@ -121,7 +121,7 @@ export default function Home() {
                 </span>
               </p>
               <div className='border-t-4 w-1/5 mx-auto py-2 border-red-700' />
-              <p className='hidden md:block mt-3 max-w-md mx-auto prose lg:prose-xl lg:text-gray-300 text-gray-900 font-semibold  md:mt-5  md:max-w-3xl'>
+              <p className='hidden md:block mt-3 max-w-md mx-auto prose lg:prose-xl text-gray-300  font-semibold  md:mt-5  md:max-w-3xl'>
                 Whether you&apos;re a business owner or insurance broker,
                 you&apos;ll find industry-specific resources and specialty
                 insurance coverages to meet the unique needs of the industries
@@ -146,7 +146,7 @@ export default function Home() {
 
               <div className='flex flex-col justify-center items-center xl:mt-12'>
                 <div className=''>
-                  <h1 className='text-xl font-semibold lg:text-gray-200 text-gray-900 mb-1 xl:mb-4'>
+                  <h1 className='text-xl font-semibold text-gray-200 mb-1 xl:mb-4'>
                     Download Our{' '}
                   </h1>
                 </div>
