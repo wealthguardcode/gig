@@ -50,6 +50,11 @@ const navigation = {
           href: '/programs/violent-malicious-acts',
           aria: 'Violent & Malicious Acts',
         },
+        {
+          name: 'Hard to Place Risk',
+          href: '/programs/hard-to-place-risk',
+          aria: 'Hard to Place Risk',
+        },
       ],
     },
     {

@@ -92,6 +92,11 @@ const footerNavigation = {
       href: '/programs/violent-malicious-acts',
       aria: 'Violent & Malicious Acts',
     },
+    {
+      name: 'Hard to Place Risk',
+      href: '/programs/hard-to-place-risk',
+      aria: 'Hard to Place Risk',
+    },
   ],
   resources: [
     {
@@ -159,7 +164,7 @@ export default function Footer() {
                   <h3 className='text-base font-medium tracking-wider text-gray-900 dark:text-gray-300'>
                     Quick Links
                   </h3>
-                  <ul role='list' className='mt-6 space-y-6'>
+                  <ul role='list' className='mt-6 space-y-4'>
                     {footerNavigation.links.map((item) => (
                       <li key={item.name} className='text-sm'>
                         <a
@@ -176,7 +181,7 @@ export default function Footer() {
                   <h3 className='text-base font-medium tracking-wider text-gray-900 dark:text-gray-300'>
                     Resources
                   </h3>
-                  <ul role='list' className='mt-6 space-y-6'>
+                  <ul role='list' className='mt-6 space-y-4'>
                     {footerNavigation.resources.map((item) => (
                       <li key={item.name} className='text-sm'>
                         <a
@@ -194,7 +199,7 @@ export default function Footer() {
                 <h3 className='text-base font-medium tracking-wider text-gray-900 dark:text-gray-300'>
                   Company
                 </h3>
-                <ul role='list' className='mt-6 space-y-6'>
+                <ul role='list' className='mt-6 space-y-4'>
                   {footerNavigation.company.map((item) => (
                     <li key={item.name} className='text-sm'>
                       <a
