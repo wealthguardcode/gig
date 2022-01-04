@@ -163,7 +163,7 @@ export default function Header() {
                       <Tab.Panel
                         key={category.name}
                         className='px-4 py-6 space-y-12'>
-                        <div className='grid grid-cols-1 gap-x-4 gap-y-8'>
+                        <div className='grid grid-cols-1 gap-x-4 gap-y-4'>
                           {category.programs.map((item) => (
                             <div
                               key={item.name}
