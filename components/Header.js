@@ -16,14 +16,14 @@ const navigation = {
           aria: 'View All Programs',
         },
         {
-          name: 'WestWall Marina Program',
+          name: 'WestWall Marina',
           href: '/programs/westwall-marina',
-          aria: 'WestWall Marina Program',
+          aria: 'WestWall Marina',
         },
         {
-          name: 'Coastal Property Program',
+          name: 'Coastal Property',
           href: '/programs/coastal-property',
-          aria: 'Coastal Property Program',
+          aria: 'Coastal Property',
         },
         {
           name: 'Healthcare Facilities',
@@ -65,10 +65,6 @@ const navigation = {
           href: '/resources/broker-resources',
           aria: 'Useful Resources for Brokers',
         },
-        // {
-        //   name: 'FAQ',
-        //   href: '/resources/faq',
-        // },
       ],
     },
     {
@@ -96,7 +92,6 @@ function classNames(...classes) {
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
-  const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false)
   const { theme, setTheme } = useTheme()
 
   return (
@@ -239,7 +234,6 @@ export default function Header() {
         </Transition.Root>
 
         {/* Large Nav */}
-
         <header className='relative z-10'>
           <nav aria-label='Top'>
             {/* Secondary navigation */}
@@ -250,7 +244,7 @@ export default function Header() {
                   <div className='hidden lg:flex-1 lg:flex lg:items-center'>
                     <Link href='/'>
                       <a>
-                        <span className='sr-only'>Workflow</span>
+                        <span className='sr-only'>WealthGuard</span>
                         <Image
                           height={60}
                           width={160}
@@ -409,7 +403,7 @@ export default function Header() {
                   {/* Logo (lg-) */}
                   <Link href='/'>
                     <a className='lg:hidden'>
-                      <span className='sr-only'>Workflow</span>
+                      <span className='sr-only'>WealthGuard</span>
                       <Image
                         height={50}
                         width={160}

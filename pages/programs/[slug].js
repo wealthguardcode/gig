@@ -150,7 +150,7 @@ export default function ProgramPage({ program, coverage, highlights }) {
             aria-hidden='true'
           />
         </div>
-        <div className='relative max-w-7xl mx-auto py-24 px-4 sm:py-32 sm:px-6 lg:px-8 '>
+        <div className='relative max-w-5xl mx-auto py-24 px-4 sm:py-32 sm:px-6 lg:px-8 '>
           <h1 className='text-4xl font-extrabold tracking-tight text-white  sm:text-5xl lg:text-6xl'>
             {program.title}
           </h1>
@@ -171,7 +171,7 @@ export default function ProgramPage({ program, coverage, highlights }) {
                   {program.subHeading}
                 </p>
               </div>
-              <div className='relative z-10 prose prose-xl md:max-w-md sm:mx-4 md:mx-2 lg:max-w-lg lg:mx-0 mb-10 mx-4'>
+              <div className='relative z-10 prose prose-xl md:max-w-md sm:mx-4 md:mx-2 lg:max-w-xl lg:mx-0 mb-10 mx-4'>
                 <p className='text-lg mr-3 dark:text-gray-400'>
                   {program.description}
                 </p>
@@ -179,7 +179,7 @@ export default function ProgramPage({ program, coverage, highlights }) {
             </div>
 
             <div className='flex flex-col '>
-              <div className='mt-10 sm:mt-0'>
+              <div className='md:mt-10 mb-5 sm:mt-0'>
                 <div className='md:grid md:grid-cols-2 md:gap-3'>
                   <div className='mt-5 md:-mt-40 md:col-span-2 md:ml-12'>
                     <form
@@ -409,8 +409,8 @@ export default function ProgramPage({ program, coverage, highlights }) {
 
           <div className='lg:grid lg:grid-cols-1 lg:gap-8 lg:items-end'>
             <div className=' '>
-              <div className='prose prose-xl md:max-w-lg'>
-                <p className='mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 dark:text-gray-300 sm:text-4xl'>
+              <div className='prose prose-xl md:max-w-md lg:max-w-xl'>
+                <p className='mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 dark:text-gray-300 md:text-4xl'>
                   Coverage
                 </p>
                 <div className='dark:text-gray-400'>
@@ -429,7 +429,7 @@ export default function ProgramPage({ program, coverage, highlights }) {
                           alt={program.title}
                           width={400}
                           height={300}
-                          className='rounded mx-2 md:m-2'
+                          className='rounded mx-2 md:m-2 cursor-pointer'
                         />
                       </div>
                       <div>
@@ -438,7 +438,7 @@ export default function ProgramPage({ program, coverage, highlights }) {
                           alt={program.title}
                           width={400}
                           height={300}
-                          className='rounded mx-2 md:m-2'
+                          className='rounded mx-2 md:m-2 cursor-pointer'
                         />
                       </div>
                     </div>
