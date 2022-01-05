@@ -76,11 +76,6 @@ export default function ContactUsPage() {
             <h1 className='text-4xl leading-10 font-extrabold tracking-tight text-gray-900 dark:text-gray-300 text-center sm:text-5xl sm:leading-none lg:text-6xl'>
               Contact Us
             </h1>
-            {/* <p className='mt-6 max-w-3xl mx-auto text-xl leading-normal text-gray-500 dark:text-gray-400 text-center'>
-              Convallis feugiat et aliquet pellentesque dictum nisi, velit.
-              Egestas fermentum adipiscing risus quam ac consectetur mattis
-              turpis tristique.
-            </p> */}
           </div>
         </div>
 
