@@ -180,7 +180,7 @@ export default function Home() {
               {features.map((feature) => (
                 <div
                   key={feature.name}
-                  className='relative cursor-pointer border-4  border-opacity-50 rounded-lg p-4 shadow-lg hover:shadow-2xl hover:border-gray-300 dark:hover:border-red-700'>
+                  className='relative cursor-pointer border-4 border-opacity-50 rounded-lg p-4 shadow-lg hover:shadow-2xl hover:border-gray-300 dark:hover:border-red-700'>
                   <div>
                     <CheckIcon
                       className='absolute h-8 w-8 text-green-500'
@@ -196,7 +196,7 @@ export default function Home() {
                   </div>
                   <Link href={feature.href}>
                     <a>
-                      <div className='mt-2 ml-9  prose-lg text-gray-500 dark:text-gray-400'>
+                      <div className='mt-2 ml-9 prose-lg text-gray-500 dark:text-gray-400'>
                         {feature.description}
                       </div>
                     </a>
@@ -255,7 +255,7 @@ export default function Home() {
               </div>
               <div className='flex flex-col items-center mt- md:flex-row md:justify-around p-4'>
                 <Link href='/programs'>
-                  <a className='flex flex-start items-center rounded group  hover:shadow-2xl mb-3 md:mb-0'>
+                  <a className='flex flex-start items-center rounded group hover:shadow-2xl mb-3 md:mb-0'>
                     <button
                       type='button'
                       className='inline-flex items-center px-6 py-3 border-2 border-gray-300 hover:border-gray-400 dark:border-red-700 shadow-sm text-base font-medium rounded-md text-gray-700 bg-white dark:bg-gray-300 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-700'>
@@ -271,7 +271,7 @@ export default function Home() {
                 </Link>
                 <Link href='/resources/broker-resources'>
                   <a
-                    className='flex flex-start items-center rounded group  hover:shadow-2xl mb-3 md:mb-0'
+                    className='flex flex-start items-center rounded group hover:shadow-2xl mb-3 md:mb-0'
                     aria-label='Useful Resources for Brokers'>
                     <button
                       type='button'
@@ -288,7 +288,7 @@ export default function Home() {
                 </Link>
 
                 <Link href='/contact-us'>
-                  <a className='flex flex-start items-center rounded group  hover:shadow-2xl mb-3 md:mb-0'>
+                  <a className='flex flex-start items-center rounded group hover:shadow-2xl mb-3 md:mb-0'>
                     <button
                       type='button'
                       className='inline-flex items-center px-6 py-3 border-2 border-gray-300 hover:border-gray-400 dark:border-red-700 shadow-sm text-base font-medium rounded-md text-gray-700 bg-white dark:bg-gray-300 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-700'>

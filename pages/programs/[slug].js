@@ -150,11 +150,11 @@ export default function ProgramPage({ program, coverage, highlights }) {
             aria-hidden='true'
           />
         </div>
-        <div className='relative max-w-5xl mx-auto py-24 px-4 sm:py-32 sm:px-6 lg:px-8 '>
+        <div className='relative max-w-5xl mx-auto py-24 px-4 sm:py-32 sm:px-6 lg:px-8'>
           <h1 className='text-4xl font-extrabold tracking-tight text-white  sm:text-5xl lg:text-6xl'>
             {program.title}
           </h1>
-          <p className='mt-6 text-xl text-gray-100 max-w-xl '>
+          <p className='mt-6 text-xl text-gray-100 max-w-xl'>
             {program.heroDescription}
           </p>
         </div>
@@ -178,7 +178,7 @@ export default function ProgramPage({ program, coverage, highlights }) {
               </div>
             </div>
 
-            <div className='flex flex-col '>
+            <div className='flex flex-col'>
               <div className='md:mt-10 mb-5 sm:mt-0'>
                 <div className='md:grid md:grid-cols-2 md:gap-3'>
                   <div className='mt-5 md:-mt-40 md:col-span-2 md:ml-12'>

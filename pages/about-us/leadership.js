@@ -8,7 +8,7 @@ const people = [
     role: 'Chief Underwriting Officer / Principal',
     imageUrl:
       'https://media.graphcms.com/output=format:jpg/resize=,height:800,fit:max/MgIE76sSmmMepxXOCgtg',
-    bio: 'Joseph is a Partner and acts as the Chief Underwriting Officer for our new in-house underwriting unit.  He has over 30 years of successful global underwriting and executive management experience.  He has held senior positions with several large international carriers as well as two start-up ventures that later went public.  His unique multiline expertise, recognized leadership and strong relationships with key trading partners has helped WealthGuard rapidly develop and grow our specialty programs offering.',
+    bio: 'Joseph is a Partner and acts as the Chief Underwriting Officer for our new in-house underwriting unit. He has over 30 years of successful global underwriting and executive management experience. He has held senior positions with several large international carriers as well as two start-up ventures that later went public. His unique multiline expertise, recognized leadership and strong relationships with key trading partners has helped WealthGuard rapidly develop and grow our specialty programs offering.',
     contact: 'joseph@wealthguardig.com',
   },
   {
@@ -24,7 +24,7 @@ const people = [
     role: 'Accounting',
     imageUrl:
       'https://media.graphcms.com/output=format:jpg/resize=,height:800,fit:max/2VtKDuTiijbnjT6BTQxQ',
-    bio: 'Jaime is the founder of WealthGuard and is our Chief Financial Officer.   Jaime began her career early on as her father, Johnny Graves, owned and operated an independent agency in Nacogdoches, Texas.  She founded WealthGuard with the principals of her dad, "provide the best experience to your clients and more importantly, get to know them".',
+    bio: 'Jaime is the founder of WealthGuard and is our Chief Financial Officer. Jaime began her career early on as her father, Johnny Graves, owned and operated an independent agency in Nacogdoches, Texas. She founded WealthGuard with the principals of her dad, "provide the best experience to your clients and more importantly, get to know them".',
     contact: 'jaime@wealthguardig.com',
   },
   {
@@ -32,7 +32,7 @@ const people = [
     role: 'Contracting & Broker Support',
     imageUrl:
       'https://media.graphcms.com/output=format:jpg/resize=,height:800,fit:max/fUJNTDpTTLuS66I0hOGT',
-    bio: 'Theresa has been with leadership for 10+ years and oversees our broker experience.  She ensures each broker appointed to our company has a smooth experience and is available to assist with any administrative need for you and your agency.',
+    bio: 'Theresa has been with leadership for 10+ years and oversees our broker experience. She ensures each broker appointed to our company has a smooth experience and is available to assist with any administrative need for you and your agency.',
     contact: 'theresa@wealthguardig.com',
   },
   {

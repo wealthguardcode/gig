@@ -18,7 +18,7 @@ export default function AboutUsOverview() {
           <div className='h-full w-full xl:grid xl:grid-cols-2'>
             <div className='h-full xl:relative xl:col-start-2'>
               <Image
-                className=' opacity-25 xl:absolute xl:inset-0'
+                className='opacity-25 xl:absolute xl:inset-0'
                 src='https://images.unsplash.com/reserve/NV0eHnNkQDHA21GC3BAJ_Paris%20Louvr.jpg?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1470&q=80'
                 layout='fill'
                 objectFit='cover'
@@ -60,18 +60,18 @@ export default function AboutUsOverview() {
       </div>
 
       {/* CTA section */}
-      <div className='grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 mt-2 md:mt-0 '>
+      <div className='grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 mt-2 md:mt-0'>
         <div className='p-4 lg:p-10 mx-3 md:mx-5 xl:mx-10 -mt-16 md:-mt-16 relative flex flex-col bg-white border-2 border-gray-300 hover:border-gray-400 dark:hover:border-red-600 rounded-lg shadow-xl hover:shadow-2xl mb-4 dark:bg-gray-900'>
           <CogIcon height={80} className='dark:text-gray-300' />
           <h1 className='text-3xl tracking-wider my-4 text-center font-semibold dark:text-gray-300'>
             Programs
           </h1>
-          <p className='prose prose-lg  my-2 dark:text-gray-400'>
+          <p className='prose prose-lg my-2 dark:text-gray-400'>
             We have years of insurance experience helping carriers and brokers
             provide solutions to their clients. Experience the difference of
             WealthGuard&apos;s newest Programs and Binding Authority division:
           </p>
-          <ul className='list-disc prose prose-lg  ml-6 dark:text-gray-400'>
+          <ul className='list-disc prose prose-lg ml-6 dark:text-gray-400'>
             <li>Assisted Living Facilities Insurance</li>
             <li>Marina Insurance </li>
             <li>Coastal Property</li>
@@ -145,7 +145,7 @@ export default function AboutUsOverview() {
           </div>
         </div>
 
-        <div className='p-8 lg:p-10 mx-5 lg:mx-16 flex flex-col bg-gray-300 dark:bg-gray-300 border-t-2 dark:border-red-500 border-gray-600  rounded-lg shadow-xl hover:shadow-2xl mb-4'>
+        <div className='p-8 lg:p-10 mx-5 lg:mx-16 flex flex-col bg-gray-300 dark:bg-gray-300 border-t-2 dark:border-red-500 border-gray-600 rounded-lg shadow-xl hover:shadow-2xl mb-4'>
           <div className='mx-auto'>
             <h1 className='text-3xl tracking-wider my-4 font-semibold dark:text-gray-800'>
               Differentiator
@@ -228,7 +228,7 @@ export default function AboutUsOverview() {
             <h2 className='text-base font-semibold uppercase tracking-wider text-gray-300'>
               Don&apos;t worry
             </h2>
-            <p className='mt-2 text-white  text-3xl font-extrabold tracking-tight sm:text-4xl'>
+            <p className='mt-2 text-white text-3xl font-extrabold tracking-tight sm:text-4xl'>
               We&apos;re here to help
             </p>
             <p className='mt-3 text-lg text-gray-300'>

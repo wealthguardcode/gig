@@ -247,7 +247,7 @@ export default function ContactUsPage() {
                 <h2 className='text-2xl font-extrabold text-gray-900 dark:text-gray-300 sm:text-3xl'>
                   Get in touch
                 </h2>
-                <div className='mt-8 1 gap-12 sm:gap-x-8 sm:gap-y-12 lg:mt-0 '>
+                <div className='mt-8 1 gap-12 sm:gap-x-8 sm:gap-y-12 lg:mt-0'>
                   <div>
                     <h3 className='text-2xl leading-6 tracking-wider font-medium text-gray-900 dark:text-gray-300'>
                       Office

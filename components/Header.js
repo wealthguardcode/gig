@@ -122,7 +122,7 @@ export default function Header() {
               leave='transition ease-in-out duration-300 transform'
               leaveFrom='translate-x-0'
               leaveTo='-translate-x-full'>
-              <div className='relative w-full bg-white dark:bg-gray-800 shadow-xl pb-12 flex flex-col overflow-y-auto '>
+              <div className='relative w-full bg-white dark:bg-gray-800 shadow-xl pb-12 flex flex-col overflow-y-auto'>
                 <div className='px-4 pt-5 pb-2 flex'>
                   <button
                     type='button'
@@ -310,7 +310,7 @@ export default function Header() {
                                       />
                                     </div>
 
-                                    <div className='relative '>
+                                    <div className='relative'>
                                       <div className='max-w-7xl mx-auto px-8'>
                                         <div className='grid grid-cols-1 py-8'>
                                           {category.programs.map((item) => (
