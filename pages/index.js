@@ -27,7 +27,7 @@ const features = [
     name: 'Marina Insurance',
     description:
       'All perils coverage including wind & hail, flood, earthquake and collapse. No co-insurance- Agreed value for property.',
-    href: '/programs/westwall-marina',
+    href: '/programs/westwall-marina-package',
   },
   {
     name: 'Coastal Property',
@@ -122,7 +122,7 @@ export default function Home() {
               </p>
               <div className='border-t-4 w-1/5 mx-auto py-2 border-red-700' />
               <p className='hidden md:block mt-3 max-w-md mx-auto prose lg:prose-xl text-gray-300  font-semibold  md:mt-5  md:max-w-3xl'>
-                Whether you&apos;re a business owner or insurance broker,
+                Whether you&apos;re a business owner or insurance agent/broker,
                 you&apos;ll find industry-specific resources and specialty
                 insurance coverages to meet the unique needs of the industries
                 we serve.

@@ -16,9 +16,9 @@ const navigation = {
           aria: 'View All Programs',
         },
         {
-          name: 'WestWall Marina',
-          href: '/programs/westwall-marina',
-          aria: 'WestWall Marina',
+          name: 'WestWall Marina Package',
+          href: '/programs/westwall-marina-package',
+          aria: 'WestWall Marina Package',
         },
         {
           name: 'Coastal Property',
