@@ -44,7 +44,7 @@ const people = [
     contact: 'sam@wealthguardig.com',
   },
   {
-    name: 'Jeffrey Fluker',
+    name: 'Jeffery Fluker',
     role: ' Senior Account Executive',
     imageUrl:
       'https://media.graphcms.com/output=format:jpg/resize=,height:800,fit:max/Me8VDakpR1CLJrmh0Zrh',
