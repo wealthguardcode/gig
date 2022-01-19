@@ -245,13 +245,23 @@ export default function Header() {
                     <Link href='/'>
                       <a>
                         <span className='sr-only'>WealthGuard</span>
-                        <Image
-                          height={60}
-                          width={160}
-                          className=''
-                          src='/images/wig-logo-v3.svg'
-                          alt='WealthGuard Logo'
-                        />
+                        {theme === 'dark' ? (
+                          <Image
+                            height={50}
+                            width={160}
+                            src='/images/wig-logo-v3-dark.svg'
+                            alt='WealthGuard Logo'
+                            className='h-12 w-auto'
+                          />
+                        ) : (
+                          <Image
+                            height={50}
+                            width={160}
+                            src='/images/wig-logo-v3.svg'
+                            alt='WealthGuard Logo'
+                            className='h-12 w-auto'
+                          />
+                        )}
                       </a>
                     </Link>
                   </div>
@@ -404,13 +414,23 @@ export default function Header() {
                   <Link href='/'>
                     <a className='lg:hidden'>
                       <span className='sr-only'>WealthGuard</span>
-                      <Image
-                        height={50}
-                        width={160}
-                        src='/images/wig-logo-v3.svg'
-                        alt='WealthGuard Logo'
-                        className='h-12 w-auto'
-                      />
+                      {theme === 'dark' ? (
+                        <Image
+                          height={50}
+                          width={160}
+                          src='/images/wig-logo-v3-dark.svg'
+                          alt='WealthGuard Logo'
+                          className='h-12 w-auto'
+                        />
+                      ) : (
+                        <Image
+                          height={50}
+                          width={160}
+                          src='/images/wig-logo-v3.svg'
+                          alt='WealthGuard Logo'
+                          className='h-12 w-auto'
+                        />
+                      )}
                     </a>
                   </Link>
                 </div>
