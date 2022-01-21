@@ -180,7 +180,7 @@ export default function Home() {
               {features.map((feature) => (
                 <div
                   key={feature.name}
-                  className='relative cursor-pointer border-4 border-opacity-50 rounded-lg p-4 shadow-lg hover:shadow-2xl hover:border-gray-300 dark:hover:border-red-700'>
+                  className='relative cursor-pointer border-4 border-opacity-50 rounded-lg p-4 shadow-lg hover:shadow-2xl hover:border-gray-300 dark:hover:border-red-700 transform transition duration-500 md:hover:scale-110 hover:scale-105'>
                   <div>
                     <CheckIcon
                       className='absolute h-8 w-8 text-green-500'
@@ -433,11 +433,11 @@ export default function Home() {
             </p>
           </div>
 
-          <div className='mt-12 space-y-10 sm:space-y-0 sm:grid sm:grid-cols-2 sm:gap-x-6 sm:gap-y-12 lg:grid-cols-3 lg:gap-x-8 hover:border-gray-100'>
+          <div className='mt-12 space-y-10 sm:space-y-0 sm:grid sm:grid-cols-2 sm:gap-x-6 sm:gap-y-12 lg:grid-cols-3 lg:gap-x-8'>
             {features2.map((feature) => (
               <div
                 key={feature.name}
-                className='shadow-xl hover:shadow-2xl rounded-xl m-2 p-4 dark:bg-gray-700'>
+                className='shadow-xl hover:shadow-2xl rounded-xl m-2 p-4 dark:bg-gray-700 border dark:border-gray-500'>
                 <div>
                   <div className='flex items-center justify-center h-12 w-12 rounded-md bg-gray-900 dark:bg-red-600 opacity-70 text-white mx-auto'>
                     <feature.icon className='h-6 w-6' aria-hidden='true' />
