@@ -51,7 +51,7 @@ export default function ProgramsPage({ programs }) {
       <div className='p-8 my-10 grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3'>
         {programs.map((program) => (
           <div
-            className='max-w-sm rounded overflow-hidden shadow-xl mx-auto hover:shadow-2xl border hover:border-red-400 dark:hover:border-red-600 dark:bg-gray-900'
+            className='max-w-sm rounded overflow-hidden shadow-xl mx-auto hover:shadow-2xl border hover:border-red-400 dark:hover:border-red-600 dark:bg-gray-900 transform transition duration-500 md:hover:scale-110 hover:scale-105'
             key={program.slug}>
             <Link href={`/programs/${program.slug}`} passHref>
               <a>

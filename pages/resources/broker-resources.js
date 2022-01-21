@@ -76,7 +76,7 @@ export default function BrokerResourcesPage() {
           {resources.map((resource) => (
             <div
               key={resource.title}
-              className='relative rounded-lg border-2 border-gray-300 bg-white px-6 py-5 shadow-xl group hover:shadow-2xl flex justify-center items-center hover:border-gray-400 dark:hover:border-red-600 focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-indigo-500'>
+              className='relative rounded-lg border-2 border-gray-300 bg-white px-6 py-5 shadow-xl group hover:shadow-2xl flex justify-center items-center hover:border-gray-400 dark:hover:border-red-600 focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-indigo-500 transform transition duration-500 hover:scale-105'>
               <div className='flex flex-col justify-center items-center'>
                 <div className=''>
                   <a href={resource.link} target='_blank' rel='noreferrer'>
