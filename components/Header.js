@@ -13,47 +13,42 @@ const navigation = {
         {
           name: 'View All Programs',
           href: '/programs',
-          aria: 'View All Programs',
         },
         {
           name: 'WestWall Marina Package',
           href: '/programs/westwall-marina-package',
-          aria: 'WestWall Marina Package',
         },
         {
           name: 'Coastal Property',
           href: '/programs/coastal-property',
-          aria: 'Coastal Property',
         },
         {
           name: 'Healthcare Facilities',
           href: '/programs/healthcare-facilities',
-          aria: 'Healthcare Facilities',
         },
         {
           name: 'Cargo & Logistics',
           href: '/programs/cargo-and-logistics',
-          aria: 'Cargo & Logistics',
         },
         {
           name: 'Active Assailant',
           href: '/programs/active-assailant',
-          aria: 'Active Assailant',
         },
         {
           name: 'Terrorism & Sabotage',
           href: '/programs/terrorism-and-sabotage',
-          aria: 'Terrorism & Sabotage',
         },
         {
           name: 'Violent & Malicious Acts',
           href: '/programs/violent-malicious-acts',
-          aria: 'Violent & Malicious Acts',
         },
         {
           name: 'Hard to Place Risk',
           href: '/programs/hard-to-place-risk',
-          aria: 'Hard to Place Risk',
+        },
+        {
+          name: 'Yacht Program',
+          href: '/programs/yacht-program',
         },
       ],
     },
@@ -63,7 +58,6 @@ const navigation = {
         {
           name: 'Broker Resources',
           href: '/resources/broker-resources',
-          aria: 'Useful Resources for Brokers',
         },
       ],
     },
@@ -73,17 +67,15 @@ const navigation = {
         {
           name: 'About Us Overview',
           href: '/about-us/about-us',
-          aria: 'About Us Overview',
         },
         {
           name: 'Leadership',
           href: '/about-us/leadership',
-          aria: "WealthGuard's Leadership",
         },
       ],
     },
   ],
-  pages: [{ name: 'Contact Us', href: '/contact-us', aria: 'Contact Us' }],
+  pages: [{ name: 'Contact Us', href: '/contact-us' }],
 }
 
 function classNames(...classes) {
@@ -165,8 +157,7 @@ export default function Header() {
                               className='group relative mx-auto'>
                               <a
                                 href={item.href}
-                                className='mt-6 block font-medium text-gray-900 dark:text-gray-300 hover:text-red-700 dark:hover:text-red-700'
-                                aria-label={item.aria}>
+                                className='mt-6 block font-medium text-gray-900 dark:text-gray-300 hover:text-red-700 dark:hover:text-red-700'>
                                 <span
                                   className='absolute z-10 inset-0'
                                   aria-hidden='true'
@@ -329,8 +320,7 @@ export default function Header() {
                                               className='group relative'>
                                               <a
                                                 href={item.href}
-                                                className='mt-4 font-base block font-medium text-gray-900 hover:text-red-700 hover:bg-gray-100 dark:hover:bg-gray-700 dark:text-gray-50 dark:hover:text-red-700'
-                                                aria-label={item.aria}>
+                                                className='mt-4 font-base block font-medium text-gray-900 hover:text-red-700 hover:bg-gray-100 dark:hover:bg-gray-700 dark:text-gray-50 dark:hover:text-red-700'>
                                                 <span
                                                   className='absolute z-10 inset-0 group-hover:block'
                                                   aria-hidden='true'

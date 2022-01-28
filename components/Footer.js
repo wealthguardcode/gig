@@ -56,77 +56,68 @@ function sendEmail(e) {
 
 const footerNavigation = {
   links: [
-    { name: 'All Programs', href: '/programs', aria: 'View All Programs' },
+    { name: 'All Programs', href: '/programs' },
     {
       name: 'WestWall Marina Package',
       href: '/programs/westwall-marina-package',
-      aria: 'WestWall Marina Package',
     },
     {
       name: 'Coastal Property',
       href: '/programs/coastal-property',
-      aria: 'Coastal Property',
     },
     {
       name: 'Healthcare Facilities',
       href: '/programs/healthcare-facilities',
-      aria: 'Healthcare Facilities',
     },
     {
       name: 'Cargo & Logistics',
       href: '/programs/cargo-and-logistics',
-      aria: 'Cargo & Logistics',
     },
     {
       name: 'Active Assailant',
       href: '/programs/active-assailant',
-      aria: 'Active Assailant',
     },
     {
       name: 'Terrorism & Sabotage',
       href: '/programs/terrorism-and-sabotage',
-      aria: 'Terrorism & Sabotage',
     },
     {
       name: 'Violent & Malicious Acts',
       href: '/programs/violent-malicious-acts',
-      aria: 'Violent & Malicious Acts',
     },
     {
       name: 'Hard to Place Risk',
       href: '/programs/hard-to-place-risk',
-      aria: 'Hard to Place Risk',
+    },
+    {
+      name: 'Yacht Program',
+      href: '/programs/yacht-program',
     },
   ],
   resources: [
     {
       name: 'Resources',
       href: '/resources/broker-resources',
-      aria: 'Useful Resources for Brokers',
     },
     {
       name: 'Privacy Policy',
       href: '/resources/privacy',
-      aria: 'Privacy Policy',
     },
     {
       name: 'Terms & Conditions',
       href: '/resources/terms',
-      aria: 'Terms & Conditions',
     },
   ],
   company: [
     {
       name: 'About Us',
       href: '/about-us/about-us',
-      aria: 'About Us',
     },
     {
       name: 'Leadership',
       href: '/about-us/leadership',
-      aria: "WealthGuard's Leadership",
     },
-    { name: 'Contact Us', href: '/contact-us', aria: 'Contact Us' },
+    { name: 'Contact Us', href: '/contact-us' },
   ],
 }
 
@@ -168,8 +159,7 @@ export default function Footer() {
                       <li key={item.name} className='text-sm'>
                         <a
                           href={item.href}
-                          className='text-gray-500 dark:text-gray-400 hover:font-bold hover:text-red-700 dark:hover:text-red-700 hover:bg-gray-100 dark:hover:bg-gray-800'
-                          aria-label={item.aria}>
+                          className='text-gray-500 dark:text-gray-400 hover:font-bold hover:text-red-700 dark:hover:text-red-700 hover:bg-gray-100 dark:hover:bg-gray-800'>
                           {item.name}
                         </a>
                       </li>
@@ -185,8 +175,7 @@ export default function Footer() {
                       <li key={item.name} className='text-sm'>
                         <a
                           href={item.href}
-                          className='text-gray-500 dark:text-gray-400 hover:font-bold hover:text-red-700 dark:hover:text-red-700 hover:bg-gray-100 dark:hover:bg-gray-800'
-                          aria-label={item.aria}>
+                          className='text-gray-500 dark:text-gray-400 hover:font-bold hover:text-red-700 dark:hover:text-red-700 hover:bg-gray-100 dark:hover:bg-gray-800'>
                           {item.name}
                         </a>
                       </li>
@@ -203,8 +192,7 @@ export default function Footer() {
                     <li key={item.name} className='text-sm'>
                       <a
                         href={item.href}
-                        className='text-gray-500 dark:text-gray-400 hover:font-bold hover:text-red-700 dark:hover:text-red-700 hover:bg-gray-100 dark:hover:bg-gray-800'
-                        aria-label={item.aria}>
+                        className='text-gray-500 dark:text-gray-400 hover:font-bold hover:text-red-700 dark:hover:text-red-700 hover:bg-gray-100 dark:hover:bg-gray-800'>
                         {item.name}
                       </a>
                     </li>
@@ -246,8 +234,8 @@ export default function Footer() {
 
         <div className='border-t border-gray-100 dark:border-gray-500 py-10 text-center'>
           <p className='text-sm text-gray-500 dark:text-gray-300'>
-            &copy; {new Date().getFullYear()} WealthGuard Insurance Group, Inc.
-            All rights reserved.
+            &copy; {new Date().getFullYear()} WealthGuard Insurance Group - All
+            rights reserved.
           </p>
         </div>
       </div>
