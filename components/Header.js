@@ -1,6 +1,7 @@
 import { Fragment, useState } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
+import { useRouter } from 'next/router'
 import { Dialog, Popover, Tab, Transition } from '@headlessui/react'
 import { MenuIcon, XIcon } from '@heroicons/react/outline'
 import { useTheme } from 'next-themes'
@@ -85,6 +86,15 @@ function classNames(...classes) {
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const { theme, setTheme } = useTheme()
+  const router = useRouter()
+  const [pathName, setPathName] = useState(router.pathname)
+
+  console.log(router)
+  console.log(router.asPath)
+
+  const newPathName = () => {
+    setPathName(router.pathname)
+  }
 
   return (
     <div className='bg-gray-50 dark:bg-gray-800'>
@@ -320,7 +330,13 @@ export default function Header() {
                                               className='group relative'>
                                               <a
                                                 href={item.href}
-                                                className='mt-4 font-base block font-medium text-gray-900 hover:text-red-700 hover:bg-gray-100 dark:hover:bg-gray-700 dark:text-gray-50 dark:hover:text-red-700'>
+                                                className={
+                                                  router.asPath === item.href
+                                                    ? 'mt-4 font-base block font-medium text-red-700 bg-gray-100 dark:bg-gray-700 dark:text-red-700'
+                                                    : 'mt-4 font-base block font-medium text-gray-900 hover:text-red-700 hover:bg-gray-100 dark:hover:bg-gray-700 dark:text-gray-50 dark:hover:text-red-700'
+                                                }
+                                                onClick={newPathName}
+                                                pathname={pathName}>
                                                 <span
                                                   className='absolute z-10 inset-0 group-hover:block'
                                                   aria-hidden='true'
@@ -343,7 +359,13 @@ export default function Header() {
                           <a
                             key={page.name}
                             href={page.href}
-                            className='flex items-center font-medium text-gray-700 hover:text-red-700 dark:text-gray-50 dark:hover:text-red-700'
+                            className={
+                              router.asPath === page.href
+                                ? 'flex items-center font-medium text-red-700 dark:text-red-700'
+                                : 'flex items-center font-medium text-gray-700 hover:text-red-700 dark:text-gray-50 dark:hover:text-red-700'
+                            }
+                            onClick={newPathName}
+                            pathname={pathName}
                             aria-label={page.aria}>
                             {page.name}
                           </a>
