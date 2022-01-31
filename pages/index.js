@@ -72,7 +72,7 @@ const features = [
     href: '/programs/hard-to-place-risk',
   },
   {
-    name: 'Yach Program',
+    name: 'Yacht Program',
     description:
       'Designed to help with liability coverage for bodily injury or damage to the property of others and damage to personal property on the vessel.',
     href: '/programs/yacht-program',
