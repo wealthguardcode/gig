@@ -20,7 +20,7 @@ const features = [
   {
     name: 'Healthcare Facilities',
     description:
-      'Every day, 10,000 baby boomers are turning 65.  The increased demand for senior care communities has sky rocketed.',
+      "Every day, 10,000 baby boomers are turning 65.  The increased demand for senior care communities has sky rocketed-- we're here to help.",
     href: '/programs/healthcare-facilities',
   },
   {
@@ -64,6 +64,18 @@ const features = [
     description:
       'Helping you limit the first-dollar losses that you may experience by reducing or eliminating the deductible.',
     href: '/programs',
+  },
+  {
+    name: 'Hard to Place Risk',
+    description:
+      'Helping you get the reliable coverage for hard to place liability risk that may not fit the mold of a traditional insurance risk.',
+    href: '/programs/hard-to-place-risk',
+  },
+  {
+    name: 'Yach Program',
+    description:
+      'Designed to help with liability coverage for bodily injury or damage to the property of others and damage to personal property on the vessel.',
+    href: '/programs/yacht-program',
   },
 ]
 
@@ -176,7 +188,7 @@ export default function Home() {
 
         <div className='max-w-7xl mx-auto py-8 px-4 sm:px-6 lg:pb-24 lg:pt-12 lg:px-8 lg:grid lg:grid-cols-2 lg:gap-x-8'>
           <div className='mt-12 lg:mt-0 lg:col-span-2'>
-            <div className='space-y-10 sm:space-y-0 sm:grid sm:grid-cols-2 sm:grid-rows-4 sm:grid-flow-col sm:gap-x-6 sm:gap-y-10 lg:gap-x-8 '>
+            <div className='space-y-10 sm:space-y-0 sm:grid sm:grid-cols-2 sm:gap-x-6 sm:gap-y-10 lg:gap-x-8 '>
               {features.map((feature) => (
                 <div
                   key={feature.name}
