@@ -89,8 +89,8 @@ export default function Header() {
   const router = useRouter()
   const [pathName, setPathName] = useState(router.pathname)
 
-  console.log(router)
-  console.log(router.asPath)
+  // console.log(router)
+  // console.log(router.asPath)
 
   const newPathName = () => {
     setPathName(router.pathname)
@@ -167,7 +167,13 @@ export default function Header() {
                               className='group relative mx-auto'>
                               <a
                                 href={item.href}
-                                className='mt-6 block font-medium text-gray-900 dark:text-gray-300 hover:text-red-700 dark:hover:text-red-700'>
+                                className={
+                                  router.asPath === item.href
+                                    ? 'mt-6 block font-medium text-red-700 dark:text-red-700 bg-gray-100 dark:bg-gray-700 px-2 py-0.5'
+                                    : 'mt-6 block font-medium text-gray-900 dark:text-gray-300 hover:text-red-700 dark:hover:text-red-700'
+                                }
+                                onClick={newPathName}
+                                pathname={pathName}>
                                 <span
                                   className='absolute z-10 inset-0'
                                   aria-hidden='true'
@@ -187,7 +193,11 @@ export default function Header() {
                     <div key={page.name} className='flow-root'>
                       <a
                         href={page.href}
-                        className='-m-2 p-2 block font-medium text-gray-900 dark:text-gray-300 hover:text-red-700 dark:hover:text-red-700'
+                        className={
+                          router.asPath === page.href
+                            ? '-m-2 px-2 py=0.5 block font-medium text-red-700 dark:text-red-700 bg-gray-100 dark:bg-gray-700'
+                            : '-m-2 p-2 block font-medium text-gray-900 dark:text-gray-300 hover:text-red-700 dark:hover:text-red-700'
+                        }
                         aria-label={page.aria}>
                         {page.name}
                       </a>
