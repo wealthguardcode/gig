@@ -1,5 +1,7 @@
+import { useState } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
+import { useRouter } from 'next/router'
 import emailjs from 'emailjs-com'
 import { toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
@@ -110,7 +112,7 @@ const footerNavigation = {
   ],
   company: [
     {
-      name: 'About Us',
+      name: 'About Us Overview',
       href: '/about-us/about-us',
     },
     {
@@ -122,6 +124,13 @@ const footerNavigation = {
 }
 
 export default function Footer() {
+  const router = useRouter()
+  const [pathName, setPathName] = useState(router.pathname)
+
+  const newPathName = () => {
+    setPathName(router.pathname)
+  }
+
   return (
     <footer
       aria-labelledby='footer-heading'
@@ -159,7 +168,13 @@ export default function Footer() {
                       <li key={item.name} className='text-sm'>
                         <a
                           href={item.href}
-                          className='text-gray-500 dark:text-gray-400 hover:font-bold hover:text-red-700 dark:hover:text-red-700 hover:bg-gray-100 dark:hover:bg-gray-800'>
+                          className={
+                            router.asPath === item.href
+                              ? 'font-bold text-red-700 dark:text-red-700 bg-gray-100 dark:bg-gray-800'
+                              : 'text-gray-500 dark:text-gray-400 hover:font-bold hover:text-red-700 dark:hover:text-red-700 hover:bg-gray-100 dark:hover:bg-gray-800'
+                          }
+                          onClick={newPathName}
+                          pathname={pathName}>
                           {item.name}
                         </a>
                       </li>
@@ -175,7 +190,13 @@ export default function Footer() {
                       <li key={item.name} className='text-sm'>
                         <a
                           href={item.href}
-                          className='text-gray-500 dark:text-gray-400 hover:font-bold hover:text-red-700 dark:hover:text-red-700 hover:bg-gray-100 dark:hover:bg-gray-800'>
+                          className={
+                            router.asPath === item.href
+                              ? 'font-bold text-red-700 dark:text-red-700 bg-gray-100 dark:bg-gray-800'
+                              : 'text-gray-500 dark:text-gray-400 hover:font-bold hover:text-red-700 dark:hover:text-red-700 hover:bg-gray-100 dark:hover:bg-gray-800'
+                          }
+                          onClick={newPathName}
+                          pathname={pathName}>
                           {item.name}
                         </a>
                       </li>
@@ -192,7 +213,13 @@ export default function Footer() {
                     <li key={item.name} className='text-sm'>
                       <a
                         href={item.href}
-                        className='text-gray-500 dark:text-gray-400 hover:font-bold hover:text-red-700 dark:hover:text-red-700 hover:bg-gray-100 dark:hover:bg-gray-800'>
+                        className={
+                          router.asPath === item.href
+                            ? 'font-bold text-red-700 dark:text-red-700 bg-gray-100 dark:bg-gray-800'
+                            : 'text-gray-500 dark:text-gray-400 hover:font-bold hover:text-red-700 dark:hover:text-red-700 hover:bg-gray-100 dark:hover:bg-gray-800'
+                        }
+                        onClick={newPathName}
+                        pathname={pathName}>
                         {item.name}
                       </a>
                     </li>

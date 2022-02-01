@@ -89,9 +89,6 @@ export default function Header() {
   const router = useRouter()
   const [pathName, setPathName] = useState(router.pathname)
 
-  // console.log(router)
-  // console.log(router.asPath)
-
   const newPathName = () => {
     setPathName(router.pathname)
   }
