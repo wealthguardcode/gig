@@ -400,9 +400,9 @@ export default function Header() {
                                   ref={buttonRef}
                                   className={classNames(
                                     open
-                                      ? 'text-red-700 my-5'
+                                      ? 'text-red-700 my-5 outline-0'
                                       : 'text-gray-700 dark:text-gray-50 hover:text-red-700 dark:hover:text-red-700 my-5',
-                                    'relative flex items-center justify-center transition-colors ease-out duration-200  font-medium'
+                                    'relative flex items-center justify-center transition-colors ease-out duration-200 font-medium outline-none'
                                   )}
                                   onClick={() => handleClick(open)}>
                                   {navigation.categories[0].name}
@@ -498,7 +498,7 @@ export default function Header() {
                                     open
                                       ? 'text-red-700 my-5'
                                       : 'text-gray-700 dark:text-gray-50 hover:text-red-700 dark:hover:text-red-700 my-5',
-                                    'relative flex items-center justify-center transition-colors ease-out duration-200  font-medium'
+                                    'relative flex items-center justify-center transition-colors ease-out duration-200 font-medium outline-none'
                                   )}
                                   onClick={() => handleClick2(open)}>
                                   {navigation.categories[1].name}
@@ -595,7 +595,7 @@ export default function Header() {
                                     open
                                       ? 'text-red-700 my-5'
                                       : 'text-gray-700 dark:text-gray-50 hover:text-red-700 dark:hover:text-red-700 my-5',
-                                    'relative flex items-center justify-center transition-colors ease-out duration-200  font-medium'
+                                    'relative flex items-center justify-center transition-colors ease-out duration-200 font-medium outline-none'
                                   )}
                                   onClick={() => handleClick3(open)}>
                                   {navigation.categories[2].name}
