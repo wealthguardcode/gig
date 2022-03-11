@@ -104,7 +104,7 @@ export default function Home() {
   return (
     <Layout>
       <div className='relative bg-white dark:bg-gray-800 overflow-hidden'>
-        <div className='relative pt-16 pb-10 md:pt-10'>
+        <div className='relative pt-16 pb-10 md:pt-12'>
           <div className='h-3/4 md:h-screen pb-12 mx-auto w-full px-4 sm:mt-0'>
             {/* BG Image */}
 
