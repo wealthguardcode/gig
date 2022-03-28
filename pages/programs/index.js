@@ -22,7 +22,7 @@ export default function ProgramsPage({ programs }) {
       <div className='relative bg-gray-400'>
         <div className='absolute inset-0'>
           <Image
-            src='https://media.graphcms.com/output=format:jpg/resize=,height:800,fit:max/n8fvyRIWRuK9U3wCa2tT'
+            src='https://media.graphassets.com/output=format:jpg/resize=,height:800,fit:max/n8fvyRIWRuK9U3wCa2tT'
             layout='fill'
             objectFit='cover'
             priority={true}

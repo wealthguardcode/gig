@@ -5,6 +5,10 @@ module.exports = {
     defaultLocale: 'en',
   },
   images: {
-    domains: ['images.unsplash.com', 'media.graphcms.com'],
+    domains: [
+      'images.unsplash.com',
+      'media.graphcms.com',
+      'media.graphassets.com',
+    ],
   },
 }

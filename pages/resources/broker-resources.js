@@ -7,25 +7,25 @@ const resources = [
   {
     title: 'Flood Action Plan',
     imageUrl:
-      'https://media.graphcms.com/output=format:jpg/resize=,height:800,fit:max/70P5WHoARt24PjDRuo7C',
+      'https://media.graphassets.com/output=format:jpg/resize=,height:800,fit:max/70P5WHoARt24PjDRuo7C',
     link: '/images/floodActionPlan.pdf',
   },
   {
     title: 'Hail Action Plan',
     imageUrl:
-      'https://media.graphcms.com/output=format:jpg/resize=,height:800,fit:max/70P5WHoARt24PjDRuo7C',
+      'https://media.graphassets.com/output=format:jpg/resize=,height:800,fit:max/70P5WHoARt24PjDRuo7C',
     link: '/images/hailActionPlan.pdf',
   },
   {
     title: 'Hurricane Action Plan',
     imageUrl:
-      'https://media.graphcms.com/output=format:jpg/resize=,height:800,fit:max/70P5WHoARt24PjDRuo7C',
+      'https://media.graphassets.com/output=format:jpg/resize=,height:800,fit:max/70P5WHoARt24PjDRuo7C',
     link: '/images/hurricaneActionPlan.pdf',
   },
   {
     title: 'Tornado Action Plan',
     imageUrl:
-      'https://media.graphcms.com/output=format:jpg/resize=,height:800,fit:max/70P5WHoARt24PjDRuo7C',
+      'https://media.graphassets.com/output=format:jpg/resize=,height:800,fit:max/70P5WHoARt24PjDRuo7C',
     link: '/images/tornadoActionPlan.pdf',
   },
 ]
