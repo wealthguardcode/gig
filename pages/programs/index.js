@@ -17,13 +17,13 @@ import { getPrograms } from "../../lib/programs";
 // }
 
 export default function ProgramsPage({ programs }) {
-  console.log(programs);
+  // console.log(programs);
   return (
     <Layout title="WIG | Our Programs">
       <div className="relative bg-gray-400">
         <div className="absolute inset-0">
           <Image
-            src="https://media.graphassets.com/output=format:jpg/resize=,height:800,fit:max/n8fvyRIWRuK9U3wCa2tT"
+            src="/images/programs-hero.jpeg"
             layout="fill"
             objectFit="cover"
             priority={true}
