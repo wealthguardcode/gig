@@ -11,25 +11,11 @@ const people = [
     contact: "joseph@wealthguardig.com",
   },
   {
-    name: "Alexandria Cantrell",
-    role: "Director of Underwriting Operations",
-    imageUrl: "/images/headshots/alexandriaCantrell.jpeg",
-    bio: "Alexandria is our Director of Underwriting Operations. Alexandria is an LSU Graduate and resides in the Houston area. She started her insurance career with a large regional wholesaler and has held several different positions with the programs and binding authority department. Alexandria now has oversight of the underwriting workflow operation for WealthGuard.",
-    contact: "alexandria@wealthguardig.com",
-  },
-  {
     name: "Jaime Calhoun",
     role: "Accounting",
     imageUrl: "/images/headshots/jaimeCalhoun.jpeg",
     bio: 'Jaime is the founder of WealthGuard and is our Chief Financial Officer. Jaime began her career early on as her father, Johnny Graves, owned and operated an independent agency in Nacogdoches, Texas. She founded WealthGuard with the principals of her dad, "provide the best experience to your clients and more importantly, get to know them".',
     contact: "jaime@wealthguardig.com",
-  },
-  {
-    name: "Theresa Elkins",
-    role: "Contracting & Broker Support",
-    imageUrl: "/images/headshots/placeholder.jpeg",
-    bio: "Theresa has been with leadership for 10+ years and oversees our broker experience. She ensures each broker appointed to our company has a smooth experience and is available to assist with any administrative need for you and your agency.",
-    contact: "theresa@wealthguardig.com",
   },
   {
     name: "Jeffery Fluker",
