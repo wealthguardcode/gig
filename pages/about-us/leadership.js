@@ -17,20 +17,7 @@ const people = [
     bio: 'Jaime is the founder of WealthGuard and is our Chief Financial Officer. Jaime began her career early on as her father, Johnny Graves, owned and operated an independent agency in Nacogdoches, Texas. She founded WealthGuard with the principals of her dad, "provide the best experience to your clients and more importantly, get to know them".',
     contact: "jaime@wealthguardig.com",
   },
-  {
-    name: "Jeffery Fluker",
-    role: " Senior Account Executive",
-    imageUrl: "/images/headshots/jefferyFluker.jpeg",
-    bio: "Jeffrey is a specialist who takes pride in the “details”. He has a personal interest in helping each broker succeed. When not working, you will find Jeffrey supporting the community, with a special interest in FFA and local associations.",
-    contact: "jeff@wealthguardig.com",
-  },
-  {
-    name: "Lita Trahan",
-    role: "Account Executive",
-    imageUrl: "/images/headshots/litaTrahan.jpeg",
-    bio: "Lita is our newest Account Executive. She brings a fiery passion to exceed expectations and will work tirelessly to deliver the best experience you will find.",
-    contact: "lita@wealthguardigig.com",
-  },
+  
 ];
 
 export default function leadership() {
