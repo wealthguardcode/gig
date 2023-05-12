@@ -283,10 +283,10 @@ export default function ContactUsPage() {
                           />
                           <a
                             className='hover:text-red-600 dark:hover:text-red-600'
-                            href='tel:832-930-3827'
+                            href='tel:832-479-0042'
                             target='_blank'
                             rel='noreferrer'>
-                            832-930-3827
+                            832-479-0042
                           </a>
                         </dd>
                       </div>
