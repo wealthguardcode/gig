@@ -5,9 +5,9 @@ import Image from "next/image";
 const people = [
     {
     name: "Michael Calhoun",
-    role: "Founder / Chief Executive Officer",
+    role: "Chief Executive Officer / Founder",
     imageUrl: "/images/headshots/michaelCalhoun.jpeg",
-    bio: "Michael is our Chief Executive Officer of WealthGuard. Prior to founding WealthGuard, he held executive leadership positions with Fortune 500 companies and was primarily responsible for implementing growth and underwriting strategies to deliver profitability. As a dynamic strategist, Michael understands the complexity of running large divisions for sales, product development, actuary/underwriting, and distribution. He has been instrumental in growing new lines of business and creating multiple distribution channels, while improving margins for existing lines of business with over $1 billion in annual revenue. He credits his family and co-workers for 100% of the success achieved.",
+    bio: "Michael is the Chief Executive Officer of WealthGuard. Prior to founding WealthGuard, he held executive leadership positions with Fortune 500 companies where he was primarily responsible for implementing growth and underwriting strategies to deliver profitability. A dynamic strategist, Michael understands the complexity of running large divisions for sales, product development, actuary/underwriting, and distribution. He has been instrumental in growing new lines of business and creating multiple distribution channels, while improving margins for existing lines of business with over $1 billion in annual revenue. He credits his family and co-workers for 100% of the success achieved.",
     contact: "michael@wealthguardig.com",
   },
   {
@@ -19,14 +19,14 @@ const people = [
   },
   {
     name: "Jaime Calhoun",
-    role: "Founder / Chief Financial Officer",
+    role: "Chief Financial Officer / Founder",
     imageUrl: "/images/headshots/jaimeCalhoun.jpeg",
     bio: 'Jaime is the founder of WealthGuard and is our Chief Financial Officer. Jaime began her career early on as her father, Johnny Graves, owned and operated an independent agency in Nacogdoches, Texas. She founded WealthGuard with the principals of her dad, "provide the best experience to your clients and more importantly, get to know them".',
     contact: "jaime@wealthguardig.com",
   },
   {
     name: "Rebecca Dias",
-    role: "Director - Marketing and Communications",
+    role: "Director of Marketing and Communications",
     imageUrl: "/images/headshots/rebeccaDias.jpeg",
     bio: "Rebecca is the Director of Marketing and Communications at WealthGuard. Rebecca has a diverse background in marketing, design, publishing, and education in both US and international markets. She uses creative vision and technical problem solving to help brands achieve strategic objectives.",
     contact: "rebecca@wealthguardig.com",
