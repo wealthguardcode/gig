@@ -3,21 +3,34 @@ import { MailIcon } from "@heroicons/react/outline";
 import Image from "next/image";
 
 const people = [
+    {
+    name: "Michael Calhoun",
+    role: "Founder / Chief Executive Officer",
+    imageUrl: "/images/headshots/michaelCalhoun.jpeg",
+    bio: "Michael is our Chief Executive Officer of WealthGuard. Prior to founding WealthGuard, he held executive leadership positions with Fortune 500 companies and was primarily responsible for implementing growth and underwriting strategies to deliver profitability. As a dynamic strategist, Michael understands the complexity of running large divisions for sales, product development, actuary/underwriting, and distribution. He has been instrumental in growing new lines of business and creating multiple distribution channels, while improving margins for existing lines of business with over $1 billion in annual revenue. He credits his family and co-workers for 100% of the success achieved.",
+    contact: "michael@wealthguardig.com",
+  },
   {
     name: "Joseph O'Connor",
     role: "Chief Underwriting Officer / Principal",
     imageUrl: "/images/headshots/josephOconnor.jpeg",
-    bio: "Joseph is a Partner and acts as the Chief Underwriting Officer for our new in-house underwriting unit. He has over 30 years of successful global underwriting and executive management experience. He has held senior positions with several large international carriers as well as two start-up ventures that later went public. His unique multiline expertise, recognized leadership and strong relationships with key trading partners has helped WealthGuard rapidly develop and grow our specialty programs offering.",
+    bio: "Joseph is a Partner and acts as the Chief Underwriting Officer for WealthGuard's in-house underwriting unit. He has over 30 years of successful global underwriting and executive management experience. He has held senior positions with several large international carriers as well as two start-up ventures that later went public. His unique multiline expertise, recognized leadership and strong relationships with key trading partners has helped WealthGuard rapidly develop and grow our specialty programs offering.",
     contact: "joseph@wealthguardig.com",
   },
   {
     name: "Jaime Calhoun",
-    role: "Accounting",
+    role: "Founder / Chief Financial Officer",
     imageUrl: "/images/headshots/jaimeCalhoun.jpeg",
     bio: 'Jaime is the founder of WealthGuard and is our Chief Financial Officer. Jaime began her career early on as her father, Johnny Graves, owned and operated an independent agency in Nacogdoches, Texas. She founded WealthGuard with the principals of her dad, "provide the best experience to your clients and more importantly, get to know them".',
     contact: "jaime@wealthguardig.com",
   },
-  
+  {
+    name: "Rebecca Dias",
+    role: "Director - Marketing and Communications",
+    imageUrl: "/images/headshots/rebeccaDias.jpeg",
+    bio: "Rebecca is the Director of Marketing and Communications at WealthGuard. Rebecca has a diverse background in marketing, design, publishing, and education in both US and international markets. She uses creative vision and technical problem solving to help brands achieve strategic objectives.",
+    contact: "rebecca@wealthguardig.com",
+  },
 ];
 
 export default function leadership() {
