@@ -13,7 +13,7 @@ Active assailant insurance is an insurance policy designed to address the impact
 
 100% underwritten by certain underwriters at Lloyd's
 
-<img src="./images/Coverholder at Lloyds_black_rgb.png" style="display: block; margin: auto;" />
+<img src="public/images/active/Coverholder at Lloyds_black_rgb.jpg" style="display: block; margin: auto;" />
   
 We cover:
 - Damage to your property
