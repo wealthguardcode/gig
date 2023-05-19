@@ -12,7 +12,9 @@ highlights: The financial impact can be devastating to a business and this cover
 Active assailant insurance is an insurance policy designed to address the impact of these events on the victims and the organization effected.
 
 100% underwritten by certain underwriters at Lloyd's
-  
+
+/images/Coverholder at Lloyds_black_rgb.png
+
 We cover:
 - Damage to your property
 - Business Interruption
