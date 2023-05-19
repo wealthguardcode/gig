@@ -10,6 +10,10 @@ highlights: If the person suffers a malicious attack that causes little or no ph
 
 <!-- Markdown generator - https://jaspervdj.be/lorem-markdownum/ -->
 
+100% underwritten by certain underwriters at Lloyd's
+
+<img src="/images/Coverholder at Lloyds_black_rgb.png" style="display: block; margin: auto;" />
+
 Aside from the severe personal cost to the victims, malicious injury or death, attacks can cause huge, unplanned disruption and expense. Including, but not limited to:
 <br />
 <br />
