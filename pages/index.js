@@ -240,8 +240,8 @@ export default function Home() {
               className="mediaobject"
               src="/images/Coverholder at Lloyds_black_rgb.png"
               alt="Coverholder at Lloyds logo black"
-              width={auto}
-              height={auto}
+              width={400}
+              height={150}
              />
             <p className="mt-4 max-w-2xl prose-2xl md:tracking-wide text-gray-500 dark:text-gray-400 mx-auto">
               WealthGuard Insurance Group is a Coverholder at Lloyd&apos;s.
