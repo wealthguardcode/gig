@@ -9,6 +9,10 @@ highlights: All perils coverage including Wind & Hail, Flood, Earthquake and Col
 ---
 <!-- Markdown generator - https://jaspervdj.be/lorem-markdownum/ -->
 
+100% underwritten by certain underwriters at Lloyd's
+
+<img src="/images/Coverholder at Lloyds_black_rgb.png" style="display: block; margin: auto;" />
+
 Our Program offers both Property and Casualty Coverage in one Package, including the following :
 
 - Marina Operators Liability
