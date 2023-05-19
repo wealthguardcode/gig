@@ -13,7 +13,7 @@ Cargo insurance protects you from financial loss due to damaged or lost cargo. I
 
 100% underwritten by certain underwriters at Lloyd's
 
-<img src="./images/Coverholder at Lloyds_black_rgb.png" style="display: block; margin: auto;" />
+<img src="/images/Coverholder at Lloyds_black_rgb.png" style="display: block; margin: auto;" />
 
 We cover:
 - General cargo for retailers, distributors, assemblers and manufactures
