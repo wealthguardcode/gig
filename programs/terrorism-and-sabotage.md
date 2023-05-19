@@ -11,6 +11,10 @@ highlights: The harm of life and property brought by acts of terrorism or sabota
 
 Sabotage and terrorism insurance coverage are designed to protect you against financial losses directly resulting from politically motivated violence or terrorism and sabotage events. The potential destruction of life and property brought about by acts of terrorism or sabotage is significant, in recent times the number of terrorist incidents has risen.
 
+100% underwritten by certain underwriters at Lloyd's
+
+<img src="./images/Coverholder at Lloyds_black_rgb.png" style="display: block; margin: auto;" />
+
 We cover:
 -  Commercial Property
 -  Riots, strikes, civil commotion
