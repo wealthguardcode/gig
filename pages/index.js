@@ -255,6 +255,16 @@ export default function Home() {
                     clients best-in-class insurance solutions and provide
                     extensive resources to help you expand your business.
                   </p>
+                  <p className="mt-3 prose-xl mx-8 dark:text-gray-500">
+                    WealthGuard Insurance Group is a coverholder at Lloyd's.
+                  </p>
+                  <Image
+                    className="mediaobject"
+                    src="/images/Coverholder at Lloyds_black_rgb.png"
+                    alt="Coverholder at Lloyd's logo black"
+                    width={400}
+                    height={100}
+                  />
                 </div>
 
                 <div className="mx-4">
