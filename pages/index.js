@@ -243,8 +243,8 @@ export default function Home() {
                className="mediaobject"
                src="/images/Coverholder at Lloyds_black_rgb.png"
                alt="Coverholder at Lloyds logo black"
-               width={400}
-               height={100}
+               width={auto}
+               height={auto}
              />
           </div>
 
