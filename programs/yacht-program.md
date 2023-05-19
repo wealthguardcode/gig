@@ -12,6 +12,10 @@ highlights: For non-US owners, please call to discuss the Latin America, Caribbe
 
 Our Program offers both includes liability coverage for bodily injury or damage to the property of others and damage to personal property on the vessel.
 
+100% underwritten by certain underwriters at Lloyd's
+
+<img src="/images/Coverholder at Lloyds_black_rgb.png" style="display: block; margin: auto;" />
+
 **Navigation:**
 - Worldwide Excluding War Zones as may be published periodically by Lloyds.
 - Excluding named/numbered windstorm cover south of 37 degrees North Latitude and north of 12 degrees 40 minutes North Latitude.
