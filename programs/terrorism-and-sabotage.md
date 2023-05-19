@@ -13,7 +13,7 @@ Sabotage and terrorism insurance coverage are designed to protect you against fi
 
 100% underwritten by certain underwriters at Lloyd's
 
-<img src="./images/Coverholder at Lloyds_black_rgb.png" style="display: block; margin: auto;" />
+<img src="/images/Coverholder at Lloyds_black_rgb.png" style="display: block; margin: auto;" />
 
 We cover:
 -  Commercial Property
