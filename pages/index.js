@@ -18,7 +18,7 @@ function classNames(...classes) {
 
 const features = [
   {
-    name: "Petroleum and Gas Distributors",
+    name: "Petroleum & Gas Distributors",
     description:
       "WealthGuard offers Excess Coverage for petroleum and gas distributors. Learn more about our risk appetite across industry categories.",
     href: "/programs/petroleum-and-gas-distributors",
