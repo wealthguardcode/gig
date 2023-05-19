@@ -24,8 +24,8 @@ const navigation = {
           href: '/programs/coastal-property',
         },
         {
-          name: 'Healthcare Facilities',
-          href: '/programs/healthcare-facilities',
+          name: 'Petroleum and Gas Distributors',
+          href: '/programs/petroleum-and-gas-distributors',
         },
         {
           name: 'Cargo & Logistics',
