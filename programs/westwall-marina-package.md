@@ -11,7 +11,7 @@ highlights: All perils coverage including Wind & Hail, Flood, Earthquake and Col
 
 100% underwritten by certain underwriters at Lloyd's
 
-<img src="/images/Coverholder at Lloyds_black_rgb.png" style="display: block; margin: auto;" />
+<img src="/images/Coverholder at Lloyds_black_rgb.png" width="350" height="130" style="display: block; margin: auto;" />
 
 Our Program offers both Property and Casualty Coverage in one Package, including the following :
 
