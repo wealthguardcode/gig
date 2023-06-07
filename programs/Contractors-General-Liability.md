@@ -21,7 +21,7 @@ WealthGuard Contractors General Liability Insurance offers coverage for the foll
 
 Eligible Classes
 
-- GCs with annual receipts under $15M and project values under $3M
+- General Contractors with annual receipts under $15M and project values under $3M
 - Artisans with 15 or fewer employees
 - New ventures, new construction and remodelers are all eligible
 - New construction eligible (both for General Contractor and Artisan)
