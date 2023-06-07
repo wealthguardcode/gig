@@ -4,10 +4,12 @@ heroDescription: WealthGuard offers Excess Only Auto Liability Coverage.
 image: /images/auto-liability-excess-only-1.jpeg
 image2: /images/auto-liability-excess-only-1.jpeg
 subHeading: Auto Liability (Excess Only)
-description: Auto Liability (Excess Only) Insurance through WealthGuard offers a broad appetite and can accommodate any cargo. Pricing has been improved through the use of driver data, resulting in meaningful credits for the average risk. Coverage options include Excess Auto Liability, Excess Hired and Non-Owned, and Designated Truckload for specified Contracts.
+description: Auto Liability (Excess Only) Insurance through WealthGuard offers a broad appetite and can accommodate any cargo. 
 highlights: For more information about Auto Liability Excess Only insurance coverage options, contact WealthGuard.
 ---
 <!-- Markdown generator - https://jaspervdj.be/lorem-markdownum/ -->
+
+Coverage options include Excess Auto Liability, Excess Hired and Non-Owned, and Designated Truckload for specified Contracts. Pricing has been improved through the use of driver data, resulting in meaningful credits for the average risk. 
 
 WealthGuard's Excess Auto Liability Coverage risk appetite includes the below:
 
