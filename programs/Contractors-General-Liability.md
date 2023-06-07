@@ -19,7 +19,7 @@ WealthGuard Contractors General Liability Insurance offers coverage for the foll
 - Limits up to $1M/$2M
 - New ventures and gaps in coverage considered
 
-Eligible Classes
+Eligible Classes:
 
 - General contractors with annual receipts under $15M and project values under $3M
 - Artisans with 15 or fewer employees
