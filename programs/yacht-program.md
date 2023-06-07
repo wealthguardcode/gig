@@ -5,16 +5,13 @@ image: /images/yacht/yacht-1.jpeg
 image2: /images/yacht/yacht-2.jpeg
 subHeading: Yacht Insurance Program
 description: Yacht insurance is an insurance policy that provides indemnity liability coverage for a sailing vessel. Yacht Insurance is a solution for those looking for a yacht policy for their boat insurance needs.
-highlights: WealthGuard program benefits include comprehensive coverage for both private owners and commercial marine business. 
-- The WealthGuard Specialist Underwriting unit can provide flexible options that are competitively priced. 
-- WealthGuard also offers consistent and responsive service.
-- Worldwide coverage options available upon request.
+highlights: For more information about Yacht Insurance, please contact us via the contact form to the right. For non-US owners, please call to discuss the Latin America, Caribbean & Europa program.
 
 ---
 
 <!-- Markdown generator - https://jaspervdj.be/lorem-markdownum/ -->
 
-Our Program offers both includes liability coverage for bodily injury or damage to the property of others and damage to personal property on the vessel. For more information about Yacht Insurance, please contact us via the contact form to the right. For non-US owners, please call to discuss the Latin America, Caribbean & Europa program.
+Our Program offers both includes liability coverage for bodily injury or damage to the property of others and damage to personal property on the vessel.
 
 Navigation:
 - Worldwide Excluding War Zones as may be published periodically by Lloyd's.
@@ -37,4 +34,8 @@ Exclusions:
 Survey:
 - Full condition and valuation in water or out of water must be carried out by SAMS/NAMS affiliated surveyor unless otherwise agreed. Vessels under five years do not require a survey. Vessel over five years will require a survey every five years.
 
-
+WealthGuard Program Benefits:
+- Comprehensive coverage for both private owners and commercial marine business.
+- WealthGuard's Specialist Underwriting unit can provide flexible options that are competitively priced. 
+- WealthGuard offers consistent and responsive service.
+- Worldwide coverage options available upon request.
