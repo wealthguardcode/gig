@@ -5,11 +5,8 @@ image: /images/yacht/yacht-1.jpeg
 image2: /images/yacht/yacht-2.jpeg
 subHeading: Yacht Insurance Program
 description: Yacht insurance is an insurance policy that provides indemnity liability coverage for a sailing vessel.
-highlights: WealthGuard program benefits include the following:
-- Comprehensive coverage for both private owners and commercial marine business.
-- WealthGuard's Specialist Underwriting unit can provide flexible options that are competitively priced.
-- WealthGuard offers consistent and responsive service.
-- Worldwide coverage options available upon request.
+highlights: WealthGuard program benefits include the following: Comprehensive coverage for both private owners and commercial marine business. WealthGuard's Specialist Underwriting unit can provide flexible options that are competitively priced. WealthGuard offers consistent and responsive service. Worldwide coverage options available upon request.
+
 ---
 
 <!-- Markdown generator - https://jaspervdj.be/lorem-markdownum/ -->
