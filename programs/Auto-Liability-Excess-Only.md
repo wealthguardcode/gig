@@ -11,7 +11,7 @@ highlights: For more information about Auto Liability Excess Only insurance cove
 
 Pricing has been improved through the use of driver data, resulting in meaningful credits for the average risk. 
 
-WealthGuard's Excess Auto Liability Coverage risk appetite includes the below:
+WealthGuard's Excess Auto Liability Coverage risk appetite:
 
 - School Buses
 - Ambulances/Ambulettes
@@ -25,9 +25,9 @@ WealthGuard's Excess Auto Liability Coverage risk appetite includes the below:
 
 Limits
 
-- Maximum limits $5M
-- Maximum limit for Charter Buses is $5M
-- Attachment within the lead $25M
+- Maximum limit: $10M
+- Maximum limit for Charter Buses: $5M
+- Attachment within the lead: $25M
 
 Minimum Attachment Points
 
