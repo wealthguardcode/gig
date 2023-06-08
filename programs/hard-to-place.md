@@ -11,8 +11,6 @@ highlights: To learn more about WealthGuard's Hard to Place Risk insurance optio
 
 Our program provides customized solutions for specialty risk in all 50 states. Our policy offerings can include hard to place property insurance and hard to place commercial property insurance. 
 
-As part of our partnership commitment, our team will consult with a prospective insured before offering formal terms.
-
 - Commercial Auto
     - Liability and Excess, Physical Damage, New Operators, Hired/Non-Owned, Dealer Plate
 - Commercial Liability
@@ -22,3 +20,5 @@ As part of our partnership commitment, our team will consult with a prospective 
     - Inland Marine, Builders Risk, Jewelers Block, Vacant Property, Excess Flood, Equipment Floaters
 - Aviation Insurance
     - Hull, Commercial and Professional Liability, Droves, Non-Owned Aircraft, Hangar, Aircraft and Excess Liability
+
+As part of our partnership commitment, our team will consult with a prospective insured before offering formal terms.
