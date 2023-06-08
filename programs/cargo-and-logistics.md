@@ -3,7 +3,7 @@ title: Cargo & Logistics
 heroDescription: In today's environment, companies shipping goods around the world are facing large risk management challenges.
 image: /images/cargo/cargo-1.jpeg
 image2: /images/cargo/cargo-1.jpeg
-subHeading: Cargo & Logistics Insurance and Stock Throughput 
+subHeading: Stock Throughput, Cargo & Logistics Insurance 
 description: Our Cargo and Logistics team are experts in helping your business avoid disruptions and recover from costly perils. Our Stock Throughput coverage options provide additional protection for goods from origin to destination.
 highlights: For more information about Cargo & Logistics Insurance and Stock Throughput Policy options, contact WealthGuard below.
 ---
