@@ -3,22 +3,24 @@ title: Cargo & Logistics
 heroDescription: In today's environment, companies shipping goods around the world are facing large risk management challenges.
 image: /images/cargo/cargo-1.jpeg
 image2: /images/cargo/cargo-1.jpeg
-subHeading: Cargo and Logistics Insurance
-description: In today's environment, companies shipping goods around the world are facing large risk management challenges. Our Cargo and Logistics team are leaders in helping your business avoid business disruptions and recover from costly perils.
-highlights: Our Cargo and Logistics team are leaders in helping your business avoid business disruptions and recover from costly perils.
+subHeading: Cargo & Logistics Insurance and Stock Throughput 
+description: Our Cargo and Logistics team are experts in helping your business avoid disruptions and recover from costly perils. Our Stock Throughput coverage options provide additional protection for goods from origin to destination.
+highlights: For more information about Cargo & Logistics Insurance and Stock Throughput Policy options, contact WealthGuard below.
 ---
 <!-- Markdown generator - https://jaspervdj.be/lorem-markdownum/ -->
 
-Cargo insurance protects you from financial loss due to damaged or lost cargo. It pays you the amount you're insured for if a covered event happens to your freight.
+Cargo insurance protects a business from financial loss due to damaged or lost cargo. WealthGuard also offers Stock Throughput Policy (STP) options. 
 
-100% underwritten by certain underwriters at Lloyd's
+A Stock Throughput Policy is a marine policy that insures a company’s inventory and the flow of goods from the source of production to the final destination, whether to a place of storage or a retail store. Purchasing an STP rather than a separate transit and storage or property policy can provide more seamless coverage of goods, as well as more control of inventory risks throughout the entire supply chain.
+
+100% underwritten by certain underwriters at Lloyd's.
 
 <img src="/images/Coverholder at Lloyds_black_rgb.png" width="350" height="130" style="display: block; margin: auto;" />
 
 We cover:
-- General cargo for retailers, distributors, assemblers and manufactures
--  Inland and ocean coverage
-- Contractor's equipment (mobile)
-- Project risks- including delay in start-up
+- General cargo for retailers, distributors, assemblers and manufacturers
+- Inland and ocean coverage
+- Contractor equipment (mobile)
+- Project risks including delay in start-up
 - Liability for logistic operators
 - Liability for forwarders, warehouse keepers and haulers
