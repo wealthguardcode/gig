@@ -12,7 +12,7 @@ highlights: Contact WealthGuard below to inquire about additional coverage optio
 
 WealthGuard actively works with carriers to provide comprehensive risk solutions for manufacturers that are up-to-date, competitively priced, and add value for manufacturer operations.
 
-Please note that while many of our most popular insurance options for manufacturers are listed below, WealthGuard can accommodate a broad risk appetite, and many additional specialized products may be available. 
+Please note that while some of our most popular insurance options for manufacturers are listed below, WealthGuard can accommodate a broad risk appetite, and many additional specialized products are available. 
 
 - Auto & Transport Manufacturers
 - Biofuels Manufacturers
