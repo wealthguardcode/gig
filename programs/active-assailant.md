@@ -1,15 +1,15 @@
 ---
 title: Active Assailant
-heroDescription: Active Assailant Insurance, also referred to as active shooter insurance, protects an entity in the event of a premeditated, malicious physical attack via a hand-held weapon that causes direct physical loss, bodily injury, and/or death.
+heroDescription: Active Assailant Insurance, also referred to as active shooter insurance, protects an entity in the event of a premeditated, malicious physical attack via a hand-held weapon.
 image: /images/active/active-1.jpeg
 image2: /images/active/active-2.jpeg
 subHeading: Active Shooter Insurance
-description: Active Shooter Insurance helps to protect a business or organizaiton in the event of a premeditated malicious physical attack, by an active shooter or assailant who is armed with a hand-held weapon in a situation that causes direct physical loss, bodily injury, and/or death. The financial impact of an active shooter incident can be devastating to a business. Active shooter insurance coverage will help keep your business operating during the incident recovery process.
+description: The financial impact of an active shooter incident can be devastating to a business. Active shooter insurance coverage will help keep your organization or business operating during the incident recovery process.
 highlights: Contact WealthGuard below to learn more about our Active Assailant Insurance program and to discuss active shooter insurance coverage options for your business.
 ---
 <!-- Markdown generator - https://jaspervdj.be/lorem-markdownum/ -->
 
-WealthGuard's Active Assailant Insurance program is an insurance policy designed to address the impact of an armed attack or active shooter on both the victims and the organization or business impacted by the attack.
+WealthGuard's Active Assailant Insurance program is an insurance policy designed to address the impact of an armed attack or active shooter incident on both victims and the organization or business impacted by the attack.
 
 100% underwritten by certain underwriters at Lloyd's.
 
