@@ -9,7 +9,7 @@ highlights: Contact WealthGuard below to learn more about our Active Assailant I
 ---
 <!-- Markdown generator - https://jaspervdj.be/lorem-markdownum/ -->
 
-WealthGuard's Active Assailant Insurance program is an insurance policy designed to address the impact of an armed attack or active shooter incident on both victims and the organization or business impacted by the attack.
+WealthGuard's Active Assailant Insurance Program addresses the impact of an armed attack or active shooter incident on both victims and the organization or business impacted by the attack.
 
 100% underwritten by certain underwriters at Lloyd's.
 
