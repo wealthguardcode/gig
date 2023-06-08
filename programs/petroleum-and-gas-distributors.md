@@ -3,8 +3,8 @@ title: Petroleum & Gas Distributors
 heroDescription: WealthGuard offers Excess Coverage for Petroleum & Gas Distributors, including fuel tanker insurance options.
 image: /images/petroleum-1.jpeg
 image2: /images/petroleum-1.jpeg
-subHeading: Petroleum & Gas Distributors Fuel Tanker Insurance
-description: WealthGuard offers excess coverage for petroleum and gas distributors. Excess commercial general liability insurance includes products and completed operations, as well as excess commercial auto liability as part of our fuel tanker insurance options.
+subHeading: Fuel Tanker Insurance for Petroleum & Gas Distributors
+description: WealthGuard offers excess commercial general liability coverage for petroleum and gas distributors. Policies cover products and completed operations, as well as excess commercial auto liability as part of our fuel tanker insurance options.
 highlights: For more information about Excess Coverage options for Petroleum & Gas Distributors, contact WealthGuard below.
 
 ---
