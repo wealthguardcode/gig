@@ -9,7 +9,9 @@ highlights: To learn more about the WealthGuard Coastal Property Insurance Progr
 ---
 <!-- Markdown generator - https://jaspervdj.be/lorem-markdownum/ -->
 
-WealthGuard's Coastal Property Insurance Program offers coverage for coastal commercial property, as well as coastal homes in some cases. WealthGuard can offer coastal property coverage for eligible occupancies (listed below) on single state schedules in TX, LA, MS, AL, GA, FL, SC, NC, VA and MD. 
+WealthGuard's Coastal Property Insurance Program offers coverage for coastal commercial property, as well as coastal homes in some cases. 
+
+WealthGuard can offer coastal property coverage for eligible occupancies (listed below) on single state schedules in TX, LA, MS, AL, GA, FL, SC, NC, VA and MD. 
 
 Target occupancies include the following:
 - Retail Shopping Centers
