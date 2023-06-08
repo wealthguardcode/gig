@@ -1,20 +1,25 @@
 ---
 title: Coastal Property
-heroDescription: Coastal Property owner’s face various exposures needing several different forms of insurance. With the Coastal Property Program you can consolidate these coverages into one Package policy.
+heroDescription: Coastal property owners face various exposures needing several different forms of insurance. With the Coastal Property Program, coverages can be consolidated into one package policy.
 image: /images/coastal/coastal-1.jpeg
 image2: /images/coastal/coastal-2.jpeg
 subHeading: Coastal Property Insurance
-description: As an owner of a coastal property, you have special insurance needs and insuring your home can be confusing– partly because it may differ in what defines it as a “coastal” property.
-highlights: Optional coverage enhancements may include the following, Completed and Signed ACORD Applications. Additional supplemental applications may be necessary. 5-Year Currently Valued Carrier Loss Runs. Full COPE information, including roof age & replacement date. Details on any losses over $10,000 (if any). Helpful, but not required, Details on opportunity, expiring / target pricing and deductibles and is the incumbent offering a renewal?
+description: Our Coastal Property Insurance Program offers coastal property and casualty insurance coverage in one package. Coverage enhancements can include Deductible Buy-Down for Wind/Hail, Commercial Terrorism (Not TRIA), Cargo and Storage, and Active Assailant insurance.
+highlights: To learn more about the WealthGuard Coastal Property Insurance Program and application requirements, please contact WealthGuard below.
 ---
 <!-- Markdown generator - https://jaspervdj.be/lorem-markdownum/ -->
 
-Our Program offers both Property and Casualty Coverage in one Package, including the following :
+WealthGuard's Coastal Property Insurance Program offers coverage for coastal commercial property, as well as coastal homes in some cases. WealthGuard can offer coastal property coverage for eligible occupancies (listed below) on single state schedules in TX, LA, MS, AL, GA, FL, SC, NC, VA and MD. 
 
+Target occupancies include the following:
 - Retail Shopping Centers
-- Self-Storage Warehouses-- Lessor's Risk
+- Self-Storage Warehouses - Lessor's Risk
 - Apartments, Condominiums and Clubhouses (less than 5 stories in Florida)
-- Distribution Warehouses-- General Lessor's Risk and Wholesale Storage (if non-perishable)
+- Distribution Warehouses - General Lessor's Risk and Wholesale Storage (if non-perishable)
 - Nursing Homes, Assisted Living and Long-Term Care Facilities
 - Church and Religious Institutions
-- Schools-- Public, Private and Charter
+- Schools - Public, Private and Charter
+
+Capacity:
+- TIV up to $7,500,000
+- Single Family Homes up to $750,000
