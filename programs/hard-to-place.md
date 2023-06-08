@@ -1,11 +1,11 @@
 ---
 title: Hard to Place Risk
-heroDescription: WealthGuard understands "hard to place" insurance and supports our producers and insureds to get the reliable coverage for liability risk.
+heroDescription: WealthGuard understands hard-to-place risk and supports our producers and insureds to get reliable insurance coverage.
 image: /images/hard/hard-1.jpeg
 image2: /images/hard/hard-2.jpeg
 subHeading: Hard to Place Risk Insurance
-description: A heightened possibility of loss or nontraditional features will make finding coverage with an insurance carrier a challenge. WealthGuard understands hard-to-place insurance and supports our producers and insureds to get reliable coverage for liability risk.
-highlights: To learn more about WealthGuard's Hard to Place Risk insurance options, contact WealthGuard below.
+description: A heightened possibility of loss or nontraditional features will make finding coverage with an insurance carrier a challenge. WealthGuard's hard-to-place risk policy options help to provide liability risk coverage for spcialized cases.
+highlights: To learn more about WealthGuard's Hard-to-Place Risk insurance options, contact WealthGuard below.
 ---
 <!-- Markdown generator - https://jaspervdj.be/lorem-markdownum/ -->
 
