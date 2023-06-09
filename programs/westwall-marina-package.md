@@ -1,5 +1,5 @@
 ---
-title: WestWall Marina<sup>TM</sup> Package
+title: WestWall Marina&trade; Package
 heroDescription: Marina operations face various exposures that require several different forms of insurance, including marina liability insurance. WealthGuard's WestWall Marina Program can consolidate these coverages into one package policy.
 image: /images/westwall/westwall-marina-1.jpeg
 image2: /images/westwall/westwall-marina-2.jpeg
