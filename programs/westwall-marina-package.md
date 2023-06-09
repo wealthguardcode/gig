@@ -1,11 +1,11 @@
 ---
 title: WestWall Marina™ Package
-heroDescription: Marina operations face various exposures that require several different forms of insurance, including marina liability insurance. WealthGuard's WestWall Marina Program can consolidate these coverages into one package policy.
+heroDescription: Marina operations face various exposures that require several different forms of insurance, including marina liability insurance. WealthGuard's WestWall Marina™ Program can consolidate these coverages into one package policy.
 image: /images/westwall/westwall-marina-1.jpeg
 image2: /images/westwall/westwall-marina-2.jpeg
-subHeading: WestWall Marina Package
+subHeading: WestWall Marina™ Package
 description: Marina owners face all kinds of hazards, including theft, damage to boats, and sometimes, damage to the structure of the marina itself. Marina operators also face liability exposures, including injury to the public, customers, and visitors.
-highlights: For more information about the WestWall Marina Program, contact WealthGuard below.
+highlights: For more information about the WestWall Marina™ Program, contact WealthGuard below.
 ---
 <!-- Markdown generator - https://jaspervdj.be/lorem-markdownum/ -->
 
@@ -13,7 +13,7 @@ highlights: For more information about the WestWall Marina Program, contact Weal
 
 <img src="/images/Coverholder at Lloyds_black_rgb.png" width="350" height="130" style="display: block; margin: auto;" />
 
-The WestWall Marina:tm: Program offers both property and casualty coverage in one package, including the following:
+The WestWall Marina™ Program offers both property and casualty coverage in one package, including the following:
 
 - Marina Operators Liability
 - Commercial General Liability
