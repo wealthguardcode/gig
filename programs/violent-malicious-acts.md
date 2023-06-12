@@ -1,25 +1,25 @@
 ---
 title: Violent Malicious Acts
-heroDescription: The WealthGuard Violent Malicious Acts Program offers malicious act insurance to help you and your facility move forward after a tragedy, homicide, nonfatal injury, or substantial damage to property.
+heroDescription: WealthGuard offers a malicious act insurance policy to help you and your facility move forward after a tragedy, homicide, nonfatal injury, or substantial damage to property.
 image: /images/violent/violent-1.jpeg
 image2: /images/violent/violent-2.jpeg
 subHeading: Violent Malicious Acts Insurance
 description: Violent Malicious Acts (VMA) Insurance insures a broadly defined extra expense for businesses that suffer an attack causing injury or death, regardless of any physical damage.
-highlights: For more information about Violent Malicious Acts Inusrance, contact WealthGuard below.
+highlights: For more information about Violent Malicious Acts Insurance, contact WealthGuard below.
 ---
 
 <!-- Markdown generator - https://jaspervdj.be/lorem-markdownum/ -->
 
-A malicious attack that causes little or no physical damage may result in losses that will not be insured by property insurance. Other policies such as liability insurance, terrorism, and WCA also may not respond. A Mmalicious act insurance policy such as can offer specialized protection to cover malicious incidents.
+A malicious attack that causes little or no physical damage may result in losses that will not be covered by property insurance. Liability insurance, terrorism, and WCA policies also may not respond. A malicious act insurance policy offers specialized protection to cover malicious incidents.
 
 100% underwritten by certain underwriters at Lloyd's.
 
 <img src="/images/Coverholder at Lloyds_black_rgb.png" width="350" height="130" style="display: block; margin: auto;" />
 
-Aside from the severe personal cost to the victims, malicious injury or death, attacks can cause huge, unplanned disruption and expense. Including, but not limited to:
+Aside from the severe personal cost to the victims, malicious injury or death, attacks can cause huge, unplanned disruption and expense. Such expenses may include, but are not limited to:
 <br />
 <br />
-- Extra Security Personnel
+- Extra security personnel
 - Temporary alternative premises & transportation
 - Trauma counseling for staff
 - Expense securing replacements for dead or injured employees
