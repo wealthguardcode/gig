@@ -30,7 +30,7 @@ function sendEmail(e) {
   } else {
     emailjs
       .sendForm(
-        'service_74a7ngi',
+        'service_xq1c0nw',
         'template_1gc83qd',
         e.target,
         'user_1ODnWoNdXKoQipSD1qXJf'
