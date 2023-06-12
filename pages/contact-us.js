@@ -40,10 +40,10 @@ function sendEmail(e) {
   } else {
     emailjs
       .sendForm(
-        'service_74a7ngi',
+        'service_xq1c0nw',
         'template_tsp834s',
         e.target,
-        'user_1ODnWoNdXKoQipSD1qXJf'
+        'user_RfvnwrDrd9OYABRy3'
       )
       .then(
         (result) => {
