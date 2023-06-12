@@ -1,16 +1,18 @@
 ---
 title: Violent Malicious Acts
-heroDescription: Designed to help you and your facility move forward after a tragedy, homicide, nonfatal injuries, or substantial damage to property.
+heroDescription: The WealthGuard Violent Malicious Acts Program offers malicious act insurance to help you and your facility move forward after a tragedy, homicide, nonfatal injury, or substantial damage to property.
 image: /images/violent/violent-1.jpeg
 image2: /images/violent/violent-2.jpeg
 subHeading: Violent Malicious Acts Insurance
-description: Violent Malicious Acts (VMA) Insurance insures a broadly defined Extra Expense for businesses that suffer an attack causing injury or death, regardless of any physical damage.
-highlights: If the person suffers a malicious attack that causes little or no physical damage, then property insurance may not respond and resultant costs will be uninsured. Liability, Terrorism and WCA may not respond either for these losses.
+description: Violent Malicious Acts (VMA) Insurance insures a broadly defined extra expense for businesses that suffer an attack causing injury or death, regardless of any physical damage.
+highlights: For more information about Violent Malicious Acts Inusrance, contact WealthGuard below.
 ---
 
 <!-- Markdown generator - https://jaspervdj.be/lorem-markdownum/ -->
 
-100% underwritten by certain underwriters at Lloyd's
+A malicious attack that causes little or no physical damage may result in losses that will not be insured by property insurance. Other policies such as liability insurance, terrorism, and WCA also may not respond. A Mmalicious act insurance policy such as can offer specialized protection to cover malicious incidents.
+
+100% underwritten by certain underwriters at Lloyd's.
 
 <img src="/images/Coverholder at Lloyds_black_rgb.png" width="350" height="130" style="display: block; margin: auto;" />
 
