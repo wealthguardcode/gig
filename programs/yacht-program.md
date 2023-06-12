@@ -1,6 +1,6 @@
 ---
 title: Yacht Program
-heroDescription: Indemnity liability coverage for a sailing vessel.
+heroDescription: WealthGuard's Yacht Insurance Program offers indemnity liability coverage for a sailing vessel.
 image: /images/yacht/yacht-1.jpeg
 image2: /images/yacht/yacht-2.jpeg
 subHeading: Yacht Insurance Program
