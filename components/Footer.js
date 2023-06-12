@@ -32,8 +32,6 @@ function sendEmail(e) {
       .sendForm(
         'service_xq1c0nw',
         'template_1gc83qd',
-        e.target,
-        'user_1ODnWoNdXKoQipSD1qXJf'
       )
       .then(
         (result) => {
