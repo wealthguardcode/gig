@@ -16,11 +16,11 @@ A malicious attack that causes little or no physical damage may result in losses
 
 <img src="/images/Coverholder at Lloyds_black_rgb.png" width="350" height="130" style="display: block; margin: auto;" />
 
-Aside from the severe personal cost to the victims, malicious injury or death, attacks can cause huge, unplanned disruption and expense. Such expenses may include, but are not limited to:
+Aside from severe personal cost, such as injury or death, malicious attacks can cause huge, unplanned disruption and expense. Such expenses may include, but are not limited to:
 <br />
 <br />
 - Extra security personnel
 - Temporary alternative premises & transportation
 - Trauma counseling for staff
 - Expense securing replacements for dead or injured employees
-- Potential loss of revenue if parishioners move elsewhere
+- Potential loss of revenue (such as losses incurred by relocation of patrons)
