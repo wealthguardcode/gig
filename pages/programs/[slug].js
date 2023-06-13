@@ -58,6 +58,7 @@ function sendEmail(e) {
         "service_xq1c0nw",
         "template_78io7bt",
         form.current,
+        "publicKey_RfvnwrDrd9OYABRy3",
       )
       .then(
         (result) => {
