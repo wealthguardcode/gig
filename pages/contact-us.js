@@ -1,6 +1,6 @@
 import Layout from '../components/Layout'
 import { MailIcon, PhoneIcon } from '@heroicons/react/solid'
-import emailjs from 'emailjs-com'
+import emailjs from '@emailjs/browser'
 import { toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 import Image from 'next/image'
@@ -43,7 +43,7 @@ function sendEmail(e) {
         'service_xq1c0nw',
         'template_tsp834s',
        e.target,
-      'user_RfvnwrDrd9OYABRy3
+      'user_RfvnwrDrd9OYABRy3'
       )
       .then(
         (result) => {
