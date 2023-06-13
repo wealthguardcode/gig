@@ -33,7 +33,7 @@ function sendEmail(e) {
         'service_xq1c0nw',
         'template_1gc83qd',
        e.target,
-        'user_RfvnwrDrd9OYABRy3'
+        'accesToken_d4nOYEeRd1vg35PMH5vcY'
       )
       .then(
         (result) => {
