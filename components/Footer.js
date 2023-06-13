@@ -2,7 +2,7 @@ import { useState } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { useRouter } from 'next/router'
-import emailjs from 'emailjs-com'
+import emailjs from '@emailjs/browser'
 import { toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 
