@@ -5,7 +5,7 @@ import Image from "next/image";
 import { MailIcon } from "@heroicons/react/solid";
 
 import SimpleReactLightbox, { SRLWrapper } from "simple-react-lightbox";
-import emailjs from "emailjs-com";
+import emailjs from "@emailjs/browser";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useState } from "react";
@@ -57,8 +57,8 @@ function sendEmail(e) {
       .sendForm(
         "service_xq1c0nw",
         "template_78io7bt",
-        e.target,
-        "user_d4nOYEeRd1vg35PMH5vcY"
+        form.current,
+        "user_RfvnwrDrd9OYABRy3"
       )
       .then(
         (result) => {
