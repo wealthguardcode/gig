@@ -32,8 +32,7 @@ function sendEmail(e) {
       .sendForm(
         'service_xq1c0nw',
         'template_1gc83qd',
-       e.target,
-        'userID_RfvnwrDrd9OYABRy3'
+       e.target
       )
       .then(
         (result) => {
