@@ -33,7 +33,7 @@ function sendEmail(e) {
         'service_xq1c0nw',
         'template_1gc83qd',
        e.target,
-        'RfvnwrDrd9OYABRy3'
+        'publicKey_RfvnwrDrd9OYABRy3'
       )
       .then(
         (result) => {
