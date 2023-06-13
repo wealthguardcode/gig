@@ -9,7 +9,7 @@ import { useTheme } from 'next-themes'
 const navigation = {
   categories: [
     {
-      name: 'Our Programs',
+      name: 'For Brokers',
       programs: [
         {
           name: 'View All Programs',
@@ -18,6 +18,14 @@ const navigation = {
         {
           name: 'WestWall Marina Package',
           href: '/programs/westwall-marina-package',
+        },
+        {
+          name: 'Coastal Property',
+          href: '/programs/coastal-property',
+        },
+        {
+          name: 'Petroleum and Gas Distributors',
+          href: '/programs/petroleum-and-gas-distributors',
         },
         {
           name: 'Cargo & Logistics',
@@ -35,38 +43,13 @@ const navigation = {
           name: 'Violent & Malicious Acts',
           href: '/programs/violent-malicious-acts',
         },
-      ],
-    },
-    {
-      name: 'Brokerage',
-      programs: [
-        {
-          name: 'Petroleum & Gas Distributors',
-          href: '/programs/petroleum-and-gas-distributors',
-        },
-        {
-          name: 'Contractors General Liability',
-          href: '/programs/contractors-general-liability',
-        },
-        {
-          name: 'Excess Auto Liability',
-          href: '/programs/Auto-Liability-Excess-Only',
-        },
-        {
-          name: 'Manufacturers',
-          href: '/programs/manufacturers-commercial-general-liability',
-        },
         {
           name: 'Hard to Place Risk',
           href: '/programs/hard-to-place-risk',
         },
         {
-          name: 'Yacht Insurance',
+          name: 'Yacht Program',
           href: '/programs/yacht-program',
-        },
-        {
-          name: 'Coastal Property',
-          href: '/programs/coastal-property',
         },
       ],
     },
@@ -94,6 +77,7 @@ const navigation = {
     },
   ],
   pages: [{ name: 'Contact Us', href: '/contact-us' }],
+}
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
