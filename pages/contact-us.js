@@ -3,47 +3,49 @@ import { MailIcon, PhoneIcon } from '@heroicons/react/solid'
 import emailjs from '@emailjs/browser'
 import { toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
+import { useRef } from 'react'
 import Image from 'next/image'
-
-function fun() {
-  document.getElementById('first_name').value = ''
-  document.getElementById('last_name').value = ''
-  document.getElementById('email').value = ''
-  document.getElementById('company').value = ''
-  document.getElementById('phone').value = ''
-  document.getElementById('message').value = ''
-}
 
 toast.configure({
   autoClose: 8000,
   draggable: false,
 })
 
-function sendEmail(e) {
-  e.preventDefault()
-  if (
-    e.target.first_name.value === '' ||
-    e.target.last_name.value === '' ||
-    e.target.email.value === '' ||
-    e.target.company.value === '' ||
-    e.target.message.value === ''
-  ) {
-    return toast.error('Form cannot be empty!', {
-      position: 'top-right',
-      autoClose: 5000,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: true,
-      progress: undefined,
-    })
-  } else {
+export default function ContactUsPage() {
+  const firstNameEl = useRef(null)
+  const lastNameEl = useRef(null)
+  const emailEl = useRef(null)
+  const companyEl = useRef(null)
+  const phoneEl = useRef(null)
+  const messageEl = useRef(null)
+
+  function sendEmail(e) {
+    e.preventDefault()
+
+    const { value: first_name = '' } = e.target.first_name
+    const { value: last_name = '' } = e.target.last_name
+    const { value: email = '' } = e.target.email
+    const { value: company = '' } = e.target.company
+    const { value: message = '' } = e.target.message
+
+    if (!first_name || !last_name || !email || !company || !message) {
+      return toast.error('Form cannot be empty!', {
+        position: 'top-right',
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+      })
+    }
+
     emailjs
       .sendForm(
         'service_xq1c0nw',
         'template_tsp834s',
-       e.target,
-      'user_RfvnwrDrd9OYABRy3'
+        e.target,
+        'RfvnwrDrd9OYABRy3'
       )
       .then(
         (result) => {
@@ -57,16 +59,21 @@ function sendEmail(e) {
             progress: undefined,
           })
           console.log(result.text)
+
+          // reset form values
+          firstNameEl.current.value = ''
+          lastNameEl.current.value = ''
+          emailEl.current.value = ''
+          companyEl.current.value = ''
+          phoneEl.current.value = ''
+          messageEl.current.value = ''
         },
         (error) => {
           alert(error.text)
         }
       )
-    fun()
   }
-}
 
-export default function ContactUsPage() {
   return (
     <Layout title='WIG | Contact Us'>
       <main>
@@ -103,77 +110,86 @@ export default function ContactUsPage() {
                     className='text-red-700 hover:text-red-600 dark:hover:text-red-600'
                     href='mailto:sales@wealthguardig.com'
                     target='_blank'
-                    rel='noreferrer'>
+                    rel='noreferrer'
+                  >
                     email us
                   </a>
                   .
                 </p>
                 <form
                   id='template_tsp834s'
-                  method='POST'
+                  onSubmit={sendEmail}
                   className='mt-9 grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8'
-                  onSubmit={sendEmail}>
+                >
                   <div>
                     <label
                       htmlFor='first_name'
-                      className='block text-sm font-medium text-gray-700 dark:text-gray-400'>
+                      className='block text-sm font-medium text-gray-700 dark:text-gray-400'
+                    >
                       First name
                     </label>
                     <div className='mt-1'>
                       <input
+                        ref={firstNameEl}
                         type='text'
                         name='first_name'
                         id='first_name'
                         autoComplete='given-name'
-                        className='block w-full shadow-sm sm:text-sm focus:ring-red-500 focus:border-red-500 border-gray-300 rounded-md'
+                        className='block w-full shadow-sm sm:text-sm focus:ring-red-500 focus:border-red-500 border-gray-300 rounded-md dark:text-gray-900'
                       />
                     </div>
                   </div>
                   <div>
                     <label
                       htmlFor='last_name'
-                      className='block text-sm font-medium text-gray-700 dark:text-gray-400'>
+                      className='block text-sm font-medium text-gray-700 dark:text-gray-400'
+                    >
                       Last name
                     </label>
                     <div className='mt-1'>
                       <input
+                        ref={lastNameEl}
                         type='text'
                         name='last_name'
                         id='last_name'
                         autoComplete='family-name'
-                        className='block w-full shadow-sm sm:text-sm focus:ring-red-500 focus:border-red-500 border-gray-300 rounded-md'
+                        className='block w-full shadow-sm sm:text-sm focus:ring-red-500 focus:border-red-500 border-gray-300 rounded-md dark:text-gray-900'
                       />
                     </div>
                   </div>
                   <div className='sm:col-span-2'>
                     <label
                       htmlFor='email'
-                      className='block text-sm font-medium text-gray-700 dark:text-gray-400'>
+                      className='block text-sm font-medium text-gray-700 dark:text-gray-400'
+                    >
                       Email
                     </label>
                     <div className='mt-1'>
                       <input
+                        ref={emailEl}
                         id='email'
                         name='email'
                         type='email'
                         autoComplete='email'
-                        className='block w-full shadow-sm sm:text-sm focus:ring-red-500 focus:border-red-500 border-gray-300 rounded-md'
+                        className='block w-full shadow-sm sm:text-sm focus:ring-red-500 focus:border-red-500 border-gray-300 rounded-md dark:text-gray-900'
                       />
                     </div>
                   </div>
                   <div className='sm:col-span-2'>
                     <label
                       htmlFor='company'
-                      className='block text-sm font-medium text-gray-700 dark:text-gray-400'>
+                      className='block text-sm font-medium text-gray-700 dark:text-gray-400'
+                    >
                       Company
                     </label>
                     <div className='mt-1'>
                       <input
+                        ref={companyEl}
                         type='text'
                         name='company'
                         id='company'
                         autoComplete='organization'
-                        className='block w-full shadow-sm sm:text-sm focus:ring-red-500 focus:border-red-500 border-gray-300 rounded-md'
+                        className='block w-full shadow-sm sm:text-sm focus:ring-red-500 focus:border-red-500 border-gray-300 rounded-md dark:text-gray-900'
                       />
                     </div>
                   </div>
@@ -181,23 +197,26 @@ export default function ContactUsPage() {
                     <div className='flex justify-between'>
                       <label
                         htmlFor='phone'
-                        className='block text-sm font-medium text-gray-700 dark:text-gray-400'>
+                        className='block text-sm font-medium text-gray-700 dark:text-gray-400'
+                      >
                         Phone
                       </label>
                       <span
                         id='phone-description'
-                        className='text-sm text-gray-500 dark:text-gray-500'>
+                        className='text-sm text-gray-500 dark:text-gray-500'
+                      >
                         Optional
                       </span>
                     </div>
                     <div className='mt-1'>
                       <input
+                        ref={phoneEl}
                         type='text'
                         name='phone'
                         id='phone'
                         autoComplete='tel'
                         aria-describedby='phone-description'
-                        className='block w-full shadow-sm sm:text-sm focus:ring-red-500 focus:border-red-500 border-gray-300 rounded-md'
+                        className='block w-full shadow-sm sm:text-sm focus:ring-red-500 focus:border-red-500 border-gray-300 rounded-md dark:text-gray-900'
                       />
                     </div>
                   </div>
@@ -205,22 +224,25 @@ export default function ContactUsPage() {
                     <div className='flex justify-between'>
                       <label
                         htmlFor='message'
-                        className='block text-sm font-medium text-gray-700 dark:text-gray-400'>
+                        className='block text-sm font-medium text-gray-700 dark:text-gray-400'
+                      >
                         How can we help you?
                       </label>
                       <span
                         id='how-can-we-help-description'
-                        className='text-sm text-gray-500'>
+                        className='text-sm text-gray-500'
+                      >
                         Max. 500 characters
                       </span>
                     </div>
                     <div className='mt-1'>
                       <textarea
+                        ref={messageEl}
                         id='message'
                         name='message'
                         aria-describedby='how-can-we-help-description'
                         rows={4}
-                        className='block w-full shadow-sm sm:text-sm focus:ring-red-500 focus:border-red-500 border border-gray-300 rounded-md'
+                        className='block w-full shadow-sm sm:text-sm focus:ring-red-500 focus:border-red-500 border border-gray-300 rounded-md dark:text-gray-900'
                         defaultValue={''}
                       />
                     </div>
@@ -229,7 +251,8 @@ export default function ContactUsPage() {
                   <div className='text-right sm:col-span-2'>
                     <button
                       type='submit'
-                      className='inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-red-600 hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500'>
+                      className='inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-red-600 hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500'
+                    >
                       Submit
                     </button>
                   </div>
@@ -269,7 +292,8 @@ export default function ContactUsPage() {
                             className='hover:text-red-600 dark:hover:text-red-600'
                             href='mailto:sales@wealthguardig.com'
                             target='_blank'
-                            rel='noreferrer'>
+                            rel='noreferrer'
+                          >
                             sales@wealthguardig.com
                           </a>
                         </dd>
@@ -285,7 +309,8 @@ export default function ContactUsPage() {
                             className='hover:text-red-600 dark:hover:text-red-600'
                             href='tel:832-479-0042'
                             target='_blank'
-                            rel='noreferrer'>
+                            rel='noreferrer'
+                          >
                             832-479-0042
                           </a>
                         </dd>
@@ -309,7 +334,8 @@ export default function ContactUsPage() {
               href='mailto:sales@wealthguardig.com'
               target='_blank'
               rel='noreferrer'
-              className='mt-8 w-full inline-flex items-center justify-center py-3 px-5 bg-white border border-transparent rounded-md shadow-md text-base font-medium text-red-600 hover:bg-red-50 sm:w-auto'>
+              className='mt-8 w-full inline-flex items-center justify-center py-3 px-5 bg-white border border-transparent rounded-md shadow-md text-base font-medium text-red-600 hover:bg-red-50 sm:w-auto'
+            >
               <span>Email Us</span>
               <MailIcon
                 className='ml-3 h-5 w-5 flex-shrink-0 text-gray-400'
