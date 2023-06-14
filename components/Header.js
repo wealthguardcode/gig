@@ -9,7 +9,7 @@ import { useTheme } from 'next-themes'
 const navigation = {
   categories: [
     {
-      name: 'For Brokers',
+      name: 'Programs',
       programs: [
         {
           name: 'View All Programs',
@@ -18,14 +18,6 @@ const navigation = {
         {
           name: 'WestWall Marina Package',
           href: '/programs/westwall-marina-package',
-        },
-        {
-          name: 'Coastal Property',
-          href: '/programs/coastal-property',
-        },
-        {
-          name: 'Petroleum and Gas Distributors',
-          href: '/programs/petroleum-and-gas-distributors',
         },
         {
           name: 'Cargo & Logistics',
@@ -43,13 +35,42 @@ const navigation = {
           name: 'Violent & Malicious Acts',
           href: '/programs/violent-malicious-acts',
         },
+      ],
+    },
+    {
+      name: 'Brokerage',
+      programs: [
+        {
+          name: 'View All Brokerage Programs',
+          href: '/brokerage',
+        },
+        {
+          name: 'Auto Liability Excess Only',
+          href: '/brokerage/Auto-Liability-Excess-Only',
+        },
+        {
+          name: 'Contractors General Liability',
+          href: '/brokerage/Contractors-General-Liability',
+        },
+        {
+          name: 'Manufacturers Commercial General Liability',
+          href: '/brokerage/Manufacturers-Commercial-General-Liability',
+        },
+        {
+          name: 'Coastal Property',
+          href: '/brokerage/coastal-property',
+        },
         {
           name: 'Hard to Place Risk',
-          href: '/programs/hard-to-place-risk',
+          href: '/brokerage/hard-to-place-risk',
+        },
+        {
+          name: 'Petroleum and Gas Distributors',
+          href: '/brokerage/petroleum-and-gas-distributors',
         },
         {
           name: 'Yacht Program',
-          href: '/programs/yacht-program',
+          href: '/brokerage/yacht-program',
         },
       ],
     },
@@ -91,9 +112,11 @@ export default function Header() {
   const buttonRef = useRef(null)
   const buttonRef2 = useRef(null)
   const buttonRef3 = useRef(null)
+  const buttonRef4 = useRef(null)
   const [openState, setOpenState] = useState(false)
   const [openState2, setOpenState2] = useState(false)
   const [openState3, setOpenState3] = useState(false)
+  const [openState4, setOpenState4] = useState(false)
 
   const newPathName = () => {
     setPathName(router.pathname)
@@ -119,6 +142,12 @@ export default function Header() {
     setOpenState3((openState3) => !openState3)
     // toggle the menu by clicking on buttonRef
     buttonRef3?.current?.click() // eslint-disable-line
+  }
+  const toggleMenu4 = (open) => {
+    // log the current open state in React (toggle open state)
+    setOpenState3((openState3) => !openState3)
+    // toggle the menu by clicking on buttonRef
+    buttonRef4?.current?.click() // eslint-disable-line
   }
 
   // Open the menu after a delay of timeoutDuration
@@ -172,6 +201,23 @@ export default function Header() {
     // else: don't click! 😁
   }
 
+  // Open the menu after a delay of timeoutDuration
+  const onHover4 = (open, action) => {
+    // if the modal is currently closed, we need to open it
+    // OR
+    // if the modal is currently open, we need to close it
+    if (
+      (!open && !openState4 && action === 'onMouseEnter') ||
+      (open && openState4 && action === 'onMouseLeave')
+    ) {
+      // clear the old timeout, if any
+      clearTimeout(timeout)
+      // open the modal after a timeout
+      timeout = setTimeout(() => toggleMenu4(open), timeoutDuration)
+    }
+    // else: don't click! 😁
+  }
+
   const handleClick = (open) => {
     setOpenState(!open) // toggle open state in React state
     clearTimeout(timeout) // stop the hover timer if it's running
@@ -181,6 +227,10 @@ export default function Header() {
     clearTimeout(timeout) // stop the hover timer if it's running
   }
   const handleClick3 = (open) => {
+    setOpenState(!open) // toggle open state in React state
+    clearTimeout(timeout) // stop the hover timer if it's running
+  }
+  const handleClick4 = (open) => {
     setOpenState(!open) // toggle open state in React state
     clearTimeout(timeout) // stop the hover timer if it's running
   }
@@ -207,7 +257,8 @@ export default function Header() {
           <Dialog
             as='div'
             className='fixed inset-0 flex z-40 lg:hidden'
-            onClose={setMobileMenuOpen}>
+            onClose={setMobileMenuOpen}
+          >
             <Transition.Child
               as={Fragment}
               enter='transition-opacity ease-linear duration-300'
@@ -215,7 +266,8 @@ export default function Header() {
               enterTo='opacity-100'
               leave='transition-opacity ease-linear duration-300'
               leaveFrom='opacity-100'
-              leaveTo='opacity-0'>
+              leaveTo='opacity-0'
+            >
               <Dialog.Overlay className='fixed inset-0 bg-black bg-opacity-25' />
             </Transition.Child>
 
@@ -226,13 +278,15 @@ export default function Header() {
               enterTo='translate-x-0'
               leave='transition ease-in-out duration-300 transform'
               leaveFrom='translate-x-0'
-              leaveTo='-translate-x-full'>
+              leaveTo='-translate-x-full'
+            >
               <div className='relative w-full bg-white dark:bg-gray-800 shadow-xl pb-12 flex flex-col overflow-y-auto'>
                 <div className='px-4 pt-5 pb-2 flex'>
                   <button
                     type='button'
                     className='-m-2 p-2 rounded-md inline-flex items-center dark:bg-gray-800 justify-center text-gray-400 dark:text-gray-400'
-                    onClick={() => setMobileMenuOpen(false)}>
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
                     <span className='sr-only'>Close menu</span>
                     <XIcon className='h-6 w-6' aria-hidden='true' />
                   </button>
@@ -252,7 +306,8 @@ export default function Header() {
                                 : 'text-gray-900 dark:text-gray-300 border-transparent hover:text-red-700 dark:hover:text-red-700',
                               'flex-1 whitespace-nowrap py-4 px-1 border-b-2 text-md font-medium'
                             )
-                          }>
+                          }
+                        >
                           {category.name}
                         </Tab>
                       ))}
@@ -262,12 +317,14 @@ export default function Header() {
                     {navigation.categories.map((category) => (
                       <Tab.Panel
                         key={category.name}
-                        className='px-4 py-6 space-y-12'>
+                        className='px-4 py-6 space-y-12'
+                      >
                         <div className='grid grid-cols-1 gap-x-4 gap-y-4'>
                           {category.programs.map((item) => (
                             <div
                               key={item.name}
-                              className='group relative mx-auto'>
+                              className='group relative mx-auto'
+                            >
                               <a
                                 href={item.href}
                                 className={
@@ -276,7 +333,8 @@ export default function Header() {
                                     : 'mt-6 block font-medium text-gray-900 dark:text-gray-300 hover:text-red-700 dark:hover:text-red-700'
                                 }
                                 onClick={newPathName}
-                                pathname={pathName}>
+                                pathname={pathName}
+                              >
                                 <span
                                   className='absolute z-10 inset-0'
                                   aria-hidden='true'
@@ -302,7 +360,8 @@ export default function Header() {
                             ? '-m-2 px-2 py=0.5 block font-medium text-red-700 dark:text-red-700 bg-gray-100 dark:bg-gray-700'
                             : '-m-2 p-2 block font-medium text-gray-900 dark:text-gray-300 hover:text-red-700 dark:hover:text-red-700'
                         }
-                        aria-label={page.aria}>
+                        aria-label={page.aria}
+                      >
                         {page.name}
                       </a>
                     </div>
@@ -312,14 +371,16 @@ export default function Header() {
                   aria-label='Toggle Dark Mode'
                   type='button'
                   className='md:order-3 mx-auto'
-                  onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}>
+                  onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+                >
                   {theme === 'dark' ? (
                     <svg
                       xmlns='http://www.w3.org/2000/svg'
                       className='h-6 w-6 text-gray-500 hover:text-gray-600'
                       fill='none'
                       viewBox='0 0 24 24'
-                      stroke='currentColor'>
+                      stroke='currentColor'
+                    >
                       <path
                         strokeLinecap='round'
                         strokeLinejoin='round'
@@ -333,7 +394,8 @@ export default function Header() {
                       className='h-6 w-6 text-gray-500 hover:text-gray-600'
                       fill='none'
                       viewBox='0 0 24 24'
-                      stroke='currentColor'>
+                      stroke='currentColor'
+                    >
                       <path
                         strokeLinecap='round'
                         strokeLinejoin='round'
@@ -383,18 +445,18 @@ export default function Header() {
 
                   <div className='hidden h-full lg:flex'>
                     {/* Flyout hover menus */}
-                    {/* For Broker Flyout hover menu */}
+                    {/* Programs Flyout hover menu */}
                     <Popover.Group className='px-4 bottom-0 inset-x-0'>
                       <div className='h-full flex justify-center space-x-8'>
                         <Popover
                           key={navigation.categories[0].name}
-                          className='flex'>
+                          className='flex'
+                        >
                           {({ open }) => (
                             <div
                               onMouseEnter={() => onHover(open, 'onMouseEnter')}
-                              onMouseLeave={() =>
-                                onHover(open, 'onMouseLeave')
-                              }>
+                              onMouseLeave={() => onHover(open, 'onMouseLeave')}
+                            >
                               <div className='relative flex'>
                                 <Popover.Button
                                   ref={buttonRef}
@@ -404,7 +466,8 @@ export default function Header() {
                                       : 'text-gray-700 dark:text-gray-50 hover:text-red-700 dark:hover:text-red-700 my-5',
                                     'relative flex items-center justify-center transition-colors ease-out duration-200 font-medium outline-none'
                                   )}
-                                  onClick={() => handleClick(open)}>
+                                  onClick={() => handleClick(open)}
+                                >
                                   {navigation.categories[0].name}
                                   <span
                                     className={classNames(
@@ -423,7 +486,8 @@ export default function Header() {
                                 enterTo='opacity-100'
                                 leave='transition ease-in duration-150'
                                 leaveFrom='opacity-100'
-                                leaveTo='opacity-0'>
+                                leaveTo='opacity-0'
+                              >
                                 <Popover.Panel className='absolute z-20 top-full inset-x-0 bg-white dark:bg-gray-800 text-md text-gray-500 dark:text-white'>
                                   <div
                                     className='absolute inset-0 top-1/2 bg-white dark:bg-gray-800 shadow'
@@ -432,7 +496,8 @@ export default function Header() {
                                   {/* Fake border when menu is open */}
                                   <div
                                     className='absolute inset-0 top-0 h-px max-w-7xl mx-auto px-8'
-                                    aria-hidden='true'>
+                                    aria-hidden='true'
+                                  >
                                     <div
                                       className={classNames(
                                         open
@@ -450,7 +515,8 @@ export default function Header() {
                                           (item) => (
                                             <div
                                               key={item.name}
-                                              className='group relative'>
+                                              className='group relative'
+                                            >
                                               <a
                                                 href={item.href}
                                                 className={
@@ -459,7 +525,110 @@ export default function Header() {
                                                     : 'mt-4 font-base block font-medium text-gray-900 hover:text-red-700 hover:bg-gray-100 dark:hover:bg-gray-700 dark:text-gray-50 dark:hover:text-red-700'
                                                 }
                                                 onClick={newPathName}
-                                                pathname={pathName}>
+                                                pathname={pathName}
+                                              >
+                                                <span
+                                                  className='absolute z-10 inset-0 group-hover:block'
+                                                  aria-hidden='true'
+                                                />
+                                                {item.name}
+                                              </a>
+                                            </div>
+                                          )
+                                        )}
+                                      </div>
+                                    </div>
+                                  </div>
+                                </Popover.Panel>
+                              </Transition>
+                            </div>
+                          )}
+                        </Popover>
+
+                        {/* Brokerage Flyout hover menu */}
+                        <Popover
+                          key={navigation.categories[1].name}
+                          className='flex'
+                        >
+                          {({ open }) => (
+                            <div
+                              onMouseEnter={() =>
+                                onHover4(open, 'onMouseEnter')
+                              }
+                              onMouseLeave={() =>
+                                onHover4(open, 'onMouseLeave')
+                              }
+                            >
+                              <div className='relative flex'>
+                                <Popover.Button
+                                  ref={buttonRef4}
+                                  className={classNames(
+                                    open
+                                      ? 'text-red-700 my-5 outline-0'
+                                      : 'text-gray-700 dark:text-gray-50 hover:text-red-700 dark:hover:text-red-700 my-5',
+                                    'relative flex items-center justify-center transition-colors ease-out duration-200 font-medium outline-none'
+                                  )}
+                                  onClick={() => handleClick4(open)}
+                                >
+                                  {navigation.categories[1].name}
+                                  <span
+                                    className={classNames(
+                                      open ? 'bg-red-700' : '',
+                                      'absolute z-30 -bottom-px inset-x-0 h-0.5 transition ease-out duration-200'
+                                    )}
+                                    aria-hidden='true'
+                                  />
+                                </Popover.Button>
+                              </div>
+
+                              <Transition
+                                as={Fragment}
+                                enter='transition ease-out duration-200'
+                                enterFrom='opacity-0'
+                                enterTo='opacity-100'
+                                leave='transition ease-in duration-150'
+                                leaveFrom='opacity-100'
+                                leaveTo='opacity-0'
+                              >
+                                <Popover.Panel className='absolute z-20 top-full inset-x-0 bg-white dark:bg-gray-800 text-md text-gray-500 dark:text-white'>
+                                  <div
+                                    className='absolute inset-0 top-1/2 bg-white dark:bg-gray-800 shadow'
+                                    aria-hidden='true'
+                                  />
+                                  {/* Fake border when menu is open */}
+                                  <div
+                                    className='absolute inset-0 top-0 h-px max-w-7xl mx-auto px-8'
+                                    aria-hidden='true'
+                                  >
+                                    <div
+                                      className={classNames(
+                                        open
+                                          ? 'bg-gray-200 dark:bg-gray-600'
+                                          : 'bg-transparent',
+                                        'w-full h-px transition-colors ease-out duration-200'
+                                      )}
+                                    />
+                                  </div>
+
+                                  <div className='relative'>
+                                    <div className='max-w-7xl mx-auto px-8'>
+                                      <div className='grid grid-cols-1 py-8'>
+                                        {navigation.categories[1].programs.map(
+                                          (item) => (
+                                            <div
+                                              key={item.name}
+                                              className='group relative'
+                                            >
+                                              <a
+                                                href={item.href}
+                                                className={
+                                                  router.asPath === item.href
+                                                    ? 'mt-4 font-base block font-medium text-red-700 bg-gray-100 dark:bg-gray-700 dark:text-red-700'
+                                                    : 'mt-4 font-base block font-medium text-gray-900 hover:text-red-700 hover:bg-gray-100 dark:hover:bg-gray-700 dark:text-gray-50 dark:hover:text-red-700'
+                                                }
+                                                onClick={newPathName}
+                                                pathname={pathName}
+                                              >
                                                 <span
                                                   className='absolute z-10 inset-0 group-hover:block'
                                                   aria-hidden='true'
@@ -480,9 +649,10 @@ export default function Header() {
 
                         {/* Resources Flyout Hover Menu */}
                         <Popover
-                          key={navigation.categories[1].name}
+                          key={navigation.categories[2].name}
                           className='flex'
-                          id='PopoverPanel2'>
+                          id='PopoverPanel2'
+                        >
                           {({ open }) => (
                             <div
                               onMouseEnter={() =>
@@ -490,7 +660,8 @@ export default function Header() {
                               }
                               onMouseLeave={() =>
                                 onHover2(open, 'onMouseLeave')
-                              }>
+                              }
+                            >
                               <div className='relative flex'>
                                 <Popover.Button
                                   ref={buttonRef2}
@@ -500,8 +671,9 @@ export default function Header() {
                                       : 'text-gray-700 dark:text-gray-50 hover:text-red-700 dark:hover:text-red-700 my-5',
                                     'relative flex items-center justify-center transition-colors ease-out duration-200 font-medium outline-none'
                                   )}
-                                  onClick={() => handleClick2(open)}>
-                                  {navigation.categories[1].name}
+                                  onClick={() => handleClick2(open)}
+                                >
+                                  {navigation.categories[2].name}
                                   <span
                                     className={classNames(
                                       open ? 'bg-red-700' : '',
@@ -519,7 +691,8 @@ export default function Header() {
                                 enterTo='opacity-100'
                                 leave='transition ease-in duration-150'
                                 leaveFrom='opacity-100'
-                                leaveTo='opacity-0'>
+                                leaveTo='opacity-0'
+                              >
                                 <Popover.Panel className='absolute z-20 top-full inset-x-0 bg-white dark:bg-gray-800 text-md text-gray-500 dark:text-white'>
                                   <div
                                     className='absolute inset-0 top-1/2 bg-white dark:bg-gray-800 shadow'
@@ -528,7 +701,8 @@ export default function Header() {
                                   {/* Fake border when menu is open */}
                                   <div
                                     className='absolute inset-0 top-0 h-px max-w-7xl mx-auto px-8'
-                                    aria-hidden='true'>
+                                    aria-hidden='true'
+                                  >
                                     <div
                                       className={classNames(
                                         open
@@ -543,11 +717,12 @@ export default function Header() {
                                     <div className='max-w-7xl mx-auto px-8'>
                                       <div className='grid grid-cols-1 py-8'>
                                         <Fragment key={'PopoverPanel2<>'}>
-                                          {navigation.categories[1].programs.map(
+                                          {navigation.categories[2].programs.map(
                                             (item) => (
                                               <div
                                                 key={item.name}
-                                                className='group relative'>
+                                                className='group relative'
+                                              >
                                                 <a
                                                   href={item.href}
                                                   className={
@@ -556,7 +731,8 @@ export default function Header() {
                                                       : 'mt-4 font-base block font-medium text-gray-900 hover:text-red-700 hover:bg-gray-100 dark:hover:bg-gray-700 dark:text-gray-50 dark:hover:text-red-700'
                                                   }
                                                   onClick={newPathName}
-                                                  pathname={pathName}>
+                                                  pathname={pathName}
+                                                >
                                                   <span
                                                     className='absolute z-10 inset-0 group-hover:block'
                                                     aria-hidden='true'
@@ -577,9 +753,10 @@ export default function Header() {
                         </Popover>
                         {/* About Us Flyout Hover Menu */}
                         <Popover
-                          key={navigation.categories[2].name}
+                          key={navigation.categories[3].name}
                           className='flex'
-                          id='PopoverPanel3'>
+                          id='PopoverPanel3'
+                        >
                           {({ open }) => (
                             <div
                               onMouseEnter={() =>
@@ -587,7 +764,8 @@ export default function Header() {
                               }
                               onMouseLeave={() =>
                                 onHover3(open, 'onMouseLeave')
-                              }>
+                              }
+                            >
                               <div className='relative flex'>
                                 <Popover.Button
                                   ref={buttonRef3}
@@ -597,8 +775,9 @@ export default function Header() {
                                       : 'text-gray-700 dark:text-gray-50 hover:text-red-700 dark:hover:text-red-700 my-5',
                                     'relative flex items-center justify-center transition-colors ease-out duration-200 font-medium outline-none'
                                   )}
-                                  onClick={() => handleClick3(open)}>
-                                  {navigation.categories[2].name}
+                                  onClick={() => handleClick3(open)}
+                                >
+                                  {navigation.categories[3].name}
                                   <span
                                     className={classNames(
                                       open ? 'bg-red-700' : '',
@@ -616,7 +795,8 @@ export default function Header() {
                                 enterTo='opacity-100'
                                 leave='transition ease-in duration-150'
                                 leaveFrom='opacity-100'
-                                leaveTo='opacity-0'>
+                                leaveTo='opacity-0'
+                              >
                                 <Popover.Panel className='absolute z-20 top-full inset-x-0 bg-white dark:bg-gray-800 text-md text-gray-500 dark:text-white'>
                                   <div
                                     className='absolute inset-0 top-1/2 bg-white dark:bg-gray-800 shadow'
@@ -625,7 +805,8 @@ export default function Header() {
                                   {/* Fake border when menu is open */}
                                   <div
                                     className='absolute inset-0 top-0 h-px max-w-7xl mx-auto px-8'
-                                    aria-hidden='true'>
+                                    aria-hidden='true'
+                                  >
                                     <div
                                       className={classNames(
                                         open
@@ -640,11 +821,12 @@ export default function Header() {
                                     <div className='max-w-7xl mx-auto px-8'>
                                       <div className='grid grid-cols-1 py-8'>
                                         <Fragment key={'PopoverPanel3<>'}>
-                                          {navigation.categories[2].programs.map(
+                                          {navigation.categories[3].programs.map(
                                             (item) => (
                                               <div
                                                 key={item.name}
-                                                className='group relative'>
+                                                className='group relative'
+                                              >
                                                 <a
                                                   href={item.href}
                                                   className={
@@ -653,7 +835,8 @@ export default function Header() {
                                                       : 'mt-4 font-base block font-medium text-gray-900 hover:text-red-700 hover:bg-gray-100 dark:hover:bg-gray-700 dark:text-gray-50 dark:hover:text-red-700'
                                                   }
                                                   onClick={newPathName}
-                                                  pathname={pathName}>
+                                                  pathname={pathName}
+                                                >
                                                   <span
                                                     className='absolute z-10 inset-0 group-hover:block'
                                                     aria-hidden='true'
@@ -685,7 +868,8 @@ export default function Header() {
                             }
                             onClick={newPathName}
                             pathname={pathName}
-                            aria-label={page.aria}>
+                            aria-label={page.aria}
+                          >
                             {page.name}
                           </a>
                         ))}
@@ -695,14 +879,16 @@ export default function Header() {
                           className='md:order-3 mx-auto'
                           onClick={() =>
                             setTheme(theme === 'dark' ? 'light' : 'dark')
-                          }>
+                          }
+                        >
                           {theme === 'dark' ? (
                             <svg
                               xmlns='http://www.w3.org/2000/svg'
                               className='h-6 w-6 text-gray-500 hover:text-gray-600'
                               fill='none'
                               viewBox='0 0 24 24'
-                              stroke='currentColor'>
+                              stroke='currentColor'
+                            >
                               <path
                                 strokeLinecap='round'
                                 strokeLinejoin='round'
@@ -716,7 +902,8 @@ export default function Header() {
                               className='h-6 w-6 text-gray-500 hover:text-gray-600'
                               fill='none'
                               viewBox='0 0 24 24'
-                              stroke='currentColor'>
+                              stroke='currentColor'
+                            >
                               <path
                                 strokeLinecap='round'
                                 strokeLinejoin='round'
@@ -735,7 +922,8 @@ export default function Header() {
                     <button
                       type='button'
                       className='-ml-2 bg-white dark:bg-gray-700 p-2 rounded-md text-gray-400'
-                      onClick={() => setMobileMenuOpen(true)}>
+                      onClick={() => setMobileMenuOpen(true)}
+                    >
                       <span className='sr-only'>Open menu</span>
                       <MenuIcon className='h-6 w-6' aria-hidden='true' />
                     </button>

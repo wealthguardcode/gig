@@ -1,4 +1,5 @@
 ---
+type: brokerage
 title: Petroleum & Gas Distributors
 heroDescription: WealthGuard offers Excess Coverage for Petroleum & Gas Distributors, including fuel tanker insurance options.
 image: /images/petroleum-1.jpeg

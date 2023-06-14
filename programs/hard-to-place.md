@@ -1,4 +1,5 @@
 ---
+type: brokerage
 title: Hard to Place Risk
 heroDescription: WealthGuard understands hard-to-place risk, and collaborates with our producers and insureds to find reliable insurance coverage for hard-to-place insurance cases.
 image: /images/hard/hard-1.jpeg

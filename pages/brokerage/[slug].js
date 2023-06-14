@@ -21,7 +21,7 @@ toast.configure({
   draggable: false,
 })
 
-export default function ProgramPage({
+export default function BrokerageProgramPage({
   frontmatter: {
     title,
     heroDescription,
@@ -85,9 +85,7 @@ export async function getStaticPaths() {
 
       return { filename, frontmatter }
     })
-    .filter(
-      ({ frontmatter }) => !frontmatter.type || frontmatter.type !== 'brokerage'
-    )
+    .filter(({ frontmatter }) => frontmatter.type === 'brokerage')
     .map(({ filename }) => ({
       params: {
         slug: filename.replace('.md', ''),
