@@ -2,59 +2,13 @@ import { useState } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { useRouter } from 'next/router'
-import emailjs from '@emailjs/browser'
 import { toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
-
-function fun() {
-  document.getElementById('subscriber_email').value = ''
-}
 
 toast.configure({
   autoClose: 8000,
   draggable: false,
 })
-
-function sendEmail(e) {
-  e.preventDefault()
-  if (e.target.subscriber_email.value === '') {
-    return toast.error('Form cannot be empty!', {
-      position: 'top-right',
-      autoClose: 5000,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: true,
-      progress: undefined,
-    })
-  } else {
-    emailjs
-      .sendForm(
-        'service_xq1c0nw',
-        'template_1gc83qd',
-       e.target,
-        'user_d4nOYEeRd1vg35PMH5vcY'
-      )
-      .then(
-        (result) => {
-          toast('🎉 Thank You!', {
-            position: 'top-right',
-            autoClose: 5000,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: true,
-            progress: undefined,
-          })
-          console.log(result.text)
-        },
-        (error) => {
-          alert(error.text)
-        }
-      )
-    fun()
-  }
-}
 
 const footerNavigation = {
   links: [
@@ -134,7 +88,8 @@ export default function Footer() {
   return (
     <footer
       aria-labelledby='footer-heading'
-      className='bg-white dark:bg-gray-700 border-t border-gray-200 dark:border-gray-500'>
+      className='bg-white dark:bg-gray-700 border-t border-gray-200 dark:border-gray-500'
+    >
       <h2 id='footer-heading' className='sr-only'>
         Footer
       </h2>
@@ -174,7 +129,8 @@ export default function Footer() {
                               : 'text-gray-500 dark:text-gray-400 hover:font-bold hover:text-red-700 dark:hover:text-red-700 hover:bg-gray-100 dark:hover:bg-gray-800'
                           }
                           onClick={newPathName}
-                          pathname={pathName}>
+                          pathname={pathName}
+                        >
                           {item.name}
                         </a>
                       </li>
@@ -196,7 +152,8 @@ export default function Footer() {
                               : 'text-gray-500 dark:text-gray-400 hover:font-bold hover:text-red-700 dark:hover:text-red-700 hover:bg-gray-100 dark:hover:bg-gray-800'
                           }
                           onClick={newPathName}
-                          pathname={pathName}>
+                          pathname={pathName}
+                        >
                           {item.name}
                         </a>
                       </li>
@@ -219,42 +176,14 @@ export default function Footer() {
                             : 'text-gray-500 dark:text-gray-400 hover:font-bold hover:text-red-700 dark:hover:text-red-700 hover:bg-gray-100 dark:hover:bg-gray-800'
                         }
                         onClick={newPathName}
-                        pathname={pathName}>
+                        pathname={pathName}
+                      >
                         {item.name}
                       </a>
                     </li>
                   ))}
                 </ul>
               </div>
-            </div>
-
-            {/* Newsletter section */}
-            <div className='mt-12 md:mt-0 md:row-start-2 md:col-start-3 md:col-span-8 lg:row-start-1 lg:col-start-9 lg:col-span-4'>
-              <h3 className='text-sm font-medium text-gray-900 dark:text-gray-300'>
-                Sign up for our newsletter
-              </h3>
-              <p className='mt-6 text-sm text-gray-500 dark:text-gray-400'>
-                The latest info & updates, sent to your inbox weekly.
-              </p>
-              <form className='mt-2 flex sm:max-w-md' onSubmit={sendEmail}>
-                <label htmlFor='subscriber_email' className='sr-only'>
-                  Email address
-                </label>
-                <input
-                  id='subscriber_email'
-                  name='subscriber_email'
-                  type='text'
-                  autoComplete='email'
-                  className='appearance-none min-w-0 w-full bg-white dark:bg-gray-50 border border-gray-300 rounded-md shadow-sm py-2 px-4 text-base text-gray-900 placeholder-gray-500 focus:outline-none focus:border-red-700 focus:ring-1 focus:ring-red-700'
-                />
-                <div className='ml-4 flex-shrink-0'>
-                  <button
-                    type='submit'
-                    className='w-full bg-red-700 border border-transparent rounded-md shadow-sm py-2 px-4 flex items-center justify-center text-base font-medium text-white hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-700'>
-                    Sign up
-                  </button>
-                </div>
-              </form>
             </div>
           </div>
         </div>
