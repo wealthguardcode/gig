@@ -16,78 +16,64 @@ import Link from 'next/link'
 
 const features = [
   {
-    slug: 'petroleum-and-gas-distributors',
-    type: 'brokerage',
     name: 'Petroleum & Gas Distributors',
     description:
       'WealthGuard offers Excess Coverage for petroleum and gas distributors. Learn more about our risk appetite across industry categories.',
-    // href: '/programs/petroleum-and-gas-distributors',
+    href: '/brokerage/petroleum-and-gas-distributors',
   },
   {
-    slug: 'westwall-marina-package',
     name: 'Marina Insurance',
     description:
       'All perils coverage including wind & hail, flood, earthquake and collapse. No co-insurance- Agreed value for property.',
-    // href: '/programs/westwall-marina-package',
+    href: '/programs/westwall-marina-package',
   },
   {
-    slug: 'coastal-property',
-    type: 'brokerage',
     name: 'Coastal Property',
     description:
       'Hurricanes cause more damage than any other natural disaster known to man, and every year they are responsible for 28 billion dollars of destruction.',
-    // href: '/programs/coastal-property',
+    href: '/brokerage/coastal-property',
   },
   {
-    slug: 'cargo-and-logistics',
     name: 'Cargo & Logistics',
     description:
       'Our Cargo and Logistics team are leaders in helping your business avoid business disruptions and recover from costly perils.',
-    // href: '/programs/cargo-and-logistics',
+    href: '/programs/cargo-and-logistics',
   },
   {
-    slug: 'terrorism-and-sabotage',
     name: 'Terrorism & Sabotage',
     description:
       'The harm of life and property brought by acts of terrorism or sabotage is significant and incidents are increasing each year. ',
-    // href: '/programs/terrorism-and-sabotage',
+    href: '/programs/terrorism-and-sabotage',
   },
   {
-    slug: 'active-assailant',
     name: 'Active Assailant',
     description:
       'The financial impact can be devastating to a business and this coverage will help keep you in business as you work through the emotional and financial recovery.',
-    // href: '/programs/active-assailant',
+    href: '/programs/active-assailant',
   },
   {
-    slug: 'violent-malicious-acts',
     name: 'Violent Malicious Acts',
     description:
       'Designed to help you and your facility move forward after a tragedy, homicide, nonfatal injuries, or substantial damage to property.',
-    // href: '/programs/violent-malicious-acts',
+    href: '/programs/violent-malicious-acts',
   },
   {
-    slug: '',
     name: 'Deductible Buy-down Options',
     description:
       'Helping you limit the first-dollar losses that you may experience by reducing or eliminating the deductible.',
-    // href: '/programs',
+    href: '/programs',
   },
   {
-    slug: 'hard-to-place-risk',
-    type: 'brokerage',
     name: 'Hard to Place Risk',
     description:
       'Helping you get the reliable coverage for hard to place liability risk that may not fit the mold of a traditional insurance risk.',
-    // href: '/programs/hard-to-place-risk',
+    href: '/brokerage/hard-to-place',
   },
   {
-    slug: 'yacht-program',
-    type: 'brokerage',
     name: 'Yacht Program',
     description:
       'Designed to help with liability coverage for bodily injury or damage to the property of others and damage to personal property on the vessel.',
-    // href: '/programs/yacht-program',
+    href: '/brokerage/yacht-program',
   },
 ]
 
@@ -202,39 +188,33 @@ export default function Home() {
         <div className='max-w-7xl mx-auto py-8 px-4 sm:px-6 lg:pb-24 lg:pt-12 lg:px-8 lg:grid lg:grid-cols-2 lg:gap-x-8'>
           <div className='mt-12 lg:mt-0 lg:col-span-2'>
             <div className='space-y-10 sm:space-y-0 sm:grid sm:grid-cols-2 sm:gap-x-6 sm:gap-y-10 lg:gap-x-8 '>
-              {features.map((feature) => {
-                const href = `/${
-                  feature.type === 'brokerage' ? 'brokerage' : 'programs'
-                }${feature.slug ? `/${feature.slug}` : ``}`
-
-                return (
-                  <div
-                    key={feature.slug || feature.name}
-                    className='relative cursor-pointer border-4 border-opacity-50 rounded-lg p-4 shadow-lg hover:shadow-2xl hover:border-gray-300 dark:hover:border-red-700 transform transition duration-500 md:hover:scale-110 hover:scale-105'
-                  >
-                    <div>
-                      <CheckIcon
-                        className='absolute h-8 w-8 text-green-500'
-                        aria-hidden='true'
-                      />
-                      <Link href={href}>
-                        <a>
-                          <p className='ml-9 text-xl leading-6 font-medium text-gray-900 dark:text-gray-300'>
-                            {feature.name}
-                          </p>
-                        </a>
-                      </Link>
-                    </div>
-                    <Link href={href}>
+              {features.map((feature) => (
+                <div
+                  key={feature.name}
+                  className='relative cursor-pointer border-4 border-opacity-50 rounded-lg p-4 shadow-lg hover:shadow-2xl hover:border-gray-300 dark:hover:border-red-700 transform transition duration-500 md:hover:scale-110 hover:scale-105'
+                >
+                  <div>
+                    <CheckIcon
+                      className='absolute h-8 w-8 text-green-500'
+                      aria-hidden='true'
+                    />
+                    <Link href={feature.href}>
                       <a>
-                        <div className='mt-2 ml-9 prose-lg text-gray-500 dark:text-gray-400'>
-                          {feature.description}
-                        </div>
+                        <p className='ml-9 text-xl leading-6 font-medium text-gray-900 dark:text-gray-300'>
+                          {feature.name}
+                        </p>
                       </a>
                     </Link>
                   </div>
-                )
-              })}
+                  <Link href={feature.href}>
+                    <a>
+                      <div className='mt-2 ml-9 prose-lg text-gray-500 dark:text-gray-400'>
+                        {feature.description}
+                      </div>
+                    </a>
+                  </Link>
+                </div>
+              ))}
             </div>
           </div>
         </div>

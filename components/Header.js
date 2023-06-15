@@ -64,7 +64,7 @@ const navigation = {
         },
         {
           name: 'Hard to Place Risk',
-          href: '/brokerage/hard-to-place-risk',
+          href: '/brokerage/hard-to-place',
         },
         {
           name: 'Petroleum and Gas Distributors',

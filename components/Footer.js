@@ -19,11 +19,7 @@ const footerNavigation = {
     },
     {
       name: 'Coastal Property',
-      href: '/programs/coastal-property',
-    },
-    {
-      name: 'Healthcare Facilities',
-      href: '/programs/healthcare-facilities',
+      href: '/brokerage/coastal-property',
     },
     {
       name: 'Cargo & Logistics',
@@ -43,11 +39,11 @@ const footerNavigation = {
     },
     {
       name: 'Hard to Place Risk',
-      href: '/programs/hard-to-place-risk',
+      href: '/brokerage/hard-to-place',
     },
     {
       name: 'Yacht Program',
-      href: '/programs/yacht-program',
+      href: '/brokerage/yacht-program',
     },
   ],
   resources: [
