@@ -8,11 +8,13 @@ import { Dialog, Popover, Tab, Transition } from '@headlessui/react'
 import { MenuIcon, XIcon } from '@heroicons/react/outline'
 import { useTheme } from 'next-themes'
 
-const navigation = {
+const TIMEOUT_DURATION = 200
+
+const NAVIGATION = {
   categories: [
     {
       name: 'Programs',
-      programs: [
+      links: [
         {
           name: 'View All Programs',
           href: '/programs',
@@ -41,7 +43,7 @@ const navigation = {
     },
     {
       name: 'Brokerage',
-      programs: [
+      links: [
         {
           name: 'View All Brokerage Solutions',
           href: '/brokerage',
@@ -78,7 +80,7 @@ const navigation = {
     },
     {
       name: 'Resources',
-      programs: [
+      links: [
         {
           name: 'Broker Resources',
           href: '/resources/broker-resources',
@@ -87,7 +89,7 @@ const navigation = {
     },
     {
       name: 'About Us',
-      programs: [
+      links: [
         {
           name: 'About Us Overview',
           href: '/about-us/about-us',
@@ -103,155 +105,18 @@ const navigation = {
 }
 
 export default function Header() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const { theme, setTheme } = useTheme()
   const router = useRouter()
-  const [pathName, setPathName] = useState(router.pathname)
-  const buttonRef = useRef(null)
-  const buttonRef2 = useRef(null)
-  const buttonRef3 = useRef(null)
-  const buttonRef4 = useRef(null)
-  const [openState, setOpenState] = useState(false)
-  const [openState2, setOpenState2] = useState(false)
-  const [openState3, setOpenState3] = useState(false)
-  const [openState4, setOpenState4] = useState(false)
 
-  const newPathName = () => {
-    setPathName(router.pathname)
-  }
+  const [isMobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   let timeout // NodeJS.Timeout
-  const timeoutDuration = 400
-
-  const toggleMenu = (open) => {
-    // log the current open state in React (toggle open state)
-    setOpenState((openState) => !openState)
-    // toggle the menu by clicking on buttonRef
-    buttonRef?.current?.click() // eslint-disable-line
-  }
-  const toggleMenu2 = (open) => {
-    // log the current open state in React (toggle open state)
-    setOpenState2((openState2) => !openState2)
-    // toggle the menu by clicking on buttonRef
-    buttonRef2?.current?.click() // eslint-disable-line
-  }
-  const toggleMenu3 = (open) => {
-    // log the current open state in React (toggle open state)
-    setOpenState3((openState3) => !openState3)
-    // toggle the menu by clicking on buttonRef
-    buttonRef3?.current?.click() // eslint-disable-line
-  }
-  const toggleMenu4 = (open) => {
-    // log the current open state in React (toggle open state)
-    setOpenState3((openState3) => !openState3)
-    // toggle the menu by clicking on buttonRef
-    buttonRef4?.current?.click() // eslint-disable-line
-  }
-
-  // Open the menu after a delay of timeoutDuration
-  const onHover = (open, action) => {
-    // if the modal is currently closed, we need to open it
-    // OR
-    // if the modal is currently open, we need to close it
-    if (
-      (!open && !openState && action === 'onMouseEnter') ||
-      (open && openState && action === 'onMouseLeave')
-    ) {
-      // clear the old timeout, if any
-      clearTimeout(timeout)
-      // open the modal after a timeout
-      timeout = setTimeout(() => toggleMenu(open), timeoutDuration)
-    }
-    // else: don't click! 😁
-  }
-
-  // Open the menu after a delay of timeoutDuration
-  const onHover2 = (open, action) => {
-    // if the modal is currently closed, we need to open it
-    // OR
-    // if the modal is currently open, we need to close it
-    if (
-      (!open && !openState2 && action === 'onMouseEnter') ||
-      (open && openState2 && action === 'onMouseLeave')
-    ) {
-      // clear the old timeout, if any
-      clearTimeout(timeout)
-      // open the modal after a timeout
-      timeout = setTimeout(() => toggleMenu2(open), timeoutDuration)
-    }
-    // else: don't click! 😁
-  }
-
-  // Open the menu after a delay of timeoutDuration
-  const onHover3 = (open, action) => {
-    // if the modal is currently closed, we need to open it
-    // OR
-    // if the modal is currently open, we need to close it
-    if (
-      (!open && !openState3 && action === 'onMouseEnter') ||
-      (open && openState3 && action === 'onMouseLeave')
-    ) {
-      // clear the old timeout, if any
-      clearTimeout(timeout)
-      // open the modal after a timeout
-      timeout = setTimeout(() => toggleMenu3(open), timeoutDuration)
-    }
-    // else: don't click! 😁
-  }
-
-  // Open the menu after a delay of timeoutDuration
-  const onHover4 = (open, action) => {
-    // if the modal is currently closed, we need to open it
-    // OR
-    // if the modal is currently open, we need to close it
-    if (
-      (!open && !openState4 && action === 'onMouseEnter') ||
-      (open && openState4 && action === 'onMouseLeave')
-    ) {
-      // clear the old timeout, if any
-      clearTimeout(timeout)
-      // open the modal after a timeout
-      timeout = setTimeout(() => toggleMenu4(open), timeoutDuration)
-    }
-    // else: don't click! 😁
-  }
-
-  const handleClick = (open) => {
-    setOpenState(!open) // toggle open state in React state
-    clearTimeout(timeout) // stop the hover timer if it's running
-  }
-  const handleClick2 = (open) => {
-    setOpenState(!open) // toggle open state in React state
-    clearTimeout(timeout) // stop the hover timer if it's running
-  }
-  const handleClick3 = (open) => {
-    setOpenState(!open) // toggle open state in React state
-    clearTimeout(timeout) // stop the hover timer if it's running
-  }
-  const handleClick4 = (open) => {
-    setOpenState(!open) // toggle open state in React state
-    clearTimeout(timeout) // stop the hover timer if it's running
-  }
-
-  const handleClickOutside = (event) => {
-    if (buttonRef.current && !buttonRef.current.contains(event.target)) {
-      event.stopPropagation()
-    }
-  }
-
-  useEffect(() => {
-    document.addEventListener('mousedown', handleClickOutside)
-
-    return () => {
-      document.removeEventListener('mousedown', handleClickOutside)
-    }
-  })
 
   return (
     <div className='bg-gray-50 dark:bg-gray-800'>
       <div>
         {/* Mobile menu */}
-        <Transition.Root show={mobileMenuOpen} as={Fragment}>
+        <Transition.Root show={isMobileMenuOpen} as={Fragment}>
           <Dialog
             as='div'
             className='fixed inset-0 flex z-40 lg:hidden'
@@ -294,7 +159,7 @@ export default function Header() {
                 <Tab.Group as='div' className='mt-2'>
                   <div className='border-b border-gray-200 dark:border-gray-500'>
                     <Tab.List className='-mb-px flex px-4 space-x-2 md:space-x-8'>
-                      {navigation.categories.map((category) => (
+                      {NAVIGATION.categories.map((category) => (
                         <Tab
                           key={category.name}
                           className={({ selected }) =>
@@ -312,33 +177,33 @@ export default function Header() {
                     </Tab.List>
                   </div>
                   <Tab.Panels as={Fragment}>
-                    {navigation.categories.map((category) => (
+                    {NAVIGATION.categories.map((category) => (
                       <Tab.Panel
                         key={category.name}
                         className='px-4 py-6 space-y-12'
                       >
                         <div className='grid grid-cols-1 gap-x-4 gap-y-4'>
-                          {category.programs.map((item) => (
+                          {category.links.map((item) => (
                             <div
                               key={item.name}
                               className='group relative mx-auto'
                             >
-                              <a
-                                href={item.href}
-                                className={
-                                  router.asPath === item.href
-                                    ? 'mt-6 block font-medium text-red-700 dark:text-red-700 bg-gray-100 dark:bg-gray-700 px-2 py-0.5'
-                                    : 'mt-6 block font-medium text-gray-900 dark:text-gray-300 hover:text-red-700 dark:hover:text-red-700'
-                                }
-                                onClick={newPathName}
-                                pathname={pathName}
-                              >
-                                <span
-                                  className='absolute z-10 inset-0'
-                                  aria-hidden='true'
-                                />
-                                {item.name}
-                              </a>
+                              <Link href={item.href}>
+                                <a
+                                  onClick={() => setMobileMenuOpen(false)}
+                                  className={
+                                    router.asPath === item.href
+                                      ? 'mt-6 block font-medium text-red-700 dark:text-red-700 bg-gray-100 dark:bg-gray-700 px-2 py-0.5'
+                                      : 'mt-6 block font-medium text-gray-900 dark:text-gray-300 hover:text-red-700 dark:hover:text-red-700'
+                                  }
+                                >
+                                  <span
+                                    className='absolute z-10 inset-0'
+                                    aria-hidden='true'
+                                  />
+                                  {item.name}
+                                </a>
+                              </Link>
                             </div>
                           ))}
                         </div>
@@ -349,19 +214,21 @@ export default function Header() {
 
                 {/* Single Nav Links */}
                 <div className='border-t divide-y border-gray-200 dark:border-gray-500 py-6 px-4 space-y-6 mx-auto'>
-                  {navigation.pages.map((page) => (
+                  {NAVIGATION.pages.map((page) => (
                     <div key={page.name} className='flow-root'>
-                      <a
-                        href={page.href}
-                        className={
-                          router.asPath === page.href
-                            ? '-m-2 px-2 py=0.5 block font-medium text-red-700 dark:text-red-700 bg-gray-100 dark:bg-gray-700'
-                            : '-m-2 p-2 block font-medium text-gray-900 dark:text-gray-300 hover:text-red-700 dark:hover:text-red-700'
-                        }
-                        aria-label={page.aria}
-                      >
-                        {page.name}
-                      </a>
+                      <Link href={page.href}>
+                        <a
+                          onClick={() => setMobileMenuOpen(false)}
+                          className={
+                            router.asPath === page.href
+                              ? '-m-2 px-2 py=0.5 block font-medium text-red-700 dark:text-red-700 bg-gray-100 dark:bg-gray-700'
+                              : '-m-2 p-2 block font-medium text-gray-900 dark:text-gray-300 hover:text-red-700 dark:hover:text-red-700'
+                          }
+                          aria-label={page.aria}
+                        >
+                          {page.name}
+                        </a>
+                      </Link>
                     </div>
                   ))}
                 </div>
@@ -411,7 +278,7 @@ export default function Header() {
         {/* Large Nav */}
         <header className='relative z-10'>
           <nav aria-label='Top'>
-            {/* Secondary navigation */}
+            {/* Secondary Navigation */}
             <div className='bg-white dark:bg-gray-800 shadow-xl'>
               <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
                 <div className='h-16 flex items-center justify-between'>
@@ -443,433 +310,35 @@ export default function Header() {
 
                   <div className='hidden h-full lg:flex'>
                     {/* Flyout hover menus */}
-                    {/* Programs Flyout hover menu */}
                     <Popover.Group className='px-4 bottom-0 inset-x-0'>
                       <div className='h-full flex justify-center space-x-8'>
-                        <Popover
-                          key={navigation.categories[0].name}
-                          className='flex'
-                        >
-                          {({ open }) => (
-                            <div
-                              onMouseEnter={() => onHover(open, 'onMouseEnter')}
-                              onMouseLeave={() => onHover(open, 'onMouseLeave')}
-                            >
-                              <div className='relative flex'>
-                                <Popover.Button
-                                  ref={buttonRef}
-                                  className={classNames(
-                                    open
-                                      ? 'text-red-700 my-5 outline-0'
-                                      : 'text-gray-700 dark:text-gray-50 hover:text-red-700 dark:hover:text-red-700 my-5',
-                                    'relative flex items-center justify-center transition-colors ease-out duration-200 font-medium outline-none'
-                                  )}
-                                  onClick={() => handleClick(open)}
-                                >
-                                  {navigation.categories[0].name}
-                                  <span
-                                    className={classNames(
-                                      open ? 'bg-red-700' : '',
-                                      'absolute z-30 -bottom-px inset-x-0 h-0.5 transition ease-out duration-200'
-                                    )}
-                                    aria-hidden='true'
-                                  />
-                                </Popover.Button>
-                              </div>
-
-                              <Transition
-                                as={Fragment}
-                                enter='transition ease-out duration-200'
-                                enterFrom='opacity-0'
-                                enterTo='opacity-100'
-                                leave='transition ease-in duration-150'
-                                leaveFrom='opacity-100'
-                                leaveTo='opacity-0'
-                              >
-                                <Popover.Panel className='absolute z-20 top-full inset-x-0 bg-white dark:bg-gray-800 text-md text-gray-500 dark:text-white'>
-                                  <div
-                                    className='absolute inset-0 top-1/2 bg-white dark:bg-gray-800 shadow'
-                                    aria-hidden='true'
-                                  />
-                                  {/* Fake border when menu is open */}
-                                  <div
-                                    className='absolute inset-0 top-0 h-px max-w-7xl mx-auto px-8'
-                                    aria-hidden='true'
-                                  >
-                                    <div
-                                      className={classNames(
-                                        open
-                                          ? 'bg-gray-200 dark:bg-gray-600'
-                                          : 'bg-transparent',
-                                        'w-full h-px transition-colors ease-out duration-200'
-                                      )}
-                                    />
-                                  </div>
-
-                                  <div className='relative'>
-                                    <div className='max-w-7xl mx-auto px-8'>
-                                      <div className='grid grid-cols-1 py-8'>
-                                        {navigation.categories[0].programs.map(
-                                          (item) => (
-                                            <div
-                                              key={item.name}
-                                              className='group relative'
-                                            >
-                                              <a
-                                                href={item.href}
-                                                className={
-                                                  router.asPath === item.href
-                                                    ? 'mt-4 font-base block font-medium text-red-700 bg-gray-100 dark:bg-gray-700 dark:text-red-700'
-                                                    : 'mt-4 font-base block font-medium text-gray-900 hover:text-red-700 hover:bg-gray-100 dark:hover:bg-gray-700 dark:text-gray-50 dark:hover:text-red-700'
-                                                }
-                                                onClick={newPathName}
-                                                pathname={pathName}
-                                              >
-                                                <span
-                                                  className='absolute z-10 inset-0 group-hover:block'
-                                                  aria-hidden='true'
-                                                />
-                                                {item.name}
-                                              </a>
-                                            </div>
-                                          )
-                                        )}
-                                      </div>
-                                    </div>
-                                  </div>
-                                </Popover.Panel>
-                              </Transition>
-                            </div>
-                          )}
-                        </Popover>
-
-                        {/* Brokerage Flyout hover menu */}
-                        <Popover
-                          key={navigation.categories[1].name}
-                          className='flex'
-                        >
-                          {({ open }) => (
-                            <div
-                              onMouseEnter={() =>
-                                onHover4(open, 'onMouseEnter')
-                              }
-                              onMouseLeave={() =>
-                                onHover4(open, 'onMouseLeave')
-                              }
-                            >
-                              <div className='relative flex'>
-                                <Popover.Button
-                                  ref={buttonRef4}
-                                  className={classNames(
-                                    open
-                                      ? 'text-red-700 my-5 outline-0'
-                                      : 'text-gray-700 dark:text-gray-50 hover:text-red-700 dark:hover:text-red-700 my-5',
-                                    'relative flex items-center justify-center transition-colors ease-out duration-200 font-medium outline-none'
-                                  )}
-                                  onClick={() => handleClick4(open)}
-                                >
-                                  {navigation.categories[1].name}
-                                  <span
-                                    className={classNames(
-                                      open ? 'bg-red-700' : '',
-                                      'absolute z-30 -bottom-px inset-x-0 h-0.5 transition ease-out duration-200'
-                                    )}
-                                    aria-hidden='true'
-                                  />
-                                </Popover.Button>
-                              </div>
-
-                              <Transition
-                                as={Fragment}
-                                enter='transition ease-out duration-200'
-                                enterFrom='opacity-0'
-                                enterTo='opacity-100'
-                                leave='transition ease-in duration-150'
-                                leaveFrom='opacity-100'
-                                leaveTo='opacity-0'
-                              >
-                                <Popover.Panel className='absolute z-20 top-full inset-x-0 bg-white dark:bg-gray-800 text-md text-gray-500 dark:text-white'>
-                                  <div
-                                    className='absolute inset-0 top-1/2 bg-white dark:bg-gray-800 shadow'
-                                    aria-hidden='true'
-                                  />
-                                  {/* Fake border when menu is open */}
-                                  <div
-                                    className='absolute inset-0 top-0 h-px max-w-7xl mx-auto px-8'
-                                    aria-hidden='true'
-                                  >
-                                    <div
-                                      className={classNames(
-                                        open
-                                          ? 'bg-gray-200 dark:bg-gray-600'
-                                          : 'bg-transparent',
-                                        'w-full h-px transition-colors ease-out duration-200'
-                                      )}
-                                    />
-                                  </div>
-
-                                  <div className='relative'>
-                                    <div className='max-w-7xl mx-auto px-8'>
-                                      <div className='grid grid-cols-1 py-8'>
-                                        {navigation.categories[1].programs.map(
-                                          (item) => (
-                                            <div
-                                              key={item.name}
-                                              className='group relative'
-                                            >
-                                              <a
-                                                href={item.href}
-                                                className={
-                                                  router.asPath === item.href
-                                                    ? 'mt-4 font-base block font-medium text-red-700 bg-gray-100 dark:bg-gray-700 dark:text-red-700'
-                                                    : 'mt-4 font-base block font-medium text-gray-900 hover:text-red-700 hover:bg-gray-100 dark:hover:bg-gray-700 dark:text-gray-50 dark:hover:text-red-700'
-                                                }
-                                                onClick={newPathName}
-                                                pathname={pathName}
-                                              >
-                                                <span
-                                                  className='absolute z-10 inset-0 group-hover:block'
-                                                  aria-hidden='true'
-                                                />
-                                                {item.name}
-                                              </a>
-                                            </div>
-                                          )
-                                        )}
-                                      </div>
-                                    </div>
-                                  </div>
-                                </Popover.Panel>
-                              </Transition>
-                            </div>
-                          )}
-                        </Popover>
-
-                        {/* Resources Flyout Hover Menu */}
-                        <Popover
-                          key={navigation.categories[2].name}
-                          className='flex'
-                          id='PopoverPanel2'
-                        >
-                          {({ open }) => (
-                            <div
-                              onMouseEnter={() =>
-                                onHover2(open, 'onMouseEnter')
-                              }
-                              onMouseLeave={() =>
-                                onHover2(open, 'onMouseLeave')
-                              }
-                            >
-                              <div className='relative flex'>
-                                <Popover.Button
-                                  ref={buttonRef2}
-                                  className={classNames(
-                                    open
-                                      ? 'text-red-700 my-5'
-                                      : 'text-gray-700 dark:text-gray-50 hover:text-red-700 dark:hover:text-red-700 my-5',
-                                    'relative flex items-center justify-center transition-colors ease-out duration-200 font-medium outline-none'
-                                  )}
-                                  onClick={() => handleClick2(open)}
-                                >
-                                  {navigation.categories[2].name}
-                                  <span
-                                    className={classNames(
-                                      open ? 'bg-red-700' : '',
-                                      'absolute z-30 -bottom-px inset-x-0 h-0.5 transition ease-out duration-200'
-                                    )}
-                                    aria-hidden='true'
-                                  />
-                                </Popover.Button>
-                              </div>
-
-                              <Transition
-                                as={Fragment}
-                                enter='transition ease-out duration-200'
-                                enterFrom='opacity-0'
-                                enterTo='opacity-100'
-                                leave='transition ease-in duration-150'
-                                leaveFrom='opacity-100'
-                                leaveTo='opacity-0'
-                              >
-                                <Popover.Panel className='absolute z-20 top-full inset-x-0 bg-white dark:bg-gray-800 text-md text-gray-500 dark:text-white'>
-                                  <div
-                                    className='absolute inset-0 top-1/2 bg-white dark:bg-gray-800 shadow'
-                                    aria-hidden='true'
-                                  />
-                                  {/* Fake border when menu is open */}
-                                  <div
-                                    className='absolute inset-0 top-0 h-px max-w-7xl mx-auto px-8'
-                                    aria-hidden='true'
-                                  >
-                                    <div
-                                      className={classNames(
-                                        open
-                                          ? 'bg-gray-200 dark:bg-gray-600'
-                                          : 'bg-transparent',
-                                        'w-full h-px transition-colors ease-out duration-200'
-                                      )}
-                                    />
-                                  </div>
-
-                                  <div className='relative'>
-                                    <div className='max-w-7xl mx-auto px-8'>
-                                      <div className='grid grid-cols-1 py-8'>
-                                        <Fragment key={'PopoverPanel2<>'}>
-                                          {navigation.categories[2].programs.map(
-                                            (item) => (
-                                              <div
-                                                key={item.name}
-                                                className='group relative'
-                                              >
-                                                <a
-                                                  href={item.href}
-                                                  className={
-                                                    router.asPath === item.href
-                                                      ? 'mt-4 font-base block font-medium text-red-700 bg-gray-100 dark:bg-gray-700 dark:text-red-700'
-                                                      : 'mt-4 font-base block font-medium text-gray-900 hover:text-red-700 hover:bg-gray-100 dark:hover:bg-gray-700 dark:text-gray-50 dark:hover:text-red-700'
-                                                  }
-                                                  onClick={newPathName}
-                                                  pathname={pathName}
-                                                >
-                                                  <span
-                                                    className='absolute z-10 inset-0 group-hover:block'
-                                                    aria-hidden='true'
-                                                  />
-                                                  {item.name}
-                                                </a>
-                                              </div>
-                                            )
-                                          )}
-                                        </Fragment>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </Popover.Panel>
-                              </Transition>
-                            </div>
-                          )}
-                        </Popover>
-                        {/* About Us Flyout Hover Menu */}
-                        <Popover
-                          key={navigation.categories[3].name}
-                          className='flex'
-                          id='PopoverPanel3'
-                        >
-                          {({ open }) => (
-                            <div
-                              onMouseEnter={() =>
-                                onHover3(open, 'onMouseEnter')
-                              }
-                              onMouseLeave={() =>
-                                onHover3(open, 'onMouseLeave')
-                              }
-                            >
-                              <div className='relative flex'>
-                                <Popover.Button
-                                  ref={buttonRef3}
-                                  className={classNames(
-                                    open
-                                      ? 'text-red-700 my-5'
-                                      : 'text-gray-700 dark:text-gray-50 hover:text-red-700 dark:hover:text-red-700 my-5',
-                                    'relative flex items-center justify-center transition-colors ease-out duration-200 font-medium outline-none'
-                                  )}
-                                  onClick={() => handleClick3(open)}
-                                >
-                                  {navigation.categories[3].name}
-                                  <span
-                                    className={classNames(
-                                      open ? 'bg-red-700' : '',
-                                      'absolute z-30 -bottom-px inset-x-0 h-0.5 transition ease-out duration-200'
-                                    )}
-                                    aria-hidden='true'
-                                  />
-                                </Popover.Button>
-                              </div>
-
-                              <Transition
-                                as={Fragment}
-                                enter='transition ease-out duration-200'
-                                enterFrom='opacity-0'
-                                enterTo='opacity-100'
-                                leave='transition ease-in duration-150'
-                                leaveFrom='opacity-100'
-                                leaveTo='opacity-0'
-                              >
-                                <Popover.Panel className='absolute z-20 top-full inset-x-0 bg-white dark:bg-gray-800 text-md text-gray-500 dark:text-white'>
-                                  <div
-                                    className='absolute inset-0 top-1/2 bg-white dark:bg-gray-800 shadow'
-                                    aria-hidden='true'
-                                  />
-                                  {/* Fake border when menu is open */}
-                                  <div
-                                    className='absolute inset-0 top-0 h-px max-w-7xl mx-auto px-8'
-                                    aria-hidden='true'
-                                  >
-                                    <div
-                                      className={classNames(
-                                        open
-                                          ? 'bg-gray-200 dark:bg-gray-600'
-                                          : 'bg-transparent',
-                                        'w-full h-px transition-colors ease-out duration-200'
-                                      )}
-                                    />
-                                  </div>
-
-                                  <div className='relative'>
-                                    <div className='max-w-7xl mx-auto px-8'>
-                                      <div className='grid grid-cols-1 py-8'>
-                                        <Fragment key={'PopoverPanel3<>'}>
-                                          {navigation.categories[3].programs.map(
-                                            (item) => (
-                                              <div
-                                                key={item.name}
-                                                className='group relative'
-                                              >
-                                                <a
-                                                  href={item.href}
-                                                  className={
-                                                    router.asPath === item.href
-                                                      ? 'mt-4 font-base block font-medium text-red-700 bg-gray-100 dark:bg-gray-700 dark:text-red-700'
-                                                      : 'mt-4 font-base block font-medium text-gray-900 hover:text-red-700 hover:bg-gray-100 dark:hover:bg-gray-700 dark:text-gray-50 dark:hover:text-red-700'
-                                                  }
-                                                  onClick={newPathName}
-                                                  pathname={pathName}
-                                                >
-                                                  <span
-                                                    className='absolute z-10 inset-0 group-hover:block'
-                                                    aria-hidden='true'
-                                                  />
-                                                  {item.name}
-                                                </a>
-                                              </div>
-                                            )
-                                          )}
-                                        </Fragment>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </Popover.Panel>
-                              </Transition>
-                            </div>
-                          )}
-                        </Popover>
+                        {/* Flyout hover menus */}
+                        {NAVIGATION.categories.map(({ name, links }) => {
+                          return (
+                            <FlyoutHoverMenu
+                              key={name}
+                              router={router}
+                              name={name}
+                              links={links}
+                              timeout={timeout}
+                            />
+                          )
+                        })}
 
                         {/* Single Nav Links */}
-                        {navigation.pages.map((page) => (
-                          <a
-                            key={page.name}
-                            href={page.href}
-                            className={
-                              router.asPath === page.href
-                                ? 'flex items-center font-medium text-red-700 dark:text-red-700'
-                                : 'flex items-center font-medium text-gray-700 hover:text-red-700 dark:text-gray-50 dark:hover:text-red-700'
-                            }
-                            onClick={newPathName}
-                            pathname={pathName}
-                            aria-label={page.aria}
-                          >
-                            {page.name}
-                          </a>
+                        {NAVIGATION.pages.map((page) => (
+                          <Link key={page.name} href={page.href}>
+                            <a
+                              className={
+                                router.asPath === page.href
+                                  ? 'flex items-center font-medium text-red-700 dark:text-red-700'
+                                  : 'flex items-center font-medium text-gray-700 hover:text-red-700 dark:text-gray-50 dark:hover:text-red-700'
+                              }
+                              aria-label={page.aria}
+                            >
+                              {page.name}
+                            </a>
+                          </Link>
                         ))}
                         <button
                           aria-label='Toggle Dark Mode'
@@ -957,5 +426,116 @@ export default function Header() {
         </header>
       </div>
     </div>
+  )
+}
+
+function FlyoutHoverMenu({ router, name, links, timeout }) {
+  const buttonRef = useRef(null)
+  const [openState, setOpenState] = useState(false)
+
+  const boundingBox = buttonRef.current?.getBoundingClientRect()
+
+  const toggleMenu = (open) => {
+    // log the current open state in React (toggle open state)
+    setOpenState((openState) => !openState)
+    // toggle the menu by clicking on buttonRef
+    buttonRef.current?.click()
+  }
+
+  // Open the menu after delay
+  const onHover = (open, action) => {
+    // if the modal is currently closed, we need to open it
+    // OR
+    // if the modal is currently open, we need to close it
+    if (
+      (!open && !openState && action === 'onMouseEnter') ||
+      (open && openState && action === 'onMouseLeave')
+    ) {
+      // clear the old timeout, if any
+      clearTimeout(timeout)
+      // open the modal after a timeout
+      timeout = setTimeout(() => toggleMenu(open), TIMEOUT_DURATION)
+    }
+    // else: don't click! 😁
+  }
+
+  const handleClick = (open) => {
+    setOpenState(!open) // toggle open state in React state
+    clearTimeout(timeout) // stop the hover timer if it's running
+  }
+
+  return (
+    <Popover key={name} className='flex'>
+      {({ open }) => (
+        <div
+          onMouseEnter={() => onHover(open, 'onMouseEnter')}
+          onMouseLeave={() => onHover(open, 'onMouseLeave')}
+        >
+          <div className='relative flex'>
+            <Popover.Button
+              ref={buttonRef}
+              className={classNames(
+                open
+                  ? 'text-red-700 my-5 outline-0'
+                  : 'text-gray-700 dark:text-gray-50 hover:text-red-700 dark:hover:text-red-700 my-5',
+                'relative flex items-center justify-center transition-colors ease-out duration-200 font-medium outline-none'
+              )}
+              onClick={() => handleClick(open)}
+            >
+              {name}
+              <span
+                className={classNames(
+                  open ? 'bg-red-700' : '',
+                  'absolute z-30 -bottom-px inset-x-0 h-0.5 transition ease-out duration-200'
+                )}
+                aria-hidden='true'
+              />
+            </Popover.Button>
+          </div>
+
+          <Transition
+            as={Fragment}
+            enter='transition ease-out duration-200'
+            enterFrom='opacity-0'
+            enterTo='opacity-100'
+            leave='transition ease-in duration-150'
+            leaveFrom='opacity-100'
+            leaveTo='opacity-0'
+          >
+            <Popover.Panel className='absolute z-20 top-full inset-x-0 bg-white dark:bg-gray-800 text-md text-gray-500 dark:text-white'>
+              <div className='relative border-t border-solid border-gray-200 dark:border-gray-600'>
+                <div
+                  className='absolute w-auto max-w-md px-8 border-r border-b border-l border-solid border-gray-200 dark:border-gray-600 rounded-b-md bg-white dark:bg-gray-800 shadow-xl'
+                  style={{ left: boundingBox?.x ? boundingBox.x - 32 : 0 }}
+                >
+                  <div className='grid grid-cols-1 py-8'>
+                    {links.map((item) => (
+                      <div key={item.name} className='group relative'>
+                        <Link href={item.href}>
+                          <a
+                            onClick={() => onHover(open, 'onMouseLeave')}
+                            className={
+                              router.asPath === item.href
+                                ? 'mt-4 font-base block font-medium text-red-700 bg-gray-100 dark:bg-gray-700 dark:text-red-700'
+                                : 'mt-4 font-base block font-medium text-gray-900 hover:text-red-700 hover:bg-gray-100 dark:hover:bg-gray-700 dark:text-gray-50 dark:hover:text-red-700'
+                            }
+                          >
+                            <span
+                              className='absolute z-10 inset-0 group-hover:block'
+                              aria-hidden='true'
+                            />
+                            {item.name}
+                          </a>
+                        </Link>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </Popover.Panel>
+          </Transition>
+        </div>
+      )}
+    </Popover>
   )
 }
