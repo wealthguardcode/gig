@@ -454,14 +454,17 @@ function PopoverMenu({ router, name, links }) {
               static
               onMouseEnter={onMouseEnterPanel}
               onMouseLeave={onMouseLeavePanel}
-              className='absolute z-20 top-full inset-x-0 border-r border-b border-l border-solid border-gray-200 dark:border-gray-600 rounded-b-md text-md text-gray-500 dark:text-white bg-white dark:bg-gray-800 shadow-xl'
-              style={{
-                left: boundingBox?.x ? boundingBox.x - 16 : 0,
-                maxWidth: 300,
-              }}
+              className='absolute z-20 top-full inset-x-0 text-md text-gray-500 dark:text-white'
             >
-              <div className='border-t border-solid border-gray-200 dark:border-gray-600'>
-                <div className='px-8'>
+              <div className='relative border-t border-solid border-gray-200 dark:border-gray-600'>
+                <div
+                  className='absolute px-8 border-r border-b border-l border-solid border-gray-200 dark:border-gray-600 rounded-b-md bg-white dark:bg-gray-800 shadow-xl'
+                  style={{
+                    left: boundingBox?.x ? boundingBox.x - 16 : 0,
+                    width: '100%',
+                    maxWidth: 300,
+                  }}
+                >
                   <div className='grid grid-cols-1 py-8'>
                     {links.map((item) => (
                       <div key={item.name} className='group relative'>
