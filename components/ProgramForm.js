@@ -1,3 +1,5 @@
+import { classNames } from '../utils/helpers'
+
 import emailjs from '@emailjs/browser'
 import { toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
@@ -59,10 +61,6 @@ const STATES = [
   'Wisconsin',
   'Wyoming',
 ]
-
-function classNames(...classes) {
-  return classes.filter(Boolean).join(' ')
-}
 
 toast.configure({
   autoClose: 8000,

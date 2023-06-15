@@ -1,4 +1,6 @@
 import Layout from '../components/Layout'
+import { classNames } from '../utils/helpers'
+
 import {
   GlobeAltIcon,
   LightningBoltIcon,
@@ -11,10 +13,6 @@ import {
 } from '@heroicons/react/outline'
 import Image from 'next/image'
 import Link from 'next/link'
-
-function classNames(...classes) {
-  return classes.filter(Boolean).join(' ')
-}
 
 const features = [
   {

@@ -1,5 +1,4 @@
 ---
-type: brokerage
 title: Auto Liability Excess Only
 heroDescription: WealthGuard offers Excess Only Auto Liability Coverage. Excess Auto Liability Coverage offers additional coverage beyond a primary policy to provide extended protection for your business.
 image: /images/auto-liability-excess-only-1.jpeg

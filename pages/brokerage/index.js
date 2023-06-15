@@ -2,15 +2,15 @@ import Layout from '../../components/Layout'
 import ProgramsCTA from '../../components/ProgramsCTA'
 import ProgramsGrid from '../../components/ProgramsGrid'
 import ProgramsHero from '../../components/ProgramsHero'
-import { getPrograms } from '../../lib/programs'
+import { getBrokerage } from '../../lib/brokerage'
 
-export default function BrokerageProgramsPage({ programs }) {
+export default function BrokeragePage({ programs }) {
   return (
-    <Layout title='WIG | Our Brokerage Programs'>
-      <ProgramsHero title='Our Brokerage Programs'>
-        We have years of insurance experience helping carriers and brokers
-        provide solutions to their clients. Experience the difference of
-        WealthGuard&apos;s newest Programs and Binding Authority division.
+    <Layout title='WIG | Our Brokerage Solutions'>
+      <ProgramsHero title='Our Brokerage Solutions'>
+        WealthGuard brokerage solutions empower agents and brokers to deliver
+        the best possible commercial insurance products to their clients.
+        Discover WealthGuard brokerage product lines below.
       </ProgramsHero>
 
       <ProgramsGrid rootSlug='brokerage' programs={programs} />
@@ -23,7 +23,7 @@ export default function BrokerageProgramsPage({ programs }) {
 export async function getStaticProps() {
   return {
     props: {
-      programs: getPrograms('brokerage'),
+      programs: getBrokerage(),
     },
   }
 }

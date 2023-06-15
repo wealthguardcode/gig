@@ -1,5 +1,4 @@
 ---
-type: brokerage
 title: Coastal Property
 heroDescription: Coastal property owners face various exposures needing several different forms of insurance. With the Coastal Property Program, coverages can be consolidated into one package policy.
 image: /images/coastal/coastal-1.jpeg

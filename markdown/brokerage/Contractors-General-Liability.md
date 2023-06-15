@@ -1,5 +1,4 @@
 ---
-type: brokerage
 title: Contractors General Liability
 heroDescription: General contractor insurance or general liability insurance for independent contractors helps to protect contractors in the event of bodily injury and property claims.
 image: /images/contractors-general-liability-1.jpeg

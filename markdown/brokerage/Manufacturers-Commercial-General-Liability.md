@@ -1,5 +1,4 @@
 ---
-type: brokerage
 title: Manufacturers Commercial General Liability
 heroDescription: WealthGuard offers specialized insurance coverage for manufacturing industries including Commercial General Liability Insurance.
 image: /images/manufacturers-commercial-general-liability-1.jpeg

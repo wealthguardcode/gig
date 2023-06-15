@@ -1,3 +1,5 @@
+import { classNames } from '../utils/helpers'
+
 import { Fragment, useRef, useState, useEffect } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
@@ -41,7 +43,7 @@ const navigation = {
       name: 'Brokerage',
       programs: [
         {
-          name: 'View All Brokerage Programs',
+          name: 'View All Brokerage Solutions',
           href: '/brokerage',
         },
         {
@@ -98,10 +100,6 @@ const navigation = {
     },
   ],
   pages: [{ name: 'Contact Us', href: '/contact-us' }],
-}
-
-function classNames(...classes) {
-  return classes.filter(Boolean).join(' ')
 }
 
 export default function Header() {

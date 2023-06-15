@@ -5,6 +5,7 @@ import ProjectDescription from '../../components/ProjectDescription'
 import ProgramForm from '../../components/ProgramForm'
 import ProgramHero from '../../components/ProgramHero'
 import ProgramHighlights from '../../components/ProgramHighlights'
+import { classNames } from '../../utils/helpers'
 
 import { toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
@@ -12,16 +13,12 @@ import fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
 
-function classNames(...classes) {
-  return classes.filter(Boolean).join(' ')
-}
-
 toast.configure({
   autoClose: 8000,
   draggable: false,
 })
 
-export default function BrokerageProgramPage({
+export default function BrokerageSolutionPage({
   frontmatter: {
     title,
     heroDescription,
@@ -72,35 +69,25 @@ export default function BrokerageProgramPage({
 }
 
 export async function getStaticPaths() {
-  const files = fs.readdirSync(path.join('programs'))
+  const files = fs.readdirSync(path.join('markdown', 'brokerage'))
 
-  const filteredPaths = files
-    .map((filename) => {
-      const markdownWithMeta = fs.readFileSync(
-        path.join('programs', filename),
-        'utf-8'
-      )
-
-      const { data: frontmatter } = matter(markdownWithMeta)
-
-      return { filename, frontmatter }
-    })
-    .filter(({ frontmatter }) => frontmatter.type === 'brokerage')
-    .map(({ filename }) => ({
+  const paths = files.map((filename) => {
+    return {
       params: {
         slug: filename.replace('.md', ''),
       },
-    }))
+    }
+  })
 
   return {
-    paths: filteredPaths,
+    paths,
     fallback: false,
   }
 }
 
 export async function getStaticProps({ params: { slug } }) {
   const markdownWithMeta = fs.readFileSync(
-    path.join('programs', slug + '.md'),
+    path.join('markdown', 'brokerage', slug + '.md'),
     'utf-8'
   )
 
