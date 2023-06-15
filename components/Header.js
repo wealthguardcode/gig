@@ -5,7 +5,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { useRouter } from 'next/router'
 import { Dialog, Popover, Tab, Transition } from '@headlessui/react'
-import { MenuIcon, XIcon } from '@heroicons/react/outline'
+import { MenuIcon, MoonIcon, SunIcon, XIcon } from '@heroicons/react/outline'
 import { useTheme } from 'next-themes'
 
 const TIMEOUT_DURATION = 200
@@ -105,12 +105,10 @@ const NAVIGATION = {
 }
 
 export default function Header() {
-  const { theme, setTheme } = useTheme()
+  const { resolvedTheme: theme, setTheme } = useTheme()
   const router = useRouter()
 
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false)
-
-  let timeout // NodeJS.Timeout
 
   return (
     <div className='bg-gray-50 dark:bg-gray-800'>
@@ -232,44 +230,7 @@ export default function Header() {
                     </div>
                   ))}
                 </div>
-                <button
-                  aria-label='Toggle Dark Mode'
-                  type='button'
-                  className='md:order-3 mx-auto'
-                  onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-                >
-                  {theme === 'dark' ? (
-                    <svg
-                      xmlns='http://www.w3.org/2000/svg'
-                      className='h-6 w-6 text-gray-500 hover:text-gray-600'
-                      fill='none'
-                      viewBox='0 0 24 24'
-                      stroke='currentColor'
-                    >
-                      <path
-                        strokeLinecap='round'
-                        strokeLinejoin='round'
-                        strokeWidth={2}
-                        d='M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z'
-                      />
-                    </svg>
-                  ) : (
-                    <svg
-                      xmlns='http://www.w3.org/2000/svg'
-                      className='h-6 w-6 text-gray-500 hover:text-gray-600'
-                      fill='none'
-                      viewBox='0 0 24 24'
-                      stroke='currentColor'
-                    >
-                      <path
-                        strokeLinecap='round'
-                        strokeLinejoin='round'
-                        strokeWidth={2}
-                        d='M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z'
-                      />
-                    </svg>
-                  )}
-                </button>
+                <ToggleThemeBtn theme={theme} setTheme={setTheme} />
               </div>
             </Transition.Child>
           </Dialog>
@@ -311,16 +272,15 @@ export default function Header() {
                   <div className='hidden h-full lg:flex'>
                     {/* Flyout hover menus */}
                     <Popover.Group className='px-4 bottom-0 inset-x-0'>
-                      <div className='h-full flex justify-center space-x-8'>
+                      <div className='h-full flex justify-center'>
                         {/* Flyout hover menus */}
                         {NAVIGATION.categories.map(({ name, links }) => {
                           return (
-                            <FlyoutHoverMenu
+                            <PopoverMenu
                               key={name}
                               router={router}
                               name={name}
                               links={links}
-                              timeout={timeout}
                             />
                           )
                         })}
@@ -329,57 +289,19 @@ export default function Header() {
                         {NAVIGATION.pages.map((page) => (
                           <Link key={page.name} href={page.href}>
                             <a
-                              className={
+                              className={classNames(
                                 router.asPath === page.href
-                                  ? 'flex items-center font-medium text-red-700 dark:text-red-700'
-                                  : 'flex items-center font-medium text-gray-700 hover:text-red-700 dark:text-gray-50 dark:hover:text-red-700'
-                              }
+                                  ? 'text-red-700 dark:text-red-700'
+                                  : 'text-gray-700 hover:text-red-700 dark:text-gray-50 dark:hover:text-red-700',
+                                'flex items-center font-medium px-4'
+                              )}
                               aria-label={page.aria}
                             >
                               {page.name}
                             </a>
                           </Link>
                         ))}
-                        <button
-                          aria-label='Toggle Dark Mode'
-                          type='button'
-                          className='md:order-3 mx-auto'
-                          onClick={() =>
-                            setTheme(theme === 'dark' ? 'light' : 'dark')
-                          }
-                        >
-                          {theme === 'dark' ? (
-                            <svg
-                              xmlns='http://www.w3.org/2000/svg'
-                              className='h-6 w-6 text-gray-500 hover:text-gray-600'
-                              fill='none'
-                              viewBox='0 0 24 24'
-                              stroke='currentColor'
-                            >
-                              <path
-                                strokeLinecap='round'
-                                strokeLinejoin='round'
-                                strokeWidth={2}
-                                d='M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z'
-                              />
-                            </svg>
-                          ) : (
-                            <svg
-                              xmlns='http://www.w3.org/2000/svg'
-                              className='h-6 w-6 text-gray-500 hover:text-gray-600'
-                              fill='none'
-                              viewBox='0 0 24 24'
-                              stroke='currentColor'
-                            >
-                              <path
-                                strokeLinecap='round'
-                                strokeLinejoin='round'
-                                strokeWidth={2}
-                                d='M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z'
-                              />
-                            </svg>
-                          )}
-                        </button>
+                        <ToggleThemeBtn theme={theme} setTheme={setTheme} />
                       </div>
                     </Popover.Group>
                   </div>
@@ -429,63 +351,87 @@ export default function Header() {
   )
 }
 
-function FlyoutHoverMenu({ router, name, links, timeout }) {
-  const buttonRef = useRef(null)
-  const [openState, setOpenState] = useState(false)
+function ToggleThemeBtn({ theme, setTheme }) {
+  const [showBtn, setShowBtn] = useState(false)
 
-  const boundingBox = buttonRef.current?.getBoundingClientRect()
+  useEffect(() => {
+    setShowBtn(true)
+  }, [])
 
-  const toggleMenu = (open) => {
-    // log the current open state in React (toggle open state)
-    setOpenState((openState) => !openState)
-    // toggle the menu by clicking on buttonRef
-    buttonRef.current?.click()
+  if (!showBtn) return null
+
+  return (
+    <button
+      aria-label='Toggle Dark Mode'
+      type='button'
+      className='md:order-3 mx-auto py-2 px-4'
+      onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+    >
+      {theme === 'dark' ? (
+        <MoonIcon className='h-6 w-6 text-gray-500 hover:text-gray-400' />
+      ) : (
+        <SunIcon className='h-6 w-6 text-gray-500 hover:text-gray-600' />
+      )}
+    </button>
+  )
+}
+
+function PopoverMenu({ router, name, links }) {
+  const buttonEl = useRef(null)
+  const panelEl = useRef(null)
+
+  const [openPanel, setOpenPanel] = useState(false)
+  const [mouseOverButton, setMouseOverButton] = useState(false)
+  const [mouseOverPanel, setMouseOverPanel] = useState(false)
+
+  let timeoutButton
+  let timeoutPanel
+
+  const onMouseEnterButton = () => {
+    clearTimeout(timeoutButton)
+    setOpenPanel(true)
+    setMouseOverButton(true)
+  }
+  const onMouseLeaveButton = () => {
+    timeoutButton = setTimeout(
+      () => setMouseOverButton(false),
+      TIMEOUT_DURATION
+    )
   }
 
-  // Open the menu after delay
-  const onHover = (open, action) => {
-    // if the modal is currently closed, we need to open it
-    // OR
-    // if the modal is currently open, we need to close it
-    if (
-      (!open && !openState && action === 'onMouseEnter') ||
-      (open && openState && action === 'onMouseLeave')
-    ) {
-      // clear the old timeout, if any
-      clearTimeout(timeout)
-      // open the modal after a timeout
-      timeout = setTimeout(() => toggleMenu(open), TIMEOUT_DURATION)
-    }
-    // else: don't click! 😁
+  const onMouseEnterPanel = () => {
+    clearTimeout(timeoutPanel)
+    setMouseOverPanel(true)
+  }
+  const onMouseLeavePanel = () => {
+    timeoutPanel = setTimeout(() => setMouseOverPanel(false), TIMEOUT_DURATION)
   }
 
-  const handleClick = (open) => {
-    setOpenState(!open) // toggle open state in React state
-    clearTimeout(timeout) // stop the hover timer if it's running
-  }
+  const show = openPanel && (mouseOverButton || mouseOverPanel)
+
+  const boundingBox = buttonEl.current?.getBoundingClientRect()
 
   return (
     <Popover key={name} className='flex'>
-      {({ open }) => (
-        <div
-          onMouseEnter={() => onHover(open, 'onMouseEnter')}
-          onMouseLeave={() => onHover(open, 'onMouseLeave')}
-        >
-          <div className='relative flex'>
+      {({ open, close }) => (
+        <>
+          <div ref={buttonEl} className='relative px-4'>
             <Popover.Button
-              ref={buttonRef}
+              onClick={() => setOpenPanel(!openPanel)}
+              onMouseEnter={onMouseEnterButton}
+              onMouseLeave={onMouseLeaveButton}
+              onKeyPress={null}
               className={classNames(
                 open
-                  ? 'text-red-700 my-5 outline-0'
-                  : 'text-gray-700 dark:text-gray-50 hover:text-red-700 dark:hover:text-red-700 my-5',
-                'relative flex items-center justify-center transition-colors ease-out duration-200 font-medium outline-none'
+                  ? 'text-red-700 outline-0'
+                  : 'text-gray-700 dark:text-gray-50 hover:text-red-700 dark:hover:text-red-700',
+                'relative flex items-center justify-center my-5 transition-colors ease-out duration-200 font-medium outline-none'
               )}
-              onClick={() => handleClick(open)}
             >
               {name}
               <span
                 className={classNames(
-                  open ? 'bg-red-700' : '',
+                  show ? 'bg-red-700' : '',
                   'absolute z-30 -bottom-px inset-x-0 h-0.5 transition ease-out duration-200'
                 )}
                 aria-hidden='true'
@@ -495,25 +441,33 @@ function FlyoutHoverMenu({ router, name, links, timeout }) {
 
           <Transition
             as={Fragment}
-            enter='transition ease-out duration-200'
+            show={show}
+            enter='transition ease-out duration-200 delay-200'
             enterFrom='opacity-0'
             enterTo='opacity-100'
             leave='transition ease-in duration-150'
             leaveFrom='opacity-100'
             leaveTo='opacity-0'
           >
-            <Popover.Panel className='absolute z-20 top-full inset-x-0 bg-white dark:bg-gray-800 text-md text-gray-500 dark:text-white'>
-              <div className='relative border-t border-solid border-gray-200 dark:border-gray-600'>
-                <div
-                  className='absolute w-auto max-w-md px-8 border-r border-b border-l border-solid border-gray-200 dark:border-gray-600 rounded-b-md bg-white dark:bg-gray-800 shadow-xl'
-                  style={{ left: boundingBox?.x ? boundingBox.x - 32 : 0 }}
-                >
+            <Popover.Panel
+              ref={panelEl}
+              static
+              onMouseEnter={onMouseEnterPanel}
+              onMouseLeave={onMouseLeavePanel}
+              className='absolute z-20 top-full inset-x-0 border-r border-b border-l border-solid border-gray-200 dark:border-gray-600 rounded-b-md text-md text-gray-500 dark:text-white bg-white dark:bg-gray-800 shadow-xl'
+              style={{
+                left: boundingBox?.x ? boundingBox.x - 16 : 0,
+                maxWidth: 300,
+              }}
+            >
+              <div className='border-t border-solid border-gray-200 dark:border-gray-600'>
+                <div className='px-8'>
                   <div className='grid grid-cols-1 py-8'>
                     {links.map((item) => (
                       <div key={item.name} className='group relative'>
                         <Link href={item.href}>
                           <a
-                            onClick={() => onHover(open, 'onMouseLeave')}
+                            onClick={onMouseLeavePanel}
                             className={
                               router.asPath === item.href
                                 ? 'mt-4 font-base block font-medium text-red-700 bg-gray-100 dark:bg-gray-700 dark:text-red-700'
@@ -534,7 +488,7 @@ function FlyoutHoverMenu({ router, name, links, timeout }) {
               </div>
             </Popover.Panel>
           </Transition>
-        </div>
+        </>
       )}
     </Popover>
   )
