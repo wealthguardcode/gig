@@ -73,8 +73,8 @@ const NAVIGATION = {
           href: '/brokerage/petroleum-and-gas-distributors',
         },
         {
-          name: 'Yacht Program',
-          href: '/brokerage/yacht-program',
+          name: 'Yacht Insurance',
+          href: '/brokerage/yacht-insurance',
         },
       ],
     },

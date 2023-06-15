@@ -42,8 +42,8 @@ const footerNavigation = {
       href: '/brokerage/hard-to-place',
     },
     {
-      name: 'Yacht Program',
-      href: '/brokerage/yacht-program',
+      name: 'Yacht Insurance',
+      href: '/brokerage/yacht-insurance',
     },
   ],
   resources: [

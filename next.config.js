@@ -30,7 +30,7 @@ module.exports = {
       },
       {
         source: '/programs/yacht-program',
-        destination: '/brokerage/yacht-program',
+        destination: '/brokerage/yacht-insurance',
         permanent: true,
       },
     ]

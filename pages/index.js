@@ -70,10 +70,10 @@ const features = [
     href: '/brokerage/hard-to-place',
   },
   {
-    name: 'Yacht Program',
+    name: 'Yacht Insurance',
     description:
       'Designed to help with liability coverage for bodily injury or damage to the property of others and damage to personal property on the vessel.',
-    href: '/brokerage/yacht-program',
+    href: '/brokerage/yacht-insurance',
   },
 ]
 
