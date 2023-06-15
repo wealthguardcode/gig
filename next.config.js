@@ -11,4 +11,28 @@ module.exports = {
       'media.graphassets.com',
     ],
   },
+  async redirects() {
+    return [
+      {
+        source: '/programs/healthcare-facilities',
+        destination: '/programs',
+        permanent: true,
+      },
+      {
+        source: '/programs/coastal-property',
+        destination: '/brokerage/coastal-property',
+        permanent: true,
+      },
+      {
+        source: '/programs/hard-to-place',
+        destination: '/brokerage/hard-to-place',
+        permanent: true,
+      },
+      {
+        source: '/programs/yacht-program',
+        destination: '/brokerage/yacht-program',
+        permanent: true,
+      },
+    ]
+  },
 }
