@@ -18,7 +18,7 @@ toast.configure({
   draggable: false,
 })
 
-export default function ProgramPage({
+export default function BrokerageSolutionPage({
   frontmatter: {
     title,
     heroDescription,
@@ -69,7 +69,7 @@ export default function ProgramPage({
 }
 
 export async function getStaticPaths() {
-  const files = fs.readdirSync(path.join('markdown', 'programs'))
+  const files = fs.readdirSync(path.join('markdown', 'brokerage'))
 
   const paths = files.map((filename) => {
     return {
@@ -87,7 +87,7 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({ params: { slug } }) {
   const markdownWithMeta = fs.readFileSync(
-    path.join('markdown', 'programs', slug + '.md'),
+    path.join('markdown', 'brokerage', slug + '.md'),
     'utf-8'
   )
 
