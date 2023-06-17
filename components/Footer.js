@@ -120,57 +120,63 @@ export default function Footer() {
               <h3 className='text-base font-medium tracking-wider text-gray-900 dark:text-gray-300'>
                 Office
               </h3>
-              <dl className='flex flex-col gap-3 mt-4 text-sm text-gray-500 dark:text-gray-400'>
+              <dl className='flex flex-col gap-2 mt-6 text-sm text-gray-500 dark:text-gray-400'>
                 <div>
                   <dt className='sr-only'>Address</dt>
-                  <dd className='inline-flex items-start group'>
-                    <MapIcon
-                      height={16}
-                      className='mt-1 mr-1.5 group-hover:text-red-600 dark:group-hover:text-red-600'
-                    />
+                  <dd>
                     <a
-                      className='hover:text-red-600 dark:hover:text-red-600'
                       href='https://www.google.com/maps/place/WealthGuard+Insurance+Group/@30.2202,-95.5826725,17z/data=!3m1!4b1!4m6!3m5!1s0x86472f9432bb1e11:0x777b4537b97a0a07!8m2!3d30.2202001!4d-95.5778016!16s%2Fg%2F11nn3nwmr0?entry=ttu'
                       target='_blank'
                       rel='noreferrer'
+                      className='group inline-flex gap-1.5 items-start'
                     >
-                      <span>7205 FM 1488 Rd, Ste-A</span>
-                      <br />
-                      <span>Magnolia, TX 77354</span>
+                      <MapIcon
+                        height={16}
+                        className='mt-1 group-hover:text-red-600 dark:group-hover:text-red-600'
+                      />
+                      <span className='group-hover:text-red-600 dark:group-hover:text-red-600'>
+                        <span>7205 FM 1488 Rd, Ste-A</span>
+                        <br />
+                        <span>Magnolia, TX 77354</span>
+                      </span>
                     </a>
                   </dd>
                 </div>
                 <div>
                   <dt className='sr-only'>Email</dt>
-                  <dd className='inline-flex items-center group'>
-                    <MailIcon
-                      height={16}
-                      className='mr-1.5 group-hover:text-red-600 dark:group-hover:text-red-600'
-                    />
+                  <dd>
                     <a
-                      className='hover:text-red-600 dark:hover:text-red-600'
                       href='mailto:sales@wealthguardig.com'
                       target='_blank'
                       rel='noreferrer'
+                      className='group inline-flex gap-1.5 items-center'
                     >
-                      sales@wealthguardig.com
+                      <MailIcon
+                        height={16}
+                        className='group-hover:text-red-600 dark:group-hover:text-red-600'
+                      />
+                      <span className='group-hover:text-red-600 dark:group-hover:text-red-600'>
+                        sales@wealthguardig.com
+                      </span>
                     </a>
                   </dd>
                 </div>
                 <div>
                   <dt className='sr-only'>Phone number</dt>
-                  <dd className='inline-flex items-center group'>
-                    <PhoneIcon
-                      height={16}
-                      className='mr-1.5 group-hover:text-red-600 dark:group-hover:text-red-600'
-                    />
+                  <dd>
                     <a
-                      className='hover:text-red-600 dark:hover:text-red-600'
                       href='tel:832-479-0042'
                       target='_blank'
                       rel='noreferrer'
+                      className='group inline-flex gap-1.5 items-center'
                     >
-                      832-479-0042
+                      <PhoneIcon
+                        height={16}
+                        className='group-hover:text-red-600 dark:group-hover:text-red-600'
+                      />
+                      <span className='group-hover:text-red-600 dark:group-hover:text-red-600'>
+                        832-479-0042
+                      </span>
                     </a>
                   </dd>
                 </div>
