@@ -1,4 +1,6 @@
 import Layout from '../components/Layout'
+import { brokerage } from '../data/brokerage'
+import { programs } from '../data/programs'
 import { classNames } from '../utils/helpers'
 
 import {
@@ -14,87 +16,35 @@ import {
 import Image from 'next/image'
 import Link from 'next/link'
 
-const features = [
-  {
-    name: 'Petroleum & Gas Distributors',
-    description:
-      'WealthGuard offers Excess Coverage for petroleum and gas distributors. Learn more about our risk appetite across industry categories.',
-    href: '/brokerage/petroleum-and-gas-distributors',
-  },
-  {
-    name: 'Marina Insurance',
-    description:
-      'All perils coverage including wind & hail, flood, earthquake and collapse. No co-insurance- Agreed value for property.',
-    href: '/programs/westwall-marina-package',
-  },
-  {
-    name: 'Coastal Property',
-    description:
-      'Hurricanes cause more damage than any other natural disaster known to man, and every year they are responsible for 28 billion dollars of destruction.',
-    href: '/brokerage/coastal-property',
-  },
-  {
-    name: 'Cargo & Logistics',
-    description:
-      'Our Cargo and Logistics team are leaders in helping your business avoid business disruptions and recover from costly perils.',
-    href: '/programs/cargo-and-logistics',
-  },
-  {
-    name: 'Terrorism & Sabotage',
-    description:
-      'The harm of life and property brought by acts of terrorism or sabotage is significant and incidents are increasing each year. ',
-    href: '/programs/terrorism-and-sabotage',
-  },
-  {
-    name: 'Active Assailant',
-    description:
-      'The financial impact can be devastating to a business and this coverage will help keep you in business as you work through the emotional and financial recovery.',
-    href: '/programs/active-assailant',
-  },
-  {
-    name: 'Violent Malicious Acts',
-    description:
-      'Designed to help you and your facility move forward after a tragedy, homicide, nonfatal injuries, or substantial damage to property.',
-    href: '/programs/violent-malicious-acts',
-  },
-  {
-    name: 'Deductible Buy-down Options',
-    description:
-      'Helping you limit the first-dollar losses that you may experience by reducing or eliminating the deductible.',
-    href: '/programs',
-  },
-  {
-    name: 'Hard to Place Risk',
-    description:
-      'Helping you get the reliable coverage for hard to place liability risk that may not fit the mold of a traditional insurance risk.',
-    href: '/brokerage/hard-to-place',
-  },
-  {
-    name: 'Yacht Insurance',
-    description:
-      'Designed to help with liability coverage for bodily injury or damage to the property of others and damage to personal property on the vessel.',
-    href: '/brokerage/yacht-insurance',
-  },
+const SOLUTIONS = [
+  ...programs.map((p) => ({
+    ...p,
+    href: `/programs/${p.slug}`,
+  })),
+  ...brokerage.map((b) => ({
+    ...b,
+    href: `/brokerage/${b.slug}`,
+  })),
 ]
 
-const features2 = [
+const BENEFITS = [
   {
+    icon: GlobeAltIcon,
     name: 'Experience',
     description:
       'Since 2016 we have been providing insurance solutions with expertise, diversity of products, and underwriting integrity!',
-    icon: GlobeAltIcon,
   },
   {
+    icon: ScaleIcon,
     name: 'Innovation',
     description:
       "WealthGuard's executive leadership has unprecedented access to innovative commercial insurance products and solutions.",
-    icon: ScaleIcon,
   },
   {
+    icon: LightningBoltIcon,
     name: 'Relationship Driven',
     description:
       'We have years of insurance experience helping carriers and brokers provide solutions to their clients. You will build a one on one relationship at WealthGuard',
-    icon: LightningBoltIcon,
   },
 ]
 
@@ -102,15 +52,14 @@ export default function Home() {
   return (
     <Layout>
       <div className='relative bg-white dark:bg-gray-800 overflow-hidden'>
-        <div className='relative pt-16 pb-10 md:pt-12'>
-          <div className='h-3/4 md:h-screen pb-12 mx-auto w-full px-4 sm:mt-0'>
+        <div className='relative'>
+          <div className='flex items-center h-screen-header w-full mx-auto px-4'>
             {/* BG Image */}
-
-            <div className='absolute inset-0 flex items-center justify-center h-screen md:mb-12 bg-fixed lg:bg-center bg-cover custom-img'>
+            <div className='absolute inset-0 flex items-center justify-center h-screen bg-fixed lg:bg-center bg-cover custom-img'>
               <div className='absolute inset-0 bg-gray-400 mix-blend-multiply' />
             </div>
 
-            <div className='md:py-16 text-center relative'>
+            <div className='relative w-full text-center'>
               <h1 className='text-4xl tracking-tight font-extrabold text-gray-900  sm:text-5xl md:text-6xl'>
                 <span className='block xl:inline'>Commercial Insurance</span>{' '}
                 <span className='block text-red-700 font-extrabold '>
@@ -153,64 +102,33 @@ export default function Home() {
                   </Link>
                 </div>
               </div>
-
-              <div className='flex flex-col justify-center items-center xl:mt-12'>
-                <div className=''>
-                  <h1 className='text-xl font-semibold text-gray-200 mb-1 xl:mb-4'>
-                    Download Our{' '}
-                  </h1>
-                </div>
-                <div className='mt-3 rounded-md shadow sm:mt-0 ml-3'>
-                  <a
-                    href='/images/resources/theWealthGuardDifference.pdf'
-                    target='_blank'
-                    rel='noreferrer'
-                    className='w-full flex items-center justify-center px-8 py-3 border-2 border-red-700 hover:border-red-600 dark:hover:border-red-600 text-base font-medium rounded-md text-black bg-gray-200 hover:bg-gray-50 md:py-4 md:text-lg md:px-10'
-                  >
-                    <DocumentDownloadIcon height={30} />
-                    <span>The WealthGuard Difference</span>
-                  </a>
-                </div>
-              </div>
             </div>
           </div>
         </div>
       </div>
 
       {/* Features Section */}
-      <div className='bg-white dark:bg-gray-800'>
+      <section className='py-16 md:py-20 lg:py-24 bg-white dark:bg-gray-800'>
         <div className='max-w-3xl mx-auto text-center'>
-          <h2 className='text-3xl font-extrabold text-gray-900 dark:text-gray-300 md:pt-2 mt-10 md:mt-0 md:mx-0 pt-1 mx-1'>
-            WealthGuard Specialty Programs
+          <h2 className='mb-8 md:mb-10 lg:mb-12 text-3xl font-extrabold text-gray-900 dark:text-gray-300'>
+            WealthGuard Specialty Insurance Solutions
           </h2>
         </div>
 
-        <div className='max-w-7xl mx-auto py-8 px-4 sm:px-6 lg:pb-24 lg:pt-12 lg:px-8 lg:grid lg:grid-cols-2 lg:gap-x-8'>
-          <div className='mt-12 lg:mt-0 lg:col-span-2'>
-            <div className='space-y-10 sm:space-y-0 sm:grid sm:grid-cols-2 sm:gap-x-6 sm:gap-y-10 lg:gap-x-8 '>
-              {features.map((feature) => (
-                <div
-                  key={feature.name}
-                  className='relative cursor-pointer border-4 border-opacity-50 rounded-lg p-4 shadow-lg hover:shadow-2xl hover:border-gray-300 dark:hover:border-red-700 transform transition duration-500 md:hover:scale-110 hover:scale-105'
-                >
-                  <div>
-                    <CheckIcon
-                      className='absolute h-8 w-8 text-green-500'
-                      aria-hidden='true'
-                    />
-                    <Link href={feature.href}>
-                      <a>
-                        <p className='ml-9 text-xl leading-6 font-medium text-gray-900 dark:text-gray-300'>
-                          {feature.name}
-                        </p>
-                      </a>
-                    </Link>
-                  </div>
-                  <Link href={feature.href}>
-                    <a>
-                      <div className='mt-2 ml-9 prose-lg text-gray-500 dark:text-gray-400'>
-                        {feature.description}
-                      </div>
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 lg:grid lg:grid-cols-2 lg:gap-x-8'>
+          <div className='lg:col-span-2'>
+            <div className='max-w-5xl mx-auto sm:grid sm:grid-cols-2'>
+              {SOLUTIONS.map((solution) => (
+                <div key={solution.name}>
+                  <Link href={solution.href}>
+                    <a className='group flex flex-1 gap-8 items-center p-4'>
+                      <CheckIcon
+                        className='flex-none h-8 w-8 text-green-500'
+                        aria-hidden='true'
+                      />
+                      <span className='text-xl leading-normal font-medium text-gray-900 dark:text-gray-300 group-hover:text-red-700 dark:group-hover:text-red-700'>
+                        {solution.name}
+                      </span>
                     </a>
                   </Link>
                 </div>
@@ -218,7 +136,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </div>
+      </section>
 
       {/* Broker/Business Tabs */}
       <div className='py-12 bg-white dark:bg-gray-800'>
@@ -249,15 +167,15 @@ export default function Home() {
           <div className='mt-10 shadow-xl rounded-xl dark:bg-gray-300'>
             <div className='space-y-2 md:space-y-0 grid grid-cols-1 md:gap-x-8 md:gap-y-10 shadow-2xl'>
               <div className='my-10'>
-                <h1 className='text-4xl text-white bg-gradient-to-r from-gray-400 via-gray-500 to-red-700 font-bold mx-2 text-center rounded py-1'>
+                <h2 className='text-4xl text-white bg-gradient-to-r from-gray-400 via-gray-500 to-red-700 font-bold mx-2 text-center rounded py-1'>
                   For Brokers
-                </h1>
+                </h2>
               </div>
               <div className='grid grid-cols-1 md:grid-cols-2'>
                 <div className='flex flex-col justify-center items-center p-4'>
-                  <h1 className='text-5xl tracking-wider dark:text-gray-900'>
+                  <h3 className='text-5xl tracking-wider dark:text-gray-900'>
                     Brokers
-                  </h1>
+                  </h3>
                   <p className='mt-3 prose-xl mx-8 dark:text-gray-500'>
                     We work with selective brokers across the USA to bring your
                     clients best-in-class insurance solutions and provide
@@ -377,9 +295,9 @@ export default function Home() {
       <section className='py-12 bg-gray-50 dark:bg-gray-700 overflow-hidden md:py-20 lg:py-24'>
         <div className='relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <div className='relative'>
-            <h1 className='max-w-3xl mx-auto text-center text-3xl leading-9 font-bold text-gray-900 dark:text-gray-300'>
+            <h2 className='max-w-3xl mx-auto text-center text-3xl leading-9 font-bold text-gray-900 dark:text-gray-300'>
               WealthGuard Testimonial
-            </h1>
+            </h2>
             <blockquote className='mt-6 '>
               <div className='max-w-3xl mx-auto text-center text-lg md:text-2xl leading-9 font-medium text-gray-900 dark:text-gray-400'>
                 <p className=''>
@@ -461,7 +379,7 @@ export default function Home() {
           </div>
 
           <div className='mt-12 space-y-10 sm:space-y-0 sm:grid sm:grid-cols-2 sm:gap-x-6 sm:gap-y-12 lg:grid-cols-3 lg:gap-x-8'>
-            {features2.map((feature) => (
+            {BENEFITS.map((feature) => (
               <div
                 key={feature.name}
                 className='shadow-xl hover:shadow-2xl rounded-xl m-2 p-4 dark:bg-gray-700 border dark:border-gray-500'

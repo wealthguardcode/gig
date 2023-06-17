@@ -5,19 +5,16 @@ module.exports = {
   purge: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
   darkMode: 'class',
   theme: {
-    borderWidth: {
-      DEFAULT: '1px',
-      0: '0',
-      2: '2px',
-      4: '4px',
-      6: '6px',
-      8: '8px',
-      16: '16px',
-      32: '32px',
-    },
     extend: {
+      borderWidth: {
+        16: '16px',
+        32: '32px',
+      },
       fontFamily: {
         sans: ['Roboto', ...defaultTheme.fontFamily.sans],
+      },
+      height: {
+        'screen-header': 'calc(100vh - 64px)',
       },
     },
   },
