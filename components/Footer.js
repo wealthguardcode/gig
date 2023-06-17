@@ -1,7 +1,7 @@
-import { useState } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { useRouter } from 'next/router'
+import { MailIcon, MapIcon, PhoneIcon } from '@heroicons/react/solid'
 import { toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 
@@ -10,76 +10,57 @@ toast.configure({
   draggable: false,
 })
 
-const footerNavigation = {
-  links: [
-    { name: 'All Programs', href: '/programs' },
+const NAVIGATION = {
+  categories: [
     {
-      name: 'WestWall Marina Package',
-      href: '/programs/westwall-marina-package',
+      name: 'Quick Links',
+      links: [
+        {
+          name: 'Programs',
+          href: '/programs',
+        },
+        {
+          name: 'Brokerage Solutions',
+          href: '/brokerage',
+        },
+      ],
     },
-    {
-      name: 'Coastal Property',
-      href: '/brokerage/coastal-property',
-    },
-    {
-      name: 'Cargo & Logistics',
-      href: '/programs/cargo-and-logistics',
-    },
-    {
-      name: 'Active Assailant',
-      href: '/programs/active-assailant',
-    },
-    {
-      name: 'Terrorism & Sabotage',
-      href: '/programs/terrorism-and-sabotage',
-    },
-    {
-      name: 'Violent & Malicious Acts',
-      href: '/programs/violent-malicious-acts',
-    },
-    {
-      name: 'Hard to Place Risk',
-      href: '/brokerage/hard-to-place',
-    },
-    {
-      name: 'Yacht Insurance',
-      href: '/brokerage/yacht-insurance',
-    },
-  ],
-  resources: [
     {
       name: 'Resources',
-      href: '/resources/broker-resources',
+      links: [
+        {
+          name: 'Resources',
+          href: '/resources/broker-resources',
+        },
+        {
+          name: 'Privacy Policy',
+          href: '/resources/privacy',
+        },
+        {
+          name: 'Terms & Conditions',
+          href: '/resources/terms',
+        },
+      ],
     },
     {
-      name: 'Privacy Policy',
-      href: '/resources/privacy',
+      name: 'Company',
+      links: [
+        {
+          name: 'About Us Overview',
+          href: '/about-us/about-us',
+        },
+        {
+          name: 'Leadership',
+          href: '/about-us/leadership',
+        },
+        { name: 'Contact Us', href: '/contact-us' },
+      ],
     },
-    {
-      name: 'Terms & Conditions',
-      href: '/resources/terms',
-    },
-  ],
-  company: [
-    {
-      name: 'About Us Overview',
-      href: '/about-us/about-us',
-    },
-    {
-      name: 'Leadership',
-      href: '/about-us/leadership',
-    },
-    { name: 'Contact Us', href: '/contact-us' },
   ],
 }
 
 export default function Footer() {
   const router = useRouter()
-  const [pathName, setPathName] = useState(router.pathname)
-
-  const newPathName = () => {
-    setPathName(router.pathname)
-  }
 
   return (
     <footer
@@ -93,7 +74,7 @@ export default function Footer() {
         <div className='py-20'>
           <div className='grid grid-cols-1 md:grid-cols-12 md:grid-flow-col md:gap-x-8 md:gap-y-16 md:auto-rows-min'>
             {/* Image section */}
-            <div className='col-span-1 md:col-span-2 lg:row-start-1 lg:col-start-1'>
+            <div className='col-span-1 lg:row-start-1 lg:col-start-1'>
               <Link href='/'>
                 <a>
                   <Image
@@ -108,78 +89,92 @@ export default function Footer() {
             </div>
 
             {/* Sitemap sections */}
-            <div className='mt-10 col-span-6 grid grid-cols-2 gap-8 sm:grid-cols-3 md:mt-0 md:row-start-1 md:col-start-3 md:col-span-8 lg:col-start-2 lg:col-span-6'>
-              <div className='grid grid-cols-1 gap-y-12 sm:col-span-2 sm:grid-cols-2 sm:gap-x-8'>
-                <div>
+            <div className='col-span-12 mt-10 grid grid-cols-2 gap-8 sm:grid-cols-3 md:col-span-7 md:mt-0 md:row-start-1 lg:col-span-6'>
+              {NAVIGATION.categories.map((category) => (
+                <div key={category.name}>
                   <h3 className='text-base font-medium tracking-wider text-gray-900 dark:text-gray-300'>
-                    Quick Links
+                    {category.name}
                   </h3>
                   <ul role='list' className='mt-6 space-y-4'>
-                    {footerNavigation.links.map((item) => (
-                      <li key={item.name} className='text-sm'>
-                        <a
-                          href={item.href}
-                          className={
-                            router.asPath === item.href
-                              ? 'font-bold text-red-700 dark:text-red-700 bg-gray-100 dark:bg-gray-800'
-                              : 'text-gray-500 dark:text-gray-400 hover:font-bold hover:text-red-700 dark:hover:text-red-700 hover:bg-gray-100 dark:hover:bg-gray-800'
-                          }
-                          onClick={newPathName}
-                          pathname={pathName}
-                        >
-                          {item.name}
-                        </a>
+                    {category.links.map((link) => (
+                      <li key={link.name} className='text-sm'>
+                        <Link href={link.href}>
+                          <a
+                            className={
+                              router.asPath === link.href
+                                ? 'font-bold text-red-700 dark:text-red-700 bg-gray-100 dark:bg-gray-800'
+                                : 'text-gray-500 dark:text-gray-400 hover:font-bold hover:text-red-700 dark:hover:text-red-700 hover:bg-gray-100 dark:hover:bg-gray-800'
+                            }
+                          >
+                            {link.name}
+                          </a>
+                        </Link>
                       </li>
                     ))}
                   </ul>
                 </div>
+              ))}
+            </div>
+
+            <div className='col-span-5 flex flex-col w-full mt-10 pt-10 border-t border-gray-50 dark:border-gray-600 md:col-span-4 md:col-start-9 md:mt-0 md:pt-0 md:border-t-0 lg:col-span-3 lg:col-start-10 lg:justify-end lg:px-4'>
+              <h3 className='text-base font-medium tracking-wider text-gray-900 dark:text-gray-300'>
+                Office
+              </h3>
+              <dl className='flex flex-col gap-3 mt-4 text-sm text-gray-500 dark:text-gray-400'>
                 <div>
-                  <h3 className='text-base font-medium tracking-wider text-gray-900 dark:text-gray-300'>
-                    Resources
-                  </h3>
-                  <ul role='list' className='mt-6 space-y-4'>
-                    {footerNavigation.resources.map((item) => (
-                      <li key={item.name} className='text-sm'>
-                        <a
-                          href={item.href}
-                          className={
-                            router.asPath === item.href
-                              ? 'font-bold text-red-700 dark:text-red-700 bg-gray-100 dark:bg-gray-800'
-                              : 'text-gray-500 dark:text-gray-400 hover:font-bold hover:text-red-700 dark:hover:text-red-700 hover:bg-gray-100 dark:hover:bg-gray-800'
-                          }
-                          onClick={newPathName}
-                          pathname={pathName}
-                        >
-                          {item.name}
-                        </a>
-                      </li>
-                    ))}
-                  </ul>
+                  <dt className='sr-only'>Address</dt>
+                  <dd className='inline-flex items-start group'>
+                    <MapIcon
+                      height={16}
+                      className='mt-1 mr-1.5 group-hover:text-red-600 dark:group-hover:text-red-600'
+                    />
+                    <a
+                      className='hover:text-red-600 dark:hover:text-red-600'
+                      href='https://www.google.com/maps/place/WealthGuard+Insurance+Group/@30.2202,-95.5826725,17z/data=!3m1!4b1!4m6!3m5!1s0x86472f9432bb1e11:0x777b4537b97a0a07!8m2!3d30.2202001!4d-95.5778016!16s%2Fg%2F11nn3nwmr0?entry=ttu'
+                      target='_blank'
+                      rel='noreferrer'
+                    >
+                      <span>7205 FM 1488 Rd, Ste-A</span>
+                      <br />
+                      <span>Magnolia, TX 77354</span>
+                    </a>
+                  </dd>
                 </div>
-              </div>
-              <div>
-                <h3 className='text-base font-medium tracking-wider text-gray-900 dark:text-gray-300'>
-                  Company
-                </h3>
-                <ul role='list' className='mt-6 space-y-4'>
-                  {footerNavigation.company.map((item) => (
-                    <li key={item.name} className='text-sm'>
-                      <a
-                        href={item.href}
-                        className={
-                          router.asPath === item.href
-                            ? 'font-bold text-red-700 dark:text-red-700 bg-gray-100 dark:bg-gray-800'
-                            : 'text-gray-500 dark:text-gray-400 hover:font-bold hover:text-red-700 dark:hover:text-red-700 hover:bg-gray-100 dark:hover:bg-gray-800'
-                        }
-                        onClick={newPathName}
-                        pathname={pathName}
-                      >
-                        {item.name}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              </div>
+                <div>
+                  <dt className='sr-only'>Email</dt>
+                  <dd className='inline-flex items-center group'>
+                    <MailIcon
+                      height={16}
+                      className='mr-1.5 group-hover:text-red-600 dark:group-hover:text-red-600'
+                    />
+                    <a
+                      className='hover:text-red-600 dark:hover:text-red-600'
+                      href='mailto:sales@wealthguardig.com'
+                      target='_blank'
+                      rel='noreferrer'
+                    >
+                      sales@wealthguardig.com
+                    </a>
+                  </dd>
+                </div>
+                <div>
+                  <dt className='sr-only'>Phone number</dt>
+                  <dd className='inline-flex items-center group'>
+                    <PhoneIcon
+                      height={16}
+                      className='mr-1.5 group-hover:text-red-600 dark:group-hover:text-red-600'
+                    />
+                    <a
+                      className='hover:text-red-600 dark:hover:text-red-600'
+                      href='tel:832-479-0042'
+                      target='_blank'
+                      rel='noreferrer'
+                    >
+                      832-479-0042
+                    </a>
+                  </dd>
+                </div>
+              </dl>
             </div>
           </div>
         </div>

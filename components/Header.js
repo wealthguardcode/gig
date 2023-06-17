@@ -1,3 +1,5 @@
+import { brokerage } from '../data/brokerage'
+import { programs } from '../data/programs'
 import { classNames } from '../utils/helpers'
 
 import { Fragment, useRef, useState, useEffect } from 'react'
@@ -19,26 +21,10 @@ const NAVIGATION = {
           name: 'View All Programs',
           href: '/programs',
         },
-        {
-          name: 'WestWall Marina Package',
-          href: '/programs/westwall-marina-package',
-        },
-        {
-          name: 'Cargo & Logistics',
-          href: '/programs/cargo-and-logistics',
-        },
-        {
-          name: 'Active Assailant',
-          href: '/programs/active-assailant',
-        },
-        {
-          name: 'Terrorism & Sabotage',
-          href: '/programs/terrorism-and-sabotage',
-        },
-        {
-          name: 'Violent & Malicious Acts',
-          href: '/programs/violent-malicious-acts',
-        },
+        ...programs.map(({ slug, name }) => ({
+          name,
+          href: `/programs/${slug}`,
+        })),
       ],
     },
     {
@@ -48,34 +34,10 @@ const NAVIGATION = {
           name: 'View All Brokerage Solutions',
           href: '/brokerage',
         },
-        {
-          name: 'Auto Liability Excess Only',
-          href: '/brokerage/Auto-Liability-Excess-Only',
-        },
-        {
-          name: 'Contractors General Liability',
-          href: '/brokerage/Contractors-General-Liability',
-        },
-        {
-          name: 'Manufacturers Commercial General Liability',
-          href: '/brokerage/Manufacturers-Commercial-General-Liability',
-        },
-        {
-          name: 'Coastal Property',
-          href: '/brokerage/coastal-property',
-        },
-        {
-          name: 'Hard to Place Risk',
-          href: '/brokerage/hard-to-place',
-        },
-        {
-          name: 'Petroleum and Gas Distributors',
-          href: '/brokerage/petroleum-and-gas-distributors',
-        },
-        {
-          name: 'Yacht Insurance',
-          href: '/brokerage/yacht-insurance',
-        },
+        ...brokerage.map(({ slug, name }) => ({
+          name,
+          href: `/brokerage/${slug}`,
+        })),
       ],
     },
     {
@@ -114,7 +76,7 @@ export default function Header() {
     <div className='bg-gray-50 dark:bg-gray-800'>
       <div>
         {/* Mobile menu */}
-        <Transition.Root show={isMobileMenuOpen} as={Fragment}>
+        <Transition.Root as={Fragment} show={isMobileMenuOpen}>
           <Dialog
             as='div'
             className='fixed inset-0 flex z-40 lg:hidden'
@@ -155,21 +117,29 @@ export default function Header() {
 
                 {/* Links */}
                 <Tab.Group as='div' className='mt-2'>
-                  <div className='border-b border-gray-200 dark:border-gray-500'>
-                    <Tab.List className='-mb-px flex px-4 space-x-2 md:space-x-8'>
+                  <div className='relative -mb-px border-b border-gray-200 dark:border-gray-500 overflow-x-auto hide-scrollbar hide-scrollbar-hover'>
+                    <Tab.List
+                      onClick={(e) => {
+                        e.target.scrollIntoView({ behavior: 'smooth' })
+                      }}
+                      className='flex space-x-2 md:space-x-8'
+                    >
                       {NAVIGATION.categories.map((category) => (
-                        <Tab
-                          key={category.name}
-                          className={({ selected }) =>
-                            classNames(
-                              selected
-                                ? 'text-red-700 border-red-700'
-                                : 'text-gray-900 dark:text-gray-300 border-transparent hover:text-red-700 dark:hover:text-red-700',
-                              'flex-1 whitespace-nowrap py-4 px-1 border-b-2 text-md font-medium'
-                            )
-                          }
-                        >
-                          {category.name}
+                        <Tab as={Fragment} key={category.name}>
+                          {({ selected }) => (
+                            <div className='flex-1 block first:border-l-16 md:first:border-l-32 first:border-transparent last:border-r-16 md:last:border-r-32 last:border-transparent'>
+                              <span
+                                className={classNames(
+                                  selected
+                                    ? 'text-red-700 border-red-700'
+                                    : 'text-gray-900 dark:text-gray-300 border-transparent hover:text-red-700 dark:hover:text-red-700',
+                                  'block whitespace-nowrap py-4 px-2 border-b-2 text-md font-medium text-center'
+                                )}
+                              >
+                                {category.name}
+                              </span>
+                            </div>
+                          )}
                         </Tab>
                       ))}
                     </Tab.List>
@@ -181,16 +151,16 @@ export default function Header() {
                         className='px-4 py-6 space-y-12'
                       >
                         <div className='grid grid-cols-1 gap-x-4 gap-y-4'>
-                          {category.links.map((item) => (
+                          {category.links.map((link) => (
                             <div
-                              key={item.name}
-                              className='group relative mx-auto'
+                              key={link.name}
+                              className='group relative mx-auto text-center'
                             >
-                              <Link href={item.href}>
+                              <Link href={link.href}>
                                 <a
                                   onClick={() => setMobileMenuOpen(false)}
                                   className={
-                                    router.asPath === item.href
+                                    router.asPath === link.href
                                       ? 'mt-6 block font-medium text-red-700 dark:text-red-700 bg-gray-100 dark:bg-gray-700 px-2 py-0.5'
                                       : 'mt-6 block font-medium text-gray-900 dark:text-gray-300 hover:text-red-700 dark:hover:text-red-700'
                                   }
@@ -199,7 +169,7 @@ export default function Header() {
                                     className='absolute z-10 inset-0'
                                     aria-hidden='true'
                                   />
-                                  {item.name}
+                                  {link.name}
                                 </a>
                               </Link>
                             </div>
