@@ -16,6 +16,9 @@ module.exports = {
       height: {
         'screen-header': 'calc(100vh - 64px)',
       },
+      maxWidth: {
+        'screen-xs': '480px',
+      },
     },
   },
   variants: {
