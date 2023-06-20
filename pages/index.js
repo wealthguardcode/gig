@@ -1,11 +1,11 @@
-import HomePopup from '../components/HomePopup'
+import Popup from '../components/Popup'
 import Layout from '../components/Layout'
 import { brokerage } from '../data/brokerage'
 import { programs } from '../data/programs'
 import { useIntersectionObserver } from '../hooks/useIntersectionObserver'
 import { classNames } from '../utils/helpers'
 
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import {
@@ -18,6 +18,13 @@ import {
   BookOpenIcon,
   DocumentDownloadIcon,
 } from '@heroicons/react/outline'
+import { toast } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
+
+toast.configure({
+  autoClose: 8000,
+  draggable: false,
+})
 
 const SOLUTIONS = [
   ...programs.map((p) => ({
@@ -72,7 +79,7 @@ export default function Home() {
           Reset Popup
         </button>
       </div>
-      <HomePopup isOpen={isOpen} setOpen={setOpen} closePopup={closePopup} />
+      <HomePopup isOpen={isOpen} closePopup={closePopup} />
       <Layout>
         <div className='relative bg-white dark:bg-gray-800 overflow-hidden'>
           <div className='relative'>
@@ -406,29 +413,145 @@ export default function Home() {
             </div>
 
             <div className='mt-12 space-y-10 sm:space-y-0 sm:grid sm:grid-cols-2 sm:gap-x-6 sm:gap-y-12 lg:grid-cols-3 lg:gap-x-8'>
-              {BENEFITS.map((feature) => (
-                <div
-                  key={feature.name}
-                  className='shadow-xl hover:shadow-2xl rounded-xl m-2 p-4 dark:bg-gray-700 border dark:border-gray-500'
-                >
-                  <div>
-                    <div className='flex items-center justify-center h-12 w-12 rounded-md bg-gray-900 dark:bg-red-600 opacity-70 text-white mx-auto'>
-                      <feature.icon className='h-6 w-6' aria-hidden='true' />
+              {BENEFITS.map((feature) => {
+                const Icon = feature.icon
+
+                return (
+                  <div
+                    key={feature.name}
+                    className='shadow-xl hover:shadow-2xl rounded-xl m-2 p-4 dark:bg-gray-700 border dark:border-gray-500'
+                  >
+                    <div>
+                      <div className='flex items-center justify-center h-12 w-12 rounded-md bg-gray-900 dark:bg-red-600 opacity-70 text-white mx-auto'>
+                        {feature.icon ? (
+                          <Icon className='h-6 w-6' aria-hidden='true' />
+                        ) : null}
+                      </div>
+                      <p className='mt-5 text-xl leading-6 font-medium text-red-700 dark:text-gray-300 text-center '>
+                        {feature.name}
+                      </p>
                     </div>
-                    <p className='mt-5 text-xl leading-6 font-medium text-red-700 dark:text-gray-300 text-center '>
-                      {feature.name}
-                    </p>
+                    <div className='mt-3 prose-lg text-gray-500 dark:text-gray-400 md:text-center'>
+                      {feature.description}
+                    </div>
                   </div>
-                  <div className='mt-3 prose-lg text-gray-500 dark:text-gray-400 md:text-center'>
-                    {feature.description}
-                  </div>
-                </div>
-              ))}
+                )
+              })}
             </div>
           </div>
         </div>
       </Layout>
     </>
+  )
+}
+
+function HomePopup({ isOpen, closePopup }) {
+  const firstNameEl = useRef(null)
+  const lastNameEl = useRef(null)
+  const emailEl = useRef(null)
+
+  function requestPdf(e) {
+    e.preventDefault()
+
+    const { value: first_name = '' } = e.target.first_name
+    const { value: last_name = '' } = e.target.last_name
+    const { value: email = '' } = e.target.email
+
+    if (!first_name || !last_name || !email) {
+      return toast.error('Form cannot be empty!', {
+        position: 'top-right',
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+      })
+    }
+
+    alert('Form submission has not be setup, yet.')
+
+    // reset form values
+    firstNameEl.current.value = ''
+    lastNameEl.current.value = ''
+    emailEl.current.value = ''
+  }
+
+  return (
+    <Popup
+      isOpen={isOpen}
+      closePopup={closePopup}
+      title='PDF in your Inbox'
+      description={`Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.`}
+    >
+      <form
+        onSubmit={requestPdf}
+        className='grid grid-cols-1 gap-y-4 sm:grid-cols-2'
+      >
+        <div className='px-4'>
+          <label
+            htmlFor='first_name'
+            className='block text-sm font-medium text-gray-700 dark:text-gray-800'
+          >
+            First name
+          </label>
+          <div className='mt-1'>
+            <input
+              ref={firstNameEl}
+              type='text'
+              name='first_name'
+              id='first_name'
+              autoComplete='given-name'
+              className='block w-full shadow-sm sm:text-sm focus:ring-red-500 focus:border-red-500 border-gray-300 rounded-md dark:text-gray-900'
+            />
+          </div>
+        </div>
+        <div className='px-4'>
+          <label
+            htmlFor='last_name'
+            className='block text-sm font-medium text-gray-700 dark:text-gray-800'
+          >
+            Last name
+          </label>
+          <div className='mt-1'>
+            <input
+              ref={lastNameEl}
+              type='text'
+              name='last_name'
+              id='last_name'
+              autoComplete='family-name'
+              className='block w-full shadow-sm sm:text-sm focus:ring-red-500 focus:border-red-500 border-gray-300 rounded-md dark:text-gray-900'
+            />
+          </div>
+        </div>
+        <div className='px-4 sm:col-span-2'>
+          <label
+            htmlFor='email'
+            className='block text-sm font-medium text-gray-700 dark:text-gray-800'
+          >
+            Email
+          </label>
+          <div className='mt-1'>
+            <input
+              ref={emailEl}
+              id='email'
+              name='email'
+              type='email'
+              autoComplete='email'
+              className='block w-full shadow-sm sm:text-sm focus:ring-red-500 focus:border-red-500 border-gray-300 rounded-md dark:text-gray-900'
+            />
+          </div>
+        </div>
+        <div className='flex justify-end items-center mt-2 p-4 border-t border-gray-200 dark:border-gray-300 sm:col-span-2'>
+          <button
+            type='submit'
+            className='inline-flex justify-center py-3 px-5 border border-transparent text-base font-medium rounded-md text-white bg-red-600 shadow-sm hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500'
+          >
+            Request PDF
+          </button>
+        </div>
+      </form>
+    </Popup>
   )
 }
 
