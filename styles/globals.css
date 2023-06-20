@@ -9,9 +9,24 @@
 }
 
 .prose a {
-  color: #b91c1c;
+  color: #dc2626; /* red-600 */
   text-decoration: none;
   font-weight: 500;
+}
+.prose a:hover {
+  color: #b91c1c; /* red-700 */
+}
+html.dark .prose a:hover {
+  color: #ef4444; /* red-500 */
+}
+
+html.dark .prose h1,
+html.dark .prose h2,
+html.dark .prose h3,
+html.dark .prose h4,
+html.dark .prose h5,
+html.dark .prose h6 {
+  color: #d1d5db; /* gray-300 */
 }
 
 .custom-img {

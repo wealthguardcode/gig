@@ -29,6 +29,10 @@ const NAVIGATION = {
       name: 'Resources',
       links: [
         {
+          name: 'Blog',
+          href: '/blog',
+        },
+        {
           name: 'Resources',
           href: '/resources/broker-resources',
         },
@@ -75,7 +79,7 @@ export default function Footer() {
           <div className='grid grid-cols-1 md:grid-cols-12 md:grid-flow-col md:gap-x-8 md:gap-y-16 md:auto-rows-min'>
             {/* Image section */}
             <div className='col-span-1 lg:row-start-1 lg:col-start-1'>
-              <Link href='/'>
+              <Link href='/' passHref>
                 <a>
                   <Image
                     height={60}
@@ -98,7 +102,7 @@ export default function Footer() {
                   <ul role='list' className='mt-6 space-y-4'>
                     {category.links.map((link) => (
                       <li key={link.name} className='text-sm'>
-                        <Link href={link.href}>
+                        <Link href={link.href} passHref>
                           <a
                             className={
                               router.asPath === link.href

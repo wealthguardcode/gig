@@ -44,6 +44,10 @@ const NAVIGATION = {
       name: 'Resources',
       links: [
         {
+          name: 'Blog',
+          href: '/blog',
+        },
+        {
           name: 'Broker Resources',
           href: '/resources/broker-resources',
         },
@@ -156,7 +160,7 @@ export default function Header() {
                               key={link.name}
                               className='group relative mx-auto text-center'
                             >
-                              <Link href={link.href}>
+                              <Link href={link.href} passHref>
                                 <a
                                   onClick={() => setMobileMenuOpen(false)}
                                   className={
@@ -184,7 +188,7 @@ export default function Header() {
                 <div className='border-t divide-y border-gray-200 dark:border-gray-500 py-6 px-4 space-y-6 mx-auto'>
                   {NAVIGATION.pages.map((page) => (
                     <div key={page.name} className='flow-root'>
-                      <Link href={page.href}>
+                      <Link href={page.href} passHref>
                         <a
                           onClick={() => setMobileMenuOpen(false)}
                           className={
@@ -215,7 +219,7 @@ export default function Header() {
                 <div className='h-16 flex items-center justify-between'>
                   {/* Logo (lg+) */}
                   <div className='hidden lg:flex-1 lg:flex lg:items-center'>
-                    <Link href='/'>
+                    <Link href='/' passHref>
                       <a>
                         <span className='sr-only'>WealthGuard</span>
                         {theme === 'dark' ? (
@@ -257,7 +261,7 @@ export default function Header() {
 
                         {/* Single Nav Links */}
                         {NAVIGATION.pages.map((page) => (
-                          <Link key={page.name} href={page.href}>
+                          <Link key={page.name} href={page.href} passHref>
                             <a
                               className={classNames(
                                 router.asPath === page.href
@@ -289,7 +293,7 @@ export default function Header() {
                   </div>
 
                   {/* Logo (lg-) */}
-                  <Link href='/'>
+                  <Link href='/' passHref>
                     <a className='lg:hidden'>
                       <span className='sr-only'>WealthGuard</span>
                       {theme === 'dark' ? (
@@ -438,7 +442,7 @@ function PopoverMenu({ router, name, links }) {
                   <div className='grid grid-cols-1 py-8'>
                     {links.map((item) => (
                       <div key={item.name} className='group relative'>
-                        <Link href={item.href}>
+                        <Link href={item.href} passHref>
                           <a
                             onClick={onMouseLeavePanel}
                             className={

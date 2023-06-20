@@ -17,12 +17,15 @@ module.exports = {
         'screen-header': 'calc(100vh - 64px)',
       },
       maxWidth: {
+        '8xl': '88rem',
+        '9xl': '96rem',
         'screen-xs': '480px',
       },
     },
   },
   variants: {
     extend: {
+      cursor: ['disabled'],
       display: ['responsive', 'group-hover', 'group-focus'],
       borderWidth: ['first', 'last'],
       borderColor: ['first', 'last'],
