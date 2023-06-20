@@ -111,8 +111,7 @@ export default function ContactUsPage() {
                     className='text-red-700 hover:text-red-600 dark:hover:text-red-600'
                     href='mailto:sales@wealthguardig.com'
                     target='_blank'
-                    rel='noreferrer'
-                  >
+                    rel='noreferrer'>
                     email us
                   </a>
                   .
@@ -120,13 +119,11 @@ export default function ContactUsPage() {
                 <form
                   id='template_tsp834s'
                   onSubmit={sendEmail}
-                  className='mt-9 grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8'
-                >
+                  className='mt-9 grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8'>
                   <div>
                     <label
                       htmlFor='first_name'
-                      className='block text-sm font-medium text-gray-700 dark:text-gray-400'
-                    >
+                      className='block text-sm font-medium text-gray-700 dark:text-gray-400'>
                       First name
                     </label>
                     <div className='mt-1'>
@@ -143,8 +140,7 @@ export default function ContactUsPage() {
                   <div>
                     <label
                       htmlFor='last_name'
-                      className='block text-sm font-medium text-gray-700 dark:text-gray-400'
-                    >
+                      className='block text-sm font-medium text-gray-700 dark:text-gray-400'>
                       Last name
                     </label>
                     <div className='mt-1'>
@@ -161,8 +157,7 @@ export default function ContactUsPage() {
                   <div className='sm:col-span-2'>
                     <label
                       htmlFor='email'
-                      className='block text-sm font-medium text-gray-700 dark:text-gray-400'
-                    >
+                      className='block text-sm font-medium text-gray-700 dark:text-gray-400'>
                       Email
                     </label>
                     <div className='mt-1'>
@@ -179,8 +174,7 @@ export default function ContactUsPage() {
                   <div className='sm:col-span-2'>
                     <label
                       htmlFor='company'
-                      className='block text-sm font-medium text-gray-700 dark:text-gray-400'
-                    >
+                      className='block text-sm font-medium text-gray-700 dark:text-gray-400'>
                       Company
                     </label>
                     <div className='mt-1'>
@@ -198,14 +192,12 @@ export default function ContactUsPage() {
                     <div className='flex justify-between'>
                       <label
                         htmlFor='phone'
-                        className='block text-sm font-medium text-gray-700 dark:text-gray-400'
-                      >
+                        className='block text-sm font-medium text-gray-700 dark:text-gray-400'>
                         Phone
                       </label>
                       <span
                         id='phone-description'
-                        className='text-sm text-gray-500 dark:text-gray-500'
-                      >
+                        className='text-sm text-gray-500 dark:text-gray-500'>
                         Optional
                       </span>
                     </div>
@@ -225,14 +217,12 @@ export default function ContactUsPage() {
                     <div className='flex justify-between'>
                       <label
                         htmlFor='message'
-                        className='block text-sm font-medium text-gray-700 dark:text-gray-400'
-                      >
+                        className='block text-sm font-medium text-gray-700 dark:text-gray-400'>
                         How can we help you?
                       </label>
                       <span
                         id='how-can-we-help-description'
-                        className='text-sm text-gray-500'
-                      >
+                        className='text-sm text-gray-500'>
                         Max. 500 characters
                       </span>
                     </div>
@@ -252,8 +242,7 @@ export default function ContactUsPage() {
                   <div className='text-right sm:col-span-2'>
                     <button
                       type='submit'
-                      className='inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-red-600 hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500'
-                    >
+                      className='inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-red-600 hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500'>
                       Submit
                     </button>
                   </div>
@@ -284,8 +273,7 @@ export default function ContactUsPage() {
                             href='https://www.google.com/maps/place/WealthGuard+Insurance+Group/@30.2202,-95.5826725,17z/data=!3m1!4b1!4m6!3m5!1s0x86472f9432bb1e11:0x777b4537b97a0a07!8m2!3d30.2202001!4d-95.5778016!16s%2Fg%2F11nn3nwmr0?entry=ttu'
                             target='_blank'
                             rel='noreferrer'
-                            className='group inline-flex gap-2 items-start'
-                          >
+                            className='group inline-flex gap-2 items-start'>
                             <MapIcon
                               height={20}
                               className='mt-1 group-hover:text-red-600 dark:group-hover:text-red-600'
@@ -305,8 +293,7 @@ export default function ContactUsPage() {
                             href='mailto:sales@wealthguardig.com'
                             target='_blank'
                             rel='noreferrer'
-                            className='group inline-flex gap-2 items-center'
-                          >
+                            className='group inline-flex gap-2 items-center'>
                             <MailIcon
                               height={20}
                               className='group-hover:text-red-600 dark:group-hover:text-red-600'
@@ -324,8 +311,7 @@ export default function ContactUsPage() {
                             href='tel:832-479-0042'
                             target='_blank'
                             rel='noreferrer'
-                            className='group inline-flex gap-2 items-center'
-                          >
+                            className='group inline-flex gap-2 items-center'>
                             <PhoneIcon
                               height={20}
                               className='group-hover:text-red-600 dark:group-hover:text-red-600'
@@ -355,8 +341,7 @@ export default function ContactUsPage() {
               href='mailto:sales@wealthguardig.com'
               target='_blank'
               rel='noreferrer'
-              className='mt-8 w-full inline-flex items-center justify-center py-3 px-5 bg-white border border-transparent rounded-md shadow-md text-base font-medium text-red-600 hover:bg-red-50 sm:w-auto'
-            >
+              className='mt-8 w-full inline-flex items-center justify-center py-3 px-5 bg-white border border-transparent rounded-md shadow-md text-base font-medium text-red-600 hover:bg-red-50 sm:w-auto'>
               <span>Email Us</span>
               <MailIcon
                 className='ml-3 h-5 w-5 flex-shrink-0 text-gray-400'

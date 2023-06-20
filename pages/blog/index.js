@@ -66,8 +66,7 @@ export default function BlogPage({ articles }) {
               {filteredArticles.map((article) => (
                 <article
                   className='max-w-sm rounded overflow-hidden shadow-xl mx-auto hover:shadow-2xl border hover:border-red-400 dark:hover:border-red-600 dark:bg-gray-900 transform transition duration-500 md:hover:scale-110 hover:scale-105'
-                  key={article.slug}
-                >
+                  key={article.slug}>
                   <Link href={`/blog/${article.slug}`} passHref>
                     <a>
                       <Image
@@ -140,8 +139,7 @@ function ArticleFilters({ articles, filteredArticles }) {
       <div className='md:hidden'>
         <button
           onClick={() => setOpen(true)}
-          className='inline-flex gap-2 justify-center items-center w-full h-16 py-3 px-5 border border-gray-200 select-none dark:border-gray-600 rounded-md text-xl font-bold text-gray-600 dark:text-gray-300 bg-gray-100 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-900'
-        >
+          className='inline-flex gap-2 justify-center items-center w-full h-16 py-3 px-5 border border-gray-200 select-none dark:border-gray-600 rounded-md text-xl font-bold text-gray-600 dark:text-gray-300 bg-gray-100 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-900'>
           {appliedFilterCount ? (
             <span className='inline-block w-auto py-0.5 px-3 rounded-md text-white bg-red-500 dark:bg-red-600'>
               {appliedFilterCount}
@@ -170,8 +168,7 @@ function ArticleFilters({ articles, filteredArticles }) {
               router.push(router.pathname, undefined, { scroll: false })
               setOpen(false)
             },
-          }}
-        >
+          }}>
           <div className='flex flex-col gap-6 w-full my-2 p-4'>
             <CategoryFilter router={router} categories={categories} />
             <TagsFilter router={router} tags={tags} />
@@ -291,8 +288,7 @@ function TagsFilter({ router, tags }) {
                     isSelected
                       ? 'text-red-800 bg-red-50'
                       : 'text-gray-800 bg-gray-50 dark:bg-white'
-                  )}
-                >
+                  )}>
                   <span className='flex gap-1 items-center py-1 px-2'>
                     <span className='font-medium'>{name}</span>
                     <span
@@ -301,8 +297,7 @@ function TagsFilter({ router, tags }) {
                         isSelected
                           ? 'text-red-700 bg-red-100'
                           : 'text-gray-500 bg-gray-100'
-                      )}
-                    >
+                      )}>
                       {count}
                     </span>
                   </span>

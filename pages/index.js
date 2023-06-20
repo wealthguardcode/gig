@@ -74,8 +74,7 @@ export default function Home() {
           onClick={() => {
             localStorage.setItem('homePopupShown', 'false')
           }}
-          className='py-2 px-4 rounded-md text-white dark:text-blue-900 bg-blue-600 dark:bg-blue-200 disabled:opacity-50'
-        >
+          className='py-2 px-4 rounded-md text-white dark:text-blue-900 bg-blue-600 dark:bg-blue-200 disabled:opacity-50'>
           Reset Popup
         </button>
       </div>
@@ -205,8 +204,7 @@ export default function Home() {
                   <div className='flex flex-col justify-center items-center p-4'>
                     <h3
                       ref={triggerPopupRef}
-                      className='text-5xl tracking-wider dark:text-gray-900'
-                    >
+                      className='text-5xl tracking-wider dark:text-gray-900'>
                       Brokers
                     </h3>
                     <p className='mt-3 prose-xl mx-8 dark:text-gray-500'>
@@ -231,8 +229,7 @@ export default function Home() {
                     <a className='flex flex-start items-center rounded group hover:shadow-2xl mb-3 md:mb-0'>
                       <button
                         type='button'
-                        className='inline-flex items-center px-6 py-3 border-2 border-gray-300 hover:border-gray-400 dark:border-red-700 shadow-sm text-base font-medium rounded-md text-gray-700 bg-white dark:bg-gray-300 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-700'
-                      >
+                        className='inline-flex items-center px-6 py-3 border-2 border-gray-300 hover:border-gray-400 dark:border-red-700 shadow-sm text-base font-medium rounded-md text-gray-700 bg-white dark:bg-gray-300 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-700'>
                         <BookOpenIcon
                           height={40}
                           className='text-gray-400 group-hover:text-gray-300 dark:group-hover:text-gray-500'
@@ -246,12 +243,10 @@ export default function Home() {
                   <Link href='/resources/broker-resources'>
                     <a
                       className='flex flex-start items-center rounded group hover:shadow-2xl mb-3 md:mb-0'
-                      aria-label='Useful Resources for Brokers'
-                    >
+                      aria-label='Useful Resources for Brokers'>
                       <button
                         type='button'
-                        className='inline-flex items-center px-6 py-3 border-2 border-gray-300 hover:border-gray-400 dark:border-red-700 shadow-sm text-base font-medium rounded-md text-gray-700 bg-white dark:bg-gray-300 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-700'
-                      >
+                        className='inline-flex items-center px-6 py-3 border-2 border-gray-300 hover:border-gray-400 dark:border-red-700 shadow-sm text-base font-medium rounded-md text-gray-700 bg-white dark:bg-gray-300 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-700'>
                         <LinkIcon
                           height={40}
                           className='text-gray-400 group-hover:text-gray-300 dark:group-hover:text-gray-500'
@@ -267,8 +262,7 @@ export default function Home() {
                     <a className='flex flex-start items-center rounded group hover:shadow-2xl mb-3 md:mb-0'>
                       <button
                         type='button'
-                        className='inline-flex items-center px-6 py-3 border-2 border-gray-300 hover:border-gray-400 dark:border-red-700 shadow-sm text-base font-medium rounded-md text-gray-700 bg-white dark:bg-gray-300 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-700'
-                      >
+                        className='inline-flex items-center px-6 py-3 border-2 border-gray-300 hover:border-gray-400 dark:border-red-700 shadow-sm text-base font-medium rounded-md text-gray-700 bg-white dark:bg-gray-300 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-700'>
                         <MailIcon
                           height={40}
                           className='text-gray-400 group-hover:text-gray-300 dark:group-hover:text-gray-500'
@@ -356,8 +350,7 @@ export default function Home() {
                       <svg
                         className='hidden md:block mx-1 h-5 w-5 text-red-700'
                         fill='currentColor'
-                        viewBox='0 0 20 20'
-                      >
+                        viewBox='0 0 20 20'>
                         <path d='M11 0h3L9 20H6l5-20z' />
                       </svg>
 
@@ -419,8 +412,7 @@ export default function Home() {
                 return (
                   <div
                     key={feature.name}
-                    className='shadow-xl hover:shadow-2xl rounded-xl m-2 p-4 dark:bg-gray-700 border dark:border-gray-500'
-                  >
+                    className='shadow-xl hover:shadow-2xl rounded-xl m-2 p-4 dark:bg-gray-700 border dark:border-gray-500'>
                     <div>
                       <div className='flex items-center justify-center h-12 w-12 rounded-md bg-gray-900 dark:bg-red-600 opacity-70 text-white mx-auto'>
                         {feature.icon ? (
@@ -482,17 +474,14 @@ function HomePopup({ isOpen, closePopup }) {
       isOpen={isOpen}
       closePopup={closePopup}
       title='PDF in your Inbox'
-      description={`Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.`}
-    >
+      description={`Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.`}>
       <form
         onSubmit={requestPdf}
-        className='grid grid-cols-1 gap-y-4 sm:grid-cols-2'
-      >
+        className='grid grid-cols-1 gap-y-4 sm:grid-cols-2'>
         <div className='px-4'>
           <label
             htmlFor='first_name'
-            className='block text-sm font-medium text-gray-700 dark:text-gray-800'
-          >
+            className='block text-sm font-medium text-gray-700 dark:text-gray-800'>
             First name
           </label>
           <div className='mt-1'>
@@ -509,8 +498,7 @@ function HomePopup({ isOpen, closePopup }) {
         <div className='px-4'>
           <label
             htmlFor='last_name'
-            className='block text-sm font-medium text-gray-700 dark:text-gray-800'
-          >
+            className='block text-sm font-medium text-gray-700 dark:text-gray-800'>
             Last name
           </label>
           <div className='mt-1'>
@@ -527,8 +515,7 @@ function HomePopup({ isOpen, closePopup }) {
         <div className='px-4 sm:col-span-2'>
           <label
             htmlFor='email'
-            className='block text-sm font-medium text-gray-700 dark:text-gray-800'
-          >
+            className='block text-sm font-medium text-gray-700 dark:text-gray-800'>
             Email
           </label>
           <div className='mt-1'>
@@ -545,8 +532,7 @@ function HomePopup({ isOpen, closePopup }) {
         <div className='flex justify-end items-center mt-2 p-4 border-t border-gray-200 dark:border-gray-300 sm:col-span-2'>
           <button
             type='submit'
-            className='inline-flex justify-center py-3 px-5 border border-transparent text-base font-medium rounded-md text-white bg-red-600 shadow-sm hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500'
-          >
+            className='inline-flex justify-center py-3 px-5 border border-transparent text-base font-medium rounded-md text-white bg-red-600 shadow-sm hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500'>
             Request PDF
           </button>
         </div>
