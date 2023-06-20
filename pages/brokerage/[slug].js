@@ -1,9 +1,9 @@
+import ContactSecondaryCTA from '../../components/ContactSecondaryCTA'
+import Hero from '../../components/Hero'
 import Layout from '../../components/Layout'
 import ProgramCoverage from '../../components/ProgramCoverage'
-import ProgramCTA from '../../components/ProgramCTA'
 import ProjectDescription from '../../components/ProjectDescription'
 import ProgramForm from '../../components/ProgramForm'
-import ProgramHero from '../../components/ProgramHero'
 import ProgramHighlights from '../../components/ProgramHighlights'
 import { classNames } from '../../utils/helpers'
 
@@ -27,17 +27,14 @@ export default function BrokerageSolutionPage({
     subHeading,
     description,
     highlights,
-    coverage,
   },
   content,
 }) {
   return (
     <Layout title={`WIG | ${title}`}>
-      <ProgramHero
-        image={image}
-        title={title}
-        heroDescription={heroDescription}
-      />
+      <Hero image={image} title={title}>
+        {heroDescription}
+      </Hero>
 
       {/* Main content */}
       <div className='pt-16 bg-white dark:bg-gray-800'>
@@ -63,7 +60,7 @@ export default function BrokerageSolutionPage({
 
       <ProgramHighlights highlights={highlights} />
 
-      <ProgramCTA />
+      <ContactSecondaryCTA />
     </Layout>
   )
 }
