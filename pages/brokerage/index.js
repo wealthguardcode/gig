@@ -2,7 +2,7 @@ import ContactPrimaryCTA from '../../components/ContactPrimaryCTA'
 import Hero from '../../components/Hero'
 import Layout from '../../components/Layout'
 import ProgramsGrid from '../../components/ProgramsGrid'
-import { getBrokerage } from '../../lib/brokerage'
+import { getMarkdown } from '../../lib/getMarkdown'
 
 export default function BrokeragePage({ programs }) {
   return (
@@ -23,7 +23,7 @@ export default function BrokeragePage({ programs }) {
 export async function getStaticProps() {
   return {
     props: {
-      programs: getBrokerage(),
+      programs: getMarkdown('brokerage'),
     },
   }
 }

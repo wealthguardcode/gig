@@ -2,7 +2,7 @@ import ContactPrimaryCTA from '../../components/ContactPrimaryCTA'
 import Hero from '../../components/Hero'
 import Layout from '../../components/Layout'
 import ProgramsGrid from '../../components/ProgramsGrid'
-import { getPrograms } from '../../lib/programs'
+import { getMarkdown } from '../../lib/getMarkdown'
 
 export default function ProgramsPage({ programs }) {
   return (
@@ -23,7 +23,7 @@ export default function ProgramsPage({ programs }) {
 export async function getStaticProps() {
   return {
     props: {
-      programs: getPrograms(),
+      programs: getMarkdown('programs'),
     },
   }
 }
