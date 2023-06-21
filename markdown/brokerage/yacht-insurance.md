@@ -8,8 +8,6 @@ description: Yacht insurance is an insurance policy that provides indemnity liab
 highlights: For more information about WealthGuard yacht insurance, please contact WealthGuard.
 ---
 
-<!-- Markdown generator - https://jaspervdj.be/lorem-markdownum/ -->
-
 WealthGuard yacht insurance includes liability coverage for bodily injury or damage to the property of others, as well as damage to personal property on the vessel. For non-US owners, please call to discuss options for Latin America, Caribbean & Europe.
 
 Navigation:

@@ -183,11 +183,11 @@ export default function HomePage() {
                 while providing exceptional service.
               </p>
               <Image
-                src='/images/Coverholder at Lloyds_black_rgb.png'
+                src='/images/Coverholder at Lloyds_black_rgb.jpg'
                 alt='Coverholder at Lloyds logo black'
                 width={414}
                 height={162}
-                className='inline-block'
+                className='inline-block mt-4'
               />
               <p className='mt-4 max-w-2xl prose-2xl md:tracking-wide text-gray-500 dark:text-gray-400 mx-auto'>
                 WealthGuard Insurance Group is a Coverholder at Lloyd&apos;s.

@@ -6,9 +6,7 @@ image2: /images/contractors-general-liability-1.jpeg
 subHeading: Contractors General Liability Insurance
 description: WealthGuard Contractors General Liability Insurance offers coverage for the small general contractor and artisan performing either commercial or residential work. Our most successful niche is the general contractor who subcontracts out the majority of work, including paper contractors.
 highlights: For more information about Contractors General Liability Insurance, contact WealthGuard below.
-
 ---
-<!-- Markdown generator - https://jaspervdj.be/lorem-markdownum/ -->
 
 WealthGuard Contractors General Liability Insurance offers coverage for the following types of activities:
 

@@ -7,13 +7,13 @@ subHeading: Coastal Property Insurance
 description: Our Coastal Property Insurance Program offers coastal property and casualty insurance coverage in one package. Coverage enhancements can include Deductible Buy-Down for Wind/Hail, Commercial Terrorism (Not TRIA), Cargo and Storage, and Active Assailant insurance.
 highlights: To learn more about the WealthGuard Coastal Property Insurance Program and application requirements, please contact WealthGuard below.
 ---
-<!-- Markdown generator - https://jaspervdj.be/lorem-markdownum/ -->
 
-WealthGuard's Coastal Property Insurance Program offers coverage for coastal commercial property, as well as coastal homes in some cases. 
+WealthGuard's Coastal Property Insurance Program offers coverage for coastal commercial property, as well as coastal homes in some cases.
 
-WealthGuard can offer coastal property coverage for eligible occupancies (listed below) on single state schedules in TX, LA, MS, AL, GA, FL, SC, NC, VA and MD. 
+WealthGuard can offer coastal property coverage for eligible occupancies (listed below) on single state schedules in TX, LA, MS, AL, GA, FL, SC, NC, VA and MD.
 
 Target occupancies include the following:
+
 - Retail Shopping Centers
 - Self-Storage Warehouses - Lessor's Risk
 - Apartments, Condominiums and Clubhouses (less than 5 stories in Florida)
@@ -23,5 +23,6 @@ Target occupancies include the following:
 - Schools - Public, Private and Charter
 
 Capacity:
+
 - TIV up to $7,500,000
 - Single Family Homes up to $750,000
