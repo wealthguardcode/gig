@@ -1,8 +1,6 @@
 import fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
-import { toast } from 'react-toastify'
-import 'react-toastify/dist/ReactToastify.css'
 
 import ContactSecondaryCTA from '../../components/ContactSecondaryCTA'
 import Hero from '../../components/Hero'
@@ -12,11 +10,6 @@ import SolutionDescription from '../../components/SolutionDescription'
 import SolutionForm from '../../components/SolutionForm'
 import SolutionHighlights from '../../components/SolutionHighlights'
 import { classNames } from '../../utils/helpers'
-
-toast.configure({
-  autoClose: 8000,
-  draggable: false,
-})
 
 export default function ProgramPage({
   frontmatter: {

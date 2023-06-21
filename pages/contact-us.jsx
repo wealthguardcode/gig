@@ -3,14 +3,8 @@ import Image from 'next/image'
 import emailjs from '@emailjs/browser'
 import { EnvelopeIcon, MapIcon, PhoneIcon } from '@heroicons/react/24/solid'
 import { toast } from 'react-toastify'
-import 'react-toastify/dist/ReactToastify.css'
 
 import Layout from '../components/Layout'
-
-toast.configure({
-  autoClose: 8000,
-  draggable: false,
-})
 
 export default function ContactUsPage() {
   const firstNameEl = useRef(null)

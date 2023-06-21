@@ -11,7 +11,6 @@ import {
   BookOpenIcon,
 } from '@heroicons/react/24/outline'
 import { toast } from 'react-toastify'
-import 'react-toastify/dist/ReactToastify.css'
 
 import Popup from '../components/Popup'
 import Layout from '../components/Layout'
@@ -19,11 +18,6 @@ import { brokerageSolutions } from '../data/brokerage'
 import { programSolutions } from '../data/programs'
 import { useIntersectionObserver } from '../hooks/useIntersectionObserver'
 import { classNames } from '../utils/helpers'
-
-toast.configure({
-  autoClose: 8000,
-  draggable: false,
-})
 
 const solutions = [
   ...programSolutions.map((p) => ({

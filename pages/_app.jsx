@@ -4,6 +4,8 @@ import { useRouter } from 'next/router'
 import Script from 'next/script'
 import { ThemeProvider } from 'next-themes'
 import { ParallaxProvider } from 'react-scroll-parallax'
+import { ToastContainer } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
 
 import * as gtag from '../lib/gtag'
 import '../styles/globals.css'
@@ -59,6 +61,7 @@ export default function MyApp({ Component, pageProps }) {
       <ThemeProvider attribute='class'>
         <ParallaxProvider>
           <Component {...pageProps} />
+          <ToastContainer />
         </ParallaxProvider>
       </ThemeProvider>
     </>

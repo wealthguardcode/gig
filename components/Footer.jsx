@@ -2,13 +2,6 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { useRouter } from 'next/router'
 import { EnvelopeIcon, MapIcon, PhoneIcon } from '@heroicons/react/24/solid'
-import { toast } from 'react-toastify'
-import 'react-toastify/dist/ReactToastify.css'
-
-toast.configure({
-  autoClose: 8000,
-  draggable: false,
-})
 
 const navigation = {
   categories: [

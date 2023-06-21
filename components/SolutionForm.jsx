@@ -1,9 +1,8 @@
-import { classNames } from '../utils/helpers'
-
+import { useRef, useState } from 'react'
 import emailjs from '@emailjs/browser'
 import { toast } from 'react-toastify'
-import 'react-toastify/dist/ReactToastify.css'
-import { useRef, useState } from 'react'
+
+import { classNames } from '../utils/helpers'
 
 const accountQuantities = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10+']
 
@@ -61,11 +60,6 @@ const states = [
   'Wisconsin',
   'Wyoming',
 ]
-
-toast.configure({
-  autoClose: 8000,
-  draggable: false,
-})
 
 export default function SolutionForm({ title }) {
   const [defaultValue, setDefaultValue] = useState({

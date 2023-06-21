@@ -2,6 +2,7 @@ import { Fragment, useState } from 'react'
 import Image from 'next/image'
 import { Dialog, Transition } from '@headlessui/react'
 import { XMarkIcon } from '@heroicons/react/24/outline'
+
 import { classNames } from '../utils/helpers'
 
 export default function Gallery({ items }) {
