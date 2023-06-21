@@ -4,8 +4,6 @@ import { useRouter } from 'next/router'
 import Script from 'next/script'
 import { ThemeProvider } from 'next-themes'
 import { ParallaxProvider } from 'react-scroll-parallax'
-// TODO: Add a new lightbox component
-// import SimpleReactLightbox from 'simple-react-lightbox'
 
 import * as gtag from '../lib/gtag'
 import '../styles/globals.css'
@@ -59,11 +57,9 @@ export default function MyApp({ Component, pageProps }) {
       />
 
       <ThemeProvider attribute='class'>
-        {/* <SimpleReactLightbox> */}
         <ParallaxProvider>
           <Component {...pageProps} />
         </ParallaxProvider>
-        {/* </SimpleReactLightbox> */}
       </ThemeProvider>
     </>
   )

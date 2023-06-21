@@ -7,6 +7,7 @@ import matter from 'gray-matter'
 import format from 'date-fns/format'
 
 import ContactSecondaryCTA from '../../components/ContactSecondaryCTA'
+import Gallery from '../../components/Gallery'
 import Layout from '../../components/Layout'
 import { classNames } from '../../utils/helpers'
 
@@ -57,6 +58,25 @@ export default function ArticlePage({
             __html: marked.parse(content, { headerIds: false, mangle: false }),
           }}
         />
+      </div>
+
+      <div className='relative max-w-lg my-32 mx-auto'>
+        <div className='p-4 rounded-lg bg-gray-50 dark:bg-gray-900 shadow-2xl'>
+          <Gallery
+            items={[
+              {
+                id: 'hero',
+                imageUrl: image,
+                title,
+              },
+              {
+                id: 'alt',
+                imageUrl: image2,
+                title,
+              },
+            ]}
+          />
+        </div>
       </div>
 
       <ContactSecondaryCTA />

@@ -3,8 +3,8 @@ title: WealthGuard Insurance Group joins Lloyd’s global network as approved Co
 author: Rebecca Dias
 published: '2022-11-28T14:00:00Z'
 heroDescription: (MAGNOLIA, TX) — WealthGuard Insurance Group LLC is pleased to announce that it has joined the Lloyd’s global network as a Lloyd’s approved Coverholder.
-image: /images/blog/wealthguard-joins-lloyds/wealthguard-joins-lloyds-hero.jpg
-image2: /images/blog/wealthguard-joins-lloyds/wealthguard-joins-lloyds-hero.jpg
+image: /images/blog/wealthguard-joins-lloyds/wealthguard-joins-lloyds-sm.jpg
+image2: /images/blog/wealthguard-joins-lloyds/wealthguard-joins-lloyds-lg.jpg
 category: News
 tags:
   - Programs

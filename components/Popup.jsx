@@ -32,7 +32,7 @@ export default function Popup({
           leave='transition-opacity ease-linear duration-300'
           leaveFrom='opacity-100'
           leaveTo='opacity-0'>
-          <Dialog.Overlay className='fixed inset-0 bg-black/25' />
+          <Dialog.Overlay className='fixed inset-0 bg-black/50' />
         </Transition.Child>
 
         <Transition.Child
