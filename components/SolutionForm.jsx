@@ -145,10 +145,10 @@ export default function SolutionForm({ title }) {
               <div className='shadow overflow-hidden sm:rounded-md'>
                 <div className='px-4 py-5 bg-white dark:bg-gray-200 p-6 z-10'>
                   <div className='my-4'>
-                    <h1 className='sm:text-xl text-2xl text-center lg:text-3xl font-semibold dark:text-gray-800'>
+                    <h2 className='sm:text-xl text-2xl text-center lg:text-3xl font-semibold dark:text-gray-800'>
                       Speak With a <span className='text-red-700'>{title}</span>{' '}
                       Specialist
-                    </h1>
+                    </h2>
                   </div>
                   <div className='grid grid-cols-6 gap-6'>
                     <div className='col-span-6'>

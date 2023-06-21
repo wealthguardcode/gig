@@ -62,9 +62,9 @@ export default function AboutUsOverviewPage() {
       <div className='grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 mt-2 md:mt-0'>
         <div className='p-4 lg:p-10 mx-3 md:mx-5 xl:mx-10 -mt-16 md:-mt-16 relative flex flex-col bg-white border-2 border-gray-300 hover:border-gray-400 dark:hover:border-red-600 rounded-lg shadow-xl hover:shadow-2xl mb-4 dark:bg-gray-900'>
           <CogIcon height={80} className='dark:text-gray-300' />
-          <h1 className='text-3xl tracking-wider my-4 text-center font-semibold dark:text-gray-300'>
+          <h3 className='text-3xl tracking-wider my-4 text-center font-semibold dark:text-gray-300'>
             Programs
-          </h1>
+          </h3>
           <p className='prose prose-lg my-2 dark:text-gray-400'>
             We have years of insurance experience helping carriers and brokers
             provide solutions to their clients. Experience the difference of
@@ -82,9 +82,9 @@ export default function AboutUsOverviewPage() {
         </div>
         <div className='p-4 lg:p-10 mx-3 md:mx-5 xl:mx-10 md:-mt-16 relative flex flex-col bg-white border-2 border-gray-300 hover:border-gray-400 dark:hover:border-red-600 rounded-lg shadow-xl hover:shadow-2xl mb-4 dark:bg-gray-900'>
           <ScaleIcon height={80} className='dark:text-gray-300' />
-          <h1 className='text-3xl tracking-wider my-4 text-center font-semibold dark:text-gray-300'>
+          <h3 className='text-3xl tracking-wider my-4 text-center font-semibold dark:text-gray-300'>
             Stability
-          </h1>
+          </h3>
           <p className='prose prose-lg my-2 dark:text-gray-400'>
             As an independent broker, you have the privilege of going to market
             for your client. WealthGuard&apos;s executive leadership has
@@ -95,9 +95,9 @@ export default function AboutUsOverviewPage() {
         </div>
         <div className='p-4 lg:p-10 mx-3 md:mx-5 xl:mx-10 md:mt-16 xl:-mt-16 relative flex flex-col bg-white border-2 border-gray-300 hover:border-gray-400 dark:hover:border-red-600 rounded-lg shadow-xl hover:shadow-2xl mb-4 dark:bg-gray-900'>
           <UserGroupIcon height={80} className='dark:text-gray-300' />
-          <h1 className='text-3xl tracking-wider my-4 text-center font-semibold dark:text-gray-300'>
+          <h3 className='text-3xl tracking-wider my-4 text-center font-semibold dark:text-gray-300'>
             Relationships
-          </h1>
+          </h3>
           <p className='prose prose-lg my-2 dark:text-gray-400'>
             Each client has different insurance needs. For 30+ years, our
             leadership team has delivered strong results, year over year, for
@@ -113,9 +113,9 @@ export default function AboutUsOverviewPage() {
       <div className='bg-white dark:bg-gray-800'>
         <div className='max-w-7xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:px-8'>
           <div className='text-center'>
-            <p className='mt-1 text-4xl font-extrabold text-gray-900 dark:text-gray-300 sm:text-4xl sm:tracking-tight lg:text-5xl'>
+            <h2 className='mt-1 text-4xl font-extrabold text-gray-900 dark:text-gray-300 sm:text-4xl sm:tracking-tight lg:text-5xl'>
               Why <span className='text-red-700'>WealthGuard?</span>
-            </p>
+            </h2>
           </div>
         </div>
       </div>
@@ -124,9 +124,9 @@ export default function AboutUsOverviewPage() {
       <div className='grid grid-cols-1 md:grid-cols-2 md:col-span-6 lg:col-span-4 mt-2 md:mt-0'>
         <div className='p-6 lg:p-10 mx-5 lg:mx-16 flex flex-col bg-red-300 dark:bg-red-400 border-t-2 border-gray-600 dark:border-red-500 rounded-lg shadow-xl hover:shadow-2xl mb-4'>
           <div className='mx-auto'>
-            <h1 className='text-3xl tracking-wider my-4 font-semibold dark:text-gray-800'>
+            <h3 className='text-3xl tracking-wider my-4 font-semibold dark:text-gray-800'>
               Focus
-            </h1>
+            </h3>
 
             <p className='prose prose-lg my-2'>
               Independent Agents have limited time and resources to place their
@@ -146,9 +146,9 @@ export default function AboutUsOverviewPage() {
 
         <div className='p-8 lg:p-10 mx-5 lg:mx-16 flex flex-col bg-gray-300 dark:bg-gray-300 border-t-2 border-gray-600 dark:border-red-500 rounded-lg shadow-xl hover:shadow-2xl mb-4'>
           <div className='mx-auto'>
-            <h1 className='text-3xl tracking-wider my-4 font-semibold dark:text-gray-800'>
+            <h3 className='text-3xl tracking-wider my-4 font-semibold dark:text-gray-800'>
               Differentiator
-            </h1>
+            </h3>
 
             <ul className='list-disc prose prose-lg my-2'>
               <li>
@@ -176,9 +176,9 @@ export default function AboutUsOverviewPage() {
           <BuildingOfficeIcon height={200} className='dark:text-gray-300' />
         </div>
         <div className='md:mx-6 p-4 flex flex-col'>
-          <h1 className='text-3xl font-semibold my-3 text-red-700 dark:text-red-600'>
+          <h3 className='text-3xl font-semibold my-3 text-red-700 dark:text-red-600'>
             Our Mission:
-          </h1>
+          </h3>
           <p className='prose-lg my-3 dark:text-gray-400'>
             Create and manage insurance programs for partners to achieve the
             following three goals:

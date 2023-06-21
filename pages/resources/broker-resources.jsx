@@ -2,6 +2,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 
 import ContactPrimaryCTA from '../../components/ContactPrimaryCTA'
+import Hero from '../../components/Hero'
 import Layout from '../../components/Layout'
 
 const resources = [
@@ -27,34 +28,13 @@ const resources = [
   },
 ]
 
-const heroImgUrl =
-  'https://images.unsplash.com/photo-1501290836517-b22a21c522a4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1332&q=80'
-
 export default function BrokerResourcesPage() {
   return (
     <Layout title='WIG | Broker Resources'>
-      <div className='relative bg-red-400'>
-        <div className='absolute inset-0'>
-          <Image
-            src={heroImgUrl}
-            alt='Broker Resources'
-            priority
-            placeholder='blur'
-            blurDataURL={heroImgUrl}
-            fill
-            className='object-cover w-full h-full'
-          />
-          <div
-            aria-hidden='true'
-            className='absolute inset-0 bg-gray-400 mix-blend-multiply'
-          />
-        </div>
-        <div className='relative max-w-7xl mx-auto py-24 px-4 sm:py-32 sm:px-6 lg:px-8'>
-          <h1 className='text-4xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-6xl'>
-            Broker Resources
-          </h1>
-        </div>
-      </div>
+      <Hero
+        image='https://images.unsplash.com/photo-1501290836517-b22a21c522a4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1332&q=80'
+        title='Broker Resources'
+      />
 
       {/* Main */}
       <div className='bg-white dark:bg-gray-800'>
