@@ -6,7 +6,7 @@ export default function SolutionHighlights({ highlights }) {
           <h2 className='text-center text-3xl font-extrabold text-gray-900 dark:text-gray-300 sm:text-4xl my-4'>
             Highlights
           </h2>
-          <div className='prose prose-xl max-w-none mt-2 dark:text-gray-400'>
+          <div className='prose text-md max-w-none mt-2 dark:text-gray-400 md:text-lg'>
             <p>{highlights}</p>
           </div>
         </div>
