@@ -1,9 +1,8 @@
 import Head from 'next/head'
-// TODO: Add a new scroll to top button
-// import ScrollToTopButton from './ScrollToTopButton'
 
 import Header from './Header'
 import Footer from './Footer'
+import ScrollToTopButton from './ScrollToTopButton'
 
 export default function Layout({ title, keywords, description, children }) {
   return (
@@ -19,7 +18,7 @@ export default function Layout({ title, keywords, description, children }) {
 
       <main>{children}</main>
 
-      {/* <ScrollToTopButton /> */}
+      <ScrollToTopButton />
       <Footer />
     </div>
   )
