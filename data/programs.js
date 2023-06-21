@@ -1,4 +1,4 @@
-export const programs = [
+export const programSolutions = [
   {
     slug: 'westwall-marina-package',
     name: 'WestWall Marina Package',

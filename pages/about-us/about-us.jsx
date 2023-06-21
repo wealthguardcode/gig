@@ -1,31 +1,34 @@
-import Layout from '../../components/Layout'
 import Link from 'next/link'
 import Image from 'next/image'
 import {
   CogIcon,
   ScaleIcon,
   UserGroupIcon,
-  OfficeBuildingIcon,
-  ExternalLinkIcon,
-} from '@heroicons/react/outline'
+  BuildingOfficeIcon,
+  ArrowTopRightOnSquareIcon,
+} from '@heroicons/react/24/outline'
 
-export default function AboutUsOverview() {
+import Layout from '../../components/Layout'
+
+const heroImgUrl =
+  'https://images.unsplash.com/reserve/NV0eHnNkQDHA21GC3BAJ_Paris%20Louvr.jpg?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1470&q=80'
+
+export default function AboutUsOverviewPage() {
   return (
     <Layout title='WIG | About Us'>
       {/* Hero */}
       <div className='relative bg-white dark:bg-gray-800'>
         <div className='h-80 absolute inset-x-0 bottom-0 xl:top-0 xl:h-full'>
           <div className='h-full w-full xl:grid xl:grid-cols-2'>
-            <div className='h-full xl:relative xl:col-start-2'>
+            <div className='relative h-full xl:col-start-2'>
               <Image
-                className='opacity-25 xl:absolute xl:inset-0'
-                src='https://images.unsplash.com/reserve/NV0eHnNkQDHA21GC3BAJ_Paris%20Louvr.jpg?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1470&q=80'
-                layout='fill'
-                objectFit='cover'
-                priority={true}
-                placeholder='blur'
-                blurDataURL
+                src={heroImgUrl}
                 alt='People moving in building'
+                priority
+                placeholder='blur'
+                blurDataURL={heroImgUrl}
+                fill
+                className='object-cover opacity-25 xl:absolute xl:inset-0'
               />
               <div
                 aria-hidden='true'
@@ -46,14 +49,10 @@ export default function AboutUsOverview() {
               we have surrounded ourselves with the best talent available and
               are poised to continue our success in providing insurance.
             </p>
-            <Link href='/about-us/leadership' passHref>
-              <a>
-                <button
-                  type='button'
-                  className='inline-flex items-center uppercase mt-6 px-5 py-2 border border-transparent text-base font-medium rounded-full shadow-lg hover:shadow-2xl text-white bg-red-600 hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500'>
-                  Meet Our Leadership
-                </button>
-              </a>
+            <Link
+              href='/about-us/leadership'
+              className='inline-flex items-center uppercase mt-6 px-5 py-2 border border-transparent text-base font-medium rounded-full shadow-lg hover:shadow-2xl text-white bg-red-600 hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500'>
+              Meet Our Leadership
             </Link>
           </div>
         </div>
@@ -145,7 +144,7 @@ export default function AboutUsOverview() {
           </div>
         </div>
 
-        <div className='p-8 lg:p-10 mx-5 lg:mx-16 flex flex-col bg-gray-300 dark:bg-gray-300 border-t-2 dark:border-red-500 border-gray-600 rounded-lg shadow-xl hover:shadow-2xl mb-4'>
+        <div className='p-8 lg:p-10 mx-5 lg:mx-16 flex flex-col bg-gray-300 dark:bg-gray-300 border-t-2 border-gray-600 dark:border-red-500 rounded-lg shadow-xl hover:shadow-2xl mb-4'>
           <div className='mx-auto'>
             <h1 className='text-3xl tracking-wider my-4 font-semibold dark:text-gray-800'>
               Differentiator
@@ -169,25 +168,12 @@ export default function AboutUsOverview() {
             </ul>
           </div>
         </div>
-        {/* <div className='p-10 mx-10 flex flex-col dark:border-red-500 bg-red-300 dark:bg-red-400 border-t-2 border-gray-600  rounded-lg shadow-xl hover:shadow-2xl mb-4'>
-          <h1 className='text-3xl tracking-wider my-4 font-semibold dark:text-gray-800'>
-            Passion
-          </h1>
-          <p className='prose prose-lg my-2'>
-            Each client has different insurance needs. For 30+ years, our
-            leadership team has delivered strong results, year over year, for
-            our key trading partners and brokers. We credit this success for the
-            personal and professional relationships that have enjoyed over the
-            past years and years to come. If your looking for a partner, we are
-            here for you!
-          </p>
-        </div> */}
       </div>
 
       {/* Our Mission */}
-      <div className='flex flex-col justify-between items-center md:flex-row p-2 mx-3 md:mx-10 lg:mx-32 my-10 border-t-2 border-gray-600 hover:border-2 rounded-lg shadow-xl hover:shadow-2xl dark:bg-gray-700'>
+      <div className='flex flex-col justify-between items-center md:flex-row p-2 mx-3 md:mx-10 lg:mx-32 my-10 border-t-2 border-gray-600 rounded-lg shadow-xl hover:shadow-2xl dark:bg-gray-700'>
         <div className='mx-4 p-4 sm:mx-auto align-middle'>
-          <OfficeBuildingIcon height={200} className='dark:text-gray-300' />
+          <BuildingOfficeIcon height={200} className='dark:text-gray-300' />
         </div>
         <div className='md:mx-6 p-4 flex flex-col'>
           <h1 className='text-3xl font-semibold my-3 text-red-700 dark:text-red-600'>
@@ -214,13 +200,11 @@ export default function AboutUsOverview() {
       <div className='relative bg-gray-800 dark:bg-gray-900 mt-10'>
         <div className='relative h-56 bg-gray-800  md:absolute md:left-0 md:h-full md:w-1/2'>
           <Image
-            className='w-full h-full object-cover'
             src='https://images.unsplash.com/39/lIZrwvbeRuuzqOoWJUEn_Photoaday_CSD%20(1%20of%201)-5.jpg?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80'
+            alt='WealthGuard is here to help'
             width={940}
             height={490}
-            layout='fill'
-            objectFit='cover'
-            alt='WealthGuard is here to help'
+            className='object-cover w-full h-full'
           />
         </div>
         <div className='relative max-w-7xl mx-auto px-4 py-12 sm:px-6 lg:px-8 lg:py-16'>
@@ -242,14 +226,16 @@ export default function AboutUsOverview() {
             </p>
             <div className='mt-8'>
               <div className='inline-flex rounded-md shadow'>
-                <Link href='/contact-us'>
-                  <a className='inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-gray-900 bg-white hover:bg-gray-50'>
-                    Contact us
-                    <ExternalLinkIcon
-                      className='-mr-1 ml-3 h-5 w-5 text-gray-400'
+                <Link
+                  href='/contact-us'
+                  className='inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-gray-900 bg-white hover:bg-gray-50'>
+                  <>
+                    <span>Contact us</span>
+                    <ArrowTopRightOnSquareIcon
                       aria-hidden='true'
+                      className='-mr-1 ml-3 h-5 w-5 text-gray-400'
                     />
-                  </a>
+                  </>
                 </Link>
               </div>
             </div>

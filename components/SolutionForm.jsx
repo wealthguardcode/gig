@@ -5,11 +5,11 @@ import { toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 import { useRef, useState } from 'react'
 
-const ACCOUNT_QUANTITIES = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10+']
+const accountQuantities = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10+']
 
-const ACCOUNT_FUTURES = ['1', '2', '3+']
+const accountFutures = ['1', '2', '3+']
 
-const STATES = [
+const states = [
   'Alabama',
   'Alaska',
   'Arizona',
@@ -67,7 +67,7 @@ toast.configure({
   draggable: false,
 })
 
-export default function ProgramForm({ title }) {
+export default function SolutionForm({ title }) {
   const [defaultValue, setDefaultValue] = useState({
     value: `${title}`,
   })
@@ -147,8 +147,7 @@ export default function ProgramForm({ title }) {
             <form
               id='template_78io7bt'
               onSubmit={sendEmail}
-              className='shadow-2xl md:absolute md:mb-6 mx-4'
-            >
+              className='shadow-2xl md:absolute md:mb-6 mx-4'>
               <div className='shadow overflow-hidden sm:rounded-md'>
                 <div className='px-4 py-5 bg-white dark:bg-gray-200 p-6 z-10'>
                   <div className='my-4'>
@@ -161,8 +160,7 @@ export default function ProgramForm({ title }) {
                     <div className='col-span-6'>
                       <label
                         htmlFor='first_name'
-                        className='block text-sm font-medium text-gray-700'
-                      >
+                        className='block text-sm font-medium text-gray-700'>
                         First name
                       </label>
                       <input
@@ -178,8 +176,7 @@ export default function ProgramForm({ title }) {
                     <div className='col-span-6'>
                       <label
                         htmlFor='last_name'
-                        className='block text-sm font-medium text-gray-700'
-                      >
+                        className='block text-sm font-medium text-gray-700'>
                         Last name
                       </label>
                       <input
@@ -195,8 +192,7 @@ export default function ProgramForm({ title }) {
                     <div className='col-span-6'>
                       <label
                         htmlFor='work_email'
-                        className='block text-sm font-medium text-gray-700'
-                      >
+                        className='block text-sm font-medium text-gray-700'>
                         Work Email
                       </label>
                       <input
@@ -211,8 +207,7 @@ export default function ProgramForm({ title }) {
                     <div className='col-span-6'>
                       <label
                         htmlFor='program'
-                        className='block text-sm font-medium text-gray-700'
-                      >
+                        className='block text-sm font-medium text-gray-700'>
                         Program
                       </label>
                       <select
@@ -220,8 +215,7 @@ export default function ProgramForm({ title }) {
                         id='program'
                         name='program'
                         defaultValue={title}
-                        className='mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-red-500 focus:border-red-500 sm:text-sm dark:text-gray-900'
-                      >
+                        className='mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-red-500 focus:border-red-500 sm:text-sm dark:text-gray-900'>
                         <option>{title}</option>
                       </select>
                     </div>
@@ -229,17 +223,15 @@ export default function ProgramForm({ title }) {
                     <div className='col-span-6'>
                       <label
                         htmlFor='account_quantity'
-                        className='block text-sm font-medium text-gray-700'
-                      >
+                        className='block text-sm font-medium text-gray-700'>
                         How Many Accounts Do You Have That Fit This Program?
                       </label>
                       <select
                         ref={accountQuantityEl}
                         id='account_quantity'
                         name='account_quantity'
-                        className='mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-red-500 focus:border-red-500 sm:text-sm dark:text-gray-900'
-                      >
-                        {ACCOUNT_QUANTITIES.map((value) => (
+                        className='mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-red-500 focus:border-red-500 sm:text-sm dark:text-gray-900'>
+                        {accountQuantities.map((value) => (
                           <option key={value}>{value}</option>
                         ))}
                       </select>
@@ -248,8 +240,7 @@ export default function ProgramForm({ title }) {
                     <div className='col-span-6'>
                       <label
                         htmlFor='account_future'
-                        className='block text-sm font-medium text-gray-700'
-                      >
+                        className='block text-sm font-medium text-gray-700'>
                         How Many of These Accounts Are Coming Up in the Next 90
                         Days?
                       </label>
@@ -258,9 +249,8 @@ export default function ProgramForm({ title }) {
                         id='account_future'
                         name='account_future'
                         defaultValue='1'
-                        className='mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-red-500 focus:border-red-500 sm:text-sm dark:text-gray-900'
-                      >
-                        {ACCOUNT_FUTURES.map((value) => (
+                        className='mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-red-500 focus:border-red-500 sm:text-sm dark:text-gray-900'>
+                        {accountFutures.map((value) => (
                           <option key={value}>{value}</option>
                         ))}
                       </select>
@@ -269,8 +259,7 @@ export default function ProgramForm({ title }) {
                     <div className='col-span-6'>
                       <label
                         htmlFor='company'
-                        className='block text-sm font-medium text-gray-700'
-                      >
+                        className='block text-sm font-medium text-gray-700'>
                         Company
                       </label>
                       <input
@@ -284,8 +273,7 @@ export default function ProgramForm({ title }) {
                     <div className='col-span-6'>
                       <label
                         htmlFor='phone'
-                        className='block text-sm font-medium text-gray-700'
-                      >
+                        className='block text-sm font-medium text-gray-700'>
                         Phone
                       </label>
                       <input
@@ -300,8 +288,7 @@ export default function ProgramForm({ title }) {
                     <div className='col-span-6'>
                       <label
                         htmlFor='state'
-                        className='block text-sm font-medium text-gray-700'
-                      >
+                        className='block text-sm font-medium text-gray-700'>
                         State / Province
                       </label>
                       <select
@@ -309,9 +296,8 @@ export default function ProgramForm({ title }) {
                         id='state'
                         name='state'
                         defaultValue='Texas'
-                        className='mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-red-500 focus:border-red-500 sm:text-sm dark:text-gray-900'
-                      >
-                        {STATES.map((value) => (
+                        className='mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-red-500 focus:border-red-500 sm:text-sm dark:text-gray-900'>
+                        {states.map((value) => (
                           <option key={value}>{value}</option>
                         ))}
                       </select>
@@ -321,8 +307,7 @@ export default function ProgramForm({ title }) {
                 <div className='px-4 py-3 bg-white dark:bg-gray-200 text-center sm:px-6'>
                   <button
                     type='submit'
-                    className='inline-flex items-center justify-center py-2 px-4 border border-transparent shadow-sm text-lg font-medium rounded-md text-white bg-red-600 hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500'
-                  >
+                    className='inline-flex items-center justify-center py-2 px-4 border border-transparent shadow-sm text-lg font-medium rounded-md text-white bg-red-600 hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500'>
                     Request a Consultation
                   </button>
                 </div>

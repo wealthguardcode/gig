@@ -1,10 +1,10 @@
 import ContactPrimaryCTA from '../../components/ContactPrimaryCTA'
 import Hero from '../../components/Hero'
 import Layout from '../../components/Layout'
-import ProgramsGrid from '../../components/ProgramsGrid'
+import SolutionsGrid from '../../components/SolutionsGrid'
 import { getMarkdown } from '../../lib/getMarkdown'
 
-export default function BrokeragePage({ programs }) {
+export default function BrokeragePage({ solutions }) {
   return (
     <Layout title='WIG | Our Brokerage Solutions'>
       <Hero image='/images/programs-hero.jpeg' title='Our Brokerage Solutions'>
@@ -13,7 +13,7 @@ export default function BrokeragePage({ programs }) {
         Discover WealthGuard brokerage product lines below.
       </Hero>
 
-      <ProgramsGrid rootSlug='brokerage' programs={programs} />
+      <SolutionsGrid rootSlug='brokerage' solutions={solutions} />
 
       <ContactPrimaryCTA />
     </Layout>
@@ -23,7 +23,7 @@ export default function BrokeragePage({ programs }) {
 export async function getStaticProps() {
   return {
     props: {
-      programs: getMarkdown('brokerage'),
+      solutions: getMarkdown('brokerage'),
     },
   }
 }

@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { MailIcon } from '@heroicons/react/solid'
+import { EnvelopeIcon } from '@heroicons/react/24/solid'
 
 export default function ContactPrimaryCTA() {
   return (
@@ -12,14 +12,16 @@ export default function ContactPrimaryCTA() {
           Do not hesitate to reach out to us with your questions or concerns
           today.
         </p>
-        <Link href='/contact-us' passHref>
-          <a className='inline-flex justify-center items-center w-full mt-8 py-3 px-5 border border-transparent rounded-md text-base font-medium text-red-600 bg-white hover:bg-red-50 sm:w-auto'>
-            Contact us{' '}
-            <MailIcon
-              className='flex-shrink-0 h-5 w-5 ml-3 text-gray-400'
+        <Link
+          href='/contact-us'
+          className='inline-flex justify-center items-center w-full mt-8 py-3 px-5 border border-transparent rounded-md text-base font-medium text-red-600 bg-white hover:bg-red-50 sm:w-auto'>
+          <>
+            <span>Contact us</span>
+            <EnvelopeIcon
               aria-hidden='true'
+              className='shrink-0 h-5 w-5 ml-3 text-gray-400'
             />
-          </a>
+          </>
         </Link>
       </div>
     </div>

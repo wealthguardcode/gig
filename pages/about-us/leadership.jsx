@@ -1,6 +1,7 @@
-import Layout from '../../components/Layout'
-import { MailIcon } from '@heroicons/react/outline'
 import Image from 'next/image'
+import { EnvelopeIcon } from '@heroicons/react/24/outline'
+
+import Layout from '../../components/Layout'
 
 const people = [
   {
@@ -33,7 +34,10 @@ const people = [
   },
 ]
 
-export default function leadership() {
+const heroImgUrl =
+  'https://media.graphassets.com/output=format:jpg/resize=,height:800,fit:max/6gW60WjTTqiZaNhfQOBD'
+
+export default function LeadershipPage() {
   return (
     <Layout title='WIG | Leadership'>
       <div>
@@ -41,18 +45,17 @@ export default function leadership() {
         <div className='relative bg-gray-400'>
           <div className='absolute inset-0'>
             <Image
-              className='w-full h-full object-cover'
-              src='https://media.graphassets.com/output=format:jpg/resize=,height:800,fit:max/6gW60WjTTqiZaNhfQOBD'
-              layout='fill'
-              objectFit='cover'
-              priority={true}
-              placeholder='blur'
-              blurDataURL
+              src={heroImgUrl}
               alt="Wealthguard's Leadership"
+              priority
+              placeholder='blur'
+              blurDataURL={heroImgUrl}
+              fill
+              className='object-cover w-full h-full'
             />
             <div
-              className='absolute inset-0 bg-gray-400 mix-blend-multiply'
               aria-hidden='true'
+              className='absolute inset-0 bg-gray-400 mix-blend-multiply'
             />
           </div>
           <div className='relative max-w-7xl mx-auto py-24 px-4 sm:py-32 sm:px-6 lg:px-8'>
@@ -74,18 +77,19 @@ export default function leadership() {
               <ul
                 role='list'
                 className='space-y-12 lg:grid lg:grid-cols-1 lg:items-start lg:gap-x-8 lg:gap-y-12 lg:space-y-0'>
-                {people.map((person) => (
+                {people.map((person, personIndex) => (
                   <li key={person.name}>
                     <div className='space-y-4 sm:grid sm:grid-cols-3 sm:gap-6 sm:space-y-0 lg:gap-8 dark:text-gray-400'>
                       <div className='h-0 aspect-w-3 aspect-h-2 sm:aspect-w-3 sm:aspect-h-4 bg-white dark:bg-gray-800'>
                         <Image
-                          className='md:object-cover object-contain md:shadow-lg rounded-lg'
-                          layout='fill'
-                          objectFit='cover'
-                          placeholder='blur'
-                          blurDataURL
                           src={person.imageUrl}
                           alt={person.name}
+                          priority={personIndex === 0}
+                          placeholder='blur'
+                          blurDataURL={person.imageUrl}
+                          fill
+                          sizes='(max-width: 639px) 600px, 512px'
+                          className='object-cover rounded-lg md:shadow-lg'
                         />
                       </div>
                       <div className='sm:col-span-2'>
@@ -95,17 +99,17 @@ export default function leadership() {
                             <p className='text-xl text-red-700'>
                               {person.role}
                             </p>
-                            <dl className='mt-2 '>
+                            <dl className='mt-2'>
                               <dt>
                                 <span className='sr-only'>Email</span>
                               </dt>
-                              <dd className='flex text-base text-teal-50 group'>
-                                <MailIcon
-                                  className='flex-shrink-0 w-6 h-6 group-hover:text-red-600'
+                              <dd className='group flex text-base'>
+                                <EnvelopeIcon
                                   aria-hidden='true'
+                                  className='shrink-0 w-6 h-6 group-hover:text-red-600'
                                 />
                                 <a
-                                  className='text-gray-500 hover:text-red-600'
+                                  className='text-gray-500 group-hover:text-red-600'
                                   href={`mailto:${person.contact}`}
                                   target='_blank'
                                   rel='noreferrer'>

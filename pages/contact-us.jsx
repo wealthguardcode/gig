@@ -1,11 +1,11 @@
-import Layout from '../components/Layout'
-
-import { MailIcon, MapIcon, PhoneIcon } from '@heroicons/react/solid'
-import emailjs from '@emailjs/browser'
-import { toast } from 'react-toastify'
-import 'react-toastify/dist/ReactToastify.css'
 import { useRef } from 'react'
 import Image from 'next/image'
+import emailjs from '@emailjs/browser'
+import { EnvelopeIcon, MapIcon, PhoneIcon } from '@heroicons/react/24/solid'
+import { toast } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
+
+import Layout from '../components/Layout'
 
 toast.configure({
   autoClose: 8000,
@@ -91,10 +91,18 @@ export default function ContactUsPage() {
         <div className='relative bg-white dark:bg-gray-800'>
           <div className='lg:absolute lg:inset-0'>
             <div className='lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2'>
-              <img
+              {/* <img
                 className='h-56 w-full object-cover lg:absolute lg:h-full'
                 src='https://images.unsplash.com/photo-1524758631624-e2822e304c36?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1470&q=80'
                 alt='Modern office'
+              /> */}
+              <Image
+                src='https://images.unsplash.com/photo-1524758631624-e2822e304c36?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1470&q=80'
+                alt='Modern office'
+                priority
+                width={1470}
+                height={980}
+                className='h-56 w-full object-cover lg:absolute lg:h-full'
               />
             </div>
           </div>
@@ -294,7 +302,7 @@ export default function ContactUsPage() {
                             target='_blank'
                             rel='noreferrer'
                             className='group inline-flex gap-2 items-center'>
-                            <MailIcon
+                            <EnvelopeIcon
                               height={20}
                               className='group-hover:text-red-600 dark:group-hover:text-red-600'
                             />
@@ -343,9 +351,9 @@ export default function ContactUsPage() {
               rel='noreferrer'
               className='mt-8 w-full inline-flex items-center justify-center py-3 px-5 bg-white border border-transparent rounded-md shadow-md text-base font-medium text-red-600 hover:bg-red-50 sm:w-auto'>
               <span>Email Us</span>
-              <MailIcon
-                className='ml-3 h-5 w-5 flex-shrink-0 text-gray-400'
+              <EnvelopeIcon
                 aria-hidden='true'
+                className='shrink-0 w-5 h-5 ml-3 text-gray-400'
               />
             </a>
           </div>

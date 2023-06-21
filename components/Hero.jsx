@@ -10,14 +10,14 @@ export default function Hero({ image, title, titleAs = 'h1', children }) {
           src={image}
           alt={title}
           priority
-          blurDataURL
           placeholder='blur'
-          layout='fill'
-          objectFit='cover'
+          blurDataURL={image}
+          fill
+          className='object-cover'
         />
         <div
-          className='absolute z-0 inset-0 bg-gray-400 mix-blend-multiply'
           aria-hidden='true'
+          className='absolute z-0 inset-0 bg-gray-400 mix-blend-multiply'
         />
       </div>
       <div className='relative max-w-7xl mx-auto py-24 px-4 sm:py-32 sm:px-6 lg:px-8'>

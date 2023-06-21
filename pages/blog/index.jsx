@@ -1,3 +1,14 @@
+import { useMemo, useState } from 'react'
+import Link from 'next/link'
+import Image from 'next/image'
+import { useRouter } from 'next/router'
+import {
+  AdjustmentsVerticalIcon,
+  DocumentTextIcon,
+  XMarkIcon,
+} from '@heroicons/react/24/solid'
+
+import Card from '../../components/Card'
 import ContactPrimaryCTA from '../../components/ContactPrimaryCTA'
 import Hero from '../../components/Hero'
 import Layout from '../../components/Layout'
@@ -5,17 +16,6 @@ import Popup from '../../components/Popup'
 import Select from '../../components/Select'
 import { getMarkdown } from '../../lib/getMarkdown'
 import { classNames } from '../../utils/helpers'
-
-import { useMemo, useState } from 'react'
-import Link from 'next/link'
-import Image from 'next/image'
-import { useRouter } from 'next/router'
-import {
-  AdjustmentsIcon,
-  DocumentTextIcon,
-  ExternalLinkIcon,
-  XIcon,
-} from '@heroicons/react/solid'
 
 export default function BlogPage({ articles }) {
   const { query } = useRouter()
@@ -62,41 +62,19 @@ export default function BlogPage({ articles }) {
 
         <div className='col-span-12 md:col-span-7 lg:col-span-8 xl:col-span-9'>
           {Array.isArray(filteredArticles) && filteredArticles.length ? (
-            <section className='grid grid-cols-1 gap-6 lg:grid-cols-2 xl:grid-cols-3'>
+            <div className='grid grid-cols-1 gap-6 lg:grid-cols-2 xl:grid-cols-3'>
               {filteredArticles.map((article) => (
-                <article
-                  className='max-w-sm rounded overflow-hidden shadow-xl mx-auto hover:shadow-2xl border hover:border-red-400 dark:hover:border-red-600 dark:bg-gray-900 transform transition duration-500 md:hover:scale-110 hover:scale-105'
-                  key={article.slug}>
-                  <Link href={`/blog/${article.slug}`} passHref>
-                    <a>
-                      <Image
-                        className='w-full'
-                        src={article.frontmatter.image}
-                        height={300}
-                        width={400}
-                        priority={true}
-                        placeholder='blur'
-                        blurDataURL
-                        alt={article.frontmatter.title}
-                      />
-                    </a>
-                  </Link>
-                  <div className='px-6 py-4 flex flex-col items-center'>
-                    <Link href={`/blog/${article.slug}`} passHref>
-                      <a className='inline-flex items-center mb-2 px-3 py-2 border border-transparent rounded-md text-xl font-bold leading-4 text-center text-white bg-red-500 dark:bg-red-700 dark:text-white hover:bg-red-700 dark:hover:bg-red-500 dark:hover:text-red-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500'>
-                        {article.frontmatter.title}{' '}
-                        <span>
-                          <ExternalLinkIcon className='ml-1' height={20} />
-                        </span>
-                      </a>
-                    </Link>
-                  </div>
-                </article>
+                <Card
+                  key={article.slug}
+                  link={`/blog/${article.slug}`}
+                  imageUrl={article.frontmatter.image}
+                  title={article.frontmatter.title}
+                />
               ))}
-            </section>
+            </div>
           ) : (
             <section className='flex flex-col gap-8 justify-center items-center w-full h-96 rounded-md text-lg text-gray-700 dark:text-gray-300 bg-gray-50 dark:bg-gray-900'>
-              <DocumentTextIcon className='h-20 w-20' />
+              <DocumentTextIcon className='w-20 h-20' />
               <span>No articles match your search criteria</span>
             </section>
           )}
@@ -145,7 +123,7 @@ function ArticleFilters({ articles, filteredArticles }) {
               {appliedFilterCount}
             </span>
           ) : (
-            <AdjustmentsIcon height={24} />
+            <AdjustmentsVerticalIcon className='w-6 h-6' />
           )}
           <span>Filter{appliedFilterCount === 1 ? '' : 's'}</span>
         </button>
@@ -154,7 +132,7 @@ function ArticleFilters({ articles, filteredArticles }) {
           closePopup={() => setOpen(false)}
           title={
             <div className='flex gap-2 justify-start items-center'>
-              <AdjustmentsIcon height={24} />
+              <AdjustmentsVerticalIcon className='w-6 h-6' />
               <span className='leading-0'>Filters</span>
             </div>
           }
@@ -303,7 +281,7 @@ function TagsFilter({ router, tags }) {
                   </span>
                   {isSelected && (
                     <span className='flex p-1 pr-2'>
-                      <XIcon height={16} className='text-red-900' />
+                      <XMarkIcon className='w-4 h-4 text-red-900' />
                     </span>
                   )}
                 </button>

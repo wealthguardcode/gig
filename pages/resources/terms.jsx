@@ -1,6 +1,6 @@
 import Layout from '../../components/Layout'
 
-export default function terms() {
+export default function TermsPage() {
   return (
     <Layout>
       {/* Header for Terms & Conditions */}

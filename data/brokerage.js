@@ -1,4 +1,4 @@
-export const brokerage = [
+export const brokerageSolutions = [
   {
     slug: 'Auto-Liability-Excess-Only',
     name: 'Auto Liability Excess Only',

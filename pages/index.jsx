@@ -1,43 +1,42 @@
-import Popup from '../components/Popup'
-import Layout from '../components/Layout'
-import { brokerage } from '../data/brokerage'
-import { programs } from '../data/programs'
-import { useIntersectionObserver } from '../hooks/useIntersectionObserver'
-import { classNames } from '../utils/helpers'
-
 import { useEffect, useRef, useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import {
   GlobeAltIcon,
-  LightningBoltIcon,
+  BoltIcon,
   ScaleIcon,
   CheckIcon,
-  MailIcon,
+  EnvelopeIcon,
   LinkIcon,
   BookOpenIcon,
-  DocumentDownloadIcon,
-} from '@heroicons/react/outline'
+} from '@heroicons/react/24/outline'
 import { toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
+
+import Popup from '../components/Popup'
+import Layout from '../components/Layout'
+import { brokerageSolutions } from '../data/brokerage'
+import { programSolutions } from '../data/programs'
+import { useIntersectionObserver } from '../hooks/useIntersectionObserver'
+import { classNames } from '../utils/helpers'
 
 toast.configure({
   autoClose: 8000,
   draggable: false,
 })
 
-const SOLUTIONS = [
-  ...programs.map((p) => ({
+const solutions = [
+  ...programSolutions.map((p) => ({
     ...p,
     href: `/programs/${p.slug}`,
   })),
-  ...brokerage.map((b) => ({
+  ...brokerageSolutions.map((b) => ({
     ...b,
     href: `/brokerage/${b.slug}`,
   })),
 ]
 
-const BENEFITS = [
+const benefits = [
   {
     icon: GlobeAltIcon,
     name: 'Experience',
@@ -51,14 +50,14 @@ const BENEFITS = [
       "WealthGuard's executive leadership has unprecedented access to innovative commercial insurance products and solutions.",
   },
   {
-    icon: LightningBoltIcon,
+    icon: BoltIcon,
     name: 'Relationship Driven',
     description:
       'We have years of insurance experience helping carriers and brokers provide solutions to their clients. You will build a one on one relationship at WealthGuard',
   },
 ]
 
-export default function Home() {
+export default function HomePage() {
   const {
     ref: triggerPopupRef,
     isOpen,
@@ -82,9 +81,9 @@ export default function Home() {
       <Layout>
         <div className='relative bg-white dark:bg-gray-800 overflow-hidden'>
           <div className='relative'>
-            <div className='flex items-center h-screen-header w-full mx-auto px-4'>
+            <div className='flex items-center h-[calc(100vh_-_64px)] w-full mx-auto px-4'>
               {/* BG Image */}
-              <div className='absolute inset-0 flex items-center justify-center h-screen bg-fixed lg:bg-center bg-cover custom-img'>
+              <div className='absolute inset-0 flex justify-center items-center h-[calc(100vh_-_64px)] custom-img bg-fixed bg-cover lg:bg-center'>
                 <div className='absolute inset-0 bg-gray-400 mix-blend-multiply' />
               </div>
 
@@ -98,7 +97,7 @@ export default function Home() {
                     </span>
                   </span>
                 </h1>
-                <p className='outline my-3 pb-4 font-bold text-xl text-gray-300 lg:text-3xl tracking-tight'>
+                <p className='my-3 pb-4 font-bold text-xl text-gray-300 lg:text-3xl tracking-tight'>
                   <span className='block xl:inline'>
                     Since 2016 we have been providing insurance solutions with
                     expertise,
@@ -117,17 +116,17 @@ export default function Home() {
                 </p>
                 <div className='flex justify-center mt-8 mb-4'>
                   <div className='mt-3 rounded-md shadow sm:mt-0 sm:ml-3'>
-                    <Link href='/brokerage'>
-                      <a className='w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-red-700 hover:bg-red-600 md:py-4 md:text-lg md:px-10'>
-                        For Brokers
-                      </a>
+                    <Link
+                      href='/brokerage'
+                      className='w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-red-700 hover:bg-red-600 md:py-4 md:text-lg md:px-10'>
+                      For Brokers
                     </Link>
                   </div>
                   <div className='mt-3 rounded-md shadow sm:mt-0 ml-3'>
-                    <Link href='/contact-us'>
-                      <a className='w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-red-600 bg-white hover:bg-gray-50 md:py-4 md:text-lg md:px-10'>
-                        Contact Us
-                      </a>
+                    <Link
+                      href='/contact-us'
+                      className='w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-red-600 bg-white hover:bg-gray-50 md:py-4 md:text-lg md:px-10'>
+                      Contact Us
                     </Link>
                   </div>
                 </div>
@@ -147,18 +146,20 @@ export default function Home() {
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 lg:grid lg:grid-cols-2 lg:gap-x-8'>
             <div className='lg:col-span-2'>
               <div className='max-w-5xl mx-auto sm:grid sm:grid-cols-2'>
-                {SOLUTIONS.map((solution) => (
+                {solutions.map((solution) => (
                   <div key={solution.name}>
-                    <Link href={solution.href}>
-                      <a className='group flex flex-1 gap-8 items-center p-4'>
+                    <Link
+                      href={solution.href}
+                      className='group flex flex-1 gap-8 items-center p-4'>
+                      <>
                         <CheckIcon
-                          className='flex-none h-8 w-8 text-green-500'
                           aria-hidden='true'
+                          className='flex-none w-8 h-8 text-emerald-500'
                         />
                         <span className='text-xl leading-normal font-medium text-gray-900 dark:text-gray-300 group-hover:text-red-700 dark:group-hover:text-red-700'>
                           {solution.name}
                         </span>
-                      </a>
+                      </>
                     </Link>
                   </div>
                 ))}
@@ -182,11 +183,11 @@ export default function Home() {
                 while providing exceptional service.
               </p>
               <Image
-                className='mediaobject'
                 src='/images/Coverholder at Lloyds_black_rgb.png'
                 alt='Coverholder at Lloyds logo black'
-                width={400}
-                height={150}
+                width={414}
+                height={162}
+                className='inline-block'
               />
               <p className='mt-4 max-w-2xl prose-2xl md:tracking-wide text-gray-500 dark:text-gray-400 mx-auto'>
                 WealthGuard Insurance Group is a Coverholder at Lloyd&apos;s.
@@ -216,104 +217,59 @@ export default function Home() {
 
                   <div className='mx-4'>
                     <Image
-                      className='mx-auto my-2 rounded'
                       src='https://images.unsplash.com/photo-1450101499163-c8848c66ca85?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80'
                       alt='Insurance Broker'
                       width={600}
                       height={400}
+                      className='mx-auto my-2 rounded'
                     />
                   </div>
                 </div>
                 <div className='flex flex-col items-center mt- md:flex-row md:justify-around p-4'>
-                  <Link href='/brokerage'>
-                    <a className='flex flex-start items-center rounded group hover:shadow-2xl mb-3 md:mb-0'>
-                      <button
-                        type='button'
-                        className='inline-flex items-center px-6 py-3 border-2 border-gray-300 hover:border-gray-400 dark:border-red-700 shadow-sm text-base font-medium rounded-md text-gray-700 bg-white dark:bg-gray-300 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-700'>
-                        <BookOpenIcon
-                          height={40}
-                          className='text-gray-400 group-hover:text-gray-300 dark:group-hover:text-gray-500'
-                        />
-                        <span className='flex items-center text-xl font-bold ml-1 group-hover:text-red-700 dark:group-hover:text-red-700'>
-                          Programs
-                        </span>
-                      </button>
-                    </a>
+                  <Link
+                    href='/brokerage'
+                    aria-label='Brokerage Solutions'
+                    className='group inline-flex flex-start items-center mb-3 py-3 px-6 border-2 border-gray-300 hover:border-gray-400 dark:border-red-700 rounded-md text-base font-medium text-gray-700 bg-white dark:bg-gray-300 hover:bg-gray-50 shadow-sm hover:shadow-2xl focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-700 md:mb-0'>
+                    <>
+                      <BookOpenIcon
+                        height={40}
+                        className='text-gray-400 group-hover:text-gray-300 dark:group-hover:text-gray-500'
+                      />
+                      <span className='flex items-center text-xl font-bold ml-1 group-hover:text-red-700 dark:group-hover:text-red-700'>
+                        Solutions
+                      </span>
+                    </>
                   </Link>
-                  <Link href='/resources/broker-resources'>
-                    <a
-                      className='flex flex-start items-center rounded group hover:shadow-2xl mb-3 md:mb-0'
-                      aria-label='Useful Resources for Brokers'>
-                      <button
-                        type='button'
-                        className='inline-flex items-center px-6 py-3 border-2 border-gray-300 hover:border-gray-400 dark:border-red-700 shadow-sm text-base font-medium rounded-md text-gray-700 bg-white dark:bg-gray-300 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-700'>
-                        <LinkIcon
-                          height={40}
-                          className='text-gray-400 group-hover:text-gray-300 dark:group-hover:text-gray-500'
-                        />
-                        <span className='flex flex-start items-center text-xl font-bold ml-1 group-hover:text-red-700 dark:group-hover:text-red-600'>
-                          Resources
-                        </span>
-                      </button>
-                    </a>
+                  <Link
+                    href='/resources/broker-resources'
+                    aria-label='Useful Resources for Brokers'
+                    className='group inline-flex flex-start items-center mb-3 py-3 px-6 border-2 border-gray-300 hover:border-gray-400 dark:border-red-700 rounded-md text-base font-medium text-gray-700 bg-white dark:bg-gray-300 hover:bg-gray-50 shadow-sm hover:shadow-2xl focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-700 md:mb-0'>
+                    <>
+                      <LinkIcon
+                        height={40}
+                        className='text-gray-400 group-hover:text-gray-300 dark:group-hover:text-gray-500'
+                      />
+                      <span className='flex items-center text-xl font-bold ml-1 group-hover:text-red-700 dark:group-hover:text-red-700'>
+                        Resources
+                      </span>
+                    </>
                   </Link>
-
-                  <Link href='/contact-us'>
-                    <a className='flex flex-start items-center rounded group hover:shadow-2xl mb-3 md:mb-0'>
-                      <button
-                        type='button'
-                        className='inline-flex items-center px-6 py-3 border-2 border-gray-300 hover:border-gray-400 dark:border-red-700 shadow-sm text-base font-medium rounded-md text-gray-700 bg-white dark:bg-gray-300 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-700'>
-                        <MailIcon
-                          height={40}
-                          className='text-gray-400 group-hover:text-gray-300 dark:group-hover:text-gray-500'
-                        />
-                        <span className='flex items-center text-xl font-bold ml-1 group-hover:text-red-700 dark:group-hover:text-red-700'>
-                          Contact Us
-                        </span>
-                      </button>
-                    </a>
+                  <Link
+                    href='/contact-us'
+                    aria-label='Useful Resources for Brokers'
+                    className='group inline-flex flex-start items-center mb-3 py-3 px-6 border-2 border-gray-300 hover:border-gray-400 dark:border-red-700 rounded-md text-base font-medium text-gray-700 bg-white dark:bg-gray-300 hover:bg-gray-50 shadow-sm hover:shadow-2xl focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-700 md:mb-0'>
+                    <>
+                      <EnvelopeIcon
+                        height={40}
+                        className='text-gray-400 group-hover:text-gray-300 dark:group-hover:text-gray-500'
+                      />
+                      <span className='flex items-center text-xl font-bold ml-1 group-hover:text-red-700 dark:group-hover:text-red-700'>
+                        Contact Us
+                      </span>
+                    </>
                   </Link>
                 </div>
               </div>
-
-              {/* Brokers FAQ */}
-              {/* <div className='bg-gray-50 dark:bg-gray-700'>
-              <div className='max-w-7xl mx-auto py-6 px-4 sm:pt-8 sm:pb-16 sm:px-6 lg:px-8'>
-                <div className='max-w-3xl mx-auto divide-y-2 divide-gray-200'>
-                  <dl className='mt-6 space-y-6 divide-y divide-gray-200 dark:divide-gray-500'>
-                    {faqs.map((faq) => (
-                      <Disclosure as='div' key={faq.question} className='pt-6'>
-                        {({ open }) => (
-                          <>
-                            <dt className='text-xl'>
-                              <Disclosure.Button className='text-left w-full flex justify-between items-start text-gray-400'>
-                                <span className='font-medium text-gray-900 dark:text-gray-300'>
-                                  {faq.question}
-                                </span>
-                                <span className='ml-6 h-7 flex items-center'>
-                                  <ChevronDownIcon
-                                    className={classNames(
-                                      open ? '-rotate-180' : 'rotate-0',
-                                      'h-6 w-6 transform dark:text-gray-500'
-                                    )}
-                                    aria-hidden='true'
-                                  />
-                                </span>
-                              </Disclosure.Button>
-                            </dt>
-                            <Disclosure.Panel as='dd' className='mt-2 pr-12'>
-                              <p className='text-lg text-gray-500 dark:text-gray-400'>
-                                {faq.answer}
-                              </p>
-                            </Disclosure.Panel>
-                          </>
-                        )}
-                      </Disclosure>
-                    ))}
-                  </dl>
-                </div>
-              </div>
-            </div> */}
             </div>
           </div>
         </div>
@@ -327,7 +283,7 @@ export default function Home() {
               </h2>
               <blockquote className='mt-6 '>
                 <div className='max-w-3xl mx-auto text-center text-lg md:text-2xl leading-9 font-medium text-gray-900 dark:text-gray-400'>
-                  <p className=''>
+                  <p>
                     &ldquo;WealthGuard&apos;s program manager and team were a
                     pleasure to work with. They were very knowledgeable,
                     sincere, had great communication, and provided a level of
@@ -365,27 +321,6 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Resources Section */}
-        {/* <div className='bg-gray-700 dark:bg-gray-300'>
-        <div className='max-w-2xl mx-auto text-center py-16 px-4 sm:py-20 sm:px-6 lg:px-8'>
-          <h2 className='text-3xl font-extrabold text-white dark:text-gray-600 sm:text-4xl'>
-            <span className='block'>Helpful Broker Resources</span>
-          </h2>
-          <p className='mt-4 text-xl leading-9 text-gray-200 dark:text-gray-500'>
-            WealthGuard supports the continual education of brokers through our
-            own collection of articles, webinars, industry white papers, case
-            studies, videos, infographics, and program supplementals.
-          </p>
-          <Link href='/resources/broker-resources'>
-            <a
-              className='mt-8 w-full inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-gray-600 bg-white dark:text-gray-300 dark:bg-gray-600 dark:hover:text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-500 sm:w-auto'
-              aria-label='Useful Resources for Brokers'>
-              Broker Resources
-            </a>
-          </Link>
-        </div>
-      </div> */}
-
         {/* Why Work with WealthGuard */}
         <div className='bg-white dark:bg-gray-800'>
           <div className='max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:py-24 lg:px-8'>
@@ -406,7 +341,7 @@ export default function Home() {
             </div>
 
             <div className='mt-12 space-y-10 sm:space-y-0 sm:grid sm:grid-cols-2 sm:gap-x-6 sm:gap-y-12 lg:grid-cols-3 lg:gap-x-8'>
-              {BENEFITS.map((feature) => {
+              {benefits.map((feature) => {
                 const Icon = feature.icon
 
                 return (
@@ -416,7 +351,7 @@ export default function Home() {
                     <div>
                       <div className='flex items-center justify-center h-12 w-12 rounded-md bg-gray-900 dark:bg-red-600 opacity-70 text-white mx-auto'>
                         {feature.icon ? (
-                          <Icon className='h-6 w-6' aria-hidden='true' />
+                          <Icon aria-hidden='true' className='w-6 h-6' />
                         ) : null}
                       </div>
                       <p className='mt-5 text-xl leading-6 font-medium text-red-700 dark:text-gray-300 text-center '>

@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import { useRouter } from 'next/router'
-import { MailIcon, MapIcon, PhoneIcon } from '@heroicons/react/solid'
+import { EnvelopeIcon, MapIcon, PhoneIcon } from '@heroicons/react/24/solid'
 import { toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 
@@ -10,7 +10,7 @@ toast.configure({
   draggable: false,
 })
 
-const NAVIGATION = {
+const navigation = {
   categories: [
     {
       name: 'Quick Links',
@@ -69,8 +69,7 @@ export default function Footer() {
   return (
     <footer
       aria-labelledby='footer-heading'
-      className='bg-white dark:bg-gray-700 border-t border-gray-200 dark:border-gray-500'
-    >
+      className='bg-white dark:bg-gray-700 border-t border-gray-200 dark:border-gray-500'>
       <h2 id='footer-heading' className='sr-only'>
         Footer
       </h2>
@@ -79,22 +78,22 @@ export default function Footer() {
           <div className='grid grid-cols-1 md:grid-cols-12 md:grid-flow-col md:gap-x-8 md:gap-y-16 md:auto-rows-min'>
             {/* Image section */}
             <div className='col-span-1 lg:row-start-1 lg:col-start-1'>
-              <Link href='/' passHref>
-                <a>
+              <Link href='/'>
+                <>
                   <Image
-                    height={60}
-                    width={60}
                     src='/images/wig-logo.png'
                     alt='Logo'
-                    className='h-12 w-auto'
+                    width={64}
+                    height={56.5}
+                    className='w-14 h-auto'
                   />
-                </a>
+                </>
               </Link>
             </div>
 
             {/* Sitemap sections */}
             <div className='col-span-12 mt-10 grid grid-cols-2 gap-8 sm:grid-cols-3 md:col-span-7 md:mt-0 md:row-start-1 lg:col-span-6'>
-              {NAVIGATION.categories.map((category) => (
+              {navigation.categories.map((category) => (
                 <div key={category.name}>
                   <h3 className='text-base font-medium tracking-wider text-gray-900 dark:text-gray-300'>
                     {category.name}
@@ -102,16 +101,14 @@ export default function Footer() {
                   <ul role='list' className='mt-6 space-y-4'>
                     {category.links.map((link) => (
                       <li key={link.name} className='text-sm'>
-                        <Link href={link.href} passHref>
-                          <a
-                            className={
-                              router.asPath === link.href
-                                ? 'font-bold text-red-700 dark:text-red-700 bg-gray-100 dark:bg-gray-800'
-                                : 'text-gray-500 dark:text-gray-400 hover:font-bold hover:text-red-700 dark:hover:text-red-700 hover:bg-gray-100 dark:hover:bg-gray-800'
-                            }
-                          >
-                            {link.name}
-                          </a>
+                        <Link
+                          href={link.href}
+                          className={
+                            router.asPath === link.href
+                              ? 'font-bold text-red-700 dark:text-red-700 bg-gray-100 dark:bg-gray-800'
+                              : 'text-gray-500 dark:text-gray-400 hover:text-red-700 dark:hover:text-red-700 hover:bg-gray-100 dark:hover:bg-gray-800'
+                          }>
+                          {link.name}
                         </Link>
                       </li>
                     ))}
@@ -120,7 +117,7 @@ export default function Footer() {
               ))}
             </div>
 
-            <div className='col-span-5 flex flex-col w-full mt-10 pt-10 border-t border-gray-50 dark:border-gray-600 md:col-span-4 md:col-start-9 md:mt-0 md:pt-0 md:border-t-0 lg:col-span-3 lg:col-start-10 lg:justify-end lg:px-4'>
+            <div className='col-span-5 flex flex-col w-full mt-10 pt-10 border-t border-gray-50 dark:border-gray-600 md:col-span-4 md:col-start-9 md:mt-0 md:pt-0 md:border-t-0 lg:col-span-3 lg:col-start-10 lg:px-4'>
               <h3 className='text-base font-medium tracking-wider text-gray-900 dark:text-gray-300'>
                 Office
               </h3>
@@ -132,8 +129,7 @@ export default function Footer() {
                       href='https://www.google.com/maps/place/WealthGuard+Insurance+Group/@30.2202,-95.5826725,17z/data=!3m1!4b1!4m6!3m5!1s0x86472f9432bb1e11:0x777b4537b97a0a07!8m2!3d30.2202001!4d-95.5778016!16s%2Fg%2F11nn3nwmr0?entry=ttu'
                       target='_blank'
                       rel='noreferrer'
-                      className='group inline-flex gap-1.5 items-start'
-                    >
+                      className='group inline-flex gap-1.5 items-start'>
                       <MapIcon
                         height={16}
                         className='mt-1 group-hover:text-red-600 dark:group-hover:text-red-600'
@@ -153,9 +149,8 @@ export default function Footer() {
                       href='mailto:sales@wealthguardig.com'
                       target='_blank'
                       rel='noreferrer'
-                      className='group inline-flex gap-1.5 items-center'
-                    >
-                      <MailIcon
+                      className='group inline-flex gap-1.5 items-center'>
+                      <EnvelopeIcon
                         height={16}
                         className='group-hover:text-red-600 dark:group-hover:text-red-600'
                       />
@@ -172,8 +167,7 @@ export default function Footer() {
                       href='tel:832-479-0042'
                       target='_blank'
                       rel='noreferrer'
-                      className='group inline-flex gap-1.5 items-center'
-                    >
+                      className='group inline-flex gap-1.5 items-center'>
                       <PhoneIcon
                         height={16}
                         className='group-hover:text-red-600 dark:group-hover:text-red-600'

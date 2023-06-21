@@ -1,17 +1,17 @@
-import ContactSecondaryCTA from '../../components/ContactSecondaryCTA'
-import Hero from '../../components/Hero'
-import Layout from '../../components/Layout'
-import ProgramCoverage from '../../components/ProgramCoverage'
-import ProjectDescription from '../../components/ProjectDescription'
-import ProgramForm from '../../components/ProgramForm'
-import ProgramHighlights from '../../components/ProgramHighlights'
-import { classNames } from '../../utils/helpers'
-
-import { toast } from 'react-toastify'
-import 'react-toastify/dist/ReactToastify.css'
 import fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
+import { toast } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
+
+import ContactSecondaryCTA from '../../components/ContactSecondaryCTA'
+import Hero from '../../components/Hero'
+import Layout from '../../components/Layout'
+import SolutionCoverage from '../../components/SolutionCoverage'
+import SolutionDescription from '../../components/SolutionDescription'
+import SolutionForm from '../../components/SolutionForm'
+import SolutionHighlights from '../../components/SolutionHighlights'
+import { classNames } from '../../utils/helpers'
 
 toast.configure({
   autoClose: 8000,
@@ -41,15 +41,15 @@ export default function BrokerageSolutionPage({
         <div className='max-w-5xl mx-auto px-4 space-y-8 sm:px-6 lg:px-8'>
           {/* Description & Form */}
           <div className='flex flex-col md:flex-row'>
-            <ProjectDescription
+            <SolutionDescription
               subHeading={subHeading}
               description={description}
             />
 
-            <ProgramForm title={title} />
+            <SolutionForm title={title} />
           </div>
 
-          <ProgramCoverage
+          <SolutionCoverage
             image={image}
             image2={image2}
             title={title}
@@ -58,7 +58,7 @@ export default function BrokerageSolutionPage({
         </div>
       </div>
 
-      <ProgramHighlights highlights={highlights} />
+      <SolutionHighlights highlights={highlights} />
 
       <ContactSecondaryCTA />
     </Layout>

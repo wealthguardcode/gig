@@ -1,14 +1,25 @@
 import { useEffect } from 'react'
+import { Roboto } from 'next/font/google'
 import { useRouter } from 'next/router'
-import '../styles/globals.css'
+import Script from 'next/script'
 import { ThemeProvider } from 'next-themes'
 import { ParallaxProvider } from 'react-scroll-parallax'
-import SimpleReactLightbox from 'simple-react-lightbox'
-import * as gtag from '../lib/gtag'
-import Script from 'next/script'
+// TODO: Add a new lightbox component
+// import SimpleReactLightbox from 'simple-react-lightbox'
 
-function MyApp({ Component, pageProps }) {
+import * as gtag from '../lib/gtag'
+import '../styles/globals.css'
+
+const roboto = Roboto({
+  weight: ['400', '500', '700'],
+  style: ['normal', 'italic'],
+  subsets: ['latin'],
+  display: 'swap',
+})
+
+export default function MyApp({ Component, pageProps }) {
   const router = useRouter()
+
   useEffect(() => {
     const handleRouteChange = (url) => {
       gtag.pageview(url)
@@ -21,6 +32,12 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <>
+      {/* eslint-disable-next-line react/no-unknown-property */}
+      <style jsx global>{`
+        html {
+          font-family: ${roboto.style.fontFamily};
+        }
+      `}</style>
       {/* Global Site Tag (gtag.js) - Google Analytics */}
       <Script
         strategy='afterInteractive'
@@ -42,14 +59,12 @@ function MyApp({ Component, pageProps }) {
       />
 
       <ThemeProvider attribute='class'>
-        <SimpleReactLightbox>
-          <ParallaxProvider>
-            <Component {...pageProps} />
-          </ParallaxProvider>
-        </SimpleReactLightbox>
+        {/* <SimpleReactLightbox> */}
+        <ParallaxProvider>
+          <Component {...pageProps} />
+        </ParallaxProvider>
+        {/* </SimpleReactLightbox> */}
       </ThemeProvider>
     </>
   )
 }
-
-export default MyApp

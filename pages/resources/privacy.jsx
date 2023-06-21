@@ -1,6 +1,6 @@
 import Layout from '../../components/Layout'
 
-export default function privacy() {
+export default function PrivacyPage() {
   return (
     <Layout>
       {/* Header for Privacy Policy */}

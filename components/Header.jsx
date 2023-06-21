@@ -1,18 +1,23 @@
-import { brokerage } from '../data/brokerage'
-import { programs } from '../data/programs'
-import { classNames } from '../utils/helpers'
-
 import { Fragment, useRef, useState, useEffect } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { useRouter } from 'next/router'
-import { Dialog, Popover, Tab, Transition } from '@headlessui/react'
-import { MenuIcon, MoonIcon, SunIcon, XIcon } from '@heroicons/react/outline'
 import { useTheme } from 'next-themes'
+import { Dialog, Popover, Tab, Transition } from '@headlessui/react'
+import {
+  Bars3Icon,
+  MoonIcon,
+  SunIcon,
+  XMarkIcon,
+} from '@heroicons/react/24/outline'
 
-const TIMEOUT_DURATION = 200
+import { brokerageSolutions } from '../data/brokerage'
+import { programSolutions } from '../data/programs'
+import { classNames } from '../utils/helpers'
 
-const NAVIGATION = {
+const timeoutDuration = 200
+
+const navigation = {
   categories: [
     {
       name: 'Programs',
@@ -21,7 +26,7 @@ const NAVIGATION = {
           name: 'View All Programs',
           href: '/programs',
         },
-        ...programs.map(({ slug, name }) => ({
+        ...programSolutions.map(({ slug, name }) => ({
           name,
           href: `/programs/${slug}`,
         })),
@@ -34,7 +39,7 @@ const NAVIGATION = {
           name: 'View All Brokerage Solutions',
           href: '/brokerage',
         },
-        ...brokerage.map(({ slug, name }) => ({
+        ...brokerageSolutions.map(({ slug, name }) => ({
           name,
           href: `/brokerage/${slug}`,
         })),
@@ -84,8 +89,7 @@ export default function Header() {
           <Dialog
             as='div'
             className='fixed inset-0 flex z-40 lg:hidden'
-            onClose={setMobileMenuOpen}
-          >
+            onClose={setMobileMenuOpen}>
             <Transition.Child
               as={Fragment}
               enter='transition-opacity ease-linear duration-300'
@@ -93,29 +97,26 @@ export default function Header() {
               enterTo='opacity-100'
               leave='transition-opacity ease-linear duration-300'
               leaveFrom='opacity-100'
-              leaveTo='opacity-0'
-            >
-              <Dialog.Overlay className='fixed inset-0 bg-black bg-opacity-25' />
+              leaveTo='opacity-0'>
+              <Dialog.Overlay className='fixed inset-0 bg-black/25' />
             </Transition.Child>
 
             <Transition.Child
               as={Fragment}
-              enter='transition ease-in-out duration-300 transform'
+              enter='transition ease-in-out duration-300'
               enterFrom='-translate-x-full'
               enterTo='translate-x-0'
-              leave='transition ease-in-out duration-300 transform'
+              leave='transition ease-in-out duration-300'
               leaveFrom='translate-x-0'
-              leaveTo='-translate-x-full'
-            >
+              leaveTo='-translate-x-full'>
               <div className='relative w-full bg-white dark:bg-gray-800 shadow-xl pb-12 flex flex-col overflow-y-auto'>
                 <div className='px-4 pt-5 pb-2 flex'>
                   <button
                     type='button'
                     className='-m-2 p-2 rounded-md inline-flex items-center dark:bg-gray-800 justify-center text-gray-400 dark:text-gray-400'
-                    onClick={() => setMobileMenuOpen(false)}
-                  >
+                    onClick={() => setMobileMenuOpen(false)}>
                     <span className='sr-only'>Close menu</span>
-                    <XIcon className='h-6 w-6' aria-hidden='true' />
+                    <XMarkIcon aria-hidden='true' className='w-6 h-6' />
                   </button>
                 </div>
 
@@ -126,9 +127,8 @@ export default function Header() {
                       onClick={(e) => {
                         e.target.scrollIntoView({ behavior: 'smooth' })
                       }}
-                      className='flex space-x-2 md:space-x-8'
-                    >
-                      {NAVIGATION.categories.map((category) => (
+                      className='flex space-x-2 md:space-x-8'>
+                      {navigation.categories.map((category) => (
                         <Tab as={Fragment} key={category.name}>
                           {({ selected }) => (
                             <div className='flex-1 block first:border-l-16 md:first:border-l-32 first:border-transparent last:border-r-16 md:last:border-r-32 last:border-transparent'>
@@ -138,8 +138,7 @@ export default function Header() {
                                     ? 'text-red-700 border-red-700'
                                     : 'text-gray-900 dark:text-gray-300 border-transparent hover:text-red-700 dark:hover:text-red-700',
                                   'block whitespace-nowrap py-4 px-2 border-b-2 text-md font-medium text-center'
-                                )}
-                              >
+                                )}>
                                 {category.name}
                               </span>
                             </div>
@@ -149,32 +148,30 @@ export default function Header() {
                     </Tab.List>
                   </div>
                   <Tab.Panels as={Fragment}>
-                    {NAVIGATION.categories.map((category) => (
+                    {navigation.categories.map((category) => (
                       <Tab.Panel
                         key={category.name}
-                        className='px-4 py-6 space-y-12'
-                      >
+                        className='px-4 py-6 space-y-12'>
                         <div className='grid grid-cols-1 gap-x-4 gap-y-4'>
                           {category.links.map((link) => (
                             <div
                               key={link.name}
-                              className='group relative mx-auto text-center'
-                            >
-                              <Link href={link.href} passHref>
-                                <a
-                                  onClick={() => setMobileMenuOpen(false)}
-                                  className={
-                                    router.asPath === link.href
-                                      ? 'mt-6 block font-medium text-red-700 dark:text-red-700 bg-gray-100 dark:bg-gray-700 px-2 py-0.5'
-                                      : 'mt-6 block font-medium text-gray-900 dark:text-gray-300 hover:text-red-700 dark:hover:text-red-700'
-                                  }
-                                >
+                              className='group relative mx-auto text-center'>
+                              <Link
+                                href={link.href}
+                                onClick={() => setMobileMenuOpen(false)}
+                                className={
+                                  router.asPath === link.href
+                                    ? 'mt-6 block font-medium text-red-700 dark:text-red-700 bg-gray-100 dark:bg-gray-700 px-2 py-0.5'
+                                    : 'mt-6 block font-medium text-gray-900 dark:text-gray-300 hover:text-red-700 dark:hover:text-red-700'
+                                }>
+                                <>
                                   <span
-                                    className='absolute z-10 inset-0'
                                     aria-hidden='true'
+                                    className='absolute z-10 inset-0'
                                   />
                                   {link.name}
-                                </a>
+                                </>
                               </Link>
                             </div>
                           ))}
@@ -186,20 +183,18 @@ export default function Header() {
 
                 {/* Single Nav Links */}
                 <div className='border-t divide-y border-gray-200 dark:border-gray-500 py-6 px-4 space-y-6 mx-auto'>
-                  {NAVIGATION.pages.map((page) => (
+                  {navigation.pages.map((page) => (
                     <div key={page.name} className='flow-root'>
-                      <Link href={page.href} passHref>
-                        <a
-                          onClick={() => setMobileMenuOpen(false)}
-                          className={
-                            router.asPath === page.href
-                              ? '-m-2 px-2 py=0.5 block font-medium text-red-700 dark:text-red-700 bg-gray-100 dark:bg-gray-700'
-                              : '-m-2 p-2 block font-medium text-gray-900 dark:text-gray-300 hover:text-red-700 dark:hover:text-red-700'
-                          }
-                          aria-label={page.aria}
-                        >
-                          {page.name}
-                        </a>
+                      <Link
+                        href={page.href}
+                        aria-label={page.aria}
+                        onClick={() => setMobileMenuOpen(false)}
+                        className={
+                          router.asPath === page.href
+                            ? '-m-2 px-2 py=0.5 block font-medium text-red-700 dark:text-red-700 bg-gray-100 dark:bg-gray-700'
+                            : '-m-2 p-2 block font-medium text-gray-900 dark:text-gray-300 hover:text-red-700 dark:hover:text-red-700'
+                        }>
+                        {page.name}
                       </Link>
                     </div>
                   ))}
@@ -218,28 +213,12 @@ export default function Header() {
               <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
                 <div className='h-16 flex items-center justify-between'>
                   {/* Logo (lg+) */}
-                  <div className='hidden lg:flex-1 lg:flex lg:items-center'>
-                    <Link href='/' passHref>
-                      <a>
+                  <div className='hidden lg:flex-1 lg:flex lg:items-center lg:h-full'>
+                    <Link href='/'>
+                      <>
                         <span className='sr-only'>WealthGuard</span>
-                        {theme === 'dark' ? (
-                          <Image
-                            height={50}
-                            width={160}
-                            src='/images/wig-logo-v3-dark.svg'
-                            alt='WealthGuard Logo'
-                            className='h-12 w-auto'
-                          />
-                        ) : (
-                          <Image
-                            height={50}
-                            width={160}
-                            src='/images/wig-logo-v3.svg'
-                            alt='WealthGuard Logo'
-                            className='h-12 w-auto'
-                          />
-                        )}
-                      </a>
+                        <Logo theme={theme} />
+                      </>
                     </Link>
                   </div>
 
@@ -248,7 +227,7 @@ export default function Header() {
                     <Popover.Group className='px-4 bottom-0 inset-x-0'>
                       <div className='h-full flex justify-center'>
                         {/* Flyout hover menus */}
-                        {NAVIGATION.categories.map(({ name, links }) => {
+                        {navigation.categories.map(({ name, links }) => {
                           return (
                             <PopoverMenu
                               key={name}
@@ -260,19 +239,18 @@ export default function Header() {
                         })}
 
                         {/* Single Nav Links */}
-                        {NAVIGATION.pages.map((page) => (
-                          <Link key={page.name} href={page.href} passHref>
-                            <a
-                              className={classNames(
-                                router.asPath === page.href
-                                  ? 'text-red-700 dark:text-red-700'
-                                  : 'text-gray-700 hover:text-red-700 dark:text-gray-50 dark:hover:text-red-700',
-                                'flex items-center font-medium px-4'
-                              )}
-                              aria-label={page.aria}
-                            >
-                              {page.name}
-                            </a>
+                        {navigation.pages.map((page) => (
+                          <Link
+                            key={page.name}
+                            href={page.href}
+                            aria-label={page.aria}
+                            className={classNames(
+                              router.asPath === page.href
+                                ? 'text-red-700 dark:text-red-700'
+                                : 'text-gray-700 hover:text-red-700 dark:text-gray-50 dark:hover:text-red-700',
+                              'flex items-center font-medium px-4'
+                            )}>
+                            {page.name}
                           </Link>
                         ))}
                         <ToggleThemeBtn theme={theme} setTheme={setTheme} />
@@ -285,35 +263,18 @@ export default function Header() {
                     <button
                       type='button'
                       className='-ml-2 bg-white dark:bg-gray-700 p-2 rounded-md text-gray-400'
-                      onClick={() => setMobileMenuOpen(true)}
-                    >
+                      onClick={() => setMobileMenuOpen(true)}>
                       <span className='sr-only'>Open menu</span>
-                      <MenuIcon className='h-6 w-6' aria-hidden='true' />
+                      <Bars3Icon aria-hidden='true' className='w-6 h-6' />
                     </button>
                   </div>
 
                   {/* Logo (lg-) */}
-                  <Link href='/' passHref>
-                    <a className='lg:hidden'>
+                  <Link href='/' className='lg:hidden'>
+                    <>
                       <span className='sr-only'>WealthGuard</span>
-                      {theme === 'dark' ? (
-                        <Image
-                          height={50}
-                          width={160}
-                          src='/images/wig-logo-v3-dark.svg'
-                          alt='WealthGuard Logo'
-                          className='h-12 w-auto'
-                        />
-                      ) : (
-                        <Image
-                          height={50}
-                          width={160}
-                          src='/images/wig-logo-v3.svg'
-                          alt='WealthGuard Logo'
-                          className='h-12 w-auto'
-                        />
-                      )}
-                    </a>
+                      <Logo theme={theme} />
+                    </>
                   </Link>
                 </div>
               </div>
@@ -325,26 +286,57 @@ export default function Header() {
   )
 }
 
-function ToggleThemeBtn({ theme, setTheme }) {
-  const [showBtn, setShowBtn] = useState(false)
+function Logo({ theme }) {
+  const [show, setShow] = useState(false)
 
   useEffect(() => {
-    setShowBtn(true)
+    setShow(true)
   }, [])
 
-  if (!showBtn) return null
+  if (!show) return null
+
+  return (
+    <>
+      {theme === 'dark' ? (
+        <Image
+          src='/images/wig-logo-v3-dark.svg'
+          alt='WealthGuard Logo'
+          width={160}
+          height={50}
+          className='block h-10 w-auto'
+        />
+      ) : (
+        <Image
+          src='/images/wig-logo-v3.svg'
+          alt='WealthGuard Logo'
+          width={160}
+          height={50}
+          className='block h-10 w-auto'
+        />
+      )}
+    </>
+  )
+}
+
+function ToggleThemeBtn({ theme, setTheme }) {
+  const [show, setShow] = useState(false)
+
+  useEffect(() => {
+    setShow(true)
+  }, [])
+
+  if (!show) return null
 
   return (
     <button
       aria-label='Toggle Dark Mode'
       type='button'
       className='md:order-3 mx-auto py-2 px-4'
-      onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-    >
+      onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}>
       {theme === 'dark' ? (
-        <MoonIcon className='h-6 w-6 text-gray-500 hover:text-gray-400' />
+        <MoonIcon className='w-6 h-6 text-gray-500 hover:text-gray-400' />
       ) : (
-        <SunIcon className='h-6 w-6 text-gray-500 hover:text-gray-600' />
+        <SunIcon className='w-6 h-6 text-gray-500 hover:text-gray-600' />
       )}
     </button>
   )
@@ -367,10 +359,7 @@ function PopoverMenu({ router, name, links }) {
     setMouseOverButton(true)
   }
   const onMouseLeaveButton = () => {
-    timeoutButton = setTimeout(
-      () => setMouseOverButton(false),
-      TIMEOUT_DURATION
-    )
+    timeoutButton = setTimeout(() => setMouseOverButton(false), timeoutDuration)
   }
 
   const onMouseEnterPanel = () => {
@@ -378,7 +367,7 @@ function PopoverMenu({ router, name, links }) {
     setMouseOverPanel(true)
   }
   const onMouseLeavePanel = () => {
-    timeoutPanel = setTimeout(() => setMouseOverPanel(false), TIMEOUT_DURATION)
+    timeoutPanel = setTimeout(() => setMouseOverPanel(false), timeoutDuration)
   }
 
   const show = openPanel && (mouseOverButton || mouseOverPanel)
@@ -400,8 +389,7 @@ function PopoverMenu({ router, name, links }) {
                   ? 'text-red-700 outline-0'
                   : 'text-gray-700 dark:text-gray-50 hover:text-red-700 dark:hover:text-red-700',
                 'relative flex items-center justify-center my-5 transition-colors ease-out duration-200 font-medium outline-none'
-              )}
-            >
+              )}>
               {name}
               <span
                 className={classNames(
@@ -421,15 +409,13 @@ function PopoverMenu({ router, name, links }) {
             enterTo='opacity-100'
             leave='transition ease-in duration-150'
             leaveFrom='opacity-100'
-            leaveTo='opacity-0'
-          >
+            leaveTo='opacity-0'>
             <Popover.Panel
               ref={panelEl}
               static
               onMouseEnter={onMouseEnterPanel}
               onMouseLeave={onMouseLeavePanel}
-              className='absolute z-20 top-full inset-x-0 text-md text-gray-500 dark:text-white'
-            >
+              className='absolute z-20 top-full inset-x-0 text-md text-gray-500 dark:text-white'>
               <div className='relative border-t border-solid border-gray-200 dark:border-gray-600'>
                 <div
                   className='absolute px-8 border-r border-b border-l border-solid border-gray-200 dark:border-gray-600 rounded-b-md bg-white dark:bg-gray-800 shadow-xl'
@@ -437,26 +423,25 @@ function PopoverMenu({ router, name, links }) {
                     left: boundingBox?.x ? boundingBox.x - 16 : 0,
                     width: '100%',
                     maxWidth: 300,
-                  }}
-                >
+                  }}>
                   <div className='grid grid-cols-1 py-8'>
                     {links.map((item) => (
                       <div key={item.name} className='group relative'>
-                        <Link href={item.href} passHref>
-                          <a
-                            onClick={onMouseLeavePanel}
-                            className={
-                              router.asPath === item.href
-                                ? 'mt-4 font-base block font-medium text-red-700 bg-gray-100 dark:bg-gray-700 dark:text-red-700'
-                                : 'mt-4 font-base block font-medium text-gray-900 hover:text-red-700 hover:bg-gray-100 dark:hover:bg-gray-700 dark:text-gray-50 dark:hover:text-red-700'
-                            }
-                          >
+                        <Link
+                          href={item.href}
+                          onClick={onMouseLeavePanel}
+                          className={
+                            router.asPath === item.href
+                              ? 'mt-4 font-base block font-medium text-red-700 bg-gray-100 dark:bg-gray-700 dark:text-red-700'
+                              : 'mt-4 font-base block font-medium text-gray-900 hover:text-red-700 hover:bg-gray-100 dark:hover:bg-gray-700 dark:text-gray-50 dark:hover:text-red-700'
+                          }>
+                          <>
                             <span
-                              className='absolute z-10 inset-0 group-hover:block'
                               aria-hidden='true'
+                              className='absolute z-10 inset-0 group-hover:block'
                             />
                             {item.name}
-                          </a>
+                          </>
                         </Link>
                       </div>
                     ))}

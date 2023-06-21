@@ -1,4 +1,4 @@
-export default function ProjectDescription({ subHeading, description }) {
+export default function SolutionDescription({ subHeading, description }) {
   return (
     <div className='flex flex-col my-6'>
       <div className='text-base max-w-prose lg:max-w-none'>

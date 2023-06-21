@@ -1,14 +1,14 @@
+import fs from 'fs'
+import path from 'path'
+import { useMemo } from 'react'
+import Image from 'next/image'
+import { marked } from 'marked'
+import matter from 'gray-matter'
+import format from 'date-fns/format'
+
 import ContactSecondaryCTA from '../../components/ContactSecondaryCTA'
 import Layout from '../../components/Layout'
 import { classNames } from '../../utils/helpers'
-
-import { useMemo } from 'react'
-import Image from 'next/image'
-import fs from 'fs'
-import path from 'path'
-import matter from 'gray-matter'
-import marked from 'marked'
-import format from 'date-fns/format'
 
 export default function ArticlePage({
   frontmatter: { title, author, published, heroDescription, image, image2 },
@@ -19,18 +19,17 @@ export default function ArticlePage({
       <div className='relative bg-gray-400'>
         <div className='absolute inset-0'>
           <Image
-            className='object-cover'
             src={image}
-            layout='fill'
-            objectFit='cover'
-            priority={true}
-            placeholder='blur'
-            blurDataURL
             alt={title}
+            priority
+            placeholder='blur'
+            blurDataURL={image}
+            fill
+            className='object-cover'
           />
           <div
-            className='absolute inset-0 bg-gray-400 mix-blend-multiply z-0'
             aria-hidden='true'
+            className='absolute inset-0 bg-gray-400 mix-blend-multiply z-0'
           />
         </div>
         <div className='relative max-w-5xl mx-auto py-24 px-4 sm:py-32 sm:px-6 lg:px-8'>
@@ -55,7 +54,7 @@ export default function ArticlePage({
         <div
           className='prose md:prose-xl md:max-w-xl dark:text-gray-400'
           dangerouslySetInnerHTML={{
-            __html: marked(content),
+            __html: marked.parse(content, { headerIds: false, mangle: false }),
           }}
         />
       </div>

@@ -1,4 +1,4 @@
-export default function ProgramHighlights({ highlights }) {
+export default function SolutionHighlights({ highlights }) {
   return (
     <div className='bg-white dark:bg-gray-800'>
       <div className='max-w-7xl mx-auto py-12 px-4 sm:py-16 sm:px-6 lg:px-8'>

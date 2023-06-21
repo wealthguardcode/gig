@@ -1,33 +1,24 @@
 import Head from 'next/head'
 import Header from './Header'
 import Footer from './Footer'
-import ScrollToTopButton from './ScrollToTopButton'
+// TODO: Add a new scroll to top button
+// import ScrollToTopButton from './ScrollToTopButton'
 
 export default function Layout({ title, keywords, description, children }) {
   return (
     <div className='bg-white dark:bg-gray-800'>
       <Head>
         <title>{title}</title>
-        <meta name='keywords' content={keywords} />
         <meta name='description' content={description} />
+        <meta name='keywords' content={keywords} />
         <link rel='icon' href='/favicon.ico' />
-        <link rel='preconnect' href='https://fonts.googleapis.com' />
-        <link
-          rel='preconnect'
-          href='https://fonts.gstatic.com'
-          crossOrigin='true'
-        />
-        <link
-          href='https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap'
-          rel='stylesheet'
-        />
       </Head>
 
       <Header />
 
       <main>{children}</main>
 
-      <ScrollToTopButton />
+      {/* <ScrollToTopButton /> */}
       <Footer />
     </div>
   )

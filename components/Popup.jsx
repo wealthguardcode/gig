@@ -1,8 +1,8 @@
-import { classNames } from '../utils/helpers'
-
 import { Fragment, useRef } from 'react'
 import { Dialog, Transition } from '@headlessui/react'
-import { XIcon } from '@heroicons/react/outline'
+import { XMarkIcon } from '@heroicons/react/24/outline'
+
+import { classNames } from '../utils/helpers'
 
 export default function Popup({
   isOpen,
@@ -23,8 +23,7 @@ export default function Popup({
       <Dialog
         as='div'
         onClose={closePopup}
-        className='fixed z-40 inset-0 flex justify-center items-center'
-      >
+        className='fixed z-40 inset-0 flex justify-center items-center'>
         <Transition.Child
           as={Fragment}
           enter='transition-opacity ease-linear duration-300'
@@ -32,20 +31,18 @@ export default function Popup({
           enterTo='opacity-100'
           leave='transition-opacity ease-linear duration-300'
           leaveFrom='opacity-100'
-          leaveTo='opacity-0'
-        >
-          <Dialog.Overlay className='fixed inset-0 bg-black bg-opacity-25' />
+          leaveTo='opacity-0'>
+          <Dialog.Overlay className='fixed inset-0 bg-black/25' />
         </Transition.Child>
 
         <Transition.Child
           as={Fragment}
           enter='transition ease-in-out duration-500'
-          enterFrom='transform -translate-y-8 opacity-0'
-          enterTo='transform translate-y-0 opacity-100'
+          enterFrom='-translate-y-8 opacity-0'
+          enterTo='translate-y-0 opacity-100'
           leave='transition-opacity ease-in-out duration-500'
           leaveFrom='opacity-100'
-          leaveTo='opacity-0'
-        >
+          leaveTo='opacity-0'>
           <div
             className={classNames(
               'relative overflow-y-auto overflow-x-hidden flex flex-col w-full mx-4 rounded-lg bg-white dark:bg-gray-200 shadow-2xl',
@@ -55,9 +52,8 @@ export default function Popup({
                 ? 'max-w-screen-md'
                 : width === 'sm'
                 ? 'max-w-screen-sm'
-                : 'max-w-screen-xs'
-            )}
-          >
+                : 'max-w-md'
+            )}>
             <div className='flex gap-4 justify-between items-center p-4 border-b border-gray-200 dark:border-gray-300'>
               <Dialog.Title className='text-2xl font-extrabold text-gray-700 dark:text-gray-800'>
                 {title}
@@ -66,10 +62,9 @@ export default function Popup({
                 type='button'
                 aria-label='Close popup'
                 onClick={closePopup}
-                className='flex justify-center items-center -my-2 p-2 rounded-md text-gray-400 dark:text-gray-500'
-              >
+                className='flex justify-center items-center -my-2 p-2 rounded-md text-gray-400 dark:text-gray-500'>
                 <span className='sr-only'>Close popup</span>
-                <XIcon className='h-6 w-6' aria-hidden='true' />
+                <XMarkIcon aria-hidden='true' className='w-6 h-6' />
               </button>
             </div>
             <div>
@@ -87,8 +82,7 @@ export default function Popup({
                   {hasSecondaryAction && (
                     <button
                       onClick={secondaryAction.onClick}
-                      className='inline-flex justify-center py-3 px-5 border border-transparent text-base font-medium rounded-md text-white bg-gray-400 shadow-sm hover:bg-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-300'
-                    >
+                      className='inline-flex justify-center py-3 px-5 border border-transparent text-base font-medium rounded-md text-white bg-gray-400 shadow-sm hover:bg-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-300'>
                       {secondaryAction.text}
                     </button>
                   )}
@@ -97,8 +91,7 @@ export default function Popup({
                   {hasPrimaryAction && (
                     <button
                       onClick={primaryAction.onClick}
-                      className='inline-flex justify-center py-3 px-5 border border-transparent text-base font-medium rounded-md text-white bg-red-600 shadow-sm hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500'
-                    >
+                      className='inline-flex justify-center py-3 px-5 border border-transparent text-base font-medium rounded-md text-white bg-red-600 shadow-sm hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500'>
                       {primaryAction.text}
                     </button>
                   )}
