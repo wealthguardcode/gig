@@ -98,7 +98,7 @@ export default function Header() {
               leave='transition-opacity ease-linear duration-300'
               leaveFrom='opacity-100'
               leaveTo='opacity-0'>
-              <Dialog.Overlay className='fixed inset-0 bg-black/25' />
+              <div aria-hidden='true' className='fixed inset-0 bg-black/25' />
             </Transition.Child>
 
             <Transition.Child
@@ -109,7 +109,7 @@ export default function Header() {
               leave='transition ease-in-out duration-300'
               leaveFrom='translate-x-0'
               leaveTo='-translate-x-full'>
-              <div className='relative w-full bg-white dark:bg-gray-800 shadow-xl pb-12 flex flex-col overflow-y-auto'>
+              <Dialog.Panel className='relative w-full bg-white dark:bg-gray-800 shadow-xl pb-12 flex flex-col overflow-y-auto'>
                 <div className='px-4 pt-5 pb-2 flex'>
                   <button
                     type='button'
@@ -152,7 +152,7 @@ export default function Header() {
                       <Tab.Panel
                         key={category.name}
                         className='px-4 py-6 space-y-12'>
-                        <div className='grid grid-cols-1 gap-x-4 gap-y-4'>
+                        <div className='overflow-y-auto grid grid-cols-1 gap-x-4 gap-y-4'>
                           {category.links.map((link) => (
                             <div
                               key={link.name}
@@ -200,7 +200,7 @@ export default function Header() {
                   ))}
                 </div>
                 <ToggleThemeBtn theme={theme} setTheme={setTheme} />
-              </div>
+              </Dialog.Panel>
             </Transition.Child>
           </Dialog>
         </Transition.Root>
