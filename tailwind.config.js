@@ -21,6 +21,34 @@ module.exports = {
         '8xl': '88rem',
         '9xl': '96rem',
       },
+      typography: ({ theme }) => ({
+        DEFAULT: {
+          css: {
+            '--tw-prose-body': theme('colors.gray[700]'),
+            '--tw-prose-headings': theme('colors.gray[900]'),
+            'h1, h2, h3, h4, h5, h6': {
+              fontWeight: theme('fontWeight.bold'),
+            },
+            a: {
+              fontWeight: theme('fontWeight.medium'),
+              textDecoration: 'none',
+              color: theme('colors.red[600]'),
+            },
+            'a:hover': {
+              color: theme('colors.red[700]'),
+            },
+          },
+        },
+        dark: {
+          css: {
+            '--tw-prose-body': theme('colors.gray[400]'),
+            '--tw-prose-headings': theme('colors.gray[300]'),
+            'a:hover': {
+              color: theme('colors.red[500]'),
+            },
+          },
+        },
+      }),
     },
   },
   plugins: [

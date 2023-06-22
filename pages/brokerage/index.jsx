@@ -21,9 +21,11 @@ export default function BrokeragePage({ solutions }) {
 }
 
 export async function getStaticProps() {
+  const solutions = await getMarkdown('brokerage')
+
   return {
     props: {
-      solutions: getMarkdown('brokerage'),
+      solutions,
     },
   }
 }

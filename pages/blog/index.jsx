@@ -1,6 +1,4 @@
 import { useMemo, useState } from 'react'
-import Link from 'next/link'
-import Image from 'next/image'
 import { useRouter } from 'next/router'
 import {
   AdjustmentsVerticalIcon,
@@ -48,11 +46,7 @@ export default function BlogPage({ articles }) {
 
   return (
     <Layout title='WIG | Blog'>
-      <Hero image='/images/programs-hero.jpeg' title='Blog'>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam quis.
-      </Hero>
+      <Hero image='/images/programs-hero.jpeg' title='Blog' />
 
       <div className='grid grid-cols-1 gap-6 md:grid-cols-12 max-w-9xl my-10 mx-auto p-8'>
         <ArticleFilters
@@ -87,9 +81,11 @@ export default function BlogPage({ articles }) {
 }
 
 export async function getStaticProps() {
+  const articles = await getMarkdown('blog')
+
   return {
     props: {
-      articles: getMarkdown('blog'),
+      articles,
     },
   }
 }

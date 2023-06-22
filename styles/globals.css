@@ -2,35 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-.prose a {
-  color: #dc2626; /* red-600 */
-  text-decoration: none;
-  font-weight: 500;
-}
-.prose a:hover {
-  color: #b91c1c; /* red-700 */
-}
-html.dark .prose a:hover {
-  color: #ef4444; /* red-500 */
-}
-
-.prose h1,
-.prose h2,
-.prose h3,
-.prose h4,
-.prose h5,
-.prose h6 {
-  font-weight: 700;
-}
-html.dark .prose h1,
-html.dark .prose h2,
-html.dark .prose h3,
-html.dark .prose h4,
-html.dark .prose h5,
-html.dark .prose h6 {
-  color: #d1d5db; /* gray-300 */
-}
-
 .custom-img {
   background-image: url('https://images.unsplash.com/photo-1541777594744-addc2de9d110?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1470&q=80');
 }

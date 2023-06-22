@@ -21,9 +21,11 @@ export default function ProgramsPage({ solutions }) {
 }
 
 export async function getStaticProps() {
+  const solutions = await getMarkdown('programs')
+
   return {
     props: {
-      solutions: getMarkdown('programs'),
+      solutions,
     },
   }
 }

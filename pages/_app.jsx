@@ -3,10 +3,12 @@ import { Roboto } from 'next/font/google'
 import { useRouter } from 'next/router'
 import Script from 'next/script'
 import { ThemeProvider } from 'next-themes'
+import { MDXProvider } from '@mdx-js/react'
 import { ParallaxProvider } from 'react-scroll-parallax'
 import { ToastContainer } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 
+import { mdxComponents } from '../components/mdx'
 import * as gtag from '../lib/gtag'
 import '../styles/globals.css'
 
@@ -60,7 +62,9 @@ export default function MyApp({ Component, pageProps }) {
 
       <ThemeProvider attribute='class'>
         <ParallaxProvider>
-          <Component {...pageProps} />
+          <MDXProvider components={mdxComponents}>
+            <Component {...pageProps} />
+          </MDXProvider>
           <ToastContainer />
         </ParallaxProvider>
       </ThemeProvider>
