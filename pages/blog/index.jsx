@@ -81,7 +81,15 @@ export default function BlogPage({ articles }) {
 }
 
 export async function getStaticProps() {
-  const articles = await getMarkdown('blog')
+  let articles = await getMarkdown('blog')
+
+  articles = (articles || [])
+    .slice()
+    .sort((a, b) =>
+      b.frontmatter.published
+        ? new Date(b.frontmatter.published) - new Date(a.frontmatter.published)
+        : -1
+    )
 
   return {
     props: {

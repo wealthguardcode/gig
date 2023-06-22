@@ -21,7 +21,13 @@ export default function ProgramsPage({ solutions }) {
 }
 
 export async function getStaticProps() {
-  const solutions = await getMarkdown('programs')
+  let solutions = await getMarkdown('programs')
+
+  solutions = (solutions || [])
+    .slice()
+    .sort((a, b) =>
+      (a.frontmatter.title || '').localeCompare(b.frontmatter.title || '')
+    )
 
   return {
     props: {

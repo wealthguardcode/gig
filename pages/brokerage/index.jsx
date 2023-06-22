@@ -21,7 +21,13 @@ export default function BrokeragePage({ solutions }) {
 }
 
 export async function getStaticProps() {
-  const solutions = await getMarkdown('brokerage')
+  let solutions = await getMarkdown('brokerage')
+
+  solutions = (solutions || [])
+    .slice()
+    .sort((a, b) =>
+      (a.frontmatter.title || '').localeCompare(b.frontmatter.title || '')
+    )
 
   return {
     props: {
