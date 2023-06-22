@@ -17,14 +17,11 @@ export default function TrackDownloadList({ items }) {
 
 function TrackDownloadLink({ href, children }) {
   const trackDownload = (url, event) => {
-    if (gtag) {
-      gtag('event', 'click', {
-        event_category: 'Download Document',
-        event_label: url,
-        transport_type: 'beacon',
-        value: children,
-      })
-    }
+    gtag.event('file_download', {
+      event_category: 'Manufacturer PDF Download',
+      event_label: children,
+      file_path: url,
+    })
 
     window.open(url)
   }

@@ -40,10 +40,9 @@ export default function MyApp({ Component, pageProps }) {
           font-family: ${roboto.style.fontFamily};
         }
       `}</style>
-      {/* Global Site Tag (gtag.js) - Google Analytics */}
       <Script
         strategy='afterInteractive'
-        src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_ID}`}
+        src={`https://www.googletagmanager.com/gtag/js?id=${gtag.GA_TRACKING_ID}`}
       />
       <Script
         id='gtag-init'
@@ -53,13 +52,12 @@ export default function MyApp({ Component, pageProps }) {
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-            gtag('config', '${process.env.NEXT_PUBLIC_GA_ID}', {
+            gtag('config', '${gtag.GA_TRACKING_ID}', {
               page_path: window.location.pathname,
             });
           `,
         }}
       />
-
       <ThemeProvider attribute='class'>
         <ParallaxProvider>
           <MDXProvider components={mdxComponents}>
