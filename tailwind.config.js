@@ -71,6 +71,14 @@ module.exports = {
           '-ms-overflow-style': 'none',
           'scrollbar-width': 'none',
         },
+        '.text-outline-black': {
+          '-webkit-text-stroke': '0.05rem black',
+          'text-stroke': '0.05rem black',
+        },
+        '.text-outline-white': {
+          '-webkit-text-stroke': '0.05rem white',
+          'text-stroke': '0.05rem white',
+        },
       })
     }),
   ],

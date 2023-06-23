@@ -94,42 +94,42 @@ export default function HomePage() {
               <div className='relative w-full text-center'>
                 <h1 className='text-4xl tracking-tight font-extrabold text-gray-900  sm:text-5xl md:text-6xl'>
                   <span className='block xl:inline'>Commercial Insurance</span>{' '}
-                  <span className='block text-red-700 font-extrabold '>
+                  <span className='block text-red-700 font-extrabold text-outline-white'>
                     Programs &{' '}
-                    <span className='block md:inline mt-3 md:mt-0'>
+                    <span className='block md:inline mt-1 md:mt-0'>
                       Brokerage
                     </span>
                   </span>
                 </h1>
-                <p className='my-3 pb-4 font-bold text-xl text-gray-300 lg:text-3xl tracking-tight'>
+                <p className='my-3 pb-4 font-bold text-xl text-white text-outline-black lg:text-3xl tracking-tight'>
                   <span className='block xl:inline'>
-                    Since 2016 we have been providing insurance solutions with
-                    expertise,
+                    Specialized insurance solutions with industry expertise,
                     <br />
                   </span>
                   <span className='mt-2 block xl:inline'>
-                    diversity of products, and underwriting integrity!
+                    product diversity, and underwriting integrity!
                   </span>
                 </p>
                 <div className='border-t-4 w-1/5 mx-auto py-2 border-red-700' />
-                <p className='hidden md:block mt-3 max-w-md mx-auto prose lg:prose-xl text-gray-300  font-semibold  md:mt-5  md:max-w-3xl'>
-                  Whether you&apos;re a business owner or insurance
-                  agent/broker, you&apos;ll find industry-specific resources and
-                  specialty insurance coverages to meet the unique needs of the
-                  industries we serve.
-                </p>
-                <div className='flex justify-center mt-8 mb-4'>
-                  <div className='mt-3 rounded-md shadow sm:mt-0 sm:ml-3'>
+                <div className='flex flex-col gap-4 items-center mt-8 mb-4 md:flex-row md:justify-center'>
+                  <div className='rounded-md shadow'>
                     <Link
-                      href='/brokerage'
-                      className='w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-red-700 hover:bg-red-600 md:py-4 md:text-lg md:px-10'>
-                      For Brokers
+                      href='/programs'
+                      className='flex items-center justify-center w-auto px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-black hover:bg-gray-800 md:w-full md:py-4 md:px-10 md:text-lg'>
+                      Programs
                     </Link>
                   </div>
-                  <div className='mt-3 rounded-md shadow sm:mt-0 ml-3'>
+                  <div className='rounded-md shadow'>
+                    <Link
+                      href='/brokerage'
+                      className='flex items-center justify-center w-auto px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-red-700 hover:bg-red-600 md:w-full md:py-4 md:px-10 md:text-lg'>
+                      Brokerage
+                    </Link>
+                  </div>
+                  <div className='rounded-md shadow'>
                     <Link
                       href='/contact-us'
-                      className='w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-red-600 bg-white hover:bg-gray-50 md:py-4 md:text-lg md:px-10'>
+                      className='flex items-center justify-center w-auto px-8 py-3 border border-transparent text-base font-medium rounded-md text-red-600 bg-white hover:bg-gray-100 md:w-full md:py-4 md:px-10 md:text-lg'>
                       Contact Us
                     </Link>
                   </div>
@@ -146,6 +146,12 @@ export default function HomePage() {
               WealthGuard Specialty Insurance Solutions
             </h2>
           </div>
+
+          <p className='block max-w-md mb-8 mx-auto prose-xl text-center text-gray-700 dark:text-gray-400 md:mt-5 md:max-w-3xl'>
+            Whether you&apos;re a business owner or insurance agent/broker,
+            you&apos;ll find industry-specific resources and specialty insurance
+            coverages to meet the unique needs of the industries we serve.
+          </p>
 
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 lg:grid lg:grid-cols-2 lg:gap-x-8'>
             <div className='lg:col-span-2'>
@@ -175,7 +181,7 @@ export default function HomePage() {
         {/* Broker/Business Tabs */}
         <div className='py-12 bg-white dark:bg-gray-800'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-            <div className='lg:text-center '>
+            <div className='lg:text-center'>
               <p className='my-2 text-3xl leading-8 font-extrabold tracking-tight md:tracking-wider text-gray-900 dark:text-gray-300 sm:text-4xl text-center'>
                 WealthGuard&apos;s insurance programs help businesses grow and
                 thrive
@@ -186,13 +192,15 @@ export default function HomePage() {
                 protecting their client&apos;s assets, minimizing exposure,
                 while providing exceptional service.
               </p>
-              <Image
-                src='/images/Coverholder at Lloyds_black_rgb.jpg'
-                alt='Coverholder at Lloyds logo black'
-                width={414}
-                height={162}
-                className='inline-block mt-4'
-              />
+              <div className='flex justify-center mt-4'>
+                <Image
+                  src='/images/Coverholder at Lloyds_black_rgb.jpg'
+                  alt='Coverholder at Lloyds logo black'
+                  width={414}
+                  height={162}
+                  className='inline-block'
+                />
+              </div>
               <p className='mt-4 max-w-2xl prose-2xl md:tracking-wide text-gray-500 dark:text-gray-400 mx-auto'>
                 WealthGuard Insurance Group is a Coverholder at Lloyd&apos;s.
               </p>
