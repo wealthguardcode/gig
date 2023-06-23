@@ -46,7 +46,7 @@ export default function BlogPage({ articles }) {
 
   return (
     <Layout title='WIG | Blog'>
-      <Hero image='/images/programs-hero.jpeg' title='Blog' />
+      <Hero image='/images/blog/blog-1280x800.jpg' title='Blog' />
 
       <div className='grid grid-cols-1 gap-6 md:grid-cols-12 max-w-9xl my-10 mx-auto p-8'>
         <ArticleFilters

@@ -7,7 +7,7 @@ import { getMarkdown } from '../../lib/getMarkdown'
 export default function ProgramsPage({ solutions }) {
   return (
     <Layout title='WIG | Our Programs'>
-      <Hero image='/images/programs-hero.jpeg' title='Our Programs'>
+      <Hero image='/images/programs/programs-1280x800.jpg' title='Our Programs'>
         We have years of insurance experience helping carriers and brokers
         provide solutions to their clients. Experience the difference of
         WealthGuard&apos;s newest Programs and Binding Authority division.
