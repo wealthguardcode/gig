@@ -413,6 +413,14 @@ function HomePopup({ isOpen, closePopup }) {
       )
       .then(
         (result) => {
+          // send notification
+          emailjs.sendForm(
+            'service_xq1c0nw',
+            'template_5td7zbf',
+            e.target,
+            'RfvnwrDrd9OYABRy3'
+          )
+
           toast('🎉 Success, please check your inbox!', {
             position: 'top-right',
             autoClose: 5000,
