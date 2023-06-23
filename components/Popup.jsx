@@ -1,4 +1,4 @@
-import { Fragment, useRef } from 'react'
+import { Fragment } from 'react'
 import * as ReactIs from 'react-is'
 import { Dialog, Transition } from '@headlessui/react'
 import { XMarkIcon } from '@heroicons/react/24/outline'
@@ -64,7 +64,7 @@ export default function Popup({
                   type='button'
                   aria-label='Close popup'
                   onClick={closePopup}
-                  className='absolute top-[50%] right-0.5 -translate-y-[50%] flex justify-center items-center p-3 rounded-md text-gray-400 dark:text-gray-500 md:right-1.5'>
+                  className='absolute top-[50%] right-0.5 -translate-y-[50%] flex justify-center items-center p-3 rounded-md text-gray-400 dark:text-gray-500 focus:outline-none md:right-1.5'>
                   <span className='sr-only'>Close popup</span>
                   <XMarkIcon aria-hidden='true' className='w-6 h-6' />
                 </button>
