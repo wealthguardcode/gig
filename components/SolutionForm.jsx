@@ -1,4 +1,4 @@
-import { useRef, useState } from 'react'
+import { useRef } from 'react'
 import emailjs from '@emailjs/browser'
 import { toast } from 'react-toastify'
 
@@ -61,11 +61,7 @@ const states = [
   'Wyoming',
 ]
 
-export default function SolutionForm({ title }) {
-  const [defaultValue, setDefaultValue] = useState({
-    value: `${title}`,
-  })
-
+export default function SolutionForm({ title = '' }) {
   const firstNameEl = useRef(null)
   const lastNameEl = useRef(null)
   const workEmailEl = useRef(null)
@@ -120,7 +116,7 @@ export default function SolutionForm({ title }) {
           firstNameEl.current.value = ''
           lastNameEl.current.value = ''
           workEmailEl.current.value = ''
-          programEl.current.value = defaultValue.value
+          programEl.current.value = title
           accountQuantityEl.current.value = ''
           accountFutureEl.current.value = ''
           companyEl.current.value = ''
