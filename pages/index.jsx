@@ -406,7 +406,7 @@ function HomePopup({ isOpen, closePopup }) {
 
     emailjs
       .sendForm(
-        'service_xq1c0nw',
+        'service_iuce5qk', // Outlook v2
         'template_f0mcoiq',
         e.target,
         'RfvnwrDrd9OYABRy3'
@@ -415,7 +415,7 @@ function HomePopup({ isOpen, closePopup }) {
         (result) => {
           // send notification
           emailjs.sendForm(
-            'service_xq1c0nw',
+            'service_xq1c0nw', // Gmail
             'template_5td7zbf',
             e.target,
             'RfvnwrDrd9OYABRy3'
