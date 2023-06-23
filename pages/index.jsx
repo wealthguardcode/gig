@@ -10,6 +10,7 @@ import {
   LinkIcon,
   BookOpenIcon,
 } from '@heroicons/react/24/outline'
+import emailjs from '@emailjs/browser'
 import { toast } from 'react-toastify'
 
 import Popup from '../components/Popup'
@@ -33,23 +34,42 @@ const solutions = [
 const benefits = [
   {
     icon: GlobeAltIcon,
-    name: 'Experience',
-    description:
-      'Since 2016 we have been providing insurance solutions with expertise, diversity of products, and underwriting integrity!',
+    name: `Experience`,
+    description: `Since 2016 we have been providing insurance solutions with expertise, diversity of products, and underwriting integrity!`,
   },
   {
     icon: ScaleIcon,
-    name: 'Innovation',
-    description:
-      "WealthGuard's executive leadership has unprecedented access to innovative commercial insurance products and solutions.",
+    name: `Innovation`,
+    description: `WealthGuard's executive leadership has unprecedented access to innovative commercial insurance products and solutions.`,
   },
   {
     icon: BoltIcon,
-    name: 'Relationship Driven',
-    description:
-      'We have years of insurance experience helping carriers and brokers provide solutions to their clients. You will build a one on one relationship at WealthGuard',
+    name: `Relationship Driven`,
+    description: `We have years of insurance experience helping carriers and brokers provide solutions to their clients. You will build a one on one relationship at WealthGuard`,
   },
 ]
+
+const popupContent = {
+  title: `Don't miss this, MVP!`,
+  image: {
+    src: `/images/wig-7-step-checklist-thumb.jpg`,
+    alt: `7-Step Commercial Insurance Strategy Checklist`,
+    width: 153,
+    height: 198,
+  },
+  description: [
+    {
+      fontSize: `lg`,
+      text: `Get our "7-Step Commercial Insurance Strategy Checklist" (for agents, brokers & businesses)`,
+    },
+    {
+      fontSize: `md`,
+      text: `plus WealthGuard news delivered to your inbox`,
+    },
+  ],
+  finePrint: `Privacy Policy: We don't share your info, and we don't like spam. Unsubscribe anytime.`,
+  submitBtn: `Touchdown`,
+}
 
 export default function HomePage() {
   const {
@@ -61,16 +81,6 @@ export default function HomePage() {
 
   return (
     <>
-      {/* TODO: Remove button */}
-      <div className='flex justify-center w-full p-3 bg-blue-900 dark:bg-blue-50'>
-        <button
-          onClick={() => {
-            localStorage.setItem('homePopupShown', 'false')
-          }}
-          className='py-2 px-4 rounded-md text-white dark:text-blue-900 bg-blue-600 dark:bg-blue-200 disabled:opacity-50'>
-          Reset Popup
-        </button>
-      </div>
       <HomePopup isOpen={isOpen} closePopup={closePopup} />
       <Layout>
         <div className='relative bg-white dark:bg-gray-800 overflow-hidden'>
@@ -367,19 +377,15 @@ export default function HomePage() {
 }
 
 function HomePopup({ isOpen, closePopup }) {
-  const firstNameEl = useRef(null)
-  const lastNameEl = useRef(null)
   const emailEl = useRef(null)
 
   function requestPdf(e) {
     e.preventDefault()
 
-    const { value: first_name = '' } = e.target.first_name
-    const { value: last_name = '' } = e.target.last_name
     const { value: email = '' } = e.target.email
 
-    if (!first_name || !last_name || !email) {
-      return toast.error('Form cannot be empty!', {
+    if (!email) {
+      return toast.error('Please enter your email address!', {
         position: 'top-right',
         autoClose: 5000,
         hideProgressBar: false,
@@ -390,58 +396,79 @@ function HomePopup({ isOpen, closePopup }) {
       })
     }
 
-    alert('Form submission has not be setup, yet.')
+    emailjs
+      .sendForm(
+        'service_xq1c0nw',
+        'template_f0mcoiq',
+        e.target,
+        'RfvnwrDrd9OYABRy3'
+      )
+      .then(
+        (result) => {
+          toast('🎉 Success, please check your inbox!', {
+            position: 'top-right',
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+          })
+          console.log(result.text)
 
-    // reset form values
-    firstNameEl.current.value = ''
-    lastNameEl.current.value = ''
-    emailEl.current.value = ''
+          // reset form values
+          emailEl.current.value = ''
+
+          closePopup()
+        },
+        (error) => {
+          alert(error.text)
+        }
+      )
   }
 
   return (
     <Popup
       isOpen={isOpen}
       closePopup={closePopup}
-      title='PDF in your Inbox'
-      description={`Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.`}>
+      title={popupContent.title}
+      description={
+        Array.isArray(popupContent.description) &&
+        popupContent.description.length > 0 && (
+          <div className='after:content-[""] after:table after:clear-both'>
+            {!!popupContent.image?.src && (
+              <Image
+                src={popupContent.image.src}
+                alt={popupContent.image.alt}
+                width={popupContent.image.width}
+                height={popupContent.image.height}
+                className='float-left w-24 sm:w-28 mr-3 border-2 border-red-600/50 rounded'
+              />
+            )}
+            <span className='clear-left'>
+              {popupContent.description.map(({ fontSize, text }, index) => (
+                <p
+                  key={index}
+                  className={classNames(
+                    'mb-3 last:mb-0',
+                    ['xs', 'sm', 'lg', 'xl'].includes(fontSize)
+                      ? `text-${fontSize}`
+                      : fontSize === 'md'
+                      ? 'text-base'
+                      : ''
+                  )}>
+                  {text}
+                </p>
+              ))}
+            </span>
+          </div>
+        )
+      }>
       <form
+        id='template_f0mcoiq'
         onSubmit={requestPdf}
-        className='grid grid-cols-1 gap-y-4 sm:grid-cols-2'>
-        <div className='px-4'>
-          <label
-            htmlFor='first_name'
-            className='block text-sm font-medium text-gray-700 dark:text-gray-800'>
-            First name
-          </label>
-          <div className='mt-1'>
-            <input
-              ref={firstNameEl}
-              type='text'
-              name='first_name'
-              id='first_name'
-              autoComplete='given-name'
-              className='block w-full shadow-sm sm:text-sm focus:ring-red-500 focus:border-red-500 border-gray-300 rounded-md dark:text-gray-900'
-            />
-          </div>
-        </div>
-        <div className='px-4'>
-          <label
-            htmlFor='last_name'
-            className='block text-sm font-medium text-gray-700 dark:text-gray-800'>
-            Last name
-          </label>
-          <div className='mt-1'>
-            <input
-              ref={lastNameEl}
-              type='text'
-              name='last_name'
-              id='last_name'
-              autoComplete='family-name'
-              className='block w-full shadow-sm sm:text-sm focus:ring-red-500 focus:border-red-500 border-gray-300 rounded-md dark:text-gray-900'
-            />
-          </div>
-        </div>
-        <div className='px-4 sm:col-span-2'>
+        className='flex flex-col gap-y-4 mx-4 p-4 border border-gray-100 dark:border-gray-300 rounded-lg'>
+        <div>
           <label
             htmlFor='email'
             className='block text-sm font-medium text-gray-700 dark:text-gray-800'>
@@ -458,14 +485,15 @@ function HomePopup({ isOpen, closePopup }) {
             />
           </div>
         </div>
-        <div className='flex justify-end items-center mt-2 p-4 border-t border-gray-200 dark:border-gray-300 sm:col-span-2'>
-          <button
-            type='submit'
-            className='inline-flex justify-center py-3 px-5 border border-transparent text-base font-medium rounded-md text-white bg-red-600 shadow-sm hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500'>
-            Request PDF
-          </button>
-        </div>
+        <button
+          type='submit'
+          className='self-center inline-flex justify-center py-3 px-5 border border-transparent text-base font-medium uppercase rounded-md text-white bg-red-600 shadow-sm hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500'>
+          {popupContent.submitBtn}
+        </button>
       </form>
+      <div className='max-w-xs mx-auto p-4 text-xs text-center text-gray-500 dark:text-gray-600'>
+        <p>{popupContent.finePrint}</p>
+      </div>
     </Popup>
   )
 }
@@ -482,9 +510,16 @@ function useTriggerPopup() {
   const [isOpen, setOpen] = useState(false)
 
   useEffect(() => {
+    if (isOpen || !isIntersecting) return
+
+    let homePopupShown = localStorage.getItem('homePopupShown')
+    if (homePopupShown) {
+      homePopupShown = JSON.parse(homePopupShown)
+    }
+
     if (
-      !isOpen & isIntersecting &&
-      localStorage.getItem('homePopupShown') !== 'true'
+      !homePopupShown?.expires ||
+      new Date(homePopupShown.expires) < new Date()
     ) {
       setOpen(true)
     }
@@ -492,7 +527,14 @@ function useTriggerPopup() {
 
   const closePopup = () => {
     setOpen(false)
-    localStorage.setItem('homePopupShown', 'true')
+
+    const now = new Date()
+    localStorage.setItem(
+      'homePopupShown',
+      JSON.stringify({
+        expires: now.setDate(now.getDate() + 7),
+      })
+    )
   }
 
   return { ref, isOpen, setOpen, closePopup }

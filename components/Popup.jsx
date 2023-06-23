@@ -1,4 +1,5 @@
 import { Fragment, useRef } from 'react'
+import * as ReactIs from 'react-is'
 import { Dialog, Transition } from '@headlessui/react'
 import { XMarkIcon } from '@heroicons/react/24/outline'
 
@@ -55,22 +56,24 @@ export default function Popup({
                   ? 'max-w-screen-sm'
                   : 'max-w-md'
               )}>
-              <div className='flex gap-4 justify-between items-center p-4 border-b border-gray-200 dark:border-gray-300'>
-                <Dialog.Title className='text-2xl font-extrabold text-gray-700 dark:text-gray-800'>
+              <div className='relative flex gap-4 justify-center items-center p-4 border-b border-gray-200 dark:border-gray-300'>
+                <Dialog.Title className='text-center text-2xl font-extrabold text-gray-800 dark:text-gray-900 md:text-3xl'>
                   {title}
                 </Dialog.Title>
                 <button
                   type='button'
                   aria-label='Close popup'
                   onClick={closePopup}
-                  className='flex justify-center items-center -my-2 p-2 rounded-md text-gray-400 dark:text-gray-500'>
+                  className='absolute top-[50%] right-0.5 -translate-y-[50%] flex justify-center items-center p-3 rounded-md text-gray-400 dark:text-gray-500 md:right-1.5'>
                   <span className='sr-only'>Close popup</span>
                   <XMarkIcon aria-hidden='true' className='w-6 h-6' />
                 </button>
               </div>
               <div>
-                {!!description && (
-                  <Dialog.Description className='p-4 text-base text-gray-600 dark:text-gray-700 md:text-lg'>
+                {(ReactIs.isElement(description) ||
+                  (typeof description === 'string' &&
+                    description.length > 0)) && (
+                  <Dialog.Description className='p-4 text-base text-gray-700 dark:text-gray-800 md:text-lg'>
                     {description}
                   </Dialog.Description>
                 )}
