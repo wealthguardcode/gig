@@ -4,7 +4,7 @@ import * as gtag from '../lib/gtag'
 
 export default function TrackDownloadList({ items }) {
   return (
-    <ul className='not-prose list-inside list-none flex flex-col gap-2 -ml-4 text-md md:text-lg'>
+    <ul className='not-prose list-inside list-none flex flex-col gap-2 -ml-4 text-base md:text-lg'>
       {items.map((item) => (
         <li key={item.title} className='group flex gap-4 items-start'>
           <DocumentArrowDownIcon className='flex-none w-6 h-6 mt-0.5 text-gray-600 group-hover:text-gray-900 dark:text-gray-500 dark:group-hover:text-gray-400' />

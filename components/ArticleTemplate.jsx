@@ -17,7 +17,7 @@ export default function ArticleTemplate({ meta, children }) {
       {/* Main content */}
       <div className='max-w-2xl mx-auto py-16 px-4 space-y-8 bg-white dark:bg-gray-800 sm:px-6 lg:px-8'>
         {(published || !!author) && (
-          <p className='text-md md:text-lg font-bold text-gray-800 dark:text-gray-300'>
+          <p className='text-base md:text-lg font-bold text-gray-800 dark:text-gray-300'>
             Published
             {published ? ` on ${format(new Date(published), 'PPP')}` : ``}
             {author ? ` by ${author}` : ``}.

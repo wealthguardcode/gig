@@ -137,7 +137,7 @@ export default function Header() {
                                   selected
                                     ? 'text-red-700 border-red-700'
                                     : 'text-gray-900 dark:text-gray-300 border-transparent hover:text-red-700 dark:hover:text-red-700',
-                                  'block whitespace-nowrap py-4 px-2 border-b-2 text-md font-medium text-center'
+                                  'block whitespace-nowrap py-4 px-2 border-b-2 text-base font-medium text-center'
                                 )}>
                                 {category.name}
                               </span>
@@ -415,7 +415,7 @@ function PopoverMenu({ router, name, links }) {
               static
               onMouseEnter={onMouseEnterPanel}
               onMouseLeave={onMouseLeavePanel}
-              className='absolute z-20 top-full inset-x-0 text-md text-gray-500 dark:text-white'>
+              className='absolute z-20 top-full inset-x-0 text-base text-gray-500 dark:text-white'>
               <div className='relative border-t border-solid border-gray-200 dark:border-gray-600'>
                 <div
                   className='absolute px-8 border-r border-b border-l border-solid border-gray-200 dark:border-gray-600 rounded-b-md bg-white dark:bg-gray-800 shadow-xl'

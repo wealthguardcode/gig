@@ -9,7 +9,7 @@ export default function ScrollToTopButton() {
   return (
     <div
       className={classNames(
-        'fixed z-50 bottom-2 right-2 transition-transform ease-in-out duration-700 md:bottom-4 md:right-4',
+        'fixed z-40 bottom-2 right-2 transition-transform ease-in-out duration-700 md:bottom-4 md:right-4',
         scrollY > 200 ? 'translate-x-0' : 'translate-x-16 md:translate-x-20'
       )}>
       <button

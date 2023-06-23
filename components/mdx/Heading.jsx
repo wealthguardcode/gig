@@ -26,13 +26,13 @@ function H4({ className, ...props }) {
 
 function H5({ className, ...props }) {
   return (
-    <h5 className={classNames('text-md md:text-lg', className)} {...props} />
+    <h5 className={classNames('text-base md:text-lg', className)} {...props} />
   )
 }
 
 function H6({ className, ...props }) {
   return (
-    <h6 className={classNames('text-sm md:text-md', className)} {...props} />
+    <h6 className={classNames('text-sm md:text-base', className)} {...props} />
   )
 }
 
