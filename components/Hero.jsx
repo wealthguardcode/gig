@@ -1,17 +1,17 @@
 import Image from 'next/image'
 
-export default function Hero({ image, title, titleAs = 'h1', children }) {
+export default function Hero({ imageUrl, title, titleAs = 'h1', children }) {
   const TitleAs = titleAs
 
   return (
     <div className='relative bg-gray-400'>
       <div className='absolute inset-0'>
         <Image
-          src={image}
+          src={imageUrl}
           alt={title}
           priority
           placeholder='blur'
-          blurDataURL={image}
+          blurDataURL={imageUrl}
           fill
           className='object-cover'
         />

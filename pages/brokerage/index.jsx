@@ -8,7 +8,7 @@ export default function BrokeragePage({ solutions }) {
   return (
     <Layout title='WIG | Our Brokerage Solutions'>
       <Hero
-        image='/images/brokerage/brokerage-1280x800.jpg'
+        imageUrl='/images/brokerage/brokerage-1280x800.jpg'
         title='Our Brokerage Solutions'>
         WealthGuard brokerage solutions empower agents and brokers to deliver
         the best possible commercial insurance products to their clients.

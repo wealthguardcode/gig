@@ -19,7 +19,7 @@ export default function SolutionTemplate({ meta, children }) {
 
   return (
     <Layout title={`WIG | ${title}`} description={heroDescription}>
-      <Hero image={image} title={title}>
+      <Hero imageUrl={image} title={title}>
         {heroDescription}
       </Hero>
 
