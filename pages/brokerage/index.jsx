@@ -10,9 +10,7 @@ export default function BrokeragePage({ solutions }) {
       <Hero
         imageUrl='/images/brokerage/brokerage-1280x800.jpg'
         title='Our Brokerage Solutions'>
-        WealthGuard brokerage solutions empower agents and brokers to deliver
-        the best possible commercial insurance products to their clients.
-        Discover WealthGuard brokerage product lines below.
+        WealthGuard&apos;s brokerage division features the following product lines.
       </Hero>
 
       <SolutionsGrid rootSlug='brokerage' solutions={solutions} />
