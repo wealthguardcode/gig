@@ -10,7 +10,7 @@ export default function ProgramsPage({ solutions }) {
       <Hero
         imageUrl='/images/programs/programs-1280x800.jpg'
         title='Our Programs'>
-        WealthGuard&apos;s Programs and Binding Authority division offers the following program-based risk solutions.
+        Discover WealthGuard Programs & Binding Authority division insurance solutions below.
       </Hero>
 
       <SolutionsGrid rootSlug='programs' solutions={solutions} />
