@@ -10,7 +10,7 @@ export default function BrokeragePage({ solutions }) {
       <Hero
         imageUrl='/images/brokerage/brokerage-1280x800.jpg'
         title='Our Brokerage Solutions'>
-        Discover WealthGuard brokerage commercial insurance solutions below.
+        From manufacturing to excess auto liability to pollution liability coverage, WealthGuard brokerage division offers commercial insurance solutions to meet your business needs.
       </Hero>
 
       <SolutionsGrid rootSlug='brokerage' solutions={solutions} />
