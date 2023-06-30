@@ -10,7 +10,7 @@ export default function BrokeragePage({ solutions }) {
       <Hero
         imageUrl='/images/brokerage/brokerage-1280x800.jpg'
         title='Our Brokerage Solutions'>
-        WealthGuard&apos;s brokerage division features the following product lines.
+        Discover WealthGuard brokerage solutions below.
       </Hero>
 
       <SolutionsGrid rootSlug='brokerage' solutions={solutions} />
