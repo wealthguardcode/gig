@@ -10,9 +10,7 @@ export default function ProgramsPage({ solutions }) {
       <Hero
         imageUrl='/images/programs/programs-1280x800.jpg'
         title='Our Programs'>
-        We have years of insurance experience helping carriers and brokers
-        provide solutions to their clients. Experience the difference of
-        WealthGuard&apos;s newest Programs and Binding Authority division.
+        WealthGuard&apos;s Programs and Binding Authority division offers the following program-based risk solutions.
       </Hero>
 
       <SolutionsGrid rootSlug='programs' solutions={solutions} />
