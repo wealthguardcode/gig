@@ -26,7 +26,7 @@ export default function ArticleTemplate({ meta, children }) {
         <div className='prose dark:prose-dark md:prose-xl'>{children}</div>
       </div>
 
-      <div className='relative max-w-lg my-32 mx-auto'>
+      <div className='relative w-full max-w-lg my-32 mx-auto'>
         <div className='p-4 rounded-lg bg-gray-50 dark:bg-gray-900 shadow-2xl'>
           <Gallery
             items={[

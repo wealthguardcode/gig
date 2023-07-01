@@ -47,7 +47,7 @@ export default function SolutionTemplate({ meta, children }) {
                 </div>
               </div>
             </div>
-            <div className='mt-12 relative text-base max-w-lg mx-auto lg:mt-0 md:pt-28'>
+            <div className='relative w-full max-w-lg mt-12 mx-auto text-base md:pt-28 lg:mt-0'>
               <div className='relative bg-gray-50 dark:bg-gray-900 rounded-lg shadow-2xl p-4 mb-8'>
                 <Gallery
                   items={[

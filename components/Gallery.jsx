@@ -70,7 +70,7 @@ export default function Gallery({ items }) {
                   <XMarkIcon className='w-10 h-10' />
                 </button>
 
-                <div className='relative inline-block overflow-hidden shadlow-xl sm:max-w-[90vw] sm:rounded-lg md:max-w-[85vw] lg:max-w-[80vw]'>
+                <div className='relative inline-block overflow-hidden w-full shadow-xl sm:max-w-[90vw] sm:rounded-lg md:max-w-[85vw] lg:max-w-[80vw]'>
                   <Image
                     src={selectedImage?.imageUrl}
                     alt={selectedImage?.title}
@@ -80,11 +80,11 @@ export default function Gallery({ items }) {
                   />
                 </div>
                 <div className='absolute bottom-0 left-0 flex justify-center w-full p-2 bg-black/25'>
-                  <div className='flex gap-2 justify-center p-2 rounded bg-white'>
+                  <div className='flex gap-2 p-2 rounded bg-white overflow-x-auto'>
                     {items.map((item, index) => (
                       <div
                         key={index}
-                        className='group relative z-10 overflow-hidden w-full max-w-[80px] rounded cursor-pointer aspect-[4/3]'>
+                        className='group flex-none relative z-10 overflow-hidden w-[80px] rounded cursor-pointer aspect-[4/3]'>
                         <Image
                           src={item.imageUrl}
                           alt={item.title}
