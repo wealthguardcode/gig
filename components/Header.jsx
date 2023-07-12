@@ -56,6 +56,10 @@ const navigation = {
           name: 'Broker Resources',
           href: '/resources/broker-resources',
         },
+        {
+          name: 'Product Guide',
+          href: '/resources/product-guide',
+        },
       ],
     },
     {
