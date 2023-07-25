@@ -20,6 +20,10 @@ export const brokerageSolutions = [
     name: `Manufacturers Commercial General Liability`,
   },
   {
+    slug: `Marine-Rental-Facility`,
+    name: `Marine Rental Facility`,
+  },
+  {
     slug: `petroleum-and-gas-distributors`,
     name: `Petroleum and Gas Distributors`,
   },
