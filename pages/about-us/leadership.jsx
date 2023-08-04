@@ -36,7 +36,7 @@ const people = [
     name: 'Gerald Wertz',
     role: 'Account Manager & Underwriter',
     imageUrl: '/images/headshots/GeraldWertz.jpg',
-    bio: 'Gerald works in account management and underwriting at WealthGuard. He joins WealthGuard from Liberty Mutual, where he worked as a Catastrophe Adjuster, and also worked in Project Management & Quality Assurance. Gerald graduated from Texas A&M University with a B.S. degree in Psychology, and holds a certificate from Haag Engineering.',
+    bio: 'Gerald works in account management and underwriting at WealthGuard. He joins WealthGuard from Liberty Mutual, where he worked as a Catastrophe Adjuster, and also worked in Project Management & Quality Assurance. Gerald graduated from Texas A&M University with a B.S. degree in Psychology. He also holds a certificate from Haag Engineering.',
     contact: 'gerald@wealthguardig.com',
   },
 ]
