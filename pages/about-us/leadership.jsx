@@ -32,13 +32,6 @@ const people = [
     bio: 'Rebecca is the Director of Marketing and Communications at WealthGuard. Rebecca has a diverse background in marketing, design, publishing, and education in both US and international markets. She uses creative vision and technical problem solving to help brands achieve strategic objectives.',
     contact: 'rebecca@wealthguardig.com',
   },
-  {
-    name: 'Gerald Wertz',
-    role: 'Account Manager / Underwriter',
-    imageUrl: '/images/headshots/GeraldWertz.jpg',
-    bio: 'Gerald works in account management and underwriting at WealthGuard. He joins WealthGuard from Liberty Mutual, where he worked as a Catastrophe Adjuster, and also worked in Project Management & Quality Assurance. Gerald graduated from Texas A&M University with a B.S. degree in Psychology. He also holds a certificate from Haag Engineering.',
-    contact: 'gerald@wealthguardig.com',
-  },
 ]
 
 const heroImgUrl =
