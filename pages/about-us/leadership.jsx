@@ -40,14 +40,12 @@ const heroImgUrl =
 export default function LeadershipPage() {
   return (
     <Layout title='WIG | Leadership'>
-      <Hero imageUrl='/images/boardroom.jpeg' title='Leadership' />
-      
       <div>
         {/* Hero */}
         <div className='relative bg-gray-400'>
           <div className='absolute inset-0'>
             <Image
-              src={heroImgUrl}
+              src='/images/boardroom.jpeg'
               alt="Wealthguard's Leadership"
               priority
               placeholder='blur'
