@@ -1,0 +1,70 @@
+import SolutionTemplate from '../../components/SolutionTemplate'
+import TrackDownloadList from '../../components/TrackDownloadList'
+
+export const meta = {
+  title: `Inland Marine`,
+  heroDescription: `WealthGuard offers inland marine coverage including builder's risk, contractor's equipment, and motor truck cargo insurance.`,
+  image: `/images/inland/inland-marine-1.jpg`,
+  image2: `/images/inland/inland-marine-2.jpg`,
+  subHeading: `Inland Marine Insurance`,
+  description: `WealthGuard offers inland marine insurance options for a variety of classes and industries. Inland marine coverage at WealthGuard includes builder's risk insurance, contractor's equipment insurance, and motor truck cargo insurance.`,
+  highlights: `Contact WealthGuard below to inquire about additional coverage options that may be available for your specific needs or industry.`,
+}
+
+{/* Begin document body */}
+
+WealthGuard inland marine insurance options include the following lines of business:
+
+- Accounts Receivables 
+- Bailee's
+- Builder's Risk for Homebuilders
+- Builder's Risk for New Construction 
+- Builder's Risk for Renovation
+- Communications including Towers, Radio, TV and Other 
+- Contingent Cargo
+- Contractors Equipment
+- Electronic Data Processing 
+- Equipment Dealers
+- Fine Arts Collections
+- Fine Arts Dealers
+- Fine Arts Museums
+- Furriers Block
+- Furriers Customers
+- Installation Floater
+- Jewelers Block
+- Medical & Scientific Equipment 
+- Motor Truck Cargo
+- Oil & Gas
+- Rental Operations
+- Rigging Operations
+- Solar Energy
+- Special Floater
+- Transportation
+- Truck Physical Damage (Stacked Units Not In Use, Held In Lot Only.) 
+- Valuable Papers
+- Warehouse Legal
+
+For additional information regarding Builder's Risk insurance, Contractor's Equipment insurance, or Motor Truck Cargo insurance, click to download a complete brochure (PDF) below. For additional inquiries, please contact WealthGuard.
+
+<TrackDownloadList
+  items={[
+    {
+      title: `Builders Risk Insurance`,
+      href: `/images/inland/WealthGuardIG%20Builders%20Risk%20Flyer.pdf',
+    },
+    {
+      title: `Contractors Equipment Insurance`,
+      href: `/images/inland/WealthGuardIG%20Contractors%20Equipment%20Flyer.pdf`,
+    },
+    {
+      title: `Motor Truck Cargo Insurance`,
+      href: `/images/inland/WealthGuardIG%20Motor%20Truck%20Cargo%20Flyer.pdf`,
+    },
+  ]}
+/>
+
+{/* End document body */}
+
+export default ({ children }) => (
+  <SolutionTemplate meta={meta}>{children}</SolutionTemplate>
+)
