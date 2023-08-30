@@ -45,3 +45,26 @@ function TrackDownloadLink({ href, children }) {
     </a>
   )
 }
+
+function TrackDownloadLink({ href, children }) {
+  const trackDownload = (url, event) => {
+    gtag.event('file_download', {
+      event_category: 'Inland Marine PDF Download',
+      event_label: children,
+      file_path: url,
+    })
+
+ return (
+    <a
+      href={href}
+      target='_blank'
+      onClick={(e) => {
+        e.preventDefault()
+
+        trackDownload(href, e)
+      }}
+      className='font-medium text-red-600 group-hover:text-red-700 dark:group-hover:text-red-500'>
+      {children}
+    </a>
+  )
+}
