@@ -30,7 +30,7 @@ export default function TrackDownloadList({ items }) {
 function TrackDownloadLink({ href, children }) {
   const trackDownload = (url, event) => {
     gtag.event('file_download', {
-      event_category: 'Manufacturer PDF Download', 'Inland Marine PDF Download',
+      event_category: 'Manufacturer PDF Download',
       event_label: children,
       file_path: url,
     })
