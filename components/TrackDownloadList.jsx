@@ -22,12 +22,7 @@ function TrackDownloadLink({ href, children }) {
       event_label: children,
       file_path: url,
     })
-     gtag.event('file_download', {
-      event_category: 'Inland Marine PDF Download',
-      event_label: children,
-      file_path: url,
-    })
-
+  
     window.open(url)
   }
 
