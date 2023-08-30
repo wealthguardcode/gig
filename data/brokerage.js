@@ -16,6 +16,10 @@ export const brokerageSolutions = [
     name: `Hard to Place Risk`,
   },
   {
+    slug: `Inland-Marine`,
+    name: `Inland Marine`,
+  },
+  {
     slug: `Manufacturers-Commercial-General-Liability`,
     name: `Manufacturers Commercial General Liability`,
   },
