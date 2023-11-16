@@ -26,6 +26,13 @@ const people = [
     contact: 'jaime@wealthguardig.com',
   },
   {
+    name: 'Tabitha Guthrie',
+    role: 'Underwriting Assistant',
+    imageUrl: '/images/headshots/TabithaGuthrie.jpg',
+    bio: 'Tabitha is a quick-witted, compassionate, and enthusiastic professional with a strong background in San Diego real estate and a deep commitment to the commercial insurance industry, particularly in the specialized area of commercial marina properties. She is a team player and consistently goes the extra mile, leveraging her extensive expertise to deliver exceptional results. She also enjoys bass fishing, weightlifting, riding her Peloton, spending time with her young daughter, and staying active in her local church.',
+    contact: 'tabitha@wealthguardig.com',
+  },
+  {
     name: 'Rebecca Dias',
     role: 'Director of Marketing and Communications',
     imageUrl: '/images/headshots/rebeccaDias.jpeg',
