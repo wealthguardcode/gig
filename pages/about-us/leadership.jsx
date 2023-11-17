@@ -29,7 +29,7 @@ const people = [
     name: 'Tabitha Guthrie',
     role: 'Underwriting Assistant',
     imageUrl: '/images/headshots/TabithaGuthrie.jpg',
-    bio: 'Tabitha is a quick-witted, compassionate, and enthusiastic professional with a strong background in San Diego real estate and a deep commitment to the commercial insurance industry, particularly in the specialized area of commercial marina properties. She is a team player and consistently goes the extra mile, leveraging her extensive expertise to deliver exceptional results. She also enjoys bass fishing, weightlifting, riding her Peloton, spending time with her young daughter, and staying active in her local church.',
+    bio: 'As a dedicated professional, Tabitha brings extensive expertise from the real estate industry with a specific focus on commercial insurance, specializing in underwriting marina properties. Her proficiency lies in delivering precise coverage to safeguard assets. Beyond the professional realm, Tabitha finds joy in bass fishing, quality time with her young daughter, weightlifting, and Peloton rides. These personal passions reflect the same dedication and precision she brings to her work. Tabitha is committed to ensuring exceptional service for her clients and actively contributes to fostering a thriving community.',
     contact: 'tabitha@wealthguardig.com',
   },
   {
