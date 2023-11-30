@@ -7,9 +7,9 @@ import Layout from '../../components/Layout'
 
 const resources = [
   {
-    title: 'WealthGuard 2023 Product Guide',
-    imageUrl: '/images/resources/WealthGuard 2023 Product Guide Cover Image.jpg',
-    link: '/images/resources/WealthGuard Insurance Group - 2023 Product Guide.pdf',
+    title: 'WealthGuard 2024 Product Guide',
+    imageUrl: '/images/resources/WealthGuard 2024 Product Guide Cover Image.jpg',
+    link: '/images/resources/WealthGuard Insurance Group - 2024 Product Guide.pdf',
   },
 ]
 
@@ -26,7 +26,7 @@ export default function BrokerResourcesPage() {
         <div className='max-w-7xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:px-8'>
           <div className='text-center'>
             <p className='max-w-3xl mt-5 mx-auto text-xl md:text-2xl text-gray-500 dark:text-gray-400'>
-              Download the complete WealthGuard 2023 Product Guide below. (Click PDF link to download).
+              Download the complete WealthGuard 2024 Product Guide below. (Click PDF link to download).
             </p>
           </div>
         </div>
