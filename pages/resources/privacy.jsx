@@ -149,8 +149,7 @@ export default function PrivacyPage() {
           </h2>
 
           <p className='pb-2 max-w-3xl mx-auto prose md:prose-lg leading-normal text-gray-500 dark:text-gray-400'>
-           Images that are available through our Website and Services have been licensed under the licensing terms of Unsplash and iStock, with the exception of leadership photos for which licensing terms have been purchased directly through Tara Flannery Photography. Terrorism Chalkboard image on our Terrorism pages is credited to Nick Youngson and RM Media Ltd.
-          </p>
+           Images that are available through our Website and Services have been licensed under the licensing terms of Unsplash and iStock, with the exception of leadership photos for which licensing terms have been purchased directly through Tara Flannery Photography.
           
           <h2 className='pt-2 max-w-3xl mx-auto text-lg md:text-xl font-bold leading-normal text-gray-500 dark:text-gray-400'>
             Changes to This Privacy Policy
